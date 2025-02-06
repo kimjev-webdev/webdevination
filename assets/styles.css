@@ -17,40 +17,47 @@
   body span {
     font-family: "Gugi", sans-serif;
     font-size: 6vw;
-
- body span icon {
-    font-size: 6vw;
- }
+  }
   
   .container {
     display: flex;
     color: #91ff00;
   }
-  
-  .letter {
+
+.letter {
+    font-family: "Gugi";
     position: relative;
     display: inline-block;
     margin: 0 5px;
     transition: all 0.5s ease;
-  }
-  
-  .letter::before {
-    content: attr(data-symbol);
+    width: 6vw; /* Fix width to make letter and icon align correctly */
+    height: 6vw; /* Fix height to make letter and icon align correctly */
+}
+
+.letter i.material-icons {
+    font-size: 6vw;
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
     transition: opacity 0.3s ease;
-  }
-  
-  .letter.show-symbol::before {
+}
+
+.letter.show-symbol i.material-icons {
     opacity: 1;
-  }
-  
-  .letter.show-symbol {
-    color: transparent;
-  }
-  
-  .letter:hover {
+}
+
+.letter.show-symbol {
+    color: transparent; /* Hide the letter text when showing the icon */
+}
+
+.letter span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Make sure the text is always in front */
+}
+
+.letter:hover {
     cursor: pointer;
-  } }
+}
