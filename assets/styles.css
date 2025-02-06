@@ -6,7 +6,6 @@
   }
   
   body {
-    font-family: "Gugi", sans-serif;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
@@ -14,12 +13,18 @@
     height: 100vh;
     margin: 0;
   }
+
+  body span {
+    font-family: "Gugi", sans-serif;
+    font-size: 6vw;
+
+ body span icon {
+    font-size: 6vw;
+ }
   
   .container {
     display: flex;
-    font-size: 40px;
-    font-weight: bold;
-    color: #333;
+    color: #91ff00;
   }
   
   .letter {
@@ -35,7 +40,6 @@
     top: 0;
     left: 0;
     opacity: 0;
-    font-size: 50px;
     transition: opacity 0.3s ease;
   }
   
@@ -49,5 +53,4 @@
   
   .letter:hover {
     cursor: pointer;
-  }
-  
+  } 
