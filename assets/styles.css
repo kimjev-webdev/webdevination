@@ -37,7 +37,7 @@
 .letter i.material-icons {
     width: 4vw;
     position: absolute;
-    top: 2;
+    top: 5px;
     left: 0;
     opacity: 0;
     transition: opacity 0.1s ease;
