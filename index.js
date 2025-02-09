@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (currentText) {
                 currentText.style.visibility = 'visible';  // Show the letter again
             }
-        }, 500); // Set how long the icon will be shown (500ms in this case)
+        }, 200); // Set how long the icon will be shown (500ms in this case)
 
         // Move to the next letter after a short delay
         currentIndex = (currentIndex + 1) % letters.length; // Move to the next letter, looping back at the end
