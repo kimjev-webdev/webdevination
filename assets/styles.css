@@ -24,9 +24,9 @@ body {
   position: relative;
   color: aquamarine;
   font-size: 5vw;
-  margin: 0 4px;
+  margin: 0 0px;
   display: inline-block;
-  width: 5vw;  /* Ensure width is the same */
+  width: 6.5vw;  /* Ensure width is the same */
   height: 6vw; /* Ensure height is consistent */
   text-align: center;  /* Center the text horizontally */
   line-height: 6vw;    /* Vertically align the text */
