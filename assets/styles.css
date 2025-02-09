@@ -29,7 +29,6 @@
     position: relative;
     display: inline-block;
     margin: 0 5px;
-    transition: all 0.5s ease;
     width: 6vw; /* Fix width to make letter and icon align correctly */
     height: 6vw; /* Fix height to make letter and icon align correctly */
 }
@@ -40,7 +39,6 @@
     top: 20px;
     left: 0;
     opacity: 0;
-    transition: opacity 0.1s ease;
 }
 
 .letter.show-symbol i.material-icons {
