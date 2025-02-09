@@ -6,7 +6,7 @@
   }
   
   body {
-    background-color: #f0f0f0;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@
   
   .container {
     display: flex;
-    color: #062e77;
+    color: #6df612;
   }
 
 .letter {
@@ -36,6 +36,7 @@
 .letter i.material-icons {
     width: 4vw;
     position: absolute;
+    color:#6df612
     top: 20px;
     left: 0;
     opacity: 0;
