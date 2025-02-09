@@ -1,62 +1,60 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body span {
-    font-family: "Gugi", sans-serif;
-    font-size: 6vw;
-  }
-  
-  .container {
-    display: flex;
-    color: #6df612;
-  }
+body {
+  background-color: #000;
+  font-family: 'Tourney', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-image: url('assets\images\tarotbg.jpg');
+  align-items: center;
+}
 
 .letter {
-    font-family: "Gugi";
-    position: relative;
-    display: inline-block;
-    margin: 0 5px;
-    width: 6vw; /* Fix width to make letter and icon align correctly */
-    height: 6vw; /* Fix height to make letter and icon align correctly */
+  position: relative;
+  color: aquamarine;
+  font-size: 5vw;
+  margin: 0 5px;
+  display: inline-block;
+  width: 6vw;  /* Ensure width is the same */
+  height: 6vw; /* Ensure height is consistent */
+  text-align: center;  /* Center the text horizontally */
+  line-height: 6vw;    /* Vertically align the text */
+  letter-spacing: 0.1em; 
 }
 
 .letter i.material-icons {
-    width: 4vw;
-    position: absolute;
-    color:#6df612
-    top: 20px;
-    left: 0;
-    opacity: 0;
+  color: aquamarine;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 3vw;
+  line-height: 5.5vw;
+  visibility: hidden;  /* Icons are hidden initially */
+}
+
+.letter .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  visibility: visible;  /* Letters are visible initially */
 }
 
 .letter.show-symbol i.material-icons {
-    opacity: 1;
+  visibility: visible;  /* Show the icon when the class is added */
 }
 
-.letter.show-symbol {
-    color: transparent; /* Hide the letter text when showing the icon */
-}
-
-.letter span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Make sure the text is always in front */
-}
-
-.letter:hover {
-    cursor: pointer;
+.letter.show-symbol .text {
+  visibility: hidden;  /* Hide the letter when the icon is shown */
 }

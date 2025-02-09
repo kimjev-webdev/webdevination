@@ -1,34 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const letters = document.querySelectorAll('.letter');
-    let currentIndex = 0;
+    const letters = document.querySelectorAll('.letter'); // Select all the letters
+    let currentIndex = 0;  // Keep track of the current letter being animated
 
-    // Function to handle the transition between icons and letters
+    // Function to handle the transition between letters and symbols
     function animateLetters() {
-        // Get the current and next letters to handle the symbol change
-        const currentLetter = letters[currentIndex];
-        const nextIndex = (currentIndex + 1) % letters.length;
-        const nextLetter = letters[nextIndex];
+        const currentLetter = letters[currentIndex]; // Get the current letter element
+        const currentIcon = currentLetter.querySelector('i.material-icons'); // Get the corresponding icon
+        const currentText = currentLetter.querySelector('.text'); // Get the corresponding text (letter)
 
-        // 1. Switch the current letter to its symbol
-        const currentIcon = currentLetter.querySelector('i.material-icons');
+        // Make the current letter invisible and show its symbol
+        if (currentText) {
+            currentText.style.visibility = 'hidden';  // Hide the letter
+        }
         if (currentIcon) {
-            currentIcon.style.display = 'inline-block'; // Show the symbol
-        }
-        currentLetter.classList.add('show-symbol'); // Ensure the symbol is shown instantly
-
-        // 2. After switching the current letter to the symbol, switch the next letter
-        const nextIcon = nextLetter.querySelector('i.material-icons');
-        if (nextIcon) {
-            nextIcon.style.display = 'none'; // Make sure the next symbol is hidden initially
+            currentIcon.style.visibility = 'visible'; // Show the icon
         }
 
-        // 3. Move to the next letter, looping back to the start if needed
-        currentIndex = nextIndex;
+        // After the symbol has been shown, hide it and show the letter again
+        setTimeout(() => {
+            // Hide the current icon
+            if (currentIcon) {
+                currentIcon.style.visibility = 'hidden';
+            }
 
-        // Continue the animation loop without any fade effect
-        setTimeout(animateLetters, 200); // Short delay to keep the animation quick (you can adjust this)
+            // Show the current letter
+            if (currentText) {
+                currentText.style.visibility = 'visible';  // Show the letter again
+            }
+        }, 500); // Set how long the icon will be shown (500ms in this case)
+
+        // Move to the next letter after a short delay
+        currentIndex = (currentIndex + 1) % letters.length; // Move to the next letter, looping back at the end
+
+        // Continue the animation by calling this function again after a delay
+        setTimeout(animateLetters, 300);  // Control the total cycle time (1 second per letter)
     }
 
-    // Start the animation
+    // Start the animation when the page loads
     animateLetters();
 });
