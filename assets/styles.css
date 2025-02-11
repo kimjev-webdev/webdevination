@@ -16,8 +16,13 @@ body {
 }
 
 .container {
-
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap; /* Allow the letters to wrap onto multiple lines */
+  justify-content: center; /* Center the letters horizontally */
+  align-items: center; /* Align items in the center vertically */
+  width: 100%; /* Make sure container takes up the full width */
+  padding: 0 10px;
+  position: relative; /* Make container the reference for absolute positioning of overlay */
 }
 
 .letter {
@@ -30,23 +35,20 @@ body {
   height: 6vw; /* Ensure height is consistent */
   text-align: center;  /* Center the text horizontally */
   line-height: 6vw;    /* Vertically align the text */
-  letter-spacing: 5em;
 }
 
 .letter i.material-icons {
   color: rgb(255, 174, 0);
+  margin: 0;
+  padding: 0;
   position: absolute;
   text-align: center;
-  font-size: 4vw;
-  width: 5vw;
+  font-size: 3.5vw;
+  width: 3vw;
   line-height: 5.5vw;
+  transform: translateX(-2vw);
+  margin-top: 0.5vh;
   visibility: hidden;  /* Icons are hidden initially */
-  top: 50%; /* Center the icon vertically */
-  left: 50%; /* Center the icon horizontally */
-  transform: translate(-60%, -50%); /* Adjust to truly center the icon */
-  display: flex; /* Add flex to ensure the text stays centered */
-  justify-content: center;
-  align-items: center;
 }
 
 .letter .text {
@@ -63,4 +65,32 @@ body {
 
 .letter.show-symbol .text {
   visibility: hidden;  /* Hide the letter when the icon is shown */
+}
+
+/* Styles for the overlay and button */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* This ensures the overlay stays above the animation */
+}
+
+.enter-button {
+  padding: 20px 40px;
+  font-size: 24px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 11; /* Ensure the button is above the overlay */
+}
+
+/* Show the overlay when the container is hovered */
+.container:hover .overlay {
+  display: flex; /* Show overlay when the container is hovered */
 }

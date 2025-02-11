@@ -39,3 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Start the animation when the page loads
     animateLetters();
 });
+
+// OVERLAY BUTTON //
+
+        // Add an event listener to the 'Enter' button to handle the click
+        document.querySelector('.enter-button').addEventListener('click', function() {
+            // Code to "enter" the site (for example, navigating to the homepage or revealing content)
+            window.location.href = "./index.html"; // Replace with your desired URL
+        });
+ 
