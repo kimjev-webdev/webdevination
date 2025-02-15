@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let typingSound = new Audio('typing-sound.mp3'); // Make sure you have the typing sound file
     let animationCycles = 0; // Counter to track animation cycles
     let userInactivityTimeout; // Timeout for detecting user inactivity
+    let isHovering = false; // To track whether the user is hovering over the container
 
     // Check if the device is mobile/tablet or desktop
     function isMobileOrTablet() {
@@ -50,8 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // Track the animation cycle count
         animationCycles++;
 
-        // Show the "Enter" button after 3 animation cycles if it's a mobile/tablet screen
-        if (isMobileOrTablet() && animationCycles >= 3) {
+        // Show the "Enter" button after 4 animation cycles
+        if (animationCycles >= 39) {
             container.style.display = 'none'; // Hide the container
             overlay.style.display = 'flex'; // Show the overlay with the Enter button
         }
@@ -65,33 +66,18 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "./tarot.html"; // Replace with your desired URL
     });
 
-    // Function to handle user inactivity timeout
-    function handleInactivity() {
-        // Hide the container and show the overlay after 10 seconds of inactivity
-        container.style.display = 'none'; // Hide the container
-        overlay.style.display = 'flex'; // Show the overlay with the Enter button
-    }
-
-    // Function to reset the inactivity timeout (i.e., if user interacts, reset the timer)
-    function resetInactivityTimer() {
-        clearTimeout(userInactivityTimeout);
-        userInactivityTimeout = setTimeout(handleInactivity, 10000); // 10 seconds of inactivity
-    }
-
-    // Set the initial inactivity timer
-    resetInactivityTimer();
-
-   
-    // Add hover effect to show the overlay and button when container is hovered
+    // Add hover effect to show the overlay and button when container is hovered (only after 4 cycles)
     container.addEventListener('mouseenter', () => {
-        if (animationCycles < 3) {
-            overlay.style.display = 'flex'; // Show overlay with button on hover (before 3 animation cycles)
+        if (animationCycles >= 39 && !isHovering) {
+            isHovering = true;
+            overlay.style.display = 'flex'; // Show overlay with button on hover (after 4 animation cycles)
             container.style.display = 'none'; // Hide the container on hover
         }
     });
 
     container.addEventListener('mouseleave', () => {
-        if (animationCycles < 3) {
+        if (animationCycles >= 39 && isHovering) {
+            isHovering = false;
             overlay.style.display = 'none'; // Hide overlay and button when container is not hovered
             container.style.display = 'flex'; // Show the container again
         }
