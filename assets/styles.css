@@ -61,8 +61,10 @@ body {
 }
 
 .overlay {
-  position: absolute;
-  display: none; /* Start with the overlay hidden */
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center; /* Start with the overlay hidden */
   top: 0;
   left: 0;
   width: 100%;
