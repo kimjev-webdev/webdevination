@@ -57,6 +57,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to handle 'Enter' button click
     document.querySelector('.enter-button').addEventListener('click', function() {
-        window.location.href = "./index.html"; // Replace with your desired URL
+        window.location.href = "./tarot.html"; // Replace with your desired URL
     });
+});
+
+
+// Select the container and overlay
+const container = document.querySelector('.container');
+const overlay = document.querySelector('.overlay');
+
+// Function to show the overlay and hide the content
+container.addEventListener('mouseenter', function() {
+  // Show the overlay
+  overlay.style.display = 'flex';
+  
+  // Hide the content inside the container
+  const letters = container.querySelectorAll('.letter');
+  letters.forEach(letter => {
+    letter.style.display = 'none';  // Hide each letter
+  });
+});
+
+// Function to hide the overlay and show the content again
+container.addEventListener('mouseleave', function() {
+  // Hide the overlay
+  overlay.style.display = 'none';
+  
+  // Show the content inside the container
+  const letters = container.querySelectorAll('.letter');
+  letters.forEach(letter => {
+    letter.style.display = 'inline-block';  // Show each letter
+  });
 });
