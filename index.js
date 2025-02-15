@@ -6,13 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;  // Keep track of the current letter being animated
     let typingSound = new Audio('typing-sound.mp3'); // Make sure you have the typing sound file
     let animationCycles = 0; // Counter to track animation cycles
-    let userInactivityTimeout; // Timeout for detecting user inactivity
-    let isHovering = false; // To track whether the user is hovering over the container
-
-    // Check if the device is mobile/tablet or desktop
-    function isMobileOrTablet() {
-        return window.innerWidth <= 768; // Consider anything under 768px as mobile/tablet
-    }
 
     // Function to handle the transition between letters and symbols
     function animateLetters() {
@@ -66,21 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "./tarot.html"; // Replace with your desired URL
     });
 
-    // Add hover effect to show the overlay and button when container is hovered (only after 4 cycles)
-    container.addEventListener('mouseenter', () => {
-        if (animationCycles >= 39 && !isHovering) {
-            isHovering = true;
-            overlay.style.display = 'flex'; // Show overlay with button on hover (after 4 animation cycles)
-            container.style.display = 'none'; // Hide the container on hover
-        }
-    });
-
-    container.addEventListener('mouseleave', () => {
-        if (animationCycles >= 39 && isHovering) {
-            isHovering = false;
-            overlay.style.display = 'none'; // Hide overlay and button when container is not hovered
-            container.style.display = 'flex'; // Show the container again
-        }
+    // Add event listener for container click or tap
+    container.addEventListener('click', function() {
+        window.location.href = "./tarot.html"; // Redirect to tarot.html when clicked or tapped
     });
 
     // Start the animation when the page loads

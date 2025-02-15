@@ -91,7 +91,7 @@ body {
   box-shadow: none; 
   display: inline-block;
   background-color: transparent;
-  text-decoration: none;
+  text-decoration: none, important!;
   text-align: center;
   margin: 3vh;
   padding: 3vh;
@@ -121,12 +121,11 @@ letter-spacing: 1vw;
 
 /* Optional: Adding hover effect to make it stand out */
 .enter-button:hover {
-  text-decoration: none;
+  text-decoration: none, important!;
   background-color: transparent;
   transform: scale(1.1);
 }
 
-.btn-link {
-text-decoration: none, important!;
+.container, .overlay, .enter-button {
+  cursor: pointer;
 }
-
