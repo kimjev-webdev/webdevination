@@ -6,39 +6,40 @@
 
 body {
   background-color: #000;
-  background-image: url('assets\images\tarotbg.jpg');
+  background-image: url('./images/tarotbg.jpg');
   font-family: 'Tourney', monospace;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  color: rgb(174, 255, 0); /* Green glow text */
 }
 
 .container {
   display: flex;
-  flex-wrap: wrap; /* Allow the letters to wrap onto multiple lines */
-  justify-content: center; /* Center the letters horizontally */
-  align-items: center; /* Align items in the center vertically */
-  width: 100%; /* Make sure container takes up the full width */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   padding: 0 10px;
-  position: relative; /* Make container the reference for absolute positioning of overlay */
+  position: relative;
 }
 
 .letter {
   position: relative;
-  color: aquamarine;
+  color: rgb(174, 255, 0);
   font-size: 5vw;
   margin: 0 0px;
   display: inline-block;
-  width: 6.5vw;  /* Ensure width is the same */
-  height: 6vw; /* Ensure height is consistent */
-  text-align: center;  /* Center the text horizontally */
-  line-height: 6vw;    /* Vertically align the text */
+  width: 6.5vw;
+  height: 6vw;
+  text-align: center;
+  line-height: 6vw;
 }
 
 .letter i.material-icons {
-  color: rgb(255, 174, 0);
+  color: rgb(174, 255, 0);
   margin: 0;
   padding: 0;
   position: absolute;
@@ -48,7 +49,6 @@ body {
   line-height: 5.5vw;
   transform: translateX(-2vw);
   margin-top: 0.5vh;
-  visibility: hidden;  /* Icons are hidden initially */
 }
 
 .letter .text {
@@ -56,15 +56,6 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
-  visibility: visible;  /* Letters are visible initially */
-}
-
-.letter.show-symbol i.material-icons {
-  visibility: visible;  /* Show the icon when the class is added */
-}
-
-.letter.show-symbol .text {
-  visibility: hidden;  /* Hide the letter when the icon is shown */
 }
 
 /* Styles for the overlay and button */
@@ -74,23 +65,78 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  display: none; /* Initially hidden */
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
   justify-content: center;
   align-items: center;
-  z-index: 10; /* This ensures the overlay stays above the animation */
+  z-index: 10;
 }
 
 .enter-button {
   padding: 20px 40px;
   font-size: 24px;
-  background-color: #fff;
+  background-color: #00000000;
   border: none;
   cursor: pointer;
-  z-index: 11; /* Ensure the button is above the overlay */
+  z-index: 11;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s ease, transform 0.5s ease;
 }
 
-/* Show the overlay when the container is hovered */
+.enter-button.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.enter-button:hover {
+  background-color: #00cc00;
+  transform: scale(1);
+  box-shadow: 0 0 15px #00ff00;
+}
+
+.cursor {
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(174, 255, 0);
+  margin-left: 5px;
+  display: inline-block;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .container:hover .overlay {
-  display: flex; /* Show overlay when the container is hovered */
+  display: flex;
+}
+
+.cursor {
+  font-size: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(174, 255, 0);
+  margin-left: 5px;
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

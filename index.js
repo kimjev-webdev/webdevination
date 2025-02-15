@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const letters = document.querySelectorAll('.letter'); // Select all the letters
+    const button = document.querySelector('.enter-button'); // The "Enter" button
     let currentIndex = 0;  // Keep track of the current letter being animated
+    let typingSound = new Audio('typing-sound.mp3'); // Make sure you have the typing sound file
 
     // Function to handle the transition between letters and symbols
     function animateLetters() {
@@ -27,24 +29,34 @@ document.addEventListener("DOMContentLoaded", () => {
             if (currentText) {
                 currentText.style.visibility = 'visible';  // Show the letter again
             }
-        }, 200); // Set how long the icon will be shown (500ms in this case)
+
+            // Add glow and sliding effect
+            currentLetter.style.opacity = 1;
+            currentLetter.style.transform = 'translateY(0)';
+        }, 200); // Set how long the icon will be shown (200ms in this case)
 
         // Move to the next letter after a short delay
         currentIndex = (currentIndex + 1) % letters.length; // Move to the next letter, looping back at the end
 
         // Continue the animation by calling this function again after a delay
-        setTimeout(animateLetters, 300);  // Control the total cycle time (1 second per letter)
+        setTimeout(animateLetters, 300);  // Control the total cycle time (300ms per letter)
     }
 
     // Start the animation when the page loads
     animateLetters();
+
+    // Create and append the cursor
+    const cursor = document.createElement('span');
+    cursor.classList.add('cursor');
+    document.body.appendChild(cursor); // Append the cursor to the body
+
+    // Show the "Enter" button after all letters have been revealed
+    function showEnterButton() {
+        button.classList.add('show');
+    }
+
+    // Function to handle 'Enter' button click
+    document.querySelector('.enter-button').addEventListener('click', function() {
+        window.location.href = "./index.html"; // Replace with your desired URL
+    });
 });
-
-// OVERLAY BUTTON //
-
-        // Add an event listener to the 'Enter' button to handle the click
-        document.querySelector('.enter-button').addEventListener('click', function() {
-            // Code to "enter" the site (for example, navigating to the homepage or revealing content)
-            window.location.href = "./index.html"; // Replace with your desired URL
-        });
- 
