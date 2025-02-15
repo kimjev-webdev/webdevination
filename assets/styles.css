@@ -125,3 +125,8 @@ letter-spacing: 1vw;
   background-color: transparent;
   transform: scale(1.1);
 }
+
+.enter-button:link,
+.enter-button:visited {
+  text-decoration: none;
+} 

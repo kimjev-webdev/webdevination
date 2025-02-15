@@ -81,10 +81,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set the initial inactivity timer
     resetInactivityTimer();
 
-    // Reset the inactivity timer on any user interaction (mousemove, keydown, etc.)
-    window.addEventListener('mousemove', resetInactivityTimer);
-    window.addEventListener('keydown', resetInactivityTimer);
-    window.addEventListener('touchstart', resetInactivityTimer); // For touch screens
+   
+    // Add hover effect to show the overlay and button when container is hovered
+    container.addEventListener('mouseenter', () => {
+        if (animationCycles < 3) {
+            overlay.style.display = 'flex'; // Show overlay with button on hover (before 3 animation cycles)
+            container.style.display = 'none'; // Hide the container on hover
+        }
+    });
+
+    container.addEventListener('mouseleave', () => {
+        if (animationCycles < 3) {
+            overlay.style.display = 'none'; // Hide overlay and button when container is not hovered
+            container.style.display = 'flex'; // Show the container again
+        }
+    });
 
     // Start the animation when the page loads
     animateLetters();
