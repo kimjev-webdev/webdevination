@@ -102,8 +102,6 @@ font-size: 4.5vw;
 letter-spacing: 1vw;
 }
 
-
-/* Flashing text effect */
 @keyframes flashText {
   0% {
       opacity: 1;
@@ -117,12 +115,13 @@ letter-spacing: 1vw;
 }
 
 /* Apply the flash effect to the button text */
-.enter-button span {
+.enter-button {
   animation: flashText 1s infinite; /* Flash every 1 second */
 }
 
 /* Optional: Adding hover effect to make it stand out */
 .enter-button:hover {
+  text-decoration: none;
   background-color: transparent;
   transform: scale(1.1);
 }

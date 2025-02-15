@@ -1,58 +1,91 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".container");
-  const overlay = document.querySelector(".overlay");
-  const letters = document.querySelectorAll(".letter"); // Select all the letters
+    const letters = document.querySelectorAll('.letter'); // Select all the letters
+    const button = document.querySelector('.enter-button'); // The "Enter" button
+    const container = document.querySelector('.container'); // The container div
+    const overlay = document.querySelector('.overlay'); // The overlay div
+    let currentIndex = 0;  // Keep track of the current letter being animated
+    let typingSound = new Audio('typing-sound.mp3'); // Make sure you have the typing sound file
+    let animationCycles = 0; // Counter to track animation cycles
+    let userInactivityTimeout; // Timeout for detecting user inactivity
 
-  const button = document.querySelector(".enter-button"); // The "Enter" button
-
-  // Function to handle 'Enter' button click
-  button.addEventListener("click", function () {
-    window.location.href = "./tarot.html"; // Replace with your desired URL
-  });
-
-  // Your original letter animation code...
-  let currentIndex = 0;
-
-  function animateLetters() {
-    const currentLetter = letters[currentIndex];
-    const currentIcon = currentLetter.querySelector("i.material-icons");
-    const currentText = currentLetter.querySelector(".text");
-
-    if (currentText) {
-      currentText.style.visibility = "hidden";
-    }
-    if (currentIcon) {
-      currentIcon.style.visibility = "visible";
+    // Check if the device is mobile/tablet or desktop
+    function isMobileOrTablet() {
+        return window.innerWidth <= 768; // Consider anything under 768px as mobile/tablet
     }
 
-    setTimeout(() => {
-      if (currentIcon) {
-        currentIcon.style.visibility = "hidden";
-      }
-      if (currentText) {
-        currentText.style.visibility = "visible";
-      }
+    // Function to handle the transition between letters and symbols
+    function animateLetters() {
+        const currentLetter = letters[currentIndex]; // Get the current letter element
+        const currentIcon = currentLetter.querySelector('i.material-icons'); // Get the corresponding icon
+        const currentText = currentLetter.querySelector('.text'); // Get the corresponding text (letter)
 
-      currentLetter.style.opacity = 1;
-      currentLetter.style.transform = "translateY(0)";
-    }, 200);
+        // Make the current letter invisible and show its symbol
+        if (currentText) {
+            currentText.style.visibility = 'hidden';  // Hide the letter
+        }
+        if (currentIcon) {
+            currentIcon.style.visibility = 'visible'; // Show the icon
+        }
 
-    currentIndex = (currentIndex + 1) % letters.length;
+        // After the symbol has been shown, hide it and show the letter again
+        setTimeout(() => {
+            // Hide the current icon
+            if (currentIcon) {
+                currentIcon.style.visibility = 'hidden';
+            }
 
-    setTimeout(animateLetters, 300);
-  }
+            // Show the current letter
+            if (currentText) {
+                currentText.style.visibility = 'visible';  // Show the letter again
+            }
 
-  animateLetters();
+            // Add glow and sliding effect
+            currentLetter.style.opacity = 1;
+            currentLetter.style.transform = 'translateY(0)';
+        }, 200); // Set how long the icon will be shown (200ms in this case)
 
-  // Show the overlay and hide the container content on hover
-  container.addEventListener("mouseenter", function () {
-    container.style.display = "none"; // Hide the entire container
-    overlay.style.display = "flex"; // Show the overlay
-  });
+        // Move to the next letter after a short delay
+        currentIndex = (currentIndex + 1) % letters.length; // Move to the next letter, looping back at the end
 
-  // Show the container and hide the overlay when not hovering
-  container.addEventListener("mouseleave", function () {
-    container.style.display = "flex"; // Show the container
-    overlay.style.display = "none"; // Hide the overlay
-  });
+        // Track the animation cycle count
+        animationCycles++;
+
+        // Show the "Enter" button after 3 animation cycles if it's a mobile/tablet screen
+        if (isMobileOrTablet() && animationCycles >= 3) {
+            container.style.display = 'none'; // Hide the container
+            overlay.style.display = 'flex'; // Show the overlay with the Enter button
+        }
+
+        // Continue the animation by calling this function again after a delay
+        setTimeout(animateLetters, 300);  // Control the total cycle time (300ms per letter)
+    }
+
+    // Function to handle 'Enter' button click
+    button.addEventListener('click', function() {
+        window.location.href = "./tarot.html"; // Replace with your desired URL
+    });
+
+    // Function to handle user inactivity timeout
+    function handleInactivity() {
+        // Hide the container and show the overlay after 10 seconds of inactivity
+        container.style.display = 'none'; // Hide the container
+        overlay.style.display = 'flex'; // Show the overlay with the Enter button
+    }
+
+    // Function to reset the inactivity timeout (i.e., if user interacts, reset the timer)
+    function resetInactivityTimer() {
+        clearTimeout(userInactivityTimeout);
+        userInactivityTimeout = setTimeout(handleInactivity, 10000); // 10 seconds of inactivity
+    }
+
+    // Set the initial inactivity timer
+    resetInactivityTimer();
+
+    // Reset the inactivity timer on any user interaction (mousemove, keydown, etc.)
+    window.addEventListener('mousemove', resetInactivityTimer);
+    window.addEventListener('keydown', resetInactivityTimer);
+    window.addEventListener('touchstart', resetInactivityTimer); // For touch screens
+
+    // Start the animation when the page loads
+    animateLetters();
 });
