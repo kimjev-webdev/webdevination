@@ -63,6 +63,7 @@ body {
 
 .overlay {
   position: absolute;
+  display: none;
   top: 0;
   left: 0;
   width: 100%;
@@ -73,6 +74,10 @@ body {
   align-items: center;
   flex-direction: column;
   z-index: 2;
+}
+
+.container:hover .overlay {
+  display: flex;
 }
 
 .enter-button {
