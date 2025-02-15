@@ -72,6 +72,8 @@ body {
   justify-content: center; /* Start with the overlay hidden */
   top: 0;
   left: 0;
+  margin: 3vh;
+  padding: 3vh;
   width: 100%;
   height: 100%;
   background-color: transparent;
