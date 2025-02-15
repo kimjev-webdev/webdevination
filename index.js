@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector('.container');
+    const overlay = document.querySelector('.overlay');
+
+    // Show the overlay and hide the container on hover
+    container.addEventListener('mouseenter', function() {
+        container.style.display = 'none'; // Hide the entire container
+        overlay.style.display = 'flex';   // Show the overlay
+    });
+
+    // Hide the overlay and show the container when not hovering
+    container.addEventListener('mouseleave', function() {
+        container.style.display = 'flex'; // Show the entire container
+        overlay.style.display = 'none';   // Hide the overlay
+    });
+
     const letters = document.querySelectorAll('.letter'); // Select all the letters
     const button = document.querySelector('.enter-button'); // The "Enter" button
     let currentIndex = 0;  // Keep track of the current letter being animated
@@ -59,33 +74,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('.enter-button').addEventListener('click', function() {
         window.location.href = "./tarot.html"; // Replace with your desired URL
     });
-});
-
-
-// Select the container and overlay
-const container = document.querySelector('.container');
-const overlay = document.querySelector('.overlay');
-
-// Function to show the overlay and hide the content
-container.addEventListener('mouseenter', function() {
-  // Show the overlay
-  overlay.style.display = 'flex';
-  
-  // Hide the content inside the container
-  const letters = container.querySelectorAll('.letter');
-  letters.forEach(letter => {
-    letter.style.display = 'none';  // Hide each letter
-  });
-});
-
-// Function to hide the overlay and show the content again
-container.addEventListener('mouseleave', function() {
-  // Hide the overlay
-  overlay.style.display = 'none';
-  
-  // Show the content inside the container
-  const letters = container.querySelectorAll('.letter');
-  letters.forEach(letter => {
-    letter.style.display = 'inline-block';  // Show each letter
-  });
 });

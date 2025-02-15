@@ -17,7 +17,6 @@ body {
 }
 
 .container {
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -63,7 +62,7 @@ body {
 
 .overlay {
   position: absolute;
-  display: none;
+  display: none; /* Start with the overlay hidden */
   top: 0;
   left: 0;
   width: 100%;
@@ -71,6 +70,7 @@ body {
   background-color: transparent;
   flex-direction: column;
   z-index: 2;
+  transition: opacity 0.3s ease;
 }
 
 .container:hover .overlay {
