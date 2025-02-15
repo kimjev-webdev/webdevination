@@ -27,9 +27,7 @@ body {
   width: 100vw;
   top: 50%;            /* Move the top of the container to the center of the viewport */
   left: 50%;           /* Move the left of the container to the center of the viewport */
-  transform: translate(-50%, -50%);  /* Offset the container by half its width and height */
-
-  
+  transform: translate(-50%, -50%);  /* Offset the container by half its width and height */ 
 }
 
 .letter {
