@@ -35,11 +35,11 @@ body {
 .letter {
   position: relative;
   color: rgb(174, 255, 0);
-  font-size: 5vw;
+  font-size: 4.5vw;
   margin: 0 0px;
   display: inline-block;
-  width: 6.5vw;
-  height: 6vw;
+  width: 5vw;
+  height: 5vw;
   text-align: center;
   line-height: 6vw;
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
@@ -72,19 +72,19 @@ body {
   display: none;
   align-items: center;
   justify-content: center; /* Start with the overlay hidden */
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 30vh;
   background-color: transparent;
   flex-direction: column;
   z-index: 2;
-  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 50%;            /* Move the top of the container to the center of the viewport */
+  left: 50%;           /* Move the left of the container to the center of the viewport */
+  transform: translate(-50%, -50%);  /* Offset the container by half its width and height */ 
 }
 
 .container:hover .overlay {
   display: flex;
-  
 }
 
 .enter-button {
@@ -98,7 +98,7 @@ body {
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 font-family: 'Tourney', monospace;
-font-size: 5vw;
+font-size: 4.5vw;
 letter-spacing: 1vw;
 }
 
