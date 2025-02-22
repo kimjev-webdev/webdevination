@@ -164,7 +164,7 @@ letter-spacing: 1vw;
 @media (max-width: 600px) {
   .letter i.material-icons {
     margin-top: 0vh;
-    transform: translatey(-1vh); 
+    transform: translatey(-3vh); 
   }
 }
 
