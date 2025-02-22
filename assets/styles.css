@@ -154,6 +154,11 @@ letter-spacing: 1vw;
 }
 
 .rotate-icon {
+  display: none;
+  text-align: right;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
   font-size: 3.5vw, important!;
   margin-bottom: 10px;
   animation: rotate 3s linear infinite, flashText 1s infinite;
@@ -182,7 +187,7 @@ letter-spacing: 1vw;
 .rotate-icon {
       display: none;
   }
-  
+
   .rotate-prompt {
       display: none;
   }
