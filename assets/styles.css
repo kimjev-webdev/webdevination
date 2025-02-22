@@ -130,3 +130,59 @@ letter-spacing: 1vw;
   cursor: pointer;
 }
 
+/* Hide the prompt by default */
+.rotate-prompt {
+  display: none;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+font-family: 'Tourney', monospace;
+}
+
+.rotate-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: rotate 1s infinite linear;
+  color: rgb(174, 255, 0);
+  animation: flashText 1s infinite;
+}
+
+/* Animation for rotating icon */
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Content styling */
+.content {
+  display: none; /* Content will only show in landscape mode */
+}
+
+
+
+
+
+/* Show the prompt on portrait orientation */
+@media only screen and (orientation: portrait) {
+  .rotate-prompt {
+      display: block;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .content {
+      display: block;
+  }
+
+  .rotate-prompt {
+      display: none;
+  }
+}
