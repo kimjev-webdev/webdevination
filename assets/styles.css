@@ -173,13 +173,16 @@ letter-spacing: 1vw;
   .rotate-prompt {
       display: block;
   }
+  .rotate-icon {
+      display: block;
+  }
 }
 
 @media only screen and (orientation: landscape) {
-  .content {
-      display: block;
+.rotate-icon {
+      display: none;
   }
-
+  
   .rotate-prompt {
       display: none;
   }
