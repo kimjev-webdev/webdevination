@@ -2,13 +2,11 @@
 
 <img src="assets\images\readmefiles\webdevinationtitle.JPG" alt="WebDevination" width="100%"/>
 
-[WebDevination](https://kimjev-webdev.github.io/webdevination/) is a portmanteau of *web development* and *divination*, combining the ancient art of tarot reading with the power of modern technology. The interactive tarot game is designed to offer a unique user experience that updates fortune-telling with a digital framework.
+[WebDevination](https://kimjev-webdev.github.io/webdevination/) is a portmanteau of *web development* and *divination*, combining the ancient art of tarot reading with the power of modern technology. The interactive tarot game is designed to offer a unique user experience that updates the divinatory experience within a digital framework.
 
-With design influences drawn from the classic terminal interface, the site immerses the user in the mysterious world of divination in cyberspace; the concept of *techno-divination* seeks to refresh the personal, intimate nature of tarot readings, offering an intuitive, authentic experience that guides users on a journey of self-discovery. 
+With design influences drawn from the classic terminal interface, the site introduces users to the concept of *techno-divination* which seeks to refresh and replicate the personal nature of in person fortune telling. Javascript aids interactivity and helps to provide this authentic experience.
 
-In-person readings are central to the mystic experience, which is why the site is designed to maintain an exciting and personal feel. Javascript aids interactivity and helps to provide this authentic experience. 
-
-Each reading encourages the user to tap into their intuition and explore not only the meaning of the cards but also themselves. This project brings divination into the modern age, creating a space where the internet serves as a transcendental, immaterial environment for connection and self-reflection.
+Each reading encourages the user to tap into their intuition and explore not only the meaning of the cards but also themselves. This project brings divination into the modern age, creating a space where the internet is justified as the perfect transcendental, immaterial, environment for this practice which enables deeper connection and self-reflection.
 
 ## Table of Contents
 
