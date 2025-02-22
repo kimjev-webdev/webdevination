@@ -151,7 +151,7 @@ font-family: 'Tourney', monospace;
   animation: flashText 1s infinite;
 }
 
-/* Animation for rotating icon */
+/* Animation for rotate screen prompt icon */
 @keyframes rotate {
   0% {
       transform: rotate(0deg);
@@ -161,10 +161,6 @@ font-family: 'Tourney', monospace;
   }
 }
 
-/* Content styling */
-.content {
-  display: none; /* Content will only show in landscape mode */
-}
 
 /* Move icons on landing page up slightly on phones and tablets */
 @media (max-width: 600px) {
@@ -173,8 +169,7 @@ font-family: 'Tourney', monospace;
   }
 }
 
-
-/* Show the rotate screen icon and prompt on portrait orientation */
+/* Show the rotate screen icon and prompt on devices with portrait orientation */
 @media only screen and (orientation: portrait) {
   .rotate-prompt {
       display: block;
