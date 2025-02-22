@@ -166,11 +166,15 @@ font-family: 'Tourney', monospace;
   display: none; /* Content will only show in landscape mode */
 }
 
+/* Move icons on landing page up slightly on phones and tablets */
+@media (max-width: 600px) {
+  .letter i.material-icons {
+    margin-top: 0.2vh; 
+  }
+}
 
 
-
-
-/* Show the prompt on portrait orientation */
+/* Show the rotate screen icon and prompt on portrait orientation */
 @media only screen and (orientation: portrait) {
   .rotate-prompt {
       display: block;
