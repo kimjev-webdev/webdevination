@@ -165,7 +165,17 @@ letter-spacing: 1vw;
 }
 
 /* Move icons on landing page up slightly on phones and tablets */
-@media (max-width: 576px) {
+
+@media (min-width: 300px) and (max-width: 400px) {
+  .letter i.material-icons {
+    font-size: 4.5vw;
+    margin-top: 0vh;
+    transform: translate(-2vw, 0.2vh); 
+  }
+}
+
+
+@media (min-width:400px) and (max-width: 576px) {
   .letter i.material-icons {
     font-size: 4.5vw;
     margin-top: 0vh;
