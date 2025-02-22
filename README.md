@@ -1,6 +1,7 @@
 <h1 align="center"> Welcome to WebDevination </h1>
 
-<img src="assets/images/readmetitle.webp" alt="insert header here" width="100%"/>
+<img src="![image](assets\images\readmefiles\webdevinationtitle.JPG)
+" alt="WebDevination" width="100%"/>
 
 [WebDevination](https://kimjev-webdev.github.io/webdevination/) is a portmanteau of *web development* and *divination*, combining the ancient art of tarot reading with the power of modern technology. The interactive tarot game is designed to offer a unique user experience that updates fortune-telling with a digital framework.
 
