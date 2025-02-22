@@ -186,7 +186,7 @@ letter-spacing: 1vw;
   .letter i.material-icons {
     font-size: 4.5vw;
     margin-top: 0vh;
-    transform: translate(-2vw, 0vh); 
+    transform: translate(-2vw, -0.2vh); 
   }
   .letter i.material-icons {
     font-size: 4.5vw;
