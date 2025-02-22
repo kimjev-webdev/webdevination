@@ -136,6 +136,12 @@ letter-spacing: 1vw;
   transform: scale(1.1);
 }
 
+button.btn.btn-link.enter-button:hover
+{ text-decoration: none !important;
+background-color: transparent !important;
+transform: scale(1.1);
+}
+
 .container, .overlay, .enter-button {
   cursor: pointer;
 }
@@ -186,7 +192,7 @@ letter-spacing: 1vw;
   .letter i.material-icons {
     font-size: 4.5vw;
     margin-top: 0vh;
-    transform: translate(-2vw, -0.2vh); 
+    transform: translate(-2vw, 0.5vh); 
   }
   .letter i.material-icons {
     font-size: 4.5vw;
