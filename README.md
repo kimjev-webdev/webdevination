@@ -2,7 +2,7 @@
 
 <img src="assets/images/readmetitle.webp" alt="insert header here" width="100%"/>
 
-[WebDevination](https://kimjev-webdev.github.io/webdevination/) is a portmanteau of *web development* and *divination*, combining the ancient art of tarot reading with the power of modern technology. The interactive tarot game is designed to offer a unique user experience that brings the mystical world of fortune-telling within a digital framework.
+[WebDevination](https://kimjev-webdev.github.io/webdevination/) is a portmanteau of *web development* and *divination*, combining the ancient art of tarot reading with the power of modern technology. The interactive tarot game is designed to offer a unique user experience that updates fortune-telling within a digital framework.
 
 With design influences drawn from the classic terminal interface, the site immerses the user in the mysterious sensibility of fortune telling in cyberspace; the concept of *techno-divination* seeks to refresh the personal, intimate nature of tarot readings, offering an intuitive, authentic experience that guides users on a journey of self-discovery. 
 
