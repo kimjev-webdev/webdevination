@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add event listener for container click or tap
     container.addEventListener('click', function() {
-        window.location.href = "./tarot.html"; // Redirect to tarot.html when clicked or tapped
+        window.location.href = "./info.html"; // Redirect to tarot.html when clicked or tapped
     });
 
     // Start the animation when the page loads
