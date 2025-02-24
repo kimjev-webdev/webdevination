@@ -139,6 +139,7 @@ letter-spacing: 1vw;
   text-decoration: none !important;
   background-color: transparent;
   transform: scale(1.1);
+  outline: transparent !important;
 }
 
 button.btn.btn-link.enter-button:hover
