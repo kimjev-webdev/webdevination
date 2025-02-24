@@ -231,6 +231,64 @@ body .info, html {
   word-wrap: break-word;
 }
 
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out;
+}
+
+.card-button {
+  margin: 10px;
+  background-color: transparent;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start below */
+}
+
+.card-button:hover {
+  background-color: transparent;
+  text-decoration: none;
+  animation: flashText 1s infinite;
+  transform: scale(1.1);
+}
+
+.card-button:focus {
+  outline: none;
+}
+
+.explanation {
+  margin-top: 10px;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  font-family: 'Cascadia Code', Courier, monospace;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start below */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* For when the explanation text should appear */
+.explanation.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to normal position */
+}
+
+.card-button.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to normal position */
+}
+
+
 
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
