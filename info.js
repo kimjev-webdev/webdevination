@@ -1,5 +1,10 @@
 const terminalTextElement = document.getElementById('terminalText');
 const skipButton = document.getElementById('skipButton');
+const buttonsContainer = document.getElementById('buttons-container');
+const pickOneCardButton = document.getElementById('pickOneCard');
+const pickThreeCardsButton = document.getElementById('pickThreeCards');
+const pickOneExplanation = document.getElementById('pickOneExplanation');
+const pickThreeExplanation = document.getElementById('pickThreeExplanation');
 
 // Sample text that will be "typed" out
 const textToType = [
@@ -26,7 +31,30 @@ function typeText() {
             currentCharIndex = 0;
             setTimeout(typeText, 500); // Wait a bit before typing the next line
         }
+    } else {
+        // Show buttons and their explanations after typing finishes
+        showButtons();
     }
+}
+
+// Show the buttons with smooth transitions
+function showButtons() {
+    buttonsContainer.style.opacity = 1; // Make the container visible
+    setTimeout(() => {
+        pickOneCardButton.classList.add('visible'); // Make first button visible
+    }, 500); // Delay to give time for container to show
+
+    setTimeout(() => {
+        pickThreeCardsButton.classList.add('visible'); // Make second button visible
+    }, 1000); // Delay the second button
+
+    setTimeout(() => {
+        pickOneExplanation.classList.add('visible'); // Show explanation for first button
+    }, 1500); // Delay for explanation
+
+    setTimeout(() => {
+        pickThreeExplanation.classList.add('visible'); // Show explanation for second button
+    }, 1500); // Both explanations appear at once
 }
 
 // Start typing the text when the page loads
