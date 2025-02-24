@@ -6,7 +6,9 @@
   box-sizing: border-box;
 }
 
-body {
+/* styles for the landing page */
+
+body .landing {
   background-color: #000;
   background-image: url('./images/tarotbg.jpeg');
   font-family: 'Tourney', monospace;
@@ -18,8 +20,6 @@ body {
   margin: 0;
   color: rgb(174, 255, 0); /* Green glow text */
 }
-
-/* styles for the landing page */
 
 .container {
   display: flex;
@@ -160,7 +160,7 @@ transform: scale(1.1);
   font-size: 1rem;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  font-family: 'Cascadia Code', monospace;
+  font-family: 'Cascadia Code', Courier, monospace;
 }
 
 .rotate-icon .material-icons {
@@ -177,6 +177,61 @@ transform: scale(1.1);
   color: rgb(174, 255, 0);
 }
 
+/* styles for info page */
+
+/* Set the page to look like a terminal */
+body .info, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: black;
+  font-family: 'Cascadia Code', Courier, monospace;
+}
+
+.terminal {
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.skip-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.skip-button:hover {
+  background-color: transparent;
+  text-decoration: none;
+  animation: flashText 1s infinite;
+  transform: scale(1.1);
+
+}
+
+.skip-button:focus {
+  outline: none;
+}
+
+#terminalText {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+/* media query */
 /* Move icons on landing page up slightly on phones and tablets */
 
 @media (min-width: 300px) and (max-width: 370px) {
