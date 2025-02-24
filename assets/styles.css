@@ -8,7 +8,7 @@
 
 /* styles for the landing page */
 
-body .landing {
+body.landing {
   background-color: #000;
   background-image: url('./images/tarotbg.jpeg');
   font-family: 'Tourney', monospace;
