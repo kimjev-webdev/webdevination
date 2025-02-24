@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to handle 'Enter' button click
     button.addEventListener('click', function() {
-        window.location.href = "./tarot.html"; // Replace with your desired URL
+        window.location.href = "./info.html"; // Replace with your desired URL
     });
 
     // Add event listener for container click or tap
@@ -67,3 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // Start the animation when the page loads
     animateLetters();
 });
+

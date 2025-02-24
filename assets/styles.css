@@ -1,3 +1,5 @@
+/* general styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +18,8 @@ body {
   margin: 0;
   color: rgb(174, 255, 0); /* Green glow text */
 }
+
+/* styles for the landing page */
 
 .container {
   display: flex;
@@ -44,7 +48,8 @@ body {
   }
 }
 
-/* Keyframes to rotate the icon continuously */
+/* keyframes to rotate the rotate screen icon continuously */
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg); /* Start at 0 degrees */
