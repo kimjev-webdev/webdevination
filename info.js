@@ -3,8 +3,9 @@ const skipButton = document.getElementById('skipButton');
 
 // Sample text that will be "typed" out
 const textToType = [
-    "Welcome to WebDevination!\n",
-    "The cards are waiting to light your way on an exciting journey of self discovery.\n",
+    "Welcome Seeker!\n",
+    "It seems you are eager to embark on your journey of self discovery.\n",
+    "The cards are waiting to light your way.\n",
     "Two paths lay before you, but which one will you choose?\n",
 ];
 
