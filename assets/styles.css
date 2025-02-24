@@ -190,6 +190,7 @@ body .info, html {
 }
 
 .terminal {
+  background-color: #000;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
   padding: 20px;
@@ -232,6 +233,7 @@ body .info, html {
 }
 
 .buttons-container {
+  background-color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
