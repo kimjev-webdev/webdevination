@@ -16,9 +16,10 @@ const textToType = [
 
 let currentTextIndex = 0;
 let currentCharIndex = 0;
+let typingInProgress = true; // Flag to control if typing is in progress
 
 function typeText() {
-    if (currentTextIndex < textToType.length) {
+    if (typingInProgress && currentTextIndex < textToType.length) {
         let currentText = textToType[currentTextIndex];
         if (currentCharIndex < currentText.length) {
             terminalTextElement.textContent += currentText[currentCharIndex];
@@ -31,7 +32,7 @@ function typeText() {
             currentCharIndex = 0;
             setTimeout(typeText, 500); // Wait a bit before typing the next line
         }
-    } else {
+    } else if (currentTextIndex >= textToType.length) {
         // Show buttons and their explanations after typing finishes
         showButtons();
     }
@@ -62,5 +63,12 @@ window.onload = typeText;
 
 // Skip button functionality
 skipButton.addEventListener('click', () => {
-    window.location.href = './tarot.html'; // Redirect to tarot.html when the button is clicked
+    // Stop typing and set the flag to false
+    typingInProgress = false;
+
+    // Immediately display all the text (no typing)
+    terminalTextElement.textContent = textToType.join('');
+
+    // Show buttons and explanations without delay
+    showButtons();
 });
