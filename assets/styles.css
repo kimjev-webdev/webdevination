@@ -182,9 +182,9 @@ transform: scale(1.1);
 
 /* Set the page to look like a terminal */
 body.info, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+  margin: 10px;
+  padding: 20px;
+  height: 100vh;
   background-color: black;
   font-family: 'Cascadia Code', Courier, monospace;
 }
@@ -194,7 +194,6 @@ body.info, html {
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
   padding: 20px;
-  height: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -236,6 +235,8 @@ body.info, html {
 .buttons-container {
   background-color: #000;
   align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-top: 20px;
   opacity: 0; /* Initially hidden */
   transition: opacity 1s ease-in-out;
@@ -289,6 +290,11 @@ body.info, html {
 .explanation.visible {
     opacity: 1 !important;
     transform: translateY(0); /* Move to normal position */
+}
+
+.card-button.visible:hover {
+  animation: flashText 1s infinite;
+  transform: scale(1.1);
 }
 
 

@@ -67,6 +67,12 @@ function showButtons() {
         pickThreeExplanation.classList.add('visible'); // Show explanation for pickThreeCards
     }, 1500);
 
+    // Start timer for flashing animation after 10 seconds
+    setTimeout(() => {
+        pickOneCardButton.classList.add('flashing'); // Add flashing class to the first button
+        pickThreeCardsButton.classList.add('flashing'); // Add flashing class to the second button
+    }, 10000); // 10 seconds
+
     // Hide skip button after text is finished
     skipButton.style.display = 'none';
 }
