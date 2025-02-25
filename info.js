@@ -77,6 +77,21 @@ function showButtons() {
     skipButton.style.display = 'none';
 }
 
+// Flash text when hovering
+function addFlashOnHover(button) {
+    button.addEventListener('mouseenter', () => {
+        button.classList.add('flashing'); // Start flashing on hover
+    });
+
+    button.addEventListener('mouseleave', () => {
+        button.classList.remove('flashing'); // Stop flashing when hover ends
+    });
+}
+
+// Apply flash effect to the card buttons on hover
+addFlashOnHover(pickOneCardButton);
+addFlashOnHover(pickThreeCardsButton);
+
 // Skip button functionality
 skipButton.addEventListener('click', () => {
     typingInProgress = false; // Stop typing
