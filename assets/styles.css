@@ -181,7 +181,7 @@ transform: scale(1.1);
 /* styles for info page */
 
 /* Set the page to look like a terminal */
-body .info, html {
+body.info, html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -205,6 +205,7 @@ body .info, html {
   position: fixed;
   bottom: 10px;
   right: 10px;
+  font-family: 'Tourney', monospace;
   background-color: transparent;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
@@ -234,8 +235,6 @@ body .info, html {
 
 .buttons-container {
   background-color: #000;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   margin-top: 20px;
   opacity: 0; /* Initially hidden */
@@ -245,15 +244,15 @@ body .info, html {
 .card-button {
   margin: 10px;
   background-color: transparent;
+  font-family: 'Tourney', monospace;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
   padding: 10px 20px;
   border: none;
-  font-size: 16px;
+  font-size: 3vw;
   cursor: pointer;
   transition: 0.3s;
   opacity: 0; /* Initially hidden */
-  transform: translateY(20px); /* Start below */
 }
 
 .card-button:hover {
@@ -273,9 +272,9 @@ body .info, html {
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
   font-family: 'Cascadia Code', Courier, monospace;
   font-size: 14px;
-  text-align: center;
+  text-align: left;
   opacity: 0; /* Initially hidden */
-  transform: translateY(20px); /* Start below */
+  transform: translateY(-20px); /* Start below */
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
