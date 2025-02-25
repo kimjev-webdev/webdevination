@@ -279,14 +279,16 @@ body.info, html {
 }
 
 /* For when the explanation text should appear */
-.explanation.visible {
-  opacity: 1;
+.visible {
+  opacity: 1 !important;
   transform: translateY(0); /* Move to normal position */
 }
 
-.card-button.visible {
-  opacity: 1;
-  transform: translateY(0); /* Move to normal position */
+.buttons-container.visible,
+.card-button.visible,
+.explanation.visible {
+    opacity: 1 !important;
+    transform: translateY(0); /* Move to normal position */
 }
 
 

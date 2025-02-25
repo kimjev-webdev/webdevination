@@ -1,3 +1,4 @@
+// Elements
 const terminalTextElement = document.getElementById('terminalText');
 const skipButton = document.getElementById('skipButton');
 const buttonsContainer = document.getElementById('buttons-container');
@@ -6,7 +7,7 @@ const pickThreeCardsButton = document.getElementById('pickThreeCards');
 const pickOneExplanation = document.getElementById('pickOneExplanation');
 const pickThreeExplanation = document.getElementById('pickThreeExplanation');
 
-// Sample text that will be "typed" out
+// Text to be typed out
 const textToType = [
     "Welcome Seeker!\n",
     "It seems you are eager to embark on your journey of self discovery...\n",
@@ -14,61 +15,70 @@ const textToType = [
     "Two paths lay before you, but which one will you choose?\n",
 ];
 
+// State variables
 let currentTextIndex = 0;
 let currentCharIndex = 0;
-let typingInProgress = true; // Flag to control if typing is in progress
+let typingInProgress = true;
 
+// Type the terminal text
 function typeText() {
     if (typingInProgress && currentTextIndex < textToType.length) {
-        let currentText = textToType[currentTextIndex];
+        const currentText = textToType[currentTextIndex];
+        
         if (currentCharIndex < currentText.length) {
             terminalTextElement.textContent += currentText[currentCharIndex];
             currentCharIndex++;
-            setTimeout(typeText, 100); // Adjust speed by changing the timeout value
+            setTimeout(typeText, 100); // Adjust typing speed
         } else {
-            // Move to the next line after the current text is typed out
+            // After typing a line, move to the next line after a delay
             terminalTextElement.textContent += '\n';
             currentTextIndex++;
             currentCharIndex = 0;
-            setTimeout(typeText, 500); // Wait a bit before typing the next line
+            setTimeout(typeText, 500); // Adjust delay between lines
         }
     } else if (currentTextIndex >= textToType.length) {
-        // Show buttons and their explanations after typing finishes
+        // Once typing is done, show buttons and explanations
         showButtons();
     }
 }
 
-// Show the buttons with smooth transitions
+// Show buttons and explanations
 function showButtons() {
-    buttonsContainer.style.opacity = 1; // Make the container visible
-    setTimeout(() => {
-        pickOneCardButton.classList.add('visible'); // Make first button visible
-    }, 500); // Delay to give time for container to show
+    // Make buttons and explanations visible
+    buttonsContainer.style.opacity = 1; // Make the buttons container visible
 
+    // Make the pickOneCard button visible
     setTimeout(() => {
-        pickThreeCardsButton.classList.add('visible'); // Make second button visible
-    }, 1000); // Delay the second button
+        pickOneCardButton.classList.add('visible'); // Show pickOneCard button
+    }, 500);
 
+    // Make the pickThreeCards button visible
     setTimeout(() => {
-        pickOneExplanation.classList.add('visible'); // Show explanation for first button
-    }, 1500); // Delay for explanation
+        pickThreeCardsButton.classList.add('visible'); // Show pickThreeCards button
+    }, 1000);
 
+    // Make the pickOneExplanation visible
     setTimeout(() => {
-        pickThreeExplanation.classList.add('visible'); // Show explanation for second button
-    }, 1500); // Both explanations appear at once
+        pickOneExplanation.classList.add('visible'); // Show explanation for pickOneCard
+    }, 1500);
+
+    // Make the pickThreeExplanation visible
+    setTimeout(() => {
+        pickThreeExplanation.classList.add('visible'); // Show explanation for pickThreeCards
+    }, 1500);
+
+    // Hide skip button after text is finished
+    skipButton.style.display = 'none';
 }
-
-// Start typing the text when the page loads
-window.onload = typeText;
 
 // Skip button functionality
 skipButton.addEventListener('click', () => {
-    // Stop typing and set the flag to false
-    typingInProgress = false;
+    typingInProgress = false; // Stop typing
+    terminalTextElement.textContent = textToType.join(''); // Display all the text at once
 
-    // Immediately display all the text (no typing)
-    terminalTextElement.textContent = textToType.join('');
-
-    // Show buttons and explanations without delay
+    // Show buttons and explanations immediately
     showButtons();
 });
+
+// Start typing text when the page loads
+window.onload = typeText;
