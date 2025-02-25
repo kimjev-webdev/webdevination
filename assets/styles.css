@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 /* styles for the landing page */
 
 body.landing {
@@ -238,9 +237,11 @@ html {
   outline: none;
 }
 
-#terminalText {
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  #terminalText {
+    white-space: normal;        /* Allow text to wrap */
+    word-wrap: break-word;      /* Ensure words break properly when reaching the container's edge */
+    line-height: 1.5;           /* Adjust line-height for proper spacing between lines */
+    overflow: hidden;           /* Prevent overflow */
 }
 
 .buttons-container {
@@ -270,6 +271,7 @@ html {
 
 .card-button:hover {
   background-color: transparent;
+  animation: flashText 1s infinite;
   text-decoration: none;
   transform: scale(1.1);
 }
@@ -303,11 +305,8 @@ html {
   transform: translateY(0); /* Move to normal position */
 }
 
-.card-button.visible:hover {
+.visible.card-button:hover {
   transform: scale(1.1);
-}
-
-.card-button.flashing {
   animation: flashText 1s infinite;
 }
 

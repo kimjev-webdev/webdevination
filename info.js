@@ -10,8 +10,8 @@ const pickThreeExplanation = document.getElementById('pickThreeExplanation');
 // Text to be typed out
 const textToType = [
     "Welcome Seeker!\n",
-    "It seems you are eager to embark on your journey of self discovery...\n",
-    "The cards are waiting to light your way.\n",
+    "I sense that you are eager to embark on a journey of self discovery...\n",
+    "The cards are waiting to guide your way!\n",
     "Two paths lay before you, but which one will you choose?\n",
 ];
 
@@ -67,30 +67,9 @@ function showButtons() {
         pickThreeExplanation.classList.add('visible'); // Show explanation for pickThreeCards
     }, 1500);
 
-    // Start timer for flashing animation after 10 seconds
-    setTimeout(() => {
-        pickOneCardButton.classList.add('flashing'); // Add flashing class to the first button
-        pickThreeCardsButton.classList.add('flashing'); // Add flashing class to the second button
-    }, 10000); // 10 seconds
-
     // Hide skip button after text is finished
     skipButton.style.display = 'none';
 }
-
-// Flash text when hovering
-function addFlashOnHover(button) {
-    button.addEventListener('mouseenter', () => {
-        button.classList.add('flashing'); // Start flashing on hover
-    });
-
-    button.addEventListener('mouseleave', () => {
-        button.classList.remove('flashing'); // Stop flashing when hover ends
-    });
-}
-
-// Apply flash effect to the card buttons on hover
-addFlashOnHover(pickOneCardButton);
-addFlashOnHover(pickThreeCardsButton);
 
 // Skip button functionality
 skipButton.addEventListener('click', () => {
