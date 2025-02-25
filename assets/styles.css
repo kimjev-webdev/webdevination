@@ -305,7 +305,7 @@ html {
   transform: translateY(0); /* Move to normal position */
 }
 
-.visible.card-button:hover {
+.card-button.visible:hover {
   transform: scale(1.1);
   animation: flashText 1s infinite;
 }
