@@ -10,11 +10,14 @@
 
 body.landing {
   background-color: #000;
-  background-image: url('./assets/images/tarotbg.webp');
-  font-family: 'Tourney', monospace;
+  background-image: url('./assets/images/tarotbg.jpeg');
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat; /* Adjust as needed */
+  background-position: center;
+  font-family: "Tourney", monospace;
   display: flex;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -30,21 +33,24 @@ body.landing {
   position: absolute;
   width: 100vw;
   height: 30vh;
-  top: 50%;            /* Move the top of the container to the center of the viewport */
-  left: 50%;           /* Move the left of the container to the center of the viewport */
-  transform: translate(-50%, -50%);  /* Offset the container by half its width and height */ 
+  top: 50%; /* Move the top of the container to the center of the viewport */
+  left: 50%; /* Move the left of the container to the center of the viewport */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Offset the container by half its width and height */
   white-space: nowrap;
 }
 
 @keyframes flashText {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
   50% {
-      opacity: 0.2;
+    opacity: 0.2;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -105,9 +111,12 @@ body.landing {
   flex-direction: column;
   z-index: 2;
   position: absolute;
-  top: 50%;            /* Move the top of the container to the center of the viewport */
-  left: 50%;           /* Move the left of the container to the center of the viewport */
-  transform: translate(-50%, -50%);  /* Offset the container by half its width and height */ 
+  top: 50%; /* Move the top of the container to the center of the viewport */
+  left: 50%; /* Move the left of the container to the center of the viewport */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Offset the container by half its width and height */
 }
 
 .container:hover .overlay {
@@ -115,7 +124,7 @@ body.landing {
 }
 
 .enter-button {
-  box-shadow: none; 
+  box-shadow: none;
   display: inline-block;
   background-color: transparent;
   text-decoration: none !important;
@@ -124,9 +133,9 @@ body.landing {
   padding: 3vh;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-font-family: 'Tourney', monospace;
-font-size: 4.5vw;
-letter-spacing: 1vw;
+  font-family: "Tourney", monospace;
+  font-size: 4.5vw;
+  letter-spacing: 1vw;
 }
 
 /* Apply the flash effect to the button text */
@@ -142,13 +151,15 @@ letter-spacing: 1vw;
   outline: transparent !important;
 }
 
-button.btn.btn-link.enter-button:hover
-{ text-decoration: none !important;
-background-color: transparent !important;
-transform: scale(1.1);
+button.btn.btn-link.enter-button:hover {
+  text-decoration: none !important;
+  background-color: transparent !important;
+  transform: scale(1.1);
 }
 
-.container, .overlay, .enter-button {
+.container,
+.overlay,
+.enter-button {
   cursor: pointer;
 }
 
@@ -161,7 +172,7 @@ transform: scale(1.1);
   font-size: 1rem;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  font-family: 'Cascadia Code', Courier, monospace;
+  font-family: "Cascadia Code", Courier, monospace;
 }
 
 .rotate-icon .material-icons {
@@ -181,12 +192,13 @@ transform: scale(1.1);
 /* styles for info page */
 
 /* Set the page to look like a terminal */
-body.info, html {
+body.info,
+html {
   margin: 10px;
   padding: 20px;
   height: 100vh;
   background-color: black;
-  font-family: 'Cascadia Code', Courier, monospace;
+  font-family: "Cascadia Code", Courier, monospace;
 }
 
 .terminal {
@@ -204,7 +216,7 @@ body.info, html {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  font-family: 'Tourney', monospace;
+  font-family: "Tourney", monospace;
   background-color: transparent;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
@@ -220,7 +232,6 @@ body.info, html {
   text-decoration: none;
   animation: flashText 1s infinite;
   transform: scale(1.1);
-
 }
 
 .skip-button:focus {
@@ -246,7 +257,7 @@ body.info, html {
   display: block;
   margin: auto;
   background-color: transparent;
-  font-family: 'Tourney', monospace;
+  font-family: "Tourney", monospace;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
   padding: 10px 20px;
@@ -271,7 +282,7 @@ body.info, html {
   margin-top: 10px;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  font-family: 'Cascadia Code', monospace;
+  font-family: "Cascadia Code", monospace;
   font-size: 14px;
   text-align: left;
   opacity: 0; /* Initially hidden */
@@ -288,8 +299,8 @@ body.info, html {
 .buttons-container.visible,
 .card-button.visible,
 .explanation.visible {
-    opacity: 1 !important;
-    transform: translateY(0); /* Move to normal position */
+  opacity: 1 !important;
+  transform: translateY(0); /* Move to normal position */
 }
 
 .card-button.visible:hover {
@@ -300,7 +311,6 @@ body.info, html {
   animation: flashText 1s infinite;
 }
 
-
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
 
@@ -308,59 +318,54 @@ body.info, html {
   .letter i.material-icons {
     font-size: 4.5vw;
     margin-top: 0vh;
-    transform: translate(-2vw, 0.2vh); 
+    transform: translate(-2vw, 0.2vh);
   }
 
   .rotate-icon .material-icons {
     margin-top: 85vh;
+  }
 }
-}
 
-
-
-@media (min-width:370px) and (max-width: 576px) {
+@media (min-width: 370px) and (max-width: 576px) {
   .letter i.material-icons {
     font-size: 4.5vw;
     margin-top: 0vh;
-    transform: translate(-2vw, 0vh); 
+    transform: translate(-2vw, 0vh);
   }
 
   .rotate-icon .material-icons {
     margin-top: 84.5vh;
-}
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
   .rotate-icon .material-icons {
     margin-top: 86vh;
-}
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .rotate-icon .material-icons {
     margin-top: 85vh;
+  }
 }
-}
-  
-  
-
 
 /* Show the rotate screen icon and prompt on devices with portrait orientation */
 @media only screen and (orientation: portrait) {
   .rotate-prompt {
-      display: block;
+    display: block;
   }
   .rotate-icon {
-      display: block;
+    display: block;
   }
 }
 
 @media only screen and (orientation: landscape) {
-.rotate-icon {
-      display: none;
+  .rotate-icon {
+    display: none;
   }
 
   .rotate-prompt {
-      display: none;
+    display: none;
   }
 }
