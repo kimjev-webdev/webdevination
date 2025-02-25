@@ -10,7 +10,7 @@
 
 body.landing {
   background-color: #000;
-  background-image: url('./assets/images/tarotbg.jpeg');
+  background-image: url('../assets/images/tarotbg.webp');
   background-size: cover; /* Adjust as needed */
   background-repeat: no-repeat; /* Adjust as needed */
   background-position: center;
