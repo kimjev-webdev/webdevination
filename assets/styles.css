@@ -260,7 +260,6 @@ body.info, html {
 .card-button:hover {
   background-color: transparent;
   text-decoration: none;
-  animation: flashText 1s infinite;
   transform: scale(1.1);
 }
 
@@ -295,10 +294,9 @@ body.info, html {
 
 .card-button.visible:hover {
   transform: scale(1.1);
-  animation: flashText 1s infinite;
 }
 
-.flashing {
+.card-button.flashing {
   animation: flashText 1s infinite;
 }
 
