@@ -10,7 +10,7 @@
 
 body.landing {
   background-color: #000;
-  background-image: url('./assets\images\tarotbg.webp');
+  background-image: url('./assets//images/tarotbg.webp');
   font-family: 'Tourney', monospace;
   display: flex;
   justify-content: center;
