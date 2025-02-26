@@ -189,6 +189,11 @@ button.btn.btn-link.enter-button:hover {
 }
 
  /* Navbar background and tab styling */
+ i.fa-pasted-svg-1 {
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  margin-left: 10px;
+ }
+ 
  .navbar {
   background-color: black;
   padding: 20px 0;
