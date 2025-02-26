@@ -315,6 +315,7 @@ html {
 .card-button {
   display: block;
   margin: auto;
+  text-decoration: none;
   background-color: transparent;
   font-family: "Tourney", monospace;
   color: rgb(174, 255, 0);
@@ -336,6 +337,7 @@ html {
 
 .card-button:focus {
   outline: none;
+  animation: flashText 1s infinite;
 }
 
 .explanation {
@@ -359,12 +361,19 @@ html {
 .buttons-container.visible,
 .card-button.visible,
 .explanation.visible {
+  text-decoration: none;
   opacity: 1 !important;
   transform: translateY(0); /* Move to normal position */
 }
-.card-button.visible:hover {
+
+a.card-button.visible:hover {
   transform: scale(1.1);
   animation: flashText 1s infinite;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(174, 255, 0);
 }
 
 /* media query */
