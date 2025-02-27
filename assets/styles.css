@@ -249,8 +249,7 @@ button.btn.btn-link.enter-button:hover {
 /* styles for info page */
 
 /* Set the page to look like a terminal */
-body.info,
-html {
+body.info {
   margin: 10px;
   padding: 20px;
   height: 100vh;
@@ -312,7 +311,7 @@ html {
   transition: opacity 1s ease-in-out;
 }
 
-.card-button {
+.card-button  {
   display: block;
   margin: auto;
   text-decoration: none;
@@ -326,6 +325,7 @@ html {
   cursor: pointer;
   transition: 0.3s;
   opacity: 0; /* Initially hidden */
+  text-transform: capitalize;
 }
 
 .card-button:hover {
@@ -375,6 +375,60 @@ a {
   text-decoration: none;
   color: rgb(174, 255, 0);
 }
+
+body.cards {
+  margin: 10px;
+  padding: 20px;
+  height: 100vh;
+  background-image: url('../assets/images/tarotbg.webp') !important; 
+}
+
+.accordion-item {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.accordion-body {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.accordion-button {
+  text-align: center !important;
+  background-color: transparent !important;
+  color: rgb(174, 255, 0) !important;
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  font-family: "Tourney", monospace;
+  font-size: 3vw;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer !important;
+  transition: 0.3s;
+  border: none !important;
+  box-shadow: none !important;
+  display: block;
+  animation: flashText 1s infinite;
+}
+
+.card-body {
+  background-color: transparent !important;
+  border: none;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  font-family: "Cascadia Code", monospace;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.card {
+  background-color: transparent !important;
+}
+
+.card-img , .card-img-top {
+  border-radius: 15px !important;
+}
+
 
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
