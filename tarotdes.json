@@ -1,0 +1,136 @@
+{
+  "tarot": [
+    {
+      "name": "The Fool",
+      "image": "../assets/images/cardfronts/thefool.webp",
+      "interpretation": "The Fool is a card of new beginnings, inviting you to embrace spontaneity and embark on a new adventure with faith. In love, it speaks of a fresh start and the potential for an exciting connection. Career-wise, it encourages taking a leap of faith or starting something unconventional. Financially, it warns against rash decisions but celebrates freedom and potential. In health, it asks you to listen to your body and embrace the unknown.",
+      "response": "Maybe"
+    },
+    {
+      "name": "The Magician",
+      "image": "../assets/images/cardfronts/themagician.webp",
+      "interpretation": "The Magician is a card of manifestation and power. In love, it indicates confidence and attraction, where you have the tools to create the relationship you desire. For your career, it signals a time when your skills will allow you to succeed. Financially, it suggests you have the ability to manifest wealth through hard work. In terms of health, it reminds you to take charge of your well-being.",
+      "response": "Yes"
+    },
+    {
+      "name": "The High Priestess",
+      "image": "../assets/images/cardfronts/thehighpriestess.webp",
+      "interpretation": "The High Priestess is all about intuition, mystery, and inner wisdom. In love, it speaks to hidden feelings or needing to trust your gut in your relationships. Career-wise, it suggests you may not have all the answers but trusting yourself foremost will lead you to success. In money, it advises caution and looking beyond the surface. For health, listen to your body’s quiet signals.",
+      "response": "Maybe"
+    },
+    {
+      "name": "The Empress",
+      "image": "../assets/images/cardfronts/theempress.webp",
+      "interpretation": "The Empress represents abundance, nurturing, and creativity. In love, it signifies deep, caring relationships and fertility. Career-wise, it signals growth, creativity, and a period of prosperity. For finances, this card indicates the potential for a comfortable and abundant life. Health-wise, it asks you to nurture yourself and enjoy the pleasures of life.",
+      "response": "Yes"
+    },
+    {
+      "name": "The Emperor",
+      "image": "../assets/images/cardfronts/theemperor.webp",
+      "interpretation": "The Emperor symbolizes leadership, authority, and stability. In love, it reflects a strong relationship where security is a priority. In career, it suggests a position of power, or the need to assert control and be ambitious. Financially, it represents stability and the need for a solid foundation. In health, it reflects strong discipline and control.",
+      "response": "Yes"
+    },
+    {
+      "name": "The Hierophant",
+      "image": "../assets/images/cardfronts/thehierophant.webp",
+      "interpretation": "The Hierophant stands for tradition, spirituality, and guidance. In love, it suggests seeking stability and perhaps a relationship that follows traditional values. Career-wise, it indicates the importance of mentorship or following established paths. With money, it advises staying within your comfort zone and avoiding risky ventures. In health, it suggests a need for discipline and regular routines.",
+      "response": "Maybe"
+    },
+    {
+      "name": "The Lovers",
+      "image": "../assets/images/cardfronts/thelovers.webp",
+      "interpretation": "The Lovers speak of deep connections and choices. In love, it signifies harmony and a strong emotional bond. In career, it can indicate making a partnership or key decision. Financially, it warns of needing to make an important choice that could impact your security. In health, it suggests balance and harmonious energy.",
+      "response": "Yes"
+    },
+    {
+      "name": "The Chariot",
+      "image": "../assets/images/cardfronts/thechariot.webp",
+      "interpretation": "The Chariot is about victory through determination and control. In love, it suggests triumph over obstacles and the need to keep pushing forward. Career-wise, it speaks to achieving success through focus and willpower. In money, it advises staying strong and disciplined to reach your goals. Health-wise, it encourages taking action for self-improvement.",
+      "response": "Yes"
+    },
+    {
+      "name": "Strength",
+      "image": "../assets/images/cardfronts/strength.webp",
+      "interpretation": "Strength symbolizes inner power, courage, and resilience. In love, it indicates a strong, compassionate relationship built on patience and understanding. Career-wise, it speaks to overcoming challenges with determination. Financially, it suggests that through inner strength and perseverance, success is possible. For health, it emphasizes strength and vitality.",
+      "response": "Yes"
+    },
+    {
+      "name": "The Hermit",
+      "image": "../assets/images/cardfronts/thehermit.webp",
+      "interpretation": "The Hermit is about introspection, wisdom, and solitude. In love, it may indicate a period of reflection or a need for alone time before moving forward. Career-wise, it suggests a need to take time out and reconsider your path. For finances, it advises a cautious and introspective approach. In health, it suggests the need for rest and self-reflection.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Wheel of Fortune",
+      "image": "../assets/images/cardfronts/wheelfortune.webp",
+      "interpretation": "The Wheel of Fortune signifies cycles, destiny, and luck. In love, it can indicate a change in your romantic situation—possibly for the better. Career-wise, it points to unexpected shifts and opportunities. For money, it suggests fluctuating fortunes, will luck be on your side? In health, it signifies changes in your condition, for the better or for worse.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Justice",
+      "image": "../assets/images/cardfronts/justice.webp",
+      "interpretation": "Justice represents fairness, truth, and balance. In love, it indicates a relationship based on fairness and equality. Career-wise, it speaks to decisions that need to be made with integrity. With money, it advises making financial choices based on fairness and balance. In health, it reflects the importance of maintaining equilibrium.",
+      "response": "Yes"
+    },
+    {
+      "name": "The Hanged Man",
+      "image": "../assets/images/cardfronts/thehangedman.webp",
+      "interpretation": "The Hanged Man is about sacrifice, new perspectives, and waiting. In love, it suggests needing to pause and view the relationship from a different angle. Career-wise, it indicates a time to reflect before making a move. For money, it suggests that things are in a holding pattern. In health, it warns of delays or needing rest to see things clearly.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Death",
+      "image": "../assets/images/cardfronts/death.webp",
+      "interpretation": "Death is a card of transformation and rebirth. In love, it can indicate the end of a cycle, making way for something new. Career-wise, it signals a major change that may lead to new opportunities. Financially, it suggests the end of one phase and the beginning of another. In health, it calls for letting go of old habits.",
+      "response": "No"
+    },
+    {
+      "name": "Temperance",
+      "image": "../assets/images/cardfronts/temperance.webp",
+      "interpretation": "Temperance is about balance, moderation, and harmony. In love, it advises patience and finding balance within the relationship. In career, it suggests a balanced approach to challenges. For finances, it speaks to managing resources wisely and harmoniously. In health, it indicates a time to adopt moderation and healthy routines.",
+      "response": "Maybe"
+    },
+    {
+      "name": "The Devil",
+      "image": "../assets/images/cardfronts/thedevil.webp",
+      "interpretation": "The Devil symbolizes temptation, addiction, and materialism. In love, it may represent unhealthy attachments or toxic relationships. Career-wise, it could indicate feeling stuck or trapped in a situation. Financially, it suggests caution and avoiding excess. For health, it warns against overindulgence.",
+      "response": "No"
+    },
+    {
+      "name": "The Tower",
+      "image": "../assets/images/cardfronts/thetower.webp",
+      "interpretation": "The Tower signifies sudden upheaval, destruction, and liberation. In love, it indicates a shocking or unexpected event that could change the relationship. Career-wise, it could mean a dramatic shift or disruption. Financially, it warns of unexpected losses or events. In health, it signifies sudden changes or revelations.",
+      "response": "No"
+    },
+    {
+      "name": "The Star",
+      "image": "../assets/images/cardfronts/thestar.webp",
+      "interpretation": "The Star is a card of hope, inspiration, and renewal. In love, it speaks to peace and healing in your relationship. Career-wise, it represents hope and a time of positive direction. Financially, it signals blessings and recovery from hardships. In health, it brings a sense of rejuvenation and vitality.",
+      "response": "Yes"
+    },
+    {
+      "name": "The Moon",
+      "image": "../assets/images/cardfronts/themoon.webp",
+      "interpretation": "The Moon signifies illusion, intuition, and secrets. In love, it warns of deception or uncertainty, urging you to tap into your intuition. Career-wise, it suggests navigating uncertainty and listening to your inner voice. With money, it advises caution and avoiding illusions. In health, it warns of hidden issues or confusion.",
+      "response": "Maybe"
+    },
+    {
+      "name": "The Sun",
+      "image": "../assets/images/cardfronts/thesun.webp",
+      "interpretation": "The Sun represents clarity, success, and positivity. In love, it signals happiness and harmony within a relationship. Career-wise, it indicates success and achievement. Financially, it speaks to abundance and prosperity. In health, it signifies vitality and overall well-being.",
+      "response": "Yes"
+    },
+    {
+      "name": "Judgement",
+      "image": "../assets/images/cardfronts/judgement.webp",
+      "interpretation": "Judgement symbolizes awakening, transformation, and self-reflection. In love, it speaks of the transformative powers of a relationship, where both partners grow and evolve. Career-wise, it suggests the need to evaluate past decisions and make a fresh start. With money, it indicates a financial awakening and a chance to move forward. In health, it signals recovery and spiritual renewal.",
+      "response": "Yes"
+    },
+    {
+      "name": "The World",
+      "image": "../assets/images/cardfronts/theworld.webp",
+      "interpretation": "The World represents completion, wholeness, and fulfillment. In love, it signifies a fulfilling and balanced relationship. Career-wise, it indicates success, recognition, and the end of a cycle. For finances, it speaks of abundance, achievement, and completion. In health, it reflects a time of good overall health and vitality.",
+      "response": "Yes"
+    }
+  ]
+}
