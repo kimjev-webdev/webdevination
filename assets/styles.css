@@ -433,7 +433,7 @@ body.onecard {
   background-color: #000;
   background-image: url('../assets/images/tarotbg.webp');
   margin-top: 70px; /* Add margin-top to ensure the content is below the navbar */
-  max-height: 100%;
+  max-height: 100vh;
 }
 
 #deck {
@@ -453,9 +453,13 @@ body.onecard {
   z-index: 0;
 }
 
-button.onebutton {
+.dealcol {
+postion: absolute;
+bottom: 0;
+}
+
+button.shufflebtn, button.dealbtn {
   box-shadow: none;
-  display: inline-block;
   background-color: transparent !important;
   text-decoration: none !important;
   text-align: center;
@@ -469,6 +473,9 @@ button.onebutton {
   border: transparent !important;
   text-transform: capitalize !important;
 }
+
+
+
 
 #selected-cardone {
   position: relative;
