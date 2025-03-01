@@ -447,8 +447,10 @@ button.onebutton {
     color: rgb(174, 255, 0) !important;
     text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a !important;
     font-family: "Tourney", monospace !important;
-    font-size: 4.5vw !important;
+    font-size: 3vw !important;
     letter-spacing: 1vw;
+    border: transparent !important;
+    text-transform: capitalize !important;
 }
 
 #selected-cardone {
@@ -477,13 +479,12 @@ button.onebutton {
     background-image: url('./assets/images/cardbacks.webp');
     background-size: cover;
     background-position: center;
-    transform: rotateY(180deg); /* Ensures the back is not flipped initially */
     transition: transform 1s ease-in-out;
 }
 
 /* Flip effect */
 .selected-card.flip .card-back {
-    transform: rotateY(0deg); /* Flips to show the front */
+  transform: rotateY(180deg); /* Flip the back to reveal front */
 }
 
 /* media query */
