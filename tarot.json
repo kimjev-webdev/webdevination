@@ -131,6 +131,92 @@
       "image": "../assets/images/cardfronts/theworld.webp",
       "interpretation": "The World represents completion, wholeness, and fulfillment. In love, it signifies a fulfilling and balanced relationship. Career-wise, it indicates success, recognition, and the end of a cycle. For finances, it speaks of abundance, achievement, and completion. In health, it reflects a time of good overall health and vitality.",
       "response": "Yes"
+    },
+    {
+      "name": "Ace of Cups",
+      "image": "../assets/images/cardfronts/aceofcups.webp",
+      "interpretation": "The Ace of Cups represents new emotional beginnings, deep love, and spiritual renewal. In love, it signifies the start of a deep and fulfilling connection, where emotions flow freely. Career-wise, it suggests a creative or spiritually aligned opportunity on the horizon. Financially, it can indicate a new venture or emotional satisfaction from your work, though not necessarily wealth. For health, it signals a time of emotional healing and revitalization.",
+      "response": "Yes"
+    },
+    {
+      "name": "Two of Cups",
+      "image": "../assets/images/cardfronts/twoofcups.webp",
+      "interpretation": "The Two of Cups is a card of harmony, partnership, and mutual attraction. In love, it indicates a balanced and equal relationship, where both partners are deeply connected. Career-wise, it suggests the formation of a successful partnership or collaboration. For money, it may indicate a shared financial venture or mutual support. In health, it speaks to the importance of balance and emotional well-being.",
+      "response": "Yes"
+    },
+{
+      "name": "Three of Cups",
+      "image": "../assets/images/cardfronts/threeofcups.webp",
+      "interpretation": "The Three of Cups signifies celebration, friendship, and joy. In love, it represents a joyful and harmonious period in a relationship, with a focus on emotional fulfillment. Career-wise, it indicates success through teamwork and collaboration. Financially, it may indicate spending time with loved ones, enjoying the fruits of your labor, or receiving a reward. For health, it speaks to emotional support and a period of rejuvenation.",
+      "response": "Yes"
+    },
+    {
+      "name": "Four of Cups",
+      "image": "../assets/images/cardfronts/fourofcups.webp",
+      "interpretation": "The Four of Cups represents contemplation, apathy, and missed opportunities. In love, it indicates dissatisfaction or emotional disconnection, suggesting you may be overlooking what is right in front of you. Career-wise, it warns of complacency or a lack of motivation. Financially, it suggests a period of emotional stagnation or discontent with your current financial situation. In health, it signals emotional neglect or ignoring your well-being.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Five of Cups",
+      "image": "../assets/images/cardfronts/fiveofcups.webp",
+      "interpretation": "The Five of Cups is a card of loss, grief, and regret. In love, it speaks of emotional pain, disappointment, or the end of a relationship. Career-wise, it indicates a setback or failure, but also the need to focus on what remains rather than what’s lost. Financially, it can indicate a financial disappointment, though hope still exists. For health, it signifies emotional suffering that could manifest physically.",
+      "response": "No"
+    },
+    {
+      "name": "Six of Cups",
+      "image": "../assets/images/cardfronts/sixofcups.webp",
+      "interpretation": "The Six of Cups represents nostalgia, childhood, and happy memories. In love, it indicates a relationship full of emotional warmth, sometimes from the past or rooted in familiarity. Career-wise, it may suggest a return to past projects or revisiting something you once loved. Financially, it speaks to comfort and security, possibly coming from family or old investments. In health, it speaks to finding comfort in your past routines or healing through nostalgia.",
+      "response": "Yes"
+    },
+    {
+      "name": "Seven of Cups",
+      "image": "../assets/images/cardfronts/sevenofcups.webp",
+      "interpretation": "The Seven of Cups is a card of choices, dreams, and illusions. In love, it suggests that you may be faced with many options, but some may not be as fulfilling as they seem. Career-wise, it can indicate a time of confusion or an overwhelming number of choices, but not all are worth pursuing. Financially, it warns against getting lost in illusions or unrealistic expectations. In health, it advises clarity and grounding your emotions.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Eight of Cups",
+      "image": "../assets/images/cardfronts/eightofcups.webp",
+      "interpretation": "The Eight of Cups symbolizes walking away from something that no longer serves you. In love, it suggests leaving behind an emotionally unfulfilling relationship in search of something more meaningful. Career-wise, it may indicate leaving a job or project that no longer inspires you. Financially, it can signify walking away from a bad investment or financial loss. In health, it indicates the need to let go of unhealthy habits.",
+      "response": "No"
+    },
+    {
+      "name": "Nine of Cups",
+      "image": "../assets/images/cardfronts/nineofcups.webp",
+      "interpretation": "The Nine of Cups is the wish card, symbolizing emotional fulfillment and contentment. In love, it indicates a period of emotional satisfaction and happiness within a relationship. Career-wise, it speaks to achieving your goals and feeling proud of your accomplishments. Financially, it represents the fulfillment of material wishes or success. In health, it suggests a period of good health and emotional well-being.",
+      "response": "Yes"
+    },
+    {
+      "name": "Ten of Cups",
+      "image": "../assets/images/cardfronts/tenofcups.webp",
+      "interpretation": "The Ten of Cups is a card of emotional fulfillment, happiness, and harmony. In love, it represents a blissful, loving relationship, and the realization of emotional dreams. Career-wise, it speaks to achieving emotional satisfaction in your work life. Financially, it suggests a harmonious and abundant time. In health, it reflects vitality and overall well-being.",
+      "response": "Yes"
+    },
+    {
+      "name": "Page of Cups",
+      "image": "../assets/images/cardfronts/pageofcups.webp",
+      "interpretation": "The Page of Cups is a card of emotional openness, curiosity, and youthful energy. In love, it suggests a new, emotionally fulfilling connection, often based on fresh feelings. Career-wise, it represents creative projects or a new opportunity that aligns with your passions. Financially, it may indicate an unexpected or intuitive opportunity, though it requires careful consideration. For health, it signals emotional healing and renewal.",
+      "response": "Yes"
+    },
+    {
+      "name": "Knight of Cups",
+      "image": "../assets/images/cardfronts/knightofcups.webp",
+      "interpretation": "The Knight of Cups is a romantic, idealistic, and adventurous card. In love, it indicates a passionate pursuit of romance or a deepening emotional connection. Career-wise, it suggests creative endeavors or pursuing work that aligns with your passions. Financially, it warns against impulsive spending or decisions, but suggests creativity in financial matters. In health, it points to the importance of balancing emotions and following your heart.",
+      "response": "Yes"
+    },
+    {
+      "name": "Queen of Cups",
+      "image": "../assets/images/cardfronts/queenofcups.webp",
+      "interpretation": "The Queen of Cups represents emotional intelligence, compassion, and nurturing. In love, it signifies deep emotional understanding and intuitive connections. Career-wise, it suggests using empathy and compassion in your professional life. For finances, it suggests using intuition and emotional intelligence to guide financial decisions. In health, it indicates emotional balance and self-care.",
+      "response": "Yes"
+    },
+    {
+      "name": "King of Cups",
+      "image": "../assets/images/cardfronts/kingofcups.webp",
+      "interpretation": "The King of Cups represents emotional maturity, control, and compassion. In love, it indicates a relationship built on emotional depth and mutual understanding. Career-wise, it suggests a leadership role where emotional intelligence plays a key part. For finances, it indicates wisdom and balance in managing wealth. In health, it signals a balanced approach to mental and emotional well-being.",
+      "response": "Yes"
     }
+    
   ]
 }
+
