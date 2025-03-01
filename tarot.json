@@ -62,7 +62,7 @@
     },
     {
       "name": "Wheel of Fortune",
-      "image": "../assets/images/cardfronts/thewheeloffortune.webp",
+      "image": "../assets/images/cardfronts/wheeloffortune.webp",
       "interpretation": "The Wheel of Fortune signifies cycles, destiny, and luck. In love, it can indicate a change in your romantic situation—possibly for the better. Career-wise, it points to unexpected shifts and opportunities. For money, it suggests fluctuating fortunes, will luck be on your side? In health, it signifies changes in your condition, for the better or for worse.",
       "response": "Maybe"
     },
@@ -320,7 +320,7 @@
     },
     {
       "name": "Four of Swords",
-      "image": "../assets/images/cardfronts/fourofwords.webp",
+      "image": "../assets/images/cardfronts/fourofswords.webp",
       "interpretation": "The Four of Swords represents rest, recovery, and taking time to heal. In love, it suggests a period of reflection and rest after a difficult emotional experience. Career-wise, it points to the need to step back and recharge before making major decisions. Financially, it speaks to a need for a break from financial stress or a time of waiting. In health, it suggests rest is needed to recover from illness or exhaustion.",
       "response": "Maybe"
     },
