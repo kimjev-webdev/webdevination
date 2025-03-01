@@ -429,8 +429,6 @@ body.cards {
 }
 
 /* styles.css */
-/* styles.css */
-/* Fixing the visibility of the buttons and clearing the navbar overlap */
 body.onecard {
   background-color: #000;
   background-image: url('../assets/images/tarotbg.webp');
@@ -457,9 +455,12 @@ button.onebutton {
 #selected-cardone {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  flex-direction: column; /* Ensures the content is stacked vertically */
+  justify-content: flex-start; /* Align items to the top of the column */
+  align-items: center; /* Align items horizontally in the center */
+  height: 72vh; /* Use full viewport height minus navbar height */
+  overflow: hidden; /* Prevents any overflow if the content grows larger */
+  margin-top: 70px; /* Account for the navbar space */
 }
 
 .selected-card {
@@ -512,11 +513,6 @@ button.onebutton {
   transform: rotateY(0deg); /* Rotate front to face the user */
 }
 
-.selected-cardone {
-  display: flex;
-  flex-direction: column;
-}
-
 /* Styles for card name */
 .card-name {
   font-family: "Tourney", monospace;
@@ -528,11 +524,23 @@ button.onebutton {
 /* Styles for interpretation and response */
 .card-details-text {
   font-family: "Cascadia Code", monospace;
+  font-size: 1rem;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
 
-
+.card-info {
+  position: absolute;
+  bottom: 0; /* Move text to the bottom of the card */
+  left: 0;
+  right: 0;
+  padding: 5px 20px; /* Reduced padding to decrease space */
+  background: rgba(0, 0, 0, 0.6); /* Background to help the text stand out */
+  color: rgb(174, 255, 0);
+  font-family: "Tourney", monospace;
+  text-align: center;
+  margin-bottom: -10px; /* Use negative margin to pull the text up */
+}
 
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
