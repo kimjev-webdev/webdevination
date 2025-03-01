@@ -22,7 +22,7 @@ body.landing {
   color: rgb(174, 255, 0); /* Green glow text */
 }
 
-.container {
+.containerlanding {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
