@@ -1,7 +1,7 @@
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
     const deckElement = document.getElementById('deck');
-    const shuffleBtn = document.getElementById('shuffleBtn');
+    const shuffleBtn = document.getElementById('shufflebtn');
   
     // Create a pile of cards
     function createCards() {
