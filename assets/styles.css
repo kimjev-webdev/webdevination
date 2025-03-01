@@ -487,6 +487,11 @@ button.onebutton {
   transform: rotateY(180deg); /* Flip the back to reveal front */
 }
 
+.selected-cardone {
+  display: flex;
+  flex-direction: column;
+}
+
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
 
