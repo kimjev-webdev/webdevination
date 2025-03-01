@@ -429,62 +429,87 @@ body.cards {
 }
 
 /* styles.css */
+/* styles.css */
 /* Fixing the visibility of the buttons and clearing the navbar overlap */
 body.onecard {
-    background-color: #000;
-    background-image: url('../assets/images/tarotbg.webp');
-    margin-top: 70px; /* Add margin-top to ensure the content is below the navbar */
+  background-color: #000;
+  background-image: url('../assets/images/tarotbg.webp');
+  margin-top: 70px; /* Add margin-top to ensure the content is below the navbar */
 }
 
 button.onebutton {
-    box-shadow: none;
-    display: inline-block;
-    background-color: transparent !important;
-    text-decoration: none !important;
-    text-align: center;
-    margin: 3vh;
-    padding: 3vh;
-    color: rgb(174, 255, 0) !important;
-    text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a !important;
-    font-family: "Tourney", monospace !important;
-    font-size: 3vw !important;
-    letter-spacing: 1vw;
-    border: transparent !important;
-    text-transform: capitalize !important;
+  box-shadow: none;
+  display: inline-block;
+  background-color: transparent !important;
+  text-decoration: none !important;
+  text-align: center;
+  margin: 3vh;
+  padding: 3vh;
+  color: rgb(174, 255, 0) !important;
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a !important;
+  font-family: "Tourney", monospace !important;
+  font-size: 3vw !important;
+  letter-spacing: 1vw;
+  border: transparent !important;
+  text-transform: capitalize !important;
 }
 
 #selected-cardone {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .selected-card {
-    position: relative;
-    width: 30vw;
-    height: 60vh;
-    background-size: cover;
-    background-position: center;
-    transition: transform 1s ease-in-out;
+  position: relative;
+  width: 30vw;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d; /* Enables 3D effect for flipping */
+  perspective: 1000px; /* Ensures the flip effect is 3D */
 }
 
+.card-front,
 .card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('./assets/images/cardbacks.webp');
-    background-size: cover;
-    background-position: center;
-    transition: transform 1s ease-in-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Prevents the back of the card from showing */
+  transition: transform 1s;
+  border-radius: 15px;
+}
+
+/* Card back initial state */
+.card-back {
+  background-image: url('./assets/images/cardbacks.webp');
+  background-size: contain;
+  background-position: center;
+  opacity: 1; /* Initially visible */
+  transform: rotateY(0deg); /* Back is facing up initially */
+}
+
+/* Card front state */
+.card-front {
+  background-image: url(''); /* Empty initially, filled by JS */
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Initially hidden */
+  transform: rotateY(180deg); /* Front is initially rotated away */
 }
 
 /* Flip effect */
 .selected-card.flip .card-back {
-  transform: rotateY(180deg); /* Flip the back to reveal front */
+  opacity: 0; /* Hide the back when flipping */
+  transform: rotateY(180deg); /* Rotate the back to face away */
+}
+
+.selected-card.flip .card-front {
+  opacity: 1; /* Show the front */
+  transform: rotateY(0deg); /* Rotate front to face the user */
 }
 
 .selected-cardone {
@@ -492,20 +517,20 @@ button.onebutton {
   flex-direction: column;
 }
 
-    /* Styles for card name */
-    .card-name {
-      font-family: "Tourney", monospace;
-      text-transform: uppercase !important;
-      color: rgb(174, 255, 0);
-    text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-    }
+/* Styles for card name */
+.card-name {
+  font-family: "Tourney", monospace;
+  text-transform: uppercase !important;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+}
 
-    /* Styles for interpretation and response */
-    .card-details-text {
-      font-family: "Cascadia Code", monospace;
-      color: rgb(174, 255, 0);
-      text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-    }
+/* Styles for interpretation and response */
+.card-details-text {
+  font-family: "Cascadia Code", monospace;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+}
 
 
 
