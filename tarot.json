@@ -215,8 +215,94 @@
       "image": "../assets/images/cardfronts/kingofcups.webp",
       "interpretation": "The King of Cups represents emotional maturity, control, and compassion. In love, it indicates a relationship built on emotional depth and mutual understanding. Career-wise, it suggests a leadership role where emotional intelligence plays a key part. For finances, it indicates wisdom and balance in managing wealth. In health, it signals a balanced approach to mental and emotional well-being.",
       "response": "Yes"
+    },
+    {
+      "name": "Ace of Wands",
+      "image": "../assets/images/cardfronts/aceofwands.webp",
+      "interpretation": "The Ace of Wands signifies new beginnings, creative energy, and inspiration. In love, it represents a passionate new start or a rekindling of romance. Career-wise, it indicates the spark of an exciting new project or an entrepreneurial opportunity. Financially, it suggests a fresh idea or approach to earning money. In health, it speaks to revitalization and the start of a period of energy and vitality.",
+      "response": "Yes"
+    },
+    {
+      "name": "Two of Wands",
+      "image": "../assets/images/cardfronts/twoofwands.webp",
+      "interpretation": "The Two of Wands represents planning, vision, and taking the first steps toward success. In love, it can suggest a relationship where both partners are considering their future together. Career-wise, it indicates the need to assess your options before making a major decision. Financially, it speaks to the beginning of a long-term plan, with an eye on growth. In health, it encourages you to consider both your long-term wellness and immediate action.",
+      "response": "Yes"
+    },
+    {
+      "name": "Three of Wands",
+      "image": "../assets/images/cardfronts/threeofwands.webp",
+      "interpretation": "The Three of Wands is a card of expansion, foresight, and waiting for your plans to come to fruition. In love, it represents a relationship that is progressing and moving toward a promising future. Career-wise, it indicates success through foresight and planning, with new opportunities on the horizon. Financially, it suggests the anticipation of profits or the reward of past investments. In health, it points to progress in personal wellness goals.",
+      "response": "Yes"
+    },
+    {
+      "name": "Four of Wands",
+      "image": "../assets/images/cardfronts/fourofwands.webp",
+      "interpretation": "The Four of Wands represents celebration, harmony, and stability. In love, it suggests a strong, committed relationship with a solid foundation. Career-wise, it indicates a time of stability and achievement, possibly celebrating a milestone. Financially, it suggests security and the possibility of enjoying the fruits of your labor. In health, it points to emotional and physical stability and well-being.",
+      "response": "Yes"
+    },
+    {
+      "name": "Five of Wands",
+      "image": "../assets/images/cardfronts/fiveofwands.webp",
+      "interpretation": "The Five of Wands symbolizes conflict, competition, and struggle. In love, it suggests that there may be misunderstandings or challenges to overcome. Career-wise, it points to competition or conflicts in the workplace, requiring you to navigate with care. Financially, it suggests challenges in your finances, possibly involving competition or dispute. In health, it indicates stress or tension that might be affecting your well-being.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Six of Wands",
+      "image": "../assets/images/cardfronts/sixofwands.webp",
+      "interpretation": "The Six of Wands represents victory, recognition, and success. In love, it signifies a victorious and harmonious relationship, where mutual admiration plays a role. Career-wise, it suggests recognition for your efforts and the successful completion of a project. Financially, it indicates public recognition or rewards for past investments. In health, it represents triumph over challenges and recovery.",
+      "response": "Yes"
+    },
+    {
+      "name": "Seven of Wands",
+      "image": "../assets/images/cardfronts/sevenofwands.webp",
+      "interpretation": "The Seven of Wands represents standing your ground, defense, and overcoming challenges. In love, it indicates the need to protect your relationship from external pressures. Career-wise, it points to a competitive situation where you must assert yourself. Financially, it suggests that you may need to defend your financial position or resist temptation. In health, it signals the need to defend your well-being against stress or external influences.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Eight of Wands",
+      "image": "../assets/images/cardfronts/eightofwands.webp",
+      "interpretation": "The Eight of Wands signifies fast movement, swift progress, and action. In love, it indicates a fast-moving relationship or communication that brings clarity. Career-wise, it points to quick developments, fast results, or an important decision coming to a head. Financially, it suggests rapid changes or sudden gains, bringing speed to your financial progress. In health, it suggests a quick recovery or an urgent need to take action.",
+      "response": "Yes"
+    },
+    {
+      "name": "Nine of Wands",
+      "image": "../assets/images/cardfronts/nineofwands.webp",
+      "interpretation": "The Nine of Wands represents perseverance, resilience, and the final stretch of a difficult journey. In love, it suggests that you may be weary, but there’s still hope for the relationship if you keep pushing forward. Career-wise, it indicates the need to hold on during a tough period, with success near but not yet achieved. Financially, it suggests that you’re close to overcoming obstacles but must remain vigilant. In health, it signals the need for strength and perseverance through a health challenge.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Ten of Wands",
+      "image": "../assets/images/cardfronts/tenofwands.webp",
+      "interpretation": "The Ten of Wands represents burden, responsibility, and exhaustion. In love, it indicates a relationship that feels overwhelming, possibly with too many obligations or responsibilities. Career-wise, it suggests overwork and burnout, and the need to lighten your load. Financially, it signals that you may be overburdened by debt or financial stress. In health, it suggests physical or emotional exhaustion, and the need to delegate or ask for help.",
+      "response": "No"
+    },
+    {
+      "name": "Page of Wands",
+      "image": "../assets/images/cardfronts/pageofwands.webp",
+      "interpretation": "The Page of Wands represents enthusiasm, exploration, and new beginnings. In love, it suggests a youthful and adventurous approach, often full of energy and excitement. Career-wise, it indicates the start of a creative project or a new venture filled with possibilities. Financially, it suggests a new opportunity or a fresh outlook on your finances. In health, it signals the start of a new wellness journey or physical activity.",
+      "response": "Yes"
+    },
+    {
+      "name": "Knight of Wands",
+      "image": "../assets/images/cardfronts/knightofwands.webp",
+      "interpretation": "The Knight of Wands represents action, courage, and fast movement. In love, it suggests a passionate and dynamic energy, but possibly fleeting or impulsive. Career-wise, it signals rapid progress and bold, daring decisions that could lead to success. Financially, it may suggest impulsive spending or the need for quick action to seize an opportunity. In health, it points to high energy and vitality, but also warns against burning out.",
+      "response": "Yes"
+    },
+    {
+      "name": "Queen of Wands",
+      "image": "../assets/images/cardfronts/queenofwands.webp",
+      "interpretation": "The Queen of Wands represents confidence, creativity, and passion. In love, it suggests a strong, independent partner or a relationship where both partners inspire and empower each other. Career-wise, it signals leadership and the ability to take charge of creative projects. Financially, it speaks to using your intuition and energy to make wise decisions. In health, it indicates vitality, strength, and the confidence to take care of yourself.",
+      "response": "Yes"
+    },
+    {
+      "name": "King of Wands",
+      "image": "../assets/images/cardfronts/kingofwands.webp",
+      "interpretation": "The King of Wands represents leadership, vision, and mastery. In love, it indicates a relationship where one partner takes a strong, authoritative role, or it can suggest a dominant energy in the relationship. Career-wise, it signals a powerful, visionary leadership position or entrepreneurial success. Financially, it indicates taking control of your financial situation and being strategic in your investments. In health, it signifies the power of will and the ability to take charge of your physical well-being.",
+      "response": "Yes"
     }
-    
+  ]
+}
+
   ]
 }
 
