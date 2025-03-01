@@ -22,7 +22,7 @@ body.landing {
   color: rgb(174, 255, 0); /* Green glow text */
 }
 
-.containerlanding {
+.container.landing-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -436,18 +436,18 @@ body.onecard {
     margin-top: 70px; /* Add margin-top to ensure the content is below the navbar */
 }
 
-button {
+button.onebutton {
     box-shadow: none;
     display: inline-block;
-    background-color: transparent;
+    background-color: transparent !important;
     text-decoration: none !important;
     text-align: center;
     margin: 3vh;
     padding: 3vh;
-    color: rgb(174, 255, 0);
-    text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-    font-family: "Tourney", monospace;
-    font-size: 4.5vw;
+    color: rgb(174, 255, 0) !important;
+    text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a !important;
+    font-family: "Tourney", monospace !important;
+    font-size: 4.5vw !important;
     letter-spacing: 1vw;
 }
 
