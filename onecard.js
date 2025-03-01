@@ -25,7 +25,7 @@ fetch('tarot.json')
             cardElement.style.backgroundImage = `url('../assets/images/cardfronts/${drawnCard.name.toLowerCase().replace(/\s+/g, '')}.webp')`;
             cardElement.setAttribute('data-name', drawnCard.name);
             cardElement.setAttribute('data-response', drawnCard.response);
-            cardElement.setAttribute('data-description', drawnCard.description);
+            cardElement.setAttribute('data-interpretation', drawnCard.interpretation);
 
             // Create the card back (initially showing the back of the card)
             const cardBack = document.createElement('div');
@@ -53,7 +53,7 @@ fetch('tarot.json')
             const cardDetails = `
                 <div class="card-info">
                     <h2>${card.name}</h2>
-                    <p><strong>Interpretation:</strong> ${card.description}</p>
+                    <p><strong>Interpretation:</strong> ${card.interpretation}</p>
                     <p><strong>Response:</strong> ${card.response}</p>
                 </div>
             `;
