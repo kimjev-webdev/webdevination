@@ -299,7 +299,7 @@
       "image": "../assets/images/cardfronts/kingofwands.webp",
       "interpretation": "The King of Wands represents leadership, vision, and mastery. In love, it indicates a relationship where one partner takes a strong, authoritative role, or it can suggest a dominant energy in the relationship. Career-wise, it signals a powerful, visionary leadership position or entrepreneurial success. Financially, it indicates taking control of your financial situation and being strategic in your investments. In health, it signifies the power of will and the ability to take charge of your physical well-being.",
       "response": "Yes"
-    } 
+    },
 { 
       "name": "Ace of Swords",
       "image": "../assets/images/cardfronts/aceofswords.webp",
@@ -383,9 +383,94 @@
       "image": "../assets/images/cardfronts/kingofswords.webp",
       "interpretation": "The King of Swords represents authority, truth, and strategic thinking. In love, it suggests a relationship built on respect, intellect, and truth. Career-wise, it indicates leadership, wisdom, and the ability to make sound decisions. Financially, it signals the importance of using intellect and strategy to improve your financial situation. In health, it suggests clear thinking and a disciplined approach to health and wellness.",
       "response": "Yes"
+    },
+    {
+      "name": "Ace of Pentacles",
+      "image": "../assets/images/cardfronts/aceofpentacles.webp",
+      "interpretation": "The Ace of Pentacles signifies new beginnings, prosperity, and material gains. In love, it indicates the potential for a stable, grounded relationship with long-term potential. Career-wise, it suggests a new opportunity that could bring financial security and success. Financially, this card represents a gift or a new source of income, bringing wealth and abundance. In health, it points to a period of good physical health and vitality.",
+      "response": "Yes"
+    },
+    {
+      "name": "Two of Pentacles",
+      "image": "../assets/images/cardfronts/twoofpentacles.webp",
+      "interpretation": "The Two of Pentacles represents balance, adaptability, and juggling priorities. In love, it suggests the need to balance emotional and practical matters within the relationship. Career-wise, it indicates juggling multiple tasks or responsibilities but with the potential for success through flexibility. Financially, it represents managing your resources wisely and finding balance between saving and spending. In health, it suggests managing stress or taking a balanced approach to well-being.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Three of Pentacles",
+      "image": "../assets/images/cardfronts/threeofpentacles.webp",
+      "interpretation": "The Three of Pentacles symbolizes collaboration, skill, and craftsmanship. In love, it indicates a relationship that is built on teamwork, mutual effort, and shared goals. Career-wise, it suggests success through collaboration or a project requiring skilled contributions from multiple people. Financially, it points to the benefits of working together with others to build something lasting. In health, it signals the need to take a practical, team-oriented approach to healing.",
+      "response": "Yes"
+    },
+    {
+      "name": "Four of Pentacles",
+      "image": "../assets/images/cardfronts/fourofpentacles.webp",
+      "interpretation": "The Four of Pentacles represents security, stability, and a strong attachment to material wealth. In love, it suggests holding onto a relationship out of fear of losing security or stability, which may cause possessiveness. Career-wise, it indicates a focus on financial security, but it warns against being too rigid or afraid of taking risks. Financially, it points to a need for careful management of your resources but warns against becoming overly obsessed with money. In health, it signifies a need to focus on maintaining balance and not overindulging.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Five of Pentacles",
+      "image": "../assets/images/cardfronts/fiveofpentacles.webp",
+      "interpretation": "The Five of Pentacles represents hardship, struggle, and feeling left out in the cold. In love, it suggests emotional or financial hardship affecting the relationship, potentially leading to feelings of isolation. Career-wise, it points to financial loss, job insecurity, or a period of hardship that will require perseverance. Financially, it signals difficulties, but also the possibility of support if you reach out for help. In health, it may indicate physical illness or the need to focus on recovery from a difficult period.",
+      "response": "No"
+    },
+    {
+      "name": "Six of Pentacles",
+      "image": "../assets/images/cardfronts/sixofpentacles.webp",
+      "interpretation": "The Six of Pentacles signifies generosity, balance, and financial assistance. In love, it suggests a balanced relationship where both parties contribute equally, with mutual care and support. Career-wise, it points to generosity at work, either receiving a raise or helping others advance. Financially, it represents fair distribution of wealth, charity, or a loan being repaid. In health, it signals the need for balanced care and being generous with your energy towards others.",
+      "response": "Yes"
+    },
+    {
+      "name": "Seven of Pentacles",
+      "image": "../assets/images/cardfronts/sevenofpentacles.webp",
+      "interpretation": "The Seven of Pentacles represents patience, assessment, and long-term planning. In love, it indicates a need to evaluate where the relationship is heading and whether your efforts are being reciprocated. Career-wise, it suggests that you may need to reassess your current path and consider a more strategic approach for long-term success. Financially, it signals that the fruits of your labor are on the horizon, but you need to be patient and wait for them to materialize. In health, it represents the need to evaluate your health habits and make adjustments for long-term well-being.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Eight of Pentacles",
+      "image": "../assets/images/cardfronts/eightofpentacles.webp",
+      "interpretation": "The Eight of Pentacles represents hard work, dedication, and mastering your craft. In love, it suggests a relationship that requires effort and attention to detail but has the potential for growth. Career-wise, it signifies honing your skills, learning new ones, and working diligently to achieve your goals. Financially, it indicates the importance of hard work and consistent effort to build wealth. In health, it speaks to the need for dedication to improving your physical well-being through small but consistent actions.",
+      "response": "Yes"
+    },
+    {
+      "name": "Nine of Pentacles",
+      "image": "../assets/images/cardfronts/nineofpentacles.webp",
+      "interpretation": "The Nine of Pentacles symbolizes independence, luxury, and financial success. In love, it represents enjoying a period of independence or a relationship that brings satisfaction and stability. Career-wise, it indicates professional success and the ability to enjoy the fruits of your labor. Financially, it points to the achievement of financial independence and material comfort. In health, it suggests a period of good physical health and personal well-being.",
+      "response": "Yes"
+    },
+    {
+      "name": "Ten of Pentacles",
+      "image": "../assets/images/cardfronts/tenofpentacles.webp",
+      "interpretation": "The Ten of Pentacles represents wealth, legacy, and family security. In love, it indicates a stable and long-lasting relationship with a strong foundation. Career-wise, it signifies achieving great success, often through family ties or generational wealth, and the potential for building a legacy. Financially, it represents long-term financial stability and the accumulation of wealth. In health, it suggests good health and a strong support system.",
+      "response": "Yes"
+    },
+    {
+      "name": "Page of Pentacles",
+      "image": "../assets/images/cardfronts/pageofpentacles.webp",
+      "interpretation": "The Page of Pentacles signifies new opportunities, curiosity, and learning. In love, it suggests the beginning of a grounded and committed relationship or an opportunity to learn more about a potential partner. Career-wise, it represents the start of a new project or venture that requires dedication and learning. Financially, it signals the potential for growth and new income opportunities, particularly through education or skill development. In health, it encourages a practical and thoughtful approach to wellness.",
+      "response": "Yes"
+    },
+    {
+      "name": "Knight of Pentacles",
+      "image": "../assets/images/cardfronts/knightofpentacles.webp",
+      "interpretation": "The Knight of Pentacles represents hard work, responsibility, and attention to detail. In love, it suggests a stable, dependable relationship where both partners are committed and grounded. Career-wise, it indicates steady progress, persistence, and a focus on achieving long-term goals. Financially, it advises a methodical approach to building wealth, with a focus on security. In health, it represents a disciplined approach to maintaining your health and well-being.",
+      "response": "Yes"
+    },
+    {
+      "name": "Queen of Pentacles",
+      "image": "../assets/images/cardfronts/queenofpentacles.webp",
+      "interpretation": "The Queen of Pentacles represents nurturing, abundance, and practical care. In love, it signifies a relationship where both partners provide emotional and material support to each other. Career-wise, it suggests a focus on creating a secure, supportive environment and using your resources wisely. Financially, it represents abundance and the ability to create stability through careful planning. In health, it suggests focusing on nurturing your physical and mental well-being.",
+      "response": "Yes"
+    },
+    {
+      "name": "King of Pentacles",
+      "image": "../assets/images/cardfronts/kingofpentacles.webp",
+      "interpretation": "The King of Pentacles represents wealth, stability, and material mastery. In love, it indicates a relationship built on mutual respect, trust, and material security. Career-wise, it signals financial mastery, successful investments, and long-term stability. Financially, it represents great wealth, financial security, and the ability to build an empire. In health, it suggests the need for stability and maintaining a strong, healthy body.",
+      "response": "Yes"
     }
   ]
 }
+
 
 
   
