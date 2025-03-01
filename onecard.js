@@ -7,6 +7,15 @@ fetch('tarot.json')
         const dealButton = document.getElementById('deal');
         const selectedCardContainer = document.getElementById('selected-cardone');
 
+        // Array of explicit card names corresponding to the webp files
+        const cardNames = [
+            "aceofcups", "twoofcups", "threeofcups", "fourofcups", "fiveofcups", "sixofcups", "sevenofcups", "eightofcups", "nineofcups", "tenofcups", "pageofcups", "knightofcups", "queenofcups", "kingofcups",
+            "aceofwands", "twoofwands", "threeofwands", "fourofwands", "fiveofwands", "sixofwands", "sevenofwands", "eightofwands", "nineofwands", "tenofwands", "pageofwands", "knightofwands", "queenofwands", "kingofwands",
+            "aceofswords", "twoofswords", "threeofswords", "fourofswords", "fiveofswords", "sixofswords", "sevenofswords", "eightofswords", "nineofswords", "tenofswords", "pageofswords", "knightofswords", "queenofswords", "kingofswords",
+            "aceofpentacles", "twoofpentacles", "threeofpentacles", "fourofpentacles", "fiveofpentacles", "sixofpentacles", "sevenofpentacles", "eightofpentacles", "nineofpentacles", "tenofpentacles", "pageofpentacles", "knightofpentacles", "queenofpentacles", "kingofpentacles",
+            "thefool", "themagician", "thehighpriestess", "theempress", "theemperor", "thehierophant", "thelovers", "thechariot", "strength", "thehermit", "wheeloffortune", "justice", "thehangedman", "death", "temperance", "thedevil", "thetower", "thestar", "themoon", "thesun", "judgement", "theworld"
+        ];
+
         // Shuffle the tarot deck
         function shuffleDeck() {
             for (let i = tarotDeck.length - 1; i > 0; i--) {
@@ -20,9 +29,17 @@ fetch('tarot.json')
             shuffleDeck(); // Shuffle before drawing
             const drawnCard = tarotDeck[0]; // Get the first card after shuffle
 
+            // Find the corresponding image filename from the cardNames array
+            const cardFileName = cardNames.find(name => name.toLowerCase() === drawnCard.name.toLowerCase().replace(/\s+/g, ''));
+
+            if (!cardFileName) {
+                console.error("Card image not found for:", drawnCard.name);
+                return;
+            }
+
             const cardElement = document.createElement('div');
             cardElement.classList.add('selected-card');
-            cardElement.style.backgroundImage = `url('../assets/images/cardfronts/${drawnCard.name.toLowerCase().replace(/\s+/g, '')}.webp')`;
+            cardElement.style.backgroundImage = `url('../assets/images/cardfronts/${cardFileName}.webp')`;
             cardElement.setAttribute('data-name', drawnCard.name);
             cardElement.setAttribute('data-response', drawnCard.response);
             cardElement.setAttribute('data-interpretation', drawnCard.interpretation);
@@ -52,9 +69,9 @@ fetch('tarot.json')
         function showCardDetails(card) {
             const cardDetails = `
                 <div class="card-info">
-                    <h2>${card.name}</h2>
-                    <p><strong>Interpretation:</strong> ${card.interpretation}</p>
-                    <p><strong>Response:</strong> ${card.response}</p>
+                    <h2 class="card-name">${card.name}</h2>
+                    <p class="card-details-text"><strong>Interpretation:</strong> ${card.interpretation}</p>
+                    <p class="card-details-text"><strong>Response:</strong> ${card.response}</p>
                 </div>
             `;
             selectedCardContainer.innerHTML += cardDetails;

@@ -492,6 +492,23 @@ button.onebutton {
   flex-direction: column;
 }
 
+    /* Styles for card name */
+    .card-name {
+      font-family: "Tourney", monospace;
+      text-transform: uppercase !important;
+      color: rgb(174, 255, 0);
+    text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+    }
+
+    /* Styles for interpretation and response */
+    .card-details-text {
+      font-family: "Cascadia Code", monospace;
+      color: rgb(174, 255, 0);
+      text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+    }
+
+
+
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
 
