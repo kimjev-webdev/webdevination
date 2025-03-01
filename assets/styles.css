@@ -464,8 +464,8 @@ button.onebutton {
 
 .selected-card {
   position: relative;
-  width: 30vw;
-  height: 60vh;
+  width: 20vw;
+  height: 40vh;
   background-size: cover;
   background-position: center;
   transition: transform 1s ease-in-out;
