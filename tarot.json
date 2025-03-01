@@ -299,10 +299,94 @@
       "image": "../assets/images/cardfronts/kingofwands.webp",
       "interpretation": "The King of Wands represents leadership, vision, and mastery. In love, it indicates a relationship where one partner takes a strong, authoritative role, or it can suggest a dominant energy in the relationship. Career-wise, it signals a powerful, visionary leadership position or entrepreneurial success. Financially, it indicates taking control of your financial situation and being strategic in your investments. In health, it signifies the power of will and the ability to take charge of your physical well-being.",
       "response": "Yes"
+    } 
+{ 
+      "name": "Ace of Swords",
+      "image": "../assets/images/cardfronts/aceofswords.webp",
+      "interpretation": "The Ace of Swords signifies clarity, new ideas, and breakthrough moments. In love, it represents cutting through confusion and gaining clarity in a relationship. Career-wise, it indicates a new direction or insight that will lead to success. Financially, it points to a new idea or strategy that can help solve financial challenges. In health, it speaks to mental clarity and the ability to make decisions that will improve your well-being.",
+      "response": "Yes"
+    },
+    {
+      "name": "Two of Swords",
+      "image": "../assets/images/cardfronts/twoofswords.webp",
+      "interpretation": "The Two of Swords represents indecision, a crossroads, and the need to make a tough choice. In love, it suggests a relationship where you're torn between two options or unsure of the next step. Career-wise, it points to a decision that needs to be made, but you may be avoiding it due to fear of conflict. Financially, it signifies the need to make a choice between two different paths. In health, it indicates mental strain due to unresolved issues, requiring you to make decisions to move forward.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Three of Swords",
+      "image": "../assets/images/cardfronts/threeofswords.webp",
+      "interpretation": "The Three of Swords represents heartbreak, emotional pain, and grief. In love, it suggests sorrow, betrayal, or a difficult breakup that needs healing. Career-wise, it can indicate disappointment or a challenging situation that has left you feeling hurt. Financially, it may represent a loss or setback that causes emotional distress. In health, it signifies emotional pain that could be affecting your physical well-being.",
+      "response": "No"
+    },
+    {
+      "name": "Four of Swords",
+      "image": "../assets/images/cardfronts/fourofwords.webp",
+      "interpretation": "The Four of Swords represents rest, recovery, and taking time to heal. In love, it suggests a period of reflection and rest after a difficult emotional experience. Career-wise, it points to the need to step back and recharge before making major decisions. Financially, it speaks to a need for a break from financial stress or a time of waiting. In health, it suggests rest is needed to recover from illness or exhaustion.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Five of Swords",
+      "image": "../assets/images/cardfronts/fiveofswords.webp",
+      "interpretation": "The Five of Swords represents conflict, defeat, and the aftermath of battle. In love, it suggests that a relationship may be characterized by arguments or a sense of one-upmanship. Career-wise, it indicates rivalry or a win-at-all-costs mentality that leaves you feeling empty. Financially, it can represent a loss due to conflict or poor decisions. In health, it signals mental or emotional stress, and the need for peace.",
+      "response": "No"
+    },
+    {
+      "name": "Six of Swords",
+      "image": "../assets/images/cardfronts/sixofswords.webp",
+      "interpretation": "The Six of Swords represents transition, moving on, and healing from past wounds. In love, it suggests moving away from conflict or emotional hardship towards a calmer, more peaceful place. Career-wise, it indicates a period of transition, such as a change in direction or leaving behind a difficult situation. Financially, it speaks to moving past financial struggles or relocating for new opportunities. In health, it suggests recovery and the process of moving towards better physical or emotional health.",
+      "response": "Yes"
+    },
+    {
+      "name": "Seven of Swords",
+      "image": "../assets/images/cardfronts/sevenofswords.webp",
+      "interpretation": "The Seven of Swords represents deception, stealth, and strategy. In love, it suggests dishonesty or hidden truths, and a need to address trust issues. Career-wise, it points to the need for careful strategy, or it could indicate someone being deceitful in your professional environment. Financially, it signals a need to be cautious of fraud or shady dealings. In health, it advises against ignoring symptoms or avoiding medical attention.",
+      "response": "Maybe"
+    },
+    {
+      "name": "Eight of Swords",
+      "image": "../assets/images/cardfronts/eightofswords.webp",
+      "interpretation": "The Eight of Swords represents restriction, fear, and mental entrapment. In love, it suggests feeling trapped in a relationship or unable to move forward due to self-imposed limitations. Career-wise, it points to a feeling of being stuck or limited in your options, often caused by fear. Financially, it signals a sense of being trapped by debt or financial obligations. In health, it represents feeling restricted by mental or emotional barriers.",
+      "response": "No"
+    },
+    {
+      "name": "Nine of Swords",
+      "image": "../assets/images/cardfronts/nineofswords.webp",
+      "interpretation": "The Nine of Swords represents anxiety, worry, and sleepless nights. In love, it indicates emotional distress or the fear of losing someone. Career-wise, it points to stress and sleepless nights over work-related issues or a looming decision. Financially, it suggests anxiety about your financial future or dealing with past mistakes. In health, it signals high levels of stress that may be affecting your physical and mental well-being.",
+      "response": "No"
+    },
+    {
+      "name": "Ten of Swords",
+      "image": "../assets/images/cardfronts/tenofswords.webp",
+      "interpretation": "The Ten of Swords signifies betrayal, ruin, and the end of a difficult cycle. In love, it represents heartbreak or the painful end of a relationship. Career-wise, it indicates a painful loss or failure, but it also signals the end of a difficult period. Financially, it points to the end of a financial struggle or the collapse of a project. In health, it suggests a final collapse or the need to recover from a long-standing issue.",
+      "response": "No"
+    },
+    {
+      "name": "Page of Swords",
+      "image": "../assets/images/cardfronts/pageofswords.webp",
+      "interpretation": "The Page of Swords represents curiosity, intellect, and vigilance. In love, it suggests a need for open communication and honest conversations. Career-wise, it points to an energetic, youthful approach to work or a new project requiring intellectual focus. Financially, it indicates a need to stay alert for new opportunities or potential risks. In health, it suggests using mental clarity to overcome challenges.",
+      "response": "Yes"
+    },
+    {
+      "name": "Knight of Swords",
+      "image": "../assets/images/cardfronts/knightofswords.webp",
+      "interpretation": "The Knight of Swords represents swift action, assertiveness, and boldness. In love, it suggests a fast-moving relationship or an impulsive decision that needs careful thought. Career-wise, it points to fast progress, decisiveness, and the need to be quick on your feet. Financially, it suggests making bold moves or taking risks in order to achieve success. In health, it signals high energy but warns against rushing without considering the consequences.",
+      "response": "Yes"
+    },
+    {
+      "name": "Queen of Swords",
+      "image": "../assets/images/cardfronts/queenofswords.webp",
+      "interpretation": "The Queen of Swords represents intellect, clarity, and the ability to make objective decisions. In love, it signifies a relationship based on clear communication and emotional honesty. Career-wise, it points to using your intelligence and analytical skills to solve problems and make decisions. Financially, it encourages logical thinking and wise decision-making. In health, it suggests a need for clear, practical solutions to health challenges.",
+      "response": "Yes"
+    },
+    {
+      "name": "King of Swords",
+      "image": "../assets/images/cardfronts/kingofswords.webp",
+      "interpretation": "The King of Swords represents authority, truth, and strategic thinking. In love, it suggests a relationship built on respect, intellect, and truth. Career-wise, it indicates leadership, wisdom, and the ability to make sound decisions. Financially, it signals the importance of using intellect and strategy to improve your financial situation. In health, it suggests clear thinking and a disciplined approach to health and wellness.",
+      "response": "Yes"
     }
   ]
 }
 
-  ]
-}
+
+  
 
