@@ -66,16 +66,17 @@ fetch('tarot.json')
         }
 
         // Display the card details
-        function showCardDetails(card) {
-            const cardDetails = `
-                <div class="card-info">
-                    <h2 class="card-name">${card.name}</h2>
-                    <p class="card-details-text"><strong>Interpretation:</strong> ${card.interpretation}</p>
-                    <p class="card-details-text"><strong>Response:</strong> ${card.response}</p>
-                </div>
-            `;
-            selectedCardContainer.innerHTML += cardDetails;
-        }
+        // Display the card details
+function showCardDetails(card) {
+    const cardDetails = `
+        <div class="card-info">
+            <h2 class="card-name">${card.name}: ${card.response}</h2>
+            <p class="card-details-text">${card.interpretation}</p> <!-- Removed the "Interpretation:" title -->
+        </div>
+    `;
+    selectedCardContainer.innerHTML += cardDetails;
+}
+
 
         // Handle Shuffle button click
         shuffleButton.addEventListener('click', () => {
