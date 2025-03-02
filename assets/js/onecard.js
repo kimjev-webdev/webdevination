@@ -30,23 +30,33 @@ fetch('./assets/tarot.json') // Corrected the path to the tarot JSON file
             // Create the back of the card (initially showing the back)
             const cardBack = document.createElement('div');
             cardBack.classList.add('card-back');
-            cardBack.style.backgroundImage = "url('assets/images/cardbacks.webp')";  // Correct path for the card back
-            cardElement.appendChild(cardBack);
+            
+            const cardBackImage = document.createElement('img');
+            cardBackImage.src = 'assets/images/cardbacks.webp'; // Card back image path
+            cardBackImage.alt = 'Card Back'; // Optional: add alt text
+            cardBack.appendChild(cardBackImage); // Append img to the back element
+            
+            cardElement.appendChild(cardBack); // Add the back of the card to the card element
 
-            // Create the front of the card, which will initially be hidden
+            // Create the front of the card (which will initially be hidden)
             const cardFront = document.createElement('div');
             cardFront.classList.add('card-front');
-            cardFront.style.backgroundImage = `url('${drawnCard.image}')`; // Use front image path from JSON
-            cardElement.appendChild(cardFront);
+            
+            const cardFrontImage = document.createElement('img');
+            cardFrontImage.src = drawnCard.image; // Use front image path from JSON
+            cardFrontImage.alt = drawnCard.name; // Optional: add alt text
+            cardFront.appendChild(cardFrontImage); // Append img to the front element
+
+            cardElement.appendChild(cardFront); // Add the front of the card to the card element
 
             // Show the card in the selected card area
             selectedCardContainer.innerHTML = ''; // Clear previous card
             selectedCardContainer.appendChild(cardElement);
 
             // Add an event listener to flip the card when clicked
-            cardElement.addEventListener('click', function() {
+            cardElement.addEventListener('click', function () {
                 // Add flip class to trigger the flip animation
-                cardElement.classList.add('flip'); 
+                cardElement.classList.add('flip');
 
                 // After the flip animation, reveal card details
                 setTimeout(() => {
@@ -60,7 +70,7 @@ fetch('./assets/tarot.json') // Corrected the path to the tarot JSON file
             const cardDetails = `
                 <div class="card-info">
                     <h2 class="card-name">${card.name}: ${card.response}</h2>
-                    <p class="card-details-text">${card.interpretation}</p> <!-- Removed the "Interpretation:" title -->
+                    <p class="card-details-text">${card.interpretation}</p>
                 </div>
             `;
             selectedCardContainer.innerHTML += cardDetails;
