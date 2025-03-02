@@ -192,8 +192,6 @@ button.btn.btn-link.enter-button:hover {
   margin-left: 10px;
  }
 
- 
- 
  .navbar {
   background-color: black;
   padding: 20px 0;
@@ -301,10 +299,16 @@ body.info {
     overflow: hidden;           /* Prevent overflow */
 }
 
+
 /* Initially hide the cardback images */
 #buttons-container .col-12.col-md-6 img {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  display: block;
+  margin: auto;
+  width: 100px; /* Adjust size */
+  height: auto;
+  margin-bottom: 10px; /* Adds space below each image */
 }
 
 /* Make the images visible when the 'visible' class is added */
@@ -312,16 +316,50 @@ body.info {
   opacity: 1;
 }
 
+/* Use flexbox on the parent container of the images only */
+#buttons-container .col-12.col-md-6 .image-container {
+  display: flex;
+  justify-content: center;  /* Align images horizontally in the row */
+  gap: 10px;  /* Space between images */
+  margin-bottom: 20px;  /* Space between images and the button below */
+}
 
+/* Ensure images inside the .image-container align in a row */
+#buttons-container .col-12.col-md-6 .image-container img {
+  margin: 0;
+  width: 100px; /* Adjust the size as necessary */
+  height: auto;
+}
+
+/* Keep the rest of the content in the column layout */
+#buttons-container .col-12.col-md-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center the content horizontally */
+  justify-content: center; /* Center the content vertically */
+}
+
+/* Ensure buttons are aligned in the center */
+#buttons-container .col-12.col-md-6 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Add some space below each button */
+}
+
+/* Buttons container: Make the buttons and explanations centered */
 .buttons-container {
   background-color: #000;
+  display: flex;
+  justify-content: center;
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 20px;
-  opacity: 0; /* Initially hidden */
+  opacity: 0;
   transition: opacity 1s ease-in-out;
 }
+
 
 .card-button  {
   display: block;
