@@ -488,6 +488,10 @@ body.onecard {
   max-height: 100vh;
 }
 
+.leftonecard {
+  margin-top: 100px;
+}
+
 #deck {
   position: relative;
   width: 150px;
@@ -521,56 +525,58 @@ button.shufflebtn, button.dealbtn {
   text-transform: capitalize !important;
 }
 
-
-
-
 #selected-cardone {
   position: relative;
   display: flex;
   flex-direction: column; /* Ensures the content is stacked vertically */
-  justify-content: flex-start; /* Align items to the top of the column */
+  justify-content: first baseline; /* Align items to the top of the column */
   align-items: center; /* Align items horizontally in the center */
-  height: 72vh; /* Use full viewport height minus navbar height */
-  overflow: hidden; /* Prevents any overflow if the content grows larger */
-  margin-top: 70px; /* Account for the navbar space */
+  overflow: hidden; /* Use full viewport height minus navbar height */ /* Account for the navbar space */
+  height: 75vh; /* Use full viewport height minus navbar height */
 }
 
 .selected-card {
   position: relative;
-  width: 20vw;
-  height: 40vh;
-  background-size: cover;
-  background-position: center;
+  width: 16vw;
+  height: 23vw;
   transition: transform 1s ease-in-out;
+  border-radius: 15px;
   transform-style: preserve-3d; /* Enables 3D effect for flipping */
   perspective: 1000px; /* Ensures the flip effect is 3D */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 0.83%;
 }
 
+.selected-card img {
+  border-radius: 15px; /* Apply border-radius directly to the images */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images maintain their aspect ratio while filling the container */
+  box-shadow: 0 0 10px rgba(174, 255, 0, 0.5); /* Optional: Add a subtle shadow for card images */
+}
+
+/* Card front and back wrapper, removed background images */
 .card-front,
 .card-back {
+  overflow: hidden;
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden; /* Prevents the back of the card from showing */
   transition: transform 1s;
-  border-radius: 15px;
 }
 
 /* Card back initial state */
 .card-back {
-  background-image: url('../images/tarotbg.webp');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
   opacity: 1; /* Initially visible */
   transform: rotateY(0deg); /* Back is facing up initially */
 }
 
 /* Card front state */
 .card-front {
-  background-image: url(''); /* Empty initially, filled by JS */
-  background-size: cover;
-  background-position: center;
   opacity: 0; /* Initially hidden */
   transform: rotateY(180deg); /* Front is initially rotated away */
 }
@@ -613,7 +619,7 @@ button.shufflebtn, button.dealbtn {
   color: rgb(174, 255, 0);
   font-family: "Tourney", monospace;
   text-align: center;
-  margin-bottom: -10px; /* Use negative margin to pull the text up */
+   /* Use negative margin to pull the text up */
 }
 
 /* media query */
