@@ -430,7 +430,7 @@ body.cards {
   margin: 10px;
   padding: 20px;
   height: 100vh;
-  background-image: url('../assets/images/tarotbg.webp') !important; 
+  background-image: url('../images/tarotbg.webp') !important; 
 }
 
 .accordion-item {
@@ -482,7 +482,7 @@ body.cards {
 /* styles.css */
 body.onecard {
   background-color: #000;
-  background-image: url('../assets/images/tarotbg.webp');
+  background-image: url('../images/tarotbg.webp');
   margin-top: 70px; /* Add margin-top to ensure the content is below the navbar */
   max-height: 100vh;
 }
@@ -497,7 +497,7 @@ body.onecard {
   position: absolute;
   width: 100px;
   height: 140px;
-  background-image: url('./assets/images/cardbacks.webp');
+  background-image: url('../images/tarotbg.webp');
   background-size: cover;
   border-radius: 5px;
   transition: transform 0.5s ease, top 0.5s ease, left 0.5s ease;
@@ -557,7 +557,7 @@ button.shufflebtn, button.dealbtn {
 
 /* Card back initial state */
 .card-back {
-  background-image: url('./assets/images/cardbacks.webp');
+  background-image: url('../images/tarotbg.webp');
   background-size: contain;
   background-position: center;
   opacity: 1; /* Initially visible */
