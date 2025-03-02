@@ -7,6 +7,9 @@ const pickThreeCardsButton = document.getElementById('pickThreeCards');
 const pickOneExplanation = document.getElementById('pickOneExplanation');
 const pickThreeExplanation = document.getElementById('pickThreeExplanation');
 
+// Image elements
+const cardbacksOne = document.querySelectorAll('#buttons-container .col-12.col-md-6 img'); // Select the images above each button
+
 // Text to be typed out
 const textToType = [
     "Welcome Seeker!\n",
@@ -46,6 +49,13 @@ function typeText() {
 function showButtons() {
     // Make buttons and explanations visible
     buttonsContainer.style.opacity = 1; // Make the buttons container visible
+
+    // Make the cardback images visible (same as buttons)
+    cardbacksOne.forEach((img, index) => {
+        setTimeout(() => {
+            img.classList.add('visible'); // Show cardback image
+        }, 500 + (index * 500)); // Add a small delay for each card image
+    });
 
     // Make the pickOneCard button visible
     setTimeout(() => {

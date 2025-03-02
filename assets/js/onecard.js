@@ -30,7 +30,7 @@ fetch('tarot.json')
             // Create the back of the card (initially showing the back)
             const cardBack = document.createElement('div');
             cardBack.classList.add('card-back');
-            cardBack.style.backgroundImage = "url('./assets/images/cardbacks.webp')";  // Correct path for the card back
+            cardBack.style.backgroundImage = "url('webdevination/assets/images/cardbacks.webp')";  // Correct path for the card back
             cardElement.appendChild(cardBack);
 
             // Create the front of the card, which will initially be hidden
