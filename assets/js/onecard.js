@@ -1,5 +1,5 @@
 // Load the tarot JSON file and initialize the game logic
-fetch('tarot.json')
+fetch('./assets/tarot.json') // Corrected the path to the tarot JSON file
     .then(response => response.json())
     .then(data => {
         const tarotDeck = data.tarot;
