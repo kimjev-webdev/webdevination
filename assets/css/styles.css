@@ -329,6 +329,7 @@ body.info {
   margin: 0;
   width: 100px; /* Adjust the size as necessary */
   height: auto;
+  border-radius: 15px;
 }
 
 /* Keep the rest of the content in the column layout */
