@@ -561,6 +561,7 @@ button.shufflebtn, button.dealbtn {
   background-image: url('../images/tarotbg.webp');
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   opacity: 1; /* Initially visible */
   transform: rotateY(0deg); /* Back is facing up initially */
 }
@@ -597,6 +598,7 @@ button.shufflebtn, button.dealbtn {
 .card-details-text {
   font-family: "Cascadia Code", monospace;
   font-size: 1rem;
+  text-align: justify;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
