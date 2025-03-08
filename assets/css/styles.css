@@ -527,6 +527,7 @@ button.shufflebtn, button.dealbtn {
 
 #selected-cardone {
   display: flex;
+  flex-direction: column;
   justify-content: center; /* Align items to the top of the column */
   align-items: center; /* Align items horizontally in the center */
   overflow: hidden; /* Use full viewport height minus navbar height */ /* Account for the navbar space */
@@ -550,7 +551,6 @@ button.shufflebtn, button.dealbtn {
 .selected-card img {
   border-radius: 15px; /* Apply border-radius directly to the images */
   width: 100%;
-  height: 100%;
   object-fit: cover; /* Ensures images maintain their aspect ratio while filling the container */
   box-shadow: 0 0 10px rgba(174, 255, 0, 0.5); /* Optional: Add a subtle shadow for card images */
 }
@@ -608,7 +608,6 @@ button.shufflebtn, button.dealbtn {
 }
 
 .card-info {
-  position: absolute;
   bottom: 0; /* Move text to the bottom of the card */
   left: 0;
   right: 0;
@@ -619,6 +618,7 @@ button.shufflebtn, button.dealbtn {
   text-align: center;
    /* Use negative margin to pull the text up */
 }
+
 
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
