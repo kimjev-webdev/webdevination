@@ -619,6 +619,31 @@ button.shufflebtn, button.dealbtn {
    /* Use negative margin to pull the text up */
 }
 
+/* shuffle.css */
+
+/* Styling for card stack and shuffle effect */
+.card-stack {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  height: 50vh;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.shufflecard {
+  position: absolute;
+  width: 16vw;
+  height: 23vw;
+  border-radius: 15px;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.shufflebtn {
+  margin-top: 20px;
+}
+
 
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */

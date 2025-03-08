@@ -76,15 +76,66 @@ fetch('./assets/tarot.json') // Corrected the path to the tarot JSON file
             selectedCardContainer.innerHTML += cardDetails;
         }
 
-        // Handle Shuffle button click
+        // Shuffle the cards visually
+        function shuffleAnimation() {
+            const cards = document.querySelectorAll(".shufflecard");
+
+            // Set initial positions and opacity for animation reset
+            cards.forEach(card => {
+                card.style.opacity = "1";
+                card.style.transform = "translate(0, 0)";
+            });
+
+            // Scatter the cards
+            cards.forEach(card => {
+                const randomX = Math.random() * 500 - 250; // Random position between -250 and 250
+                const randomY = Math.random() * 500 - 250; // Random position between -250 and 250
+                const randomRotation = Math.random() * 720 - 360; // Random rotation between -360 and 360 degrees
+
+                setTimeout(() => {
+                    card.style.transition = "transform 1s ease-out, opacity 1s ease-out";
+                    card.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${randomRotation}deg)`;
+                    card.style.opacity = "0.6"; // Slightly transparent when scattered
+                }, Math.random() * 200); // Random delay to make it look more chaotic
+            });
+
+            // After 3 seconds, return cards to center position and show the modal
+            setTimeout(() => {
+                cards.forEach(card => {
+                    card.style.transition = "transform 1s ease-in, opacity 1s ease-in";
+                    card.style.transform = "translate(0, 0)"; // Return to center
+                    card.style.opacity = "1"; // Fully opaque
+                });
+
+                // Once the shuffle animation is complete, trigger the modal
+                showModal();
+            }, 3000); // 3 seconds delay before returning cards
+        }
+
+        // Function to show the modal after the shuffle animation completes
+        function showModal() {
+            const modal = document.getElementById('shuffleModal');
+            modal.style.display = 'block'; // Show the modal
+        }
+
+        // Handle Shuffle button click (with animation)
         shuffleButton.addEventListener('click', () => {
-            shuffleDeck();
-            alert("Deck shuffled! Click 'Deal' to draw a card.");
+            shuffleAnimation();
+            setTimeout(() => {
+                shuffleDeck(); // Shuffle deck after animation
+                alert("Deck shuffled! Click 'Deal' to draw a card.");
+            }, 3500); // Wait for animation to finish before shuffling deck
         });
 
         // Handle Deal button click (draw a card)
         dealButton.addEventListener('click', () => {
             drawCard();
         });
+
+        // Close modal functionality
+        function closeModal() {
+            const modal = document.getElementById('shuffleModal');
+            modal.style.display = 'none';
+        }
     })
     .catch(error => console.error('Error loading tarot deck:', error));
