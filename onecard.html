@@ -112,11 +112,16 @@
 
     <div class="container-fluid leftonecard">
       <div class="row">
-        <div class="col-12 col-md-6 dealcol">
+        <div class="col-12 dealcol">
 
             <div id="instructions">
                 <p>Welcome to the One Card Tarot reading! Trust your intuition and ask yourself a clear question. When you're ready, click the "Shuffle" button and then the "Deal" button to receive your card.</p>
-              </div>
+                <button id="shuffle" class="btn btn-primary shufflebtn">
+                    SHUFFLE
+                  </button>
+                  <button id="deal" class="btn btn-success dealbtn">DEAL</button> 
+            
+            </div>
                       
             <div class="card-stack" id="card-stack">
 
@@ -157,17 +162,16 @@
                 alt="Card 8"
               />
             </div>
+        </div>
 
-            <button id="shuffle" class="btn btn-primary shufflebtn">
-                SHUFFLE
-              </button>
-              <button id="deal" class="btn btn-success dealbtn">DEAL</button>
+            
+              
         </div>
     
 
         <!-- Second Column: Selected Card -->
 
-        <div class="col-12 col-md-6">
+        <div class="col-12">
           <div id="selected-cardone" class="selected-cardone">
             <!-- The flipped card will be displayed here -->
           </div>

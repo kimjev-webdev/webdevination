@@ -485,7 +485,10 @@ body.onecard {
   background-color: #000;
   background-image: url('../images/tarotbg.webp');
   margin-top: 70px; /* Add margin-top to ensure the content is below the navbar */
+  max-width: 100vw;
   max-height: 100vh;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .leftonecard {
@@ -568,6 +571,7 @@ button.shufflebtn, button.dealbtn {
 
 .dealcol {
   margin: 3vw;
+  display: flex;
 }
 
 /* Card back initial state */
@@ -649,6 +653,7 @@ button.shufflebtn, button.dealbtn {
 }
 
 #instructions {
+  width: 48%;
   font-family: "Cascadia Code", monospace;
   font-size: 1rem;
   color: rgb(174, 255, 0);
