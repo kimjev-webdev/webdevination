@@ -566,6 +566,10 @@ button.shufflebtn, button.dealbtn {
   transition: transform 1s;
 }
 
+.dealcol {
+  margin: 3vw;
+}
+
 /* Card back initial state */
 .card-back {
   opacity: 1; /* Initially visible */
@@ -644,7 +648,12 @@ button.shufflebtn, button.dealbtn {
   margin-top: 20px;
 }
 
-
+#instructions {
+  font-family: "Cascadia Code", monospace;
+  font-size: 1rem;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+}
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
 
