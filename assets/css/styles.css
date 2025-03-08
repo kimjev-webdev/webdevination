@@ -526,13 +526,10 @@ button.shufflebtn, button.dealbtn {
 }
 
 #selected-cardone {
-  position: relative;
   display: flex;
-  flex-direction: column; /* Ensures the content is stacked vertically */
-  justify-content: first baseline; /* Align items to the top of the column */
+  justify-content: center; /* Align items to the top of the column */
   align-items: center; /* Align items horizontally in the center */
   overflow: hidden; /* Use full viewport height minus navbar height */ /* Account for the navbar space */
-  height: 75vh; /* Use full viewport height minus navbar height */
 }
 
 .selected-card {
@@ -594,6 +591,7 @@ button.shufflebtn, button.dealbtn {
 
 /* Styles for card name */
 .card-name {
+  margin-top: 2.5vh;
   font-family: "Tourney", monospace;
   text-transform: uppercase !important;
   color: rgb(174, 255, 0);
