@@ -112,66 +112,30 @@
 
     <div class="container-fluid leftonecard">
       <div class="row">
-        <div class="col-12 dealcol">
-
-            <div id="instructions">
-                <p>Welcome to the One Card Tarot reading! Trust your intuition and ask yourself a clear question. When you're ready, click the "Shuffle" button and then the "Deal" button to receive your card.</p>
-                <button id="shuffle" class="btn btn-primary shufflebtn">
-                    SHUFFLE
-                  </button>
-                  <button id="deal" class="btn btn-success dealbtn">DEAL</button> 
-            
-            </div>
-                      
-            <div class="card-stack" id="card-stack">
-
-              <img class="shufflecard" src="assets\images\cardbacks.webp" alt="Card 1"/>
-              <img
-                class="shufflecard"
-                src="assets\images\cardbacks.webp"
-                alt="Card 2"
-              />
-              <img
-                class="shufflecard"
-                src="assets\images\cardbacks.webp"
-                alt="Card 3"
-              />
-              <img
-                class="shufflecard"
-                src="assets\images\cardbacks.webp"
-                alt="Card 4"
-              />
-              <img
-                class="shufflecard"
-                src="assets\images\cardbacks.webp"
-                alt="Card 5"
-              />
-              <img
-                class="shufflecard"
-                src="assets\images\cardbacks.webp"
-                alt="Card 6"
-              />
-              <img
-                class="shufflecard"
-                src="assets\images\cardbacks.webp"
-                alt="Card 7"
-              />
-              <img
-                class="shufflecard"
-                src="assets\images\cardbacks.webp"
-                alt="Card 8"
-              />
-            </div>
+        <div class="col-12 col-md-6">
+          <!-- Left Column: Instructions and Buttons -->
+          <div id="instructions">
+            <p>Welcome to the One Card Tarot reading! Trust your intuition and ask yourself a clear question. When you're ready, click the "Shuffle" button and then the "Deal" button to receive your card.</p>
+            <button id="shuffle" class="btn btn-primary shufflebtn">
+                SHUFFLE
+            </button>
+            <button id="deal" class="btn btn-success dealbtn">DEAL</button> 
+          </div>
         </div>
 
-            
-              
-        </div>
-    
+        <div class="col-12 col-md-6">
+          <!-- Right Column: Shuffled Cards and Selected Card -->
+          <div class="card-stack" id="card-stack">
+            <img class="shufflecard" src="assets\images\cardbacks.webp" alt="Card 1"/>
+            <img class="shufflecard" src="assets\images\cardbacks.webp" alt="Card 2"/>
+            <img class="shufflecard" src="assets\images\cardbacks.webp" alt="Card 3"/>
+            <img class="shufflecard" src="assets\images\cardbacks.webp" alt="Card 4"/>
+            <img class="shufflecard" src="assets\images\cardbacks.webp" alt="Card 5"/>
+            <img class="shufflecard" src="assets\images\cardbacks.webp" alt="Card 6"/>
+            <img class="shufflecard" src="assets\images\cardbacks.webp" alt="Card 7"/>
+            <img class="shufflecard" src="assets\images\cardbacks.webp" alt="Card 8"/>
+          </div>
 
-        <!-- Second Column: Selected Card -->
-
-        <div class="col-12">
           <div id="selected-cardone" class="selected-cardone">
             <!-- The flipped card will be displayed here -->
           </div>
@@ -188,3 +152,4 @@
     ></script>
   </body>
 </html>
+

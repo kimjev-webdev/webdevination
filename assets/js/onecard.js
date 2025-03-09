@@ -53,7 +53,17 @@ fetch('./assets/tarot.json')
 
         // Handle Shuffle button click (with animation)
         shuffleButton.addEventListener('click', () => {
-            shuffleAnimation(); // Start shuffle animation
+            // Hide the selected card container and show shuffled card stack
+            selectedCardContainer.style.display = 'none'; // Hide the selected card container
+            cardStack.style.display = 'block'; // Show shuffled card stack
+
+            // Reset the selected card container's content before shuffling
+            selectedCardContainer.innerHTML = ''; // Clear any previously drawn card details
+
+            // Start shuffle animation
+            shuffleAnimation(); 
+
+            // Shuffle the deck after animation
             setTimeout(() => {
                 shuffleDeck(); // Shuffle deck after animation
                 alert("Deck shuffled! Click 'Deal' to draw a card.");
@@ -116,21 +126,9 @@ fetch('./assets/tarot.json')
         // Handle Deal button click (draw a card)
         dealButton.addEventListener('click', () => {
             // Hide the shuffled cards and show the selected card
-            cardStack.style.display = 'none';
-            selectedCardContainer.style.display = 'block';
+            cardStack.style.display = 'none'; // Hide the shuffled card stack
+            selectedCardContainer.style.display = 'block'; // Show the selected card container
             drawCard(); // Draw a card when the "Deal" button is clicked
-        });
-
-        // Handle Shuffle button click (reset the game and shuffle)
-        shuffleButton.addEventListener('click', () => {
-            // Show shuffled card stack and hide selected card
-            cardStack.style.display = 'block';
-            selectedCardContainer.style.display = 'none';
-            shuffleDeck(); // Shuffle the deck before showing cards again
-            shuffleAnimation(); // Start shuffle animation
-            setTimeout(() => {
-                alert("Deck shuffled! Click 'Deal' to draw a card.");
-            }, 3500); // Wait for animation to finish before shuffling deck
         });
 
     })
