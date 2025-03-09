@@ -484,7 +484,7 @@ body.cards {
 body.onecard {
   background-color: #000;
   background-image: url('../images/tarotbg.webp');
-  margin-top: 70px; /* Add margin-top to ensure the content is below the navbar */
+  margin-top: 70px; /* Adjust for navbar height */
   max-width: 100vw;
   max-height: 100vh;
   margin-left: 20px;
@@ -531,10 +531,10 @@ button.shufflebtn, button.dealbtn {
 #selected-cardone {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Align items to the top of the column */
-  align-items: center; /* Align items horizontally in the center */
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  display: none;  /* Use full viewport height minus navbar height */ /* Account for the navbar space */
+  display: none;
 }
 
 .selected-card {
@@ -543,8 +543,8 @@ button.shufflebtn, button.dealbtn {
   height: 23vw;
   transition: transform 1s ease-in-out;
   border-radius: 15px;
-  transform-style: preserve-3d; /* Enables 3D effect for flipping */
-  perspective: 1000px; /* Ensures the flip effect is 3D */
+  transform-style: preserve-3d;
+  perspective: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -553,20 +553,17 @@ button.shufflebtn, button.dealbtn {
 }
 
 .selected-card img {
-  border-radius: 15px; /* Apply border-radius directly to the images */
+  border-radius: 15px;
   width: 100%;
-  object-fit: cover; /* Ensures images maintain their aspect ratio while filling the container */
-  box-shadow: 0 0 10px rgba(174, 255, 0, 0.5); /* Optional: Add a subtle shadow for card images */
+  object-fit: cover;
 }
 
-/* Card front and back wrapper, removed background images */
-.card-front,
-.card-back {
+.card-front, .card-back {
   overflow: hidden;
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; /* Prevents the back of the card from showing */
+  backface-visibility: hidden;
   transition: transform 1s;
 }
 
@@ -575,62 +572,6 @@ button.shufflebtn, button.dealbtn {
   display: flex;
 }
 
-/* Card back initial state */
-.card-back {
-  opacity: 1; /* Initially visible */
-  transform: rotateY(0deg); /* Back is facing up initially */
-}
-
-/* Card front state */
-.card-front {
-  opacity: 0; /* Initially hidden */
-  transform: rotateY(180deg); /* Front is initially rotated away */
-}
-
-/* Flip effect */
-.selected-card.flip .card-back {
-  opacity: 0; /* Hide the back when flipping */
-  transform: rotateY(180deg); /* Rotate the back to face away */
-}
-
-.selected-card.flip .card-front {
-  opacity: 1; /* Show the front */
-  transform: rotateY(0deg); /* Rotate front to face the user */
-}
-
-/* Styles for card name */
-.card-name {
-  margin-top: 2.5vh;
-  font-family: "Tourney", monospace;
-  text-transform: uppercase !important;
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-}
-
-/* Styles for interpretation and response */
-.card-details-text {
-  font-family: "Cascadia Code", monospace;
-  font-size: 1rem;
-  text-align: justify;
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-}
-
-.card-info {
-  bottom: 0; /* Move text to the bottom of the card */
-  left: 0;
-  right: 0;
-  padding: 5px 20px; /* Reduced padding to decrease space */
-  background: rgba(0, 0, 0, 0.6); /* Background to help the text stand out */
-  color: rgb(174, 255, 0);
-  font-family: "Tourney", monospace;
-  text-align: center;
-   /* Use negative margin to pull the text up */
-}
-
-/* shuffle.css */
-
-/* Styling for card stack and shuffle effect */
 .card-stack {
   position: relative;
   display: flex;
@@ -649,17 +590,51 @@ button.shufflebtn, button.dealbtn {
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
-.shufflebtn {
-  margin-top: 20px;
-}
-
 #instructions {
-  width: 48%;
+  width: 100%;
   font-family: "Cascadia Code", monospace;
   font-size: 1rem;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  padding: 2vh;
 }
+
+.card-name {
+  color: rgb(174, 255, 0) ;
+  font-family: "Tourney", monospace;
+  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase !important;
+  margin: 1vh;
+}
+
+.card-details-text {
+  color: rgb(174, 255, 0);
+  font-family: "Cascadia Code", monospace;
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  font-size: 1rem;
+  text-align: center;
+  margin: 1vh;
+}
+
+#instructions-column {
+  width: 100%;
+}
+
+#card-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected-cardone {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
 
