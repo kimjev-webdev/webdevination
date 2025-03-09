@@ -533,7 +533,8 @@ button.shufflebtn, button.dealbtn {
   flex-direction: column;
   justify-content: center; /* Align items to the top of the column */
   align-items: center; /* Align items horizontally in the center */
-  overflow: hidden; /* Use full viewport height minus navbar height */ /* Account for the navbar space */
+  overflow: hidden;
+  display: none;  /* Use full viewport height minus navbar height */ /* Account for the navbar space */
 }
 
 .selected-card {
