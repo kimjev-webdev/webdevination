@@ -573,8 +573,8 @@ button.shufflebtn, button.dealbtn {
 }
 
 .card-stack {
-  position: relative;
   display: flex;
+  position: relative;
   justify-content: center;
   width: 50vw;
   height: 50vh;
@@ -630,7 +630,6 @@ button.shufflebtn, button.dealbtn {
 }
 
 .selected-cardone {
-  display: flex !important;
   justify-content: center;
   align-items: center;
 }
