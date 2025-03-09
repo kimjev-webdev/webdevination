@@ -53,19 +53,14 @@ fetch('./assets/tarot.json')
 
         // Handle Shuffle button click (with animation)
         shuffleButton.addEventListener('click', () => {
-            // Hide the selected card container and show shuffled card stack
+            // Show shuffled card stack and hide selected card container
+            cardStack.style.display = 'flex'; // Show shuffled cards with flexbox
             selectedCardContainer.style.display = 'none'; // Hide the selected card container
-            cardStack.style.display = 'block'; // Show shuffled card stack
 
-            // Reset the selected card container's content before shuffling
-            selectedCardContainer.innerHTML = ''; // Clear any previously drawn card details
+            shuffleDeck(); // Shuffle deck before showing cards again
+            shuffleAnimation(); // Start shuffle animation
 
-            // Start shuffle animation
-            shuffleAnimation(); 
-
-            // Shuffle the deck after animation
             setTimeout(() => {
-                shuffleDeck(); // Shuffle deck after animation
                 alert("Deck shuffled! Click 'Deal' to draw a card.");
             }, 3500); // Wait for animation to finish before shuffling deck
         });
@@ -125,11 +120,12 @@ fetch('./assets/tarot.json')
 
         // Handle Deal button click (draw a card)
         dealButton.addEventListener('click', () => {
-            // Hide the shuffled cards and show the selected card
+            // Hide shuffled cards and show the selected card
             cardStack.style.display = 'none'; // Hide the shuffled card stack
-            selectedCardContainer.style.display = 'block'; // Show the selected card container
-            drawCard(); // Draw a card when the "Deal" button is clicked
-        });
+            selectedCardContainer.style.display = 'flex'; // Show the selected card with flexbox
 
+            // Draw a card when the "Deal" button is clicked
+            drawCard();
+        });
     })
     .catch(error => console.error('Error loading tarot deck:', error));
