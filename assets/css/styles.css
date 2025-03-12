@@ -483,7 +483,6 @@ body.cards {
 /* styles.css */
 body.onecard {
   background-color: #000;
-  overflow: hidden;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -510,6 +509,10 @@ body.onecard {
   position: relative;
   width: 150px;
   height: 200px;
+}
+
+.onecardrow {
+  overflow: hidden;
 }
 
 .shufflecard {
