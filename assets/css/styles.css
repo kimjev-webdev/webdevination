@@ -483,6 +483,7 @@ body.cards {
 /* styles.css */
 body.onecard {
   background-color: #000;
+  overflow: hidden;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -498,7 +499,7 @@ body.onecard {
 .onecardheader {
   margin: 3vh;
   font-family: "Tourney", monospace;
-  font-size: 3vw;
+  font-size: 4vw;
   letter-spacing: 1vw;
 }
 .leftonecard {
@@ -545,8 +546,8 @@ button.shufflebtn, button.dealbtn {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   display: none;
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;;
 }
 
 .selected-card {
@@ -619,7 +620,6 @@ button.shufflebtn, button.dealbtn {
 .card-name {
   color: rgb(174, 255, 0) ;
   font-family: "Tourney", monospace;
-  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;
   font-size: 3vw;
   letter-spacing: 1vw;
   font-weight: bold;
@@ -631,7 +631,6 @@ button.shufflebtn, button.dealbtn {
 .card-details-text {
   color: rgb(174, 255, 0);
   font-family: "Cascadia Code", monospace;
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
   font-size: 1rem;
   text-align: center;
   margin: 1vh;
@@ -650,6 +649,7 @@ button.shufflebtn, button.dealbtn {
 .selected-cardone {
   justify-content: center;
   align-items: center;
+  
 }
 
 /* media query */
