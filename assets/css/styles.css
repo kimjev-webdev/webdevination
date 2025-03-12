@@ -488,7 +488,7 @@ body.onecard {
   justify-content: center;
   align-items: center;
   background-image: url('../images/tarotbg.webp');
-  margin-top: 70px; /* Adjust for navbar height */
+/* Adjust for navbar height */
   max-width: 100vw;
   max-height: 100vh;
   margin-left: 20px;
@@ -527,7 +527,10 @@ button.shufflebtn, button.dealbtn {
   background-color: transparent !important;
   text-decoration: none !important;
   text-align: center;
-  margin: 3vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
   color: rgb(174, 255, 0) !important;
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a !important;
   font-family: "Tourney", monospace !important;
