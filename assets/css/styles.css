@@ -513,6 +513,7 @@ body.onecard {
 
 .onecardrow {
   overflow: hidden;
+  align-items: center;
 }
 
 .shufflecard {
