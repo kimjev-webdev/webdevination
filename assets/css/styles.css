@@ -501,8 +501,10 @@ body.onecard {
   font-size: 4vw;
   letter-spacing: 1vw;
 }
+
 .leftonecard {
   margin-top: 100px;
+  overflow: hidden;
 }
 
 #deck {
@@ -512,7 +514,6 @@ body.onecard {
 }
 
 .onecardrow {
-  overflow: hidden;
   align-items: center;
 }
 
