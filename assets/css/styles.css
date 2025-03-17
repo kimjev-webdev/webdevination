@@ -382,7 +382,6 @@ body.info {
   border: none;
   font-size: 3vw;
   letter-spacing: 1vw;
-  line-height: 3rem;
   cursor: pointer;
   transition: 0.3s;
   opacity: 0; /* Initially hidden */
@@ -399,6 +398,7 @@ body.info {
 
 .explanation {
   margin-top: 10px;
+  margin-bottom: 20px;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
   font-family: "Cascadia Code", monospace;
