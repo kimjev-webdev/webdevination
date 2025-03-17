@@ -1,16 +1,38 @@
-/* general styles */
-
+/* universal styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* styles for the landing page */
 
-body.landing {
-  background-color: #000;
+/* general body styles */
+body {
+  background-color: transparent;
   background-image: url('../images/tarotbg.webp');
   background-repeat: no-repeat; /* Adjust as needed */
+  width: 100%;
+  height: 100%;
+  font-family: 'cascadia code', courier, monospace;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+}
+
+/* general button styles */
+button {
+  letter-spacing: 1vw;
+  font-family: 'Tourney' monospace;
+  box-shadow: none;
+  background-color: transparent;
+  text-decoration: none !important;
+  text-align: center;
+  border: transparent !important;
+  outline: none;
+  color:  rgb(174, 255, 0) !important;  
+  text-shadow: 0 0 5px  #2aff1a, 0 0 10px  #2aff1a, 0 0 20px  #2aff1a;
+}
+
+/* landing page specific body styles */
+body.landing {
   font-family: "Tourney", monospace;
   display: flex;
   justify-content: center;
@@ -18,9 +40,9 @@ body.landing {
   width: 100%;
   height: 100%;
   margin: 0;
-  color: rgb(174, 255, 0); /* Green glow text */
 }
 
+/* alignment for landing page container - central to viewport */
 .container.landing-container {
   display: flex;
   flex-wrap: wrap;
@@ -30,15 +52,13 @@ body.landing {
   position: absolute;
   width: 100vw;
   height: 30vh;
-  top: 50%; /* Move the top of the container to the center of the viewport */
-  left: 50%; /* Move the left of the container to the center of the viewport */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Offset the container by half its width and height */
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
   white-space: nowrap;
 }
 
+/* animations for the letters and icons */
 @keyframes flashText {
   0% {
     opacity: 1;
@@ -51,8 +71,7 @@ body.landing {
   }
 }
 
-/* keyframes to rotate the rotate screen icon continuously */
-
+/* animation to rotate the screen icon which appears on horizontal phones */
 @keyframes rotate {
   0% {
     transform: rotate(0deg); /* Start at 0 degrees */
@@ -62,9 +81,9 @@ body.landing {
   }
 }
 
+/* letter alignment for landing page animation */
 .letter {
   position: relative;
-  color: rgb(174, 255, 0);
   font-size: 4.5vw;
   margin: 0 0px;
   display: inline-block;
@@ -72,11 +91,10 @@ body.landing {
   height: 5vw;
   text-align: center;
   line-height: 6vw;
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
 
+/* icon alignment for landing page animation */
 .letter i.material-icons {
-  color: rgb(174, 255, 0);
   margin: 0;
   padding: 0;
   position: absolute;
@@ -90,63 +108,49 @@ body.landing {
   transition: box-shadow 0.3s ease-in-out;
 }
 
+/* ensure letters overlay symbols correctly */
 .letter .text {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-}
-
+} 
+/* container for enter button */
 .overlay {
   position: fixed;
   display: none;
   align-items: center;
-  justify-content: center; /* Start with the overlay hidden */
+  justify-content: center; 
   width: 100vw;
   height: 30vh;
   background-color: transparent;
   flex-direction: column;
   z-index: 2;
   position: absolute;
-  top: 50%; /* Move the top of the container to the center of the viewport */
-  left: 50%; /* Move the left of the container to the center of the viewport */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Offset the container by half its width and height */
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
 }
-
 .container:hover .overlay {
   display: flex;
 }
-
+/*sizing and alignment for enter button */
 .enter-button {
-  box-shadow: none;
   display: inline-block;
-  background-color: transparent;
-  text-decoration: none !important;
-  text-align: center;
   margin: 3vh;
   padding: 3vh;
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  font-family: "Tourney", monospace;
   font-size: 4.5vw;
-  letter-spacing: 1vw;
 }
 
-/* Apply the flash effect to the button text */
+/* flash effect for button */
 .enter-button {
   animation: flashText 1s infinite; /* Flash every 1 second */
 }
 
-/* Optional: Adding hover effect to make it stand out */
+/* hover effect to make it stand out */
 .enter-button:hover {
   text-decoration: none !important;
-  background-color: transparent;
   transform: scale(1.1);
-  outline: transparent !important;
-  border: transparent;
 }
 
 button.btn.btn-link.enter-button:hover {
@@ -332,7 +336,6 @@ body.info {
     overflow: hidden;           /* Prevent overflow */
 }
 
-
 /* Initially hide the cardback images */
 #buttons-container .col-12.col-md-6 img {
   opacity: 0;
@@ -393,7 +396,6 @@ body.info {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-
 
 .card-button  {
   display: block;
@@ -511,7 +513,7 @@ body.cards {
   border-radius: 15px !important;
 }
 
-/* styles.css */
+/* one card reading styles  */
 body.onecard {
   background-color: #000;
   display: flex;
@@ -522,9 +524,7 @@ body.onecard {
   width: 100vw;
  height: 100vh;
   margin-top: 100px;
-  margin-left: 60px;
-  margin-right: 60px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .onecardheader {
@@ -535,7 +535,7 @@ body.onecard {
 }
 
 .leftonecard {
-  overflow: visible;
+overflow: visible !important;
 display: flex;
 flex-wrap: wrap;
 }
@@ -548,6 +548,9 @@ flex-wrap: wrap;
 
 .onecardrow {
   align-items: flex-start;
+  overflow: visible;
+  flex-wrap: wrap;
+  margin: 3vw;
 }
 
 .shufflecard {
@@ -575,7 +578,7 @@ button.shufflebtn, button.dealbtn {
   color: rgb(174, 255, 0) !important;
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a !important;
   font-family: "Tourney", monospace !important;
-  font-size: 3vw !important;
+  font-size: 2vw !important;
   letter-spacing: 1vw;
   border: transparent !important;
   text-transform: capitalize !important;
@@ -599,12 +602,13 @@ button.shufflebtn:hover, button.dealbtn:hover {
 /* CARD FLIP STYLES */
 .selected-card {
   width: 16vw;
-  height: 23vw;
+  height: 23.1vw;
   transition: transform 1s ease-in-out;
   border-radius: 15px;
   transform-style: preserve-3d;
   perspective: 1000px;
   display: flex;
+  overflow: visible;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -615,6 +619,7 @@ button.shufflebtn:hover, button.dealbtn:hover {
 .selected-card .card-front, 
 .selected-card .card-back {
   position: absolute;
+  overflow: visible;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -643,7 +648,7 @@ button.shufflebtn:hover, button.dealbtn:hover {
 }
 
 .card-front, .card-back {
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -680,7 +685,7 @@ button.shufflebtn:hover, button.dealbtn:hover {
   font-size: 1rem;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  padding: 2vh;
+  padding: 1vh;
   text-align: center;
 }
 
@@ -702,7 +707,7 @@ button.shufflebtn:hover, button.dealbtn:hover {
   color: rgb(174, 255, 0);
   font-family: "Cascadia Code", monospace;
   font-size: 1rem;
-  max-width: 75%;
+  max-width: 90%;
   text-align: justify;
   align-self: center;
   margin: 1vh;
