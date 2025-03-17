@@ -216,7 +216,7 @@ button.btn.btn-link.enter-button:hover {
   text-decoration: none;
 }
 
-/* Tab active style */
+/* active navbar tab styles */
 .nav-link.active {
   background-color: rgb(174, 255, 0);
   color: #000000;
@@ -246,7 +246,8 @@ button.btn.btn-link.enter-button:hover {
 }
 /* styles for info page */
 
-/* Set the page to look like a terminal */
+/*info page styles*/
+/* set the page body to mimic terminal */
 body.info {
   margin: 10px;
   padding: 20px;
@@ -294,7 +295,7 @@ body.info {
 
   #terminalText {
     white-space: normal;        /* Allow text to wrap */
-    word-wrap: break-word;      /* Ensure words break properly when reaching the container's edge */
+    word-wrap: normal;      /* Ensure words break properly when reaching the container's edge */
     line-height: 1.5;           /* Adjust line-height for proper spacing between lines */
     overflow: hidden;           /* Prevent overflow */
 }
@@ -504,7 +505,7 @@ body.onecard {
 }
 
 .leftonecard {
-  overflow: hidden;
+  overflow: visible;
 }
 
 #deck {
@@ -514,7 +515,7 @@ body.onecard {
 }
 
 .onecardrow {
-  align-items: center;
+  align-items: flex-start;
 }
 
 .shufflecard {
