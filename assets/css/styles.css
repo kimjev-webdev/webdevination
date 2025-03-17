@@ -1,3 +1,27 @@
+/* animations */
+/* animations for the letters and icons on landing page */
+@keyframes flashText {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* animation for rotate icon which appears on horizontal phones on landing page */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* End at 360 degrees (one full rotation) */
+  }
+}
+
 /* universal styles */
 * {
   margin: 0;
@@ -31,6 +55,23 @@ button {
   text-shadow: 0 0 5px  #2aff1a, 0 0 10px  #2aff1a, 0 0 20px  #2aff1a;
 }
 
+button:hover {
+cursor: pointer;
+text-decoration: none !important;
+background-color: transparent !important;
+border: transparent;
+outline: none;
+color:  rgb(174, 255, 0) !important;  
+text-shadow: 0 0 5px  #2aff1a, 0 0 10px  #2aff1a, 0 0 20px  #2aff1a;
+transform: scale(1.1);
+animation: flashText 1s infinite;
+}
+
+i {
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  color: rgb(174, 255, 0);
+}
+
 /* landing page specific body styles */
 body.landing {
   font-family: "Tourney", monospace;
@@ -56,29 +97,6 @@ body.landing {
   left: 50%; 
   transform: translate(-50%, -50%); 
   white-space: nowrap;
-}
-
-/* animations for the letters and icons */
-@keyframes flashText {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* animation to rotate the screen icon which appears on horizontal phones */
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg); /* Start at 0 degrees */
-  }
-  100% {
-    transform: rotate(360deg); /* End at 360 degrees (one full rotation) */
-  }
 }
 
 /* letter alignment for landing page animation */
@@ -115,6 +133,7 @@ body.landing {
   left: 0;
   z-index: 1;
 } 
+
 /* container for enter button */
 .overlay {
   position: fixed;
@@ -134,6 +153,7 @@ body.landing {
 .container:hover .overlay {
   display: flex;
 }
+
 /*sizing and alignment for enter button */
 .enter-button {
   display: inline-block;
@@ -144,25 +164,14 @@ body.landing {
 
 /* flash effect for button */
 .enter-button {
-  animation: flashText 1s infinite; /* Flash every 1 second */
+  animation: flashText 1s infinite; 
 }
 
-/* hover effect to make it stand out */
-.enter-button:hover {
-  text-decoration: none !important;
-  transform: scale(1.1);
-}
-
-button.btn.btn-link.enter-button:hover {
-  text-decoration: none !important;
-  background-color: transparent !important;
-  transform: scale(1.1);
-}
-
+/* promy user to  click on the animation to enter at any point even before the sequence has finished */
 .container,
 .overlay,
 .enter-button {
-  cursor: pointer;
+cursor: pointer;
 }
 
 /* Hide the prompt by default */
@@ -172,9 +181,6 @@ button.btn.btn-link.enter-button:hover {
   position: absolute;
   bottom: 20px;
   font-size: 1rem;
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  font-family: "Cascadia Code", Courier, monospace;
 }
 
 .rotate-icon .material-icons {
@@ -187,13 +193,10 @@ button.btn.btn-link.enter-button:hover {
   margin-top: 88.5vh;
   margin-bottom: 10px;
   animation: rotate 3s linear infinite, flashText 1s infinite;
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  color: rgb(174, 255, 0);
 }
 
  /* Navbar background and tab styling */
  i.fa-pasted-svg-1 {
-  text-shadow: 0 0 5px hsl(116, 100%, 55%), 0 0 10px #2aff1a, 0 0 20px #2aff1a !important;
   margin-left: 7px;
  }
 
