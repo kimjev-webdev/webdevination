@@ -146,6 +146,7 @@ body.landing {
   background-color: transparent;
   transform: scale(1.1);
   outline: transparent !important;
+  border: transparent;
 }
 
 button.btn.btn-link.enter-button:hover {
@@ -232,6 +233,11 @@ button.btn.btn-link.enter-button:hover {
 .nav-item:last-child {
   margin-right: 0;
 }
+
+i.fa-bars {
+  text-shadow: 0 0 5px hsl(116, 100%, 55%), 0 0 10px #2aff1a, 0 0 20px #2aff1a !important;
+  
+ }
 
 /* Add some space around the content for better visual appearance */
 .content {
@@ -382,14 +388,10 @@ body.info {
 
 .card-button:hover {
   background-color: transparent;
+  text-decoration:none;
   animation: flashText 1s infinite;
   text-decoration: none;
   transform: scale(1.1);
-}
-
-.card-button:focus {
-  outline: none;
-  animation: flashText 1s infinite;
 }
 
 .explanation {
@@ -546,6 +548,12 @@ button.shufflebtn, button.dealbtn {
   border: transparent !important;
   text-transform: capitalize !important;
 }
+
+button.shufflebtn:hover, button.dealbtn:hover {
+    text-decoration: none;
+    animation: flashText 1s infinite;
+    transform: scale(1.1);
+  }
 
 #selected-cardone {
   display: flex;
