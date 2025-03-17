@@ -45,7 +45,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6, button {
-  font-family: 'Tourney' monospace;
+  font-family: 'Tourney', monospace;
   letter-spacing: 1vw;
   box-shadow: none;
   background-color: transparent;
@@ -240,8 +240,9 @@ i.rotate-icon {
   margin-right: 0;
 }
 
+/* hamburger icon custom sizing */
 i.fa-bars {
- size: 3vw !important;
+ size: 2.5vw !important;
 }
 
 .dropdown-menu {
@@ -268,11 +269,6 @@ a.dropdown-item:hover {
   text-shadow: 0 0 5px #2aff1a 0 0 10px #2aff1a 0 0 20px #2aff1a;
 }
 
-/* Add some space around the content for better visual appearance */
-.content {
-  padding: 20px;
-}
-
 /* Font color on hover */
 .nav-link:hover {
   background-color: rgb(174, 255, 0);
@@ -287,15 +283,11 @@ body.info {
   margin: 10px;
   padding: 20px;
   height: 100vh;
-  background-color: black;
   font-family: "Cascadia Code", Courier, monospace;
 }
 
 .terminal {
-  background-color: #000;
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -306,28 +298,11 @@ body.info {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  font-family: "Tourney", monospace;
-  background-color: transparent;
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
   padding: 10px 20px;
-  border: none;
-  font-size: 3vw;
-  letter-spacing: 1vw;
-  cursor: pointer;
+  font-size: 2rem;
   transition: 0.3s;
 }
 
-.skip-button:hover {
-  background-color: transparent;
-  text-decoration: none;
-  animation: flashText 1s infinite;
-  transform: scale(1.1);
-}
-
-.skip-button:focus {
-  outline: none;
-}
 
   #terminalText {
     white-space: normal;        /* Allow text to wrap */
