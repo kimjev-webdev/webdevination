@@ -275,7 +275,6 @@ a.dropdown-item:hover {
   color: black;
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
-/* styles for info page */
 
 /*info page styles*/
 /* set the page body to mimic terminal */
@@ -283,7 +282,6 @@ body.info {
   margin: 10px;
   padding: 20px;
   height: 100vh;
-  font-family: "Cascadia Code", Courier, monospace;
 }
 
 .terminal {
@@ -294,6 +292,7 @@ body.info {
   overflow: hidden;
 }
 
+/* skip button allows user to load page contents without delay */
 .skip-button {
   position: fixed;
   bottom: 10px;
@@ -303,12 +302,11 @@ body.info {
   transition: 0.3s;
 }
 
-
-  #terminalText {
-    white-space: normal;        /* Allow text to wrap */
-    word-wrap: normal;      /* Ensure words break properly when reaching the container's edge */
-    line-height: 1.5;           /* Adjust line-height for proper spacing between lines */
-    overflow: hidden;           /* Prevent overflow */
+#terminalText {
+  white-space: normal;        /* Allow text to wrap */
+  word-wrap: normal;      /* Ensure words break properly when reaching the container's edge */
+  line-height: 1.5;           /* Adjust line-height for proper spacing between lines */
+  overflow: hidden;           /* Prevent overflow */
 }
 
 /* Initially hide the cardback images */
