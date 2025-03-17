@@ -86,7 +86,7 @@ fetch('./assets/tarot.json')
             cardBack.classList.add('card-back');
 
             const cardBackImage = document.createElement('img');
-            cardBackImage.src = '../assets/images/cardback.webp'; // Set card back image
+            cardBackImage.src = './assets/images/cardbacks.webp'; // Set card back image
             cardBackImage.alt = 'Card Back';
             cardBack.appendChild(cardBackImage);
 
