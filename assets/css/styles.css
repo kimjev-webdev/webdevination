@@ -317,7 +317,6 @@ body.info {
   margin: auto;
   width: 100px; /* Adjust size */
   height: auto;
-  margin-bottom: 10px; /* Adds space below each image */
 }
 
 /* Make the images visible when the 'visible' class is added */
@@ -330,7 +329,6 @@ body.info {
   display: flex;
   justify-content: center;  /* Align images horizontally in the row */
   gap: 10px;  /* Space between images */
-  margin-bottom: 20px;  /* Space between images and the button below */
 }
 
 /* Ensure images inside the .image-container align in a row */
@@ -354,7 +352,7 @@ body.info {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px; /* Add some space below each button */
+ /* Add some space below each button */
 }
 
 /* Buttons container: Make the buttons and explanations centered */
@@ -372,14 +370,9 @@ body.info {
 .card-button  {
   display: block;
   margin: auto;
-  text-decoration: none;
-  background-color: transparent;
-  font-family: "Tourney", monospace;
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  padding: 10px 20px;
-  border: none;
-  font-size: 3vw;
+  padding: 25px 25px;
+  font-size: 2rem;
+  line-height: 2rem;
   letter-spacing: 1vw;
   cursor: pointer;
   transition: 0.3s;
@@ -387,20 +380,9 @@ body.info {
   text-transform: capitalize;
 }
 
-.card-button:hover {
-  background-color: transparent;
-  text-decoration:none;
-  animation: flashText 1s infinite;
-  text-decoration: none;
-  transform: scale(1.1);
-}
-
 .explanation {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  font-family: "Cascadia Code", monospace;
+  font-family: 'Cascadia Code', Courier, monospace ;
+  margin-bottom: 30px;
   font-size: 14px;
   text-align: left;
   opacity: 0; /* Initially hidden */
