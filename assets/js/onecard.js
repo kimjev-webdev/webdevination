@@ -81,22 +81,33 @@ fetch('./assets/tarot.json')
             cardElement.setAttribute('data-response', drawnCard.response);
             cardElement.setAttribute('data-interpretation', drawnCard.interpretation);
 
+            // Create the back of the card (initially visible)
+            const cardBack = document.createElement('div');
+            cardBack.classList.add('card-back');
+
+            const cardBackImage = document.createElement('img');
+            cardBackImage.src = '../assets/images/cardback.webp'; // Set card back image
+            cardBackImage.alt = 'Card Back';
+            cardBack.appendChild(cardBackImage);
+
             // Create the front of the card (hidden initially)
             const cardFront = document.createElement('div');
             cardFront.classList.add('card-front');
-            
+
             const cardFrontImage = document.createElement('img');
             cardFrontImage.src = drawnCard.image; // Use front image path from JSON
-            cardFrontImage.alt = drawnCard.name; // Optional: add alt text
-            cardFront.appendChild(cardFrontImage); // Append img to the front element
+            cardFrontImage.alt = drawnCard.name;
+            cardFront.appendChild(cardFrontImage);
 
-            cardElement.appendChild(cardFront); // Add the front of the card to the card element
+            // Append front and back to card element
+            cardElement.appendChild(cardBack);
+            cardElement.appendChild(cardFront);
 
             // Add the card to the selected card container
             selectedCardContainer.innerHTML = ''; // Clear any previous cards
             selectedCardContainer.appendChild(cardElement);
 
-            // Initiate flip animation immediately after the card is drawn
+            // Ensure card back is displayed first, then flip after a delay
             setTimeout(() => {
                 cardElement.classList.add('flip'); // Trigger flip animation
 
@@ -104,7 +115,7 @@ fetch('./assets/tarot.json')
                 setTimeout(() => {
                     showCardDetails(drawnCard); // Show card details after flip
                 }, 500); // Delay showing details to allow the flip to finish
-            }, 100); // Short delay to make sure card is visible before flipping
+            }, 1000); // Delay to ensure the back is visible first
         }
 
         // Display the card details
