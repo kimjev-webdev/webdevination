@@ -514,17 +514,17 @@ body.cards {
 /* styles.css */
 body.onecard {
   background-color: #000;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   background-image: url('../images/tarotbg.webp');
   /* Adjust for navbar height */
-  max-width: 100vw;
-  max-height: 100vh;
+  width: 100vw;
+ height: 100vh;
   margin-top: 100px;
   margin-left: 60px;
   margin-right: 60px;
+  overflow: hidden;
 }
 
 .onecardheader {
@@ -536,12 +536,14 @@ body.onecard {
 
 .leftonecard {
   overflow: visible;
+display: flex;
+flex-wrap: wrap;
 }
 
 #deck {
   position: relative;
-  width: 150px;
-  height: 200px;
+  width: 16vw;
+  height: 23vw;
 }
 
 .onecardrow {
@@ -651,6 +653,7 @@ button.shufflebtn:hover, button.dealbtn:hover {
 .dealcol {
   margin: 3vw;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .card-stack {
@@ -687,20 +690,25 @@ button.shufflebtn:hover, button.dealbtn:hover {
 .card-name {
   color: rgb(174, 255, 0);
   font-family: "Tourney", monospace;
-  font-size: 3vw;
+  font-size: 2rem;
   letter-spacing: 1vw;
-  font-weight: bold;
   text-align: center;
-  text-transform: uppercase !important;
   margin: 3vh;
+  text-transform: capitalize;
 }
 
 .card-details-text {
   color: rgb(174, 255, 0);
   font-family: "Cascadia Code", monospace;
   font-size: 1rem;
-  text-align: center;
+  max-width: 75%;
+  text-align: justify;
+  align-self: center;
   margin: 1vh;
+  padding: 2vh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 #instructions-column {
@@ -717,17 +725,8 @@ button.shufflebtn:hover, button.dealbtn:hover {
   width: 50vw;
   justify-content: flex-start;
   align-items: center;
-}
-
-.selected-card {
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-}
-
-#selected-cardone, .card-stack {
-  display: flex;
-  justify-content: center;
+  overflow: hidden;
+  flex-wrap: wrap;
 }
 
 
