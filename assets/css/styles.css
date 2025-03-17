@@ -608,6 +608,7 @@ button.shufflebtn:hover, button.dealbtn:hover {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 3vh;
 }
 
 /* Ensures card starts with back visible */
@@ -693,8 +694,8 @@ button.shufflebtn:hover, button.dealbtn:hover {
   font-size: 2rem;
   letter-spacing: 1vw;
   text-align: center;
-  margin: 3vh;
-  text-transform: capitalize;
+  line-height: 0.5rem;
+  text-transform: uppercase;
 }
 
 .card-details-text {
