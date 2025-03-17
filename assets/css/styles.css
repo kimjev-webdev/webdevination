@@ -549,9 +549,11 @@ body.onecard {
 }
 
 .shufflecard {
-  position: absolute;
-  width: 100px;
-  height: 140px;
+  display: flex;
+  justify-content: flex-start;
+align-items: center;
+  width: 16vw;
+  height: 23vw;
   background-image: url('../images/tarotbg.webp');
   background-size: cover;
   border-radius: 5px;
@@ -586,7 +588,7 @@ button.shufflebtn:hover, button.dealbtn:hover {
 #selected-cardone {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   display: none;
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
@@ -594,7 +596,6 @@ button.shufflebtn:hover, button.dealbtn:hover {
 
 /* CARD FLIP STYLES */
 .selected-card {
-  position: relative;
   width: 16vw;
   height: 23vw;
   transition: transform 1s ease-in-out;
@@ -605,7 +606,6 @@ button.shufflebtn:hover, button.dealbtn:hover {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 0.83%;
 }
 
 /* Ensures card starts with back visible */
@@ -658,7 +658,6 @@ button.shufflebtn:hover, button.dealbtn:hover {
   position: relative;
   justify-content: center;
   width: 50vw;
-  height: 50vh;
   margin: 0 auto;
   overflow: visible;
 }
@@ -715,8 +714,20 @@ button.shufflebtn:hover, button.dealbtn:hover {
 }
 
 .selected-cardone {
-  justify-content: center;
+  width: 50vw;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.selected-card {
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+#selected-cardone, .card-stack {
+  display: flex;
+  justify-content: center;
 }
 
 
