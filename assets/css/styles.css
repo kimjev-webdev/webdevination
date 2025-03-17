@@ -359,7 +359,6 @@ body.info {
 
 /* Buttons container: Make the buttons and explanations centered */
 .buttons-container {
-  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
