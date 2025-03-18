@@ -46,13 +46,14 @@ body.p {
 
 h1, h2, h3, h4, h5, h6, button {
   font-family: 'Tourney', monospace;
+  text-transform: uppercase !important;
   letter-spacing: 1vw;
   box-shadow: none;
-  background-color: transparent;
+  background-color: transparent !important;
   text-decoration: none !important;
   text-align: center;
   border: transparent !important;
-  outline: none;
+  outline: none !important;
   color:  rgb(174, 255, 0) !important;  
   text-shadow: 0 0 5px  #2aff1a, 0 0 10px  #2aff1a, 0 0 20px  #2aff1a;
 }
@@ -194,6 +195,7 @@ i.rotate-icon {
 .navbar {
   background-color: transparent !important;
   padding: 20px 0;
+  font-family: 'Cascadia Code', Consolas, 'Courier New' monospace;
 }
 
  /* navbar brand margin */
@@ -210,7 +212,6 @@ i.rotate-icon {
 .nav-link {
   display: block;
   margin-right: 5px;
-  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
   font-size: 16px;
   background-color: #000000;
   border: 1px solid rgb(174, 255, 0);
@@ -219,21 +220,19 @@ i.rotate-icon {
   text-align: center;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  font-family: 'Cascadia Code', Consolas, 'Courier New' monospace !important;
   text-decoration: none;
 }
 
-/* active navbar tab styles */
-.nav-link.active {
+
+.navlink.active, .nav-item:hover .nav-link {
   background-color: rgb(174, 255, 0);
   color: #000000;
+} 
+  
+.nav-link.active {
   border-bottom: 1px solid rgb(174, 255, 0);
   box-shadow: inset 0 3px 5px rgb(174, 255, 0);
-}
-
-/* navbar item hover styles */
-.nav-item:hover .nav-link {
-  background-color: rgb(174, 255, 0); 
-  color: #000000;
 }
 
 /* remove margin for last item */
@@ -246,16 +245,12 @@ i.fa-bars {
  size: 2.5vw !important;
 }
 
-.dropdown-menu {
+.dropdown-menu, .dropdown-menu:has(.dropdown:hover) {
   background-color: #000;
   border: 1px solid rgb(174, 255, 0);
   font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
 }
 
-.dropdown-menu:has(.dropdown:hover) {
-  background-color: rgb(174, 255, 0);
-  color: #000;
-}
 
 a.dropdown-item {
   font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
@@ -509,13 +504,10 @@ flex-wrap: wrap;
 }
 
 button.shufflebtn, button.dealbtn {
-  margin: 20px, 10px, 20px, 10px;
+  margin: 20px, 30px, 20px, 30px !important;
   font-family: "Tourney", monospace !important;
   font-size: 2rem !important;
   letter-spacing: 1vw;
-  border: transparent !important;
-  text-transform: capitalize !important;
-  background-color: transparent !important;
 }
 
 
@@ -525,7 +517,7 @@ button.shufflebtn, button.dealbtn {
   justify-content: center;
   align-items: center;
   display: none;
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  margin: 0, 20px, 0, 20px;
 }
 
 /* CARD FLIP STYLES */
@@ -537,7 +529,6 @@ button.shufflebtn, button.dealbtn {
   transform-style: preserve-3d;
   perspective: 1000px;
   display: flex;
-  overflow: visible;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -548,7 +539,6 @@ button.shufflebtn, button.dealbtn {
 .selected-card .card-front, 
 .selected-card .card-back {
   position: absolute;
-  overflow: visible;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -611,9 +601,8 @@ button.shufflebtn, button.dealbtn {
   width: 100%;
   font-family: "Cascadia Code", monospace;
   font-size: 1rem;
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
   text-align: center;
+  margin: 0, 20px, 0, 20px;
 }
 
 .onecardp {
@@ -634,17 +623,18 @@ button.shufflebtn, button.dealbtn {
   font-family: "Cascadia Code", monospace;
   font-size: 1rem;
   text-align: justify;
-  align-self: center;
   display: flex;
   flex-wrap: wrap;
 }
 
 #instructions-column {
   width: 100%;
+  margin: 10px;
 }
 
 #card-column {
   width: 100%;
+  margin: 10px;
 }
 
 
