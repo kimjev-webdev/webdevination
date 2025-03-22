@@ -627,6 +627,7 @@ button.shufflebtn, button.dealbtn {
 .shufflecard {
   position: absolute;
   width: 175px;
+  margin-bottom: 30px;
   height: auto;
   border-radius: 15px;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
