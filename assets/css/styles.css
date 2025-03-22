@@ -33,13 +33,13 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: transparent;
+  background-color: black;
   background-image: url('../images/tarotbg.webp');
+  background-position: center;
   background-size: cover;
-  background-position: center;  
   background-attachment: fixed;
   background-repeat: no-repeat; /* Adjust as needed */
-  width: 100%;
+  width: 100vw;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
@@ -398,7 +398,10 @@ body.info {
 }
 
 .inforow {
-  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px 0 20px;  
 }
 
 .buttons-container.visible,
