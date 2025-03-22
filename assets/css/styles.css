@@ -597,6 +597,10 @@ button.shufflebtn, button.dealbtn {
   transition: transform 1s;
 }
 
+div.card-info {
+  margin-top: 250px;
+}
+
 .dealcol {
   display: flex;
   flex-wrap: wrap;
