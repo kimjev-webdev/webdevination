@@ -369,7 +369,7 @@ body.info {
   margin: auto;
   padding: 25px 25px;
   font-size: 2rem;
-  line-height: 2rem;
+  line-height: 2.5rem;
   letter-spacing: 1vw;
   cursor: pointer;
   transition: 0.3s;
@@ -377,8 +377,14 @@ body.info {
   text-transform: capitalize;
 }
 
+.buttons-container .col-12.col-md-6 {
+  max-width: 30rem;
+  margin: 0 30px 0 30px;
+}
+
 .explanation {
   margin-bottom: 30px;
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
   font-size: 14px;
   text-align: left;
   opacity: 0; /* Initially hidden */
