@@ -31,7 +31,7 @@
 
 html, body {
   height: 100%;
-  margin: 0;
+  margin: 100px 60px 100px 60px;
   padding: 0;
   background-color: black;
   background-image: url('../images/tarotbg.webp');
@@ -39,7 +39,7 @@ html, body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat; /* Adjust as needed */
-  width: 100vw;
+  width: auto;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
@@ -281,12 +281,10 @@ a.dropdown-item:hover {
 /* set the page body to mimic terminal */
 body.info {
   margin: 10px;
-  padding: 20px;
-  height: 100vh;
+  max-width: 100%;
 }
 
 .terminal {
-  padding: 30px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -305,6 +303,7 @@ body.info {
 
 /* extra styling for explination text on info page */
 #terminalText {
+  padding: 0 30px 0 30px;
   white-space: normal;        
   word-wrap: normal;     
   line-height: 1.5;          
@@ -312,7 +311,7 @@ body.info {
 }
 
 /* initially hide the cardback images */
-#buttons-container .col-12.col-md-6 img {
+#buttons-container .col-12.col-sm-6 img {
   display: none;
   transition: opacity 0.5s ease-in-out;
   display: block;
@@ -322,19 +321,19 @@ body.info {
 }
 
 /* Make the images visible when the 'visible' class is added */
-#buttons-container .col-12.col-md-6 img.visible {
+#buttons-container .col-12.col-sm-6 img.visible {
   display: visible;
 }
 
 /* Use flexbox on the parent container of the images only */
-#buttons-container .col-12.col-md-6 .image-container {
+#buttons-container .col-12.col-sm-6 .image-container {
   display: flex;
   justify-content: center;  /* Align images horizontally in the row */
   gap: 10px;  /* Space between images */
 }
 
 /* Ensure images inside the .image-container align in a row */
-#buttons-container .col-12.col-md-6 .image-container img {
+#buttons-container .col-12.col-sm-6 .image-container img {
   margin: 0;
   width: 100px; /* Adjust the size as necessary */
   height: auto;
@@ -342,7 +341,7 @@ body.info {
 }
 
 /* Keep the rest of the content in the column layout */
-#buttons-container .col-12.col-md-6 {
+#buttons-container .col-12.col-sm-6 {
   display: flex;
   flex-direction: column;
   align-items: center;  /* Center the content horizontally */
@@ -350,7 +349,7 @@ body.info {
 }
 
 /* Ensure buttons are aligned in the center */
-#buttons-container .col-12.col-md-6 a {
+#buttons-container .col-12.col-sm-6 a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -382,8 +381,8 @@ body.info {
   text-transform: capitalize;
 }
 
-.buttons-container .col-12.col-md-6 {
-  max-width: 30rem;
+.buttons-container .col-12.col-sm-6 {
+  max-width: 80%;
   margin: 0 30px 0 30px;
 }
 
@@ -391,7 +390,8 @@ body.info {
   margin-bottom: 30px;
   font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
   font-size: 14px;
-  text-align: left;
+  align-items: center;
+  text-align: justify;
   opacity: 0; /* Initially hidden */
   transform: translateY(-20px); /* Start below */
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
@@ -481,10 +481,6 @@ body.onecard {
   overflow-x: hidden;
 }
 
-body.onecard div.col-12.col-md-6 {
-  margin: 10px;
-}
-
 .onecardheader {
   margin-bottom: 3vh;
   font-family: "Tourney", monospace;
@@ -512,10 +508,6 @@ flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
 
-}
-
-.row {
-  display: flex;
 }
 
 .shufflecard {
@@ -705,12 +697,23 @@ button.shufflebtn, button.dealbtn {
   }
 }
 
+@media (min-width: 768px) {
+  .inforow {
+    flex-wrap: nowrap;
+  }
+}
+
 @media (max-width: 768px) {
+
   .card-name {
     max-width: 100%;
   }
 
   .card-details-text {
+    max-width: 100%;
+  }
+
+  .col-sm-6 {
     max-width: 100%;
   }
 }
