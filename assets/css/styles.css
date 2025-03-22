@@ -620,14 +620,13 @@ button.shufflebtn, button.dealbtn {
   position: relative;
   justify-content: center;
   width: 50vw;
-  margin: 0 auto;
+  margin: 0 0 100px 0;
   overflow: visible;
 }
 
 .shufflecard {
   position: absolute;
   width: 175px;
-  margin-bottom: 30px;
   height: auto;
   border-radius: 15px;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
