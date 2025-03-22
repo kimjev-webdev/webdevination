@@ -597,7 +597,7 @@ button.shufflebtn, button.dealbtn {
   transition: transform 1s;
 }
 
-div.card-info {
+.card-info {
   margin-top: 250px;
 }
 
