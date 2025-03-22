@@ -523,7 +523,7 @@ flex-wrap: wrap;
   z-index: 0;
 }
 
-button.shufflebtn, button.dealbtn {
+button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
   font-family: "Tourney", monospace !important;
   font-size: 2rem !important;
   letter-spacing: 1vw;
@@ -671,7 +671,15 @@ button.shufflebtn, button.dealbtn {
   margin: 10px;
 }
 
+/* three cards */
 
+#threecard-stack {
+  visibility: hidden;
+}
+
+#cards-container {
+  visibility: hidden;
+}
 
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
