@@ -462,7 +462,9 @@ body.cards {
 
 /* Optional styling for the card back text */
 .flip-card-back p {
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
   margin: 5px 0;
+  line-height: 1rem;
   text-align: center;
 }
 
