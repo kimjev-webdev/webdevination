@@ -410,10 +410,9 @@ a {
 
 /* card details page styles */
 body.cards {
-  margin: 10px;
+  margin: 100px 60px 100px 60px;
   padding: 20px;
   height: 100vh;
-  background-image: url('../images/tarotbg.webp') !important; 
 }
 
 .accordion-item {
