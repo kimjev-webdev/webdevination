@@ -1,815 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebDevination One Card Tarot Spread</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets\favicon\apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets\favicon\favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets\favicon\favicon-16x16.png">
-    <link rel="manifest" href="./assets\favicon\site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
     <script src="https://kit.fontawesome.com/40e23bfd7e.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
-<header class="fixed-top">
-    <!-- navigation bar at the top -->
-    <nav class="navbar navbar-expand-lg bg-black">
-        <div class="container-fluid">
-            <!-- logo and home link -->
-            <a class="navbar-brand" href="index.html" aria-label="Go to Homepage">
-                <i class="fa-kit fa-pasted-svg-1 fa-2x fa-fade" style="color: rgb(174, 255, 0);"></i>
-            </a>
-            <!-- hamburger button for mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                aria-label="Expand page navigation.">
-                <!-- hamburger icon -->
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <!-- navigation links (collapsed on mobile) -->
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    <!-- links to different pages -->
-                     <!-- Dropdown for Readings -->
-                <li class="nav-item dropdown">
-                    <!-- Set href="#" to prevent navigation, only to trigger dropdown -->
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Readings
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <!-- Dropdown items linking to One Card and Three Cards pages -->
-                        <li><a class="dropdown-item" href="onecard.html">One Card</a></li>
-                        <li><a class="dropdown-item" href="threecard.html">Three Cards</a></li>
-                    </ul>
-                </li>
-                    <a class="nav-link" href="cards.html">Cards</a>
-                    <a class="nav-link" href="contact.html"></a>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
-
-
-<body class="cards">
-    <div class="accordion" id="tarotAccordion">
-        <!-- Major Arcana Section -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingMajorArcana">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMajorArcana" aria-expanded="true" aria-controls="collapseMajorArcana">
-                    MAJOR ARCANA
-            </h2>
-            <div id="collapseMajorArcana" class="accordion-collapse collapse" aria-labelledby="headingMajorArcana" data-bs-parent="#tarotAccordion">
-                <div class="accordion-body">
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-4">
-                        <!-- Major Arcana Cards -->
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/thefool.webp" class="card-img-top" alt="The Fool">
-                                <div class="card-body">
-                                    <p class="card-text">The Fool</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/themagician.webp" class="card-img-top" alt="The Magician">
-                                <div class="card-body">
-                                    <p class="card-text">The Magician</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/thehighpriestess.webp" class="card-img-top" alt="The High Priestess">
-                                <div class="card-body">
-                                    <p class="card-text">The High Priestess</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/theempress.webp" class="card-img-top" alt="The Empress">
-                                <div class="card-body">
-                                    <p class="card-text">The Empress</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- The Emperor -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/theemperor.webp" class="card-img-top" alt="The Emperor">
-                            <div class="card-body">
-                                <p class="card-text">The Emperor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- The Hierophant -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/thehierophant.webp" class="card-img-top" alt="The Hierophant">
-                            <div class="card-body">
-                                <p class="card-text">The Hierophant</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- The Lovers -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/thelovers.webp" class="card-img-top" alt="The Lovers">
-                            <div class="card-body">
-                                <p class="card-text">The Lovers</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- The Chariot -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/thechariot.webp" class="card-img-top" alt="The Chariot">
-                            <div class="card-body">
-                                <p class="card-text">The Chariot</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Strength -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/strength.webp" class="card-img-top" alt="Strength">
-                            <div class="card-body">
-                                <p class="card-text">Strength</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- The Hermit -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/thehermit.webp" class="card-img-top" alt="The Hermit">
-                            <div class="card-body">
-                                <p class="card-text">The Hermit</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Wheel of Fortune -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/wheeloffortune.webp" class="card-img-top" alt="Wheel of Fortune">
-                            <div class="card-body">
-                                <p class="card-text">Wheel of Fortune</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Justice -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/justice.webp" class="card-img-top" alt="Justice">
-                            <div class="card-body">
-                                <p class="card-text">Justice</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- The Hanged Man -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/thehangedman.webp" class="card-img-top" alt="The Hanged Man">
-                            <div class="card-body">
-                                <p class="card-text">The Hanged Man</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Death -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/death.webp" class="card-img-top" alt="Death">
-                            <div class="card-body">
-                                <p class="card-text">Death</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Temperance -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/temperance.webp" class="card-img-top" alt="Temperance">
-                            <div class="card-body">
-                                <p class="card-text">Temperance</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- The Devil -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/thedevil.webp" class="card-img-top" alt="The Devil">
-                            <div class="card-body">
-                                <p class="card-text">The Devil</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- The Tower -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/thetower.webp" class="card-img-top" alt="The Tower">
-                            <div class="card-body">
-                                <p class="card-text">The Tower</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- The Star -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/thestar.webp" class="card-img-top" alt="The Star">
-                            <div class="card-body">
-                                <p class="card-text">The Star</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- The Moon -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/themoon.webp" class="card-img-top" alt="The Moon">
-                            <div class="card-body">
-                                <p class="card-text">The Moon</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/thesun.webp" class="card-img-top" alt="The Sun">
-                            <div class="card-body">
-                                <p class="card-text">The Sun</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Judgement -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/judgement.webp" class="card-img-top" alt="Judgement">
-                            <div class="card-body">
-                                <p class="card-text">Judgement</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- The World -->
-                    <div class="col">
-                        <div class="card">
-                            <img src="./assets/images/cardfronts/theworld.webp" class="card-img-top" alt="The World">
-                            <div class="card-body">
-                                <p class="card-text">The World</p>
-                            </div>
-                        </div>
+<body>
+    <div class="container mt-4">
+        <div class="accordion" id="tarotAccordion">
+            <!-- Major Arcana Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingMajorArcana">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMajorArcana" aria-expanded="false" aria-controls="collapseMajorArcana">
+                        Major Arcana
+                    </button>
+                </h2>
+                <div id="collapseMajorArcana" class="accordion-collapse collapse" aria-labelledby="headingMajorArcana" data-bs-parent="#tarotAccordion">
+                    <div class="accordion-body" id="majorArcanaCards">
+                        <!-- Major Arcana cards will be dynamically inserted here -->
                     </div>
                 </div>
             </div>
-        </div>
-    
-        <!-- Minor Arcana Section -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingMinorArcana">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinorArcana" aria-expanded="false" aria-controls="collapseMinorArcana">
-                    MINOR ARCANA
-                </button>
-            </h2>
-            <div id="collapseMinorArcana" class="accordion-collapse collapse" aria-labelledby="headingMinorArcana" data-bs-parent="#tarotAccordion">
-                <div class="accordion-body">
-                    <!-- Suit of Wands -->
-                    <h5>Suits of Wands</h5>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-4">
-                        <!-- Loop through Suit of Wands cards -->
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/aceofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Wands</p>
+
+            <!-- Minor Arcana Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingMinorArcana">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinorArcana" aria-expanded="false" aria-controls="collapseMinorArcana">
+                        Minor Arcana
+                    </button>
+                </h2>
+                <div id="collapseMinorArcana" class="accordion-collapse collapse" aria-labelledby="headingMinorArcana" data-bs-parent="#tarotAccordion">
+                    <div class="accordion-body">
+                        <!-- SUIT OF WANDS -->
+                        <div class="accordion" id="suitOfWands">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSuitOfWands">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWands" aria-expanded="false" aria-controls="collapseWands">
+                                        Suit of Wands
+                                    </button>
+                                </h2>
+                                <div id="collapseWands" class="accordion-collapse collapse" aria-labelledby="headingSuitOfWands" data-bs-parent="#suitOfWands">
+                                    <div class="accordion-body" id="wandsCards">
+                                        <!-- Wands cards will be dynamically inserted here -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/twoofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">Two of Wands</p>
+                        <!-- SUIT OF CUPS -->
+                        <div class="accordion" id="suitOfCups">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSuitOfCups">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCups" aria-expanded="false" aria-controls="collapseCups">
+                                        Suit of Cups
+                                    </button>
+                                </h2>
+                                <div id="collapseCups" class="accordion-collapse collapse" aria-labelledby="headingSuitOfCups" data-bs-parent="#suitOfCups">
+                                    <div class="accordion-body" id="cupsCards">
+                                        <!-- Cups cards will be dynamically inserted here -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/threeofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">Three of Wands</p>
+                        <!-- SUIT OF SWORDS -->
+                        <div class="accordion" id="suitOfSwords">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSuitOfSwords">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSwords" aria-expanded="false" aria-controls="collapseSwords">
+                                        Suit of Swords
+                                    </button>
+                                </h2>
+                                <div id="collapseSwords" class="accordion-collapse collapse" aria-labelledby="headingSuitOfSwords" data-bs-parent="#suitOfSwords">
+                                    <div class="accordion-body" id="swordsCards">
+                                        <!-- Swords cards will be dynamically inserted here -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/fourofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">Four of Wands</p>
+                        <!-- SUIT OF PENTACLES -->
+                        <div class="accordion" id="suitOfPentacles">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSuitOfPentacles">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePentacles" aria-expanded="false" aria-controls="collapsePentacles">
+                                        Suit of Pentacles
+                                    </button>
+                                </h2>
+                                <div id="collapsePentacles" class="accordion-collapse collapse" aria-labelledby="headingSuitOfPentacles" data-bs-parent="#suitOfPentacles">
+                                    <div class="accordion-body" id="pentaclesCards">
+                                        <!-- Pentacles cards will be dynamically inserted here -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/fiveofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">Five of Wands</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/sixofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">Six of Wands</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/sevenofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">Seven of Wands</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/eightofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">Eight of Wands</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/nineofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">Nine of Wands</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/tenofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">Ten of Wands</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/pageofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">Page of Wands</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/knightofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">Knight of Wands</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/queenofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">Queen of Wands</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/kingofwands.webp" class="card-img-top" alt="Ace of Wands">
-                                <div class="card-body">
-                                    <p class="card-text">King of Wands</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- Suit of Cups -->
-                    <h5>Suits of Cups</h5>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-4">
-                        <!-- Loop through Suit of Cups cards -->
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/aceofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/twoofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">Two of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/threeofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">Three of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/fourofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">Four of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/fiveofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">Five of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/sixofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">Six of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/sevenofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">Seven of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/eightofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">Eight of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/nineofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">Nine of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/tenofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">Ten of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/pageofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">Page of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/knightofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">Knight of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/queenofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">Queen of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/kingofcups.webp" class="card-img-top" alt="Ace of Cups">
-                                <div class="card-body">
-                                    <p class="card-text">King of Cups</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- Suit of Swords -->
-                    <h5>Suits of Swords</h5>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-4">
-                        <!-- Loop through Suit of Swords cards -->
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/aceofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/twoofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-                       
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/threeofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/fourofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/fiveofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/sixofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/sevenofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/eightofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/nineofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/tenofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/pageofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/knightofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/queenofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/kingofswords.webp" class="card-img-top" alt="Ace of Swords">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Swords</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- Suit of Pentacles -->
-                    <h5>Suits of Pentacles</h5>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-4">
-
-                        <!-- Loop through Suit of Pentacles cards -->
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/aceofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/twoofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/threeofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/fourofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/fiveofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/sixofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/sevenofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/eightofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/nineofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/tenofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/pageofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/knightofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/queenofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img src="./assets/images/cardfronts/kingofpentacles.webp" class="card-img-top" alt="Ace of Pentacles">
-                                <div class="card-body">
-                                    <p class="card-text">Ace of Pentacles</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Repeat for other Suit of Pentacles cards -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
 
+    <script src="assets/js/cards.js"></script>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
 
 </html>

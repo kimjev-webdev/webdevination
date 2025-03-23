@@ -415,6 +415,57 @@ body.cards {
   height: 100vh;
 }
 
+/* Styles for the card flip */
+.flip-card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px; /* Make sure 3D effect works */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; /* Allow the flip */
+  transition: transform 0.5s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back when rotated */
+}
+
+.flip-card-front {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-back {
+  background-color: #f8f8f8;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transform: rotateY(180deg); /* Initially hide back */
+}
+
+/* Optional styling for the card back text */
+.flip-card-back p {
+  margin: 5px 0;
+  text-align: center;
+}
+
+
 .accordion-item {
   background-color: transparent !important;
   border: none !important;
