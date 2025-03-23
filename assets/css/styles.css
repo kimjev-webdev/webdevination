@@ -276,6 +276,70 @@ a.dropdown-item:hover {
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
 
+/* --- Styling for the icon bars (hamburger) --- */
+.icon-bar {
+  display: block;
+  width: 30px;
+  height: 4px;
+  text-shadow: 0 5px #2aff1a, 0 10px #2aff1a, 0 20px #2aff1a; /* Light gray color for bars */
+  border-radius: 2px;
+  margin: 4px 0; /* Spacing between bars */
+  transition: all 0.2s ease; /* Smooth transition */
+}
+
+/* Transform into a cross when the navbar is expanded (menu opened) */
+.navbar-toggler:not(.collapsed) .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%; /* Origin of the rotation at the top-left corner */
+}
+.navbar-toggler:not(.collapsed) .middle-bar {
+  opacity: 0; /* Hide the middle bar */
+}
+
+.navbar-toggler:not(.collapsed) .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%; /* Origin of the rotation at the bottom-left corner */
+}
+
+/* Reset the hamburger icon when collapsed (menu closed) */
+.navbar-toggler.collapsed .top-bar {
+  transform: translateY(0) rotate(0); /* Reset the top bar */
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1; /* Ensure the middle bar is visible */
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: translateY(0) rotate(0); /* Reset the bottom bar */
+}
+
+/* Ensure hamburger icon is visible when the menu is collapsed */
+.navbar-toggler.collapsed .top-bar,
+.navbar-toggler.collapsed .middle-bar,
+.navbar-toggler.collapsed .bottom-bar {
+  opacity: 1; /* Ensures the bars are visible in collapsed state */
+}
+
+/* --- General Navbar Styles --- */
+.navbar-toggler:focus {
+  outline: none; /* Remove the focus outline */
+  box-shadow: none; /* Remove the focus shadow */
+}
+
+#site-nav .navbar-toggle {
+  float: right;
+  text-align: right;
+  border: 0px;
+  margin-right: 0px;
+  margin-top: 38px;
+}
+
+.top-bar, .middle-bar, .bottom-bar {
+  background-color: rgb(174, 255, 0);
+  text-shadow: 0 5px #2aff1a, 0 10px #2aff1a, 0 20px #2aff1a;
+}
+
 /*info page styles*/
 /* set the page body to mimic terminal */
 body.info {
