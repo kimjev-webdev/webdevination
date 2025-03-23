@@ -442,15 +442,16 @@ body.cards {
 }
 
 .flip-card-front {
-  background-color: #fff;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .flip-card-back {
-  background-color: #f8f8f8;
-  color: black;
+  font-size: 14px;
+  background-color: black;
+  color:rgb(174, 255, 0);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -463,6 +464,10 @@ body.cards {
 .flip-card-back p {
   margin: 5px 0;
   text-align: center;
+}
+
+.flip-card-back {
+  font-size: 14px;
 }
 
 
