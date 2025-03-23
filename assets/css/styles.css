@@ -195,7 +195,7 @@ i.rotate-icon {
   margin: 10px;
 }
 
-*/ navbar styles */
+/* navbar styles */
 .navbar {
   background-color: transparent !important;
   padding: 20px 0;
@@ -442,7 +442,7 @@ body.cards {
 }
 
 .flip-card-front {
-  background-color: transparent;
+  background-color: transparent !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -450,8 +450,8 @@ body.cards {
 
 .flip-card-back {
   font-size: 14px;
-  background-color: black;
-  color:rgb(174, 255, 0);
+  background-color: transparent !important;
+  color:rgb(174, 255, 0) !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -477,7 +477,6 @@ body.cards {
 }
 
 .accordion-body {
-  background-color: transparent !important;
   border: none !important;
 }
 
