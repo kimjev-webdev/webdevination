@@ -29,9 +29,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+body {
   height: 100%;
-  margin: 100px 60px 100px 60px;
   padding: 0;
   background-color: black;
   background-image: url('../images/tarotbg.webp');
@@ -280,7 +279,7 @@ a.dropdown-item:hover {
 /*info page styles*/
 /* set the page body to mimic terminal */
 body.info {
-  margin: 10px;
+  margin: 100px 45px 100px 45px;
   max-width: 100%;
 }
 
@@ -317,7 +316,7 @@ body.info {
   transition: opacity 0.5s ease-in-out;
   display: block;
   margin: auto;
-  width: 120px; /* Adjust size */
+  width: 75px; /* Adjust size */
   height: auto;
 }
 
@@ -336,7 +335,7 @@ body.info {
 /* Ensure images inside the .image-container align in a row */
 #buttons-container .col-12.col-sm-6 .image-container img {
   margin: 0;
-  width: 100px; /* Adjust the size as necessary */
+  width: 75px; /* Adjust the size as necessary */
   height: auto;
   border-radius: 15px;
 }
@@ -362,8 +361,6 @@ body.info {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
   margin-top: 20px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -372,8 +369,8 @@ body.info {
 .card-button  {
   display: block;
   margin: auto;
-  padding: 25px 25px;
-  font-size: 2rem;
+  padding: 10px 0px;
+  font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 1vw;
   cursor: pointer;
@@ -382,13 +379,9 @@ body.info {
   text-transform: capitalize;
 }
 
-.buttons-container .col-12.col-sm-6 {
-  max-width: 80%;
-  margin: 0 30px 0 30px;
-}
 
 .explanation {
-  margin-bottom: 30px;
+  margin: 0 30px 30px 30px;
   font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
   font-size: 14px;
   align-items: center;
@@ -401,8 +394,7 @@ body.info {
 .inforow {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0 20px 0 20px;  
+  align-items: flex-start;
 }
 
 .buttons-container.visible,
@@ -472,13 +464,14 @@ body.cards {
 
 /* one card reading styles  */
 body.onecard {
+  margin: 100px 45px 100px 45px;
+  max-width: 100%;
   display: inline-block;
   justify-content: center;
   align-items: flex-start;
   background-image: url('../images/tarotbg.webp');
   width: auto;
   height: 100vh;
-  margin: 100px 60px 100px 60px;
   overflow-x: hidden;
 }
 
@@ -615,7 +608,6 @@ button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
   display: flex;
   position: relative;
   justify-content: center;
-  width: 50vw;
   margin: 0 0 100px 0;
   overflow: visible;
 }
