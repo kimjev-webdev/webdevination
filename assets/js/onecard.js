@@ -122,7 +122,7 @@ fetch('./assets/tarot.json')
         function showCardDetails(card) {
             const cardDetails = `
                 <div class="card-info">
-                    <h2 class="card-name">${card.name}: ${card.response}</h2>
+                    <p class="card-response">The answer is...${card.response}!</p>
                     <p class="card-details-text">${card.interpretation}</p>
                 </div>
             `;

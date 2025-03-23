@@ -464,7 +464,7 @@ body.cards {
 
 /* one card reading styles  */
 body.onecard {
-  margin: 100px 45px 100px 45px;
+  margin: 100px 60px 100px 60px;
   max-width: 100%;
   display: inline-block;
   justify-content: center;
@@ -473,6 +473,15 @@ body.onecard {
   width: auto;
   height: 100vh;
   overflow-x: hidden;
+}
+
+.instcol {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center;
+  align-items: center;  
 }
 
 .onecardheader {
@@ -596,7 +605,22 @@ button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
 }
 
 .card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 250px;
+}
+
+.card-info.p {
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace !important;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+p.card-response {
+  align-items: center;
 }
 
 .dealcol {
@@ -621,10 +645,13 @@ button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
 }
 
 #instructions {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-evenly;
   font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
   font-size: 1rem;
   text-align: center;
-  margin: 0 20px 0 20px;
 }
 
 .onecardp {
