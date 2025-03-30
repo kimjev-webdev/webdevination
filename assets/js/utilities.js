@@ -106,7 +106,7 @@ function showCardDetails(card, selectedCardContainer) {
   selectedCardContainer.innerHTML += cardDetails;
 }
 
-// DOMContentLoaded event listener (moved to the bottom)
+// DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', () => {
   const cardbacksOne = document.querySelectorAll('#buttons-container .col-12.col-md-6 img'); // Select the images above each button
 
