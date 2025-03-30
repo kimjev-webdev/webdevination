@@ -822,7 +822,7 @@ justify-content: space-evenly;
 .threecard {
   margin: 100px 60px 100px 60px;
   max-width: 100%;
-  display: inline-block;
+  display: flex;
   justify-content: center;
   align-items: flex-start;
   width: auto;
