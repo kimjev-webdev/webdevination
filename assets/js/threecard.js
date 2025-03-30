@@ -1,5 +1,5 @@
 // This file contains the logic for the three-card tarot reading game. 
-//  It handles the shuffling of the tarot deck, drawing three cards, and displaying them in the PAST, PRESENT, and FUTURE columns. 
+// It handles the shuffling of the tarot deck, drawing three cards, and displaying them in the PAST, PRESENT, and FUTURE columns. 
 // The game also includes a shuffle animation for the card stack and a function to display card details after drawing them.
 
 // Handle Shuffle button click (with animation)
@@ -22,6 +22,8 @@ function handleDealButtonClick(shuffledDeck, threecardStack, cardsContainer, pas
   threecardStack.style.visibility = 'hidden'; // Hide the shuffled card stack
   cardsContainer.style.visibility = 'visible'; // Show the cards container
 
+  // Shuffle the deck before drawing three random cards
+  shuffleDeck(shuffledDeck); // Shuffle deck (from utilities.js)
   // Draw three random cards and display them in columns
   drawThreeCards(shuffledDeck, pastColumn, presentColumn, futureColumn);
 }

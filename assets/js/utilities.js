@@ -43,10 +43,16 @@ function shuffleAnimation() {
 }
 
 // Draw a card and display it
-function drawCard(shuffledDeck, selectedCardContainer) {
+function drawCard(shuffledDeck, selectedCardContainer, isShuffled = false) {
   if (shuffledDeck.length === 0) {
     alert("No more cards in the deck!");
     return; // Stop drawing if no cards are left
+  }
+
+  // If the deck has not been shuffled, shuffle it before drawing
+  if (!isShuffled) {
+    shuffleDeck(shuffledDeck);
+    isShuffled = true; // Mark that the deck has been shuffled
   }
 
   const drawnCard = shuffledDeck.pop(); // Get the first card and remove it from the shuffled deck
