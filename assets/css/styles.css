@@ -899,17 +899,52 @@ div#cards-container.row.mt-5 {
 }
 
 /* New styles for the card choice grid */
-.card-choices {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
-  gap: 15px; /* Adds space between the cards */
-  justify-items: center; /* Center the cards within each grid cell */
-  margin-top: 20px; /* Adds some space between the description and the cards */
-}
 
+.game-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100vh; /* Full screen height */
+   /* Optional padding */
+  }
+
+  .cardgame-select {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardgame-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardgame-text {
+    font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+    font-size: 1rem;
+    text-align: center; /* Center the description */
+    margin: 20px 60px 20px 60px;
+  }
+
+.card-choices {
+  width: 20vw;
+  height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns, equally spaced */
+    grid-template-rows: repeat(2, 1fr);    /* 2 rows, equally spaced */
+    gap: 15px;                             /* Optional: Space between items */                      /* Optional: Full screen height */
+    
+    /* Align items towards the center cross of the grid */
+    place-items: center;                   /* Centers both horizontally and vertically */
+  }
 .card-choice {
-  width: 100px; /* Adjust the card width */
-  height: 150px; /* Adjust the card height */
+  width: 10vw; /* Adjust the card width */
+  height: auto; /* Adjust the card height */
   cursor: pointer;
   border: 2px solid #ccc;
   border-radius: 5px;
@@ -927,9 +962,10 @@ div#cards-container.row.mt-5 {
 }
 
 .card-description {
+  max-width: 20vw;
   margin-bottom: 20px;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
   text-align: center; /* Center the description */
 }
 
