@@ -58,12 +58,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to handle 'Enter' button click
     button.addEventListener('click', () => {
-        window.location.href = "./info.html"; // Replace with your desired URL
+        window.location.href = "./info.html"; // Direct to the info.html page 
     });
 
     // Add event listener for container click or tap
     container.addEventListener('click', () => {
-        window.location.href = "./info.html"; // Redirect to tarot.html when clicked or tapped
+        window.location.href = "./info.html"; // Direct to info.html page on container click even if enter button is not displaying yet.
     });
 
     // Start the animation when the page loads

@@ -1,29 +1,5 @@
-// Elements
-const terminalTextElement = document.getElementById('terminalText');
-const skipButton = document.getElementById('skipButton');
-const buttonsContainer = document.getElementById('buttons-container');
-const pickOneCardButton = document.getElementById('pickOneCard');
-const pickThreeCardsButton = document.getElementById('pickThreeCards');
-const pickOneExplanation = document.getElementById('pickOneExplanation');
-const pickThreeExplanation = document.getElementById('pickThreeExplanation');
-
-// Image elements
-const cardbacksOne = document.querySelectorAll('#buttons-container .col-12.col-md-6 img'); // Select the images above each button
-
-// Text to be typed out
-const textToType = [
-    "Welcome Seeker!\n",
-    "I sense that you are eager to embark on a journey of self discovery...\n",
-    "The cards are waiting to guide your way!\n",
-    "Two paths lay before you, but which one will you choose?\n",
-];
-
-// State variables
-let currentTextIndex = 0;
-let currentCharIndex = 0;
-let typingInProgress = true;
-
-// Type the terminal text
+// This script handles the typing effect for the terminal text and the display of buttons and explanations.     
+// Function to type the terminal text
 function typeText() {
     if (typingInProgress && currentTextIndex < textToType.length) {
         const currentText = textToType[currentTextIndex];
@@ -45,7 +21,7 @@ function typeText() {
     }
 }
 
-// Show buttons and explanations
+// Function to show buttons and explanations
 function showButtons() {
     // Make buttons and explanations visible
     buttonsContainer.style.opacity = 1; // Make the buttons container visible
@@ -81,14 +57,42 @@ function showButtons() {
     skipButton.style.display = 'none';
 }
 
-// Skip button functionality
-skipButton.addEventListener('click', () => {
+// Function to handle skip button click
+function handleSkipButtonClick() {
     typingInProgress = false; // Stop typing
     terminalTextElement.textContent = textToType.join(''); // Display all the text at once
 
     // Show buttons and explanations immediately
     showButtons();
-});
+}
+
+// State variables (moved here after function declarations)
+let currentTextIndex = 0;
+let currentCharIndex = 0;
+let typingInProgress = true;
+
+// DOM elements (kept here, after the state variables)
+const terminalTextElement = document.getElementById('terminalText');
+const skipButton = document.getElementById('skipButton');
+const buttonsContainer = document.getElementById('buttons-container');
+const pickOneCardButton = document.getElementById('pickOneCard');
+const pickThreeCardsButton = document.getElementById('pickThreeCards');
+const pickOneExplanation = document.getElementById('pickOneExplanation');
+const pickThreeExplanation = document.getElementById('pickThreeExplanation');
+
+// Image elements
+const cardbacksOne = document.querySelectorAll('#buttons-container .col-12.col-md-6 img'); // Select the images above each button
+
+// Text to be typed out
+const textToType = [
+    "Welcome Seeker!\n",
+    "I sense that you are eager to embark on a journey of self discovery...\n",
+    "The cards are waiting to guide your way!\n",
+    "Two paths lay before you, but which one will you choose?\n",
+];
+
+// Add event listener for skip button
+skipButton.addEventListener('click', handleSkipButtonClick);
 
 // Start typing text when the page loads
 window.onload = typeText;
