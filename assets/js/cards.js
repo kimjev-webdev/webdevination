@@ -1,3 +1,29 @@
+// Function to generate the card section (cards in rows of 4)
+function generateCardSection(cards, suit) {
+    let cardHtml = '<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">';
+    cards.forEach(card => {
+        // Construct the image path based on card name and suit
+        const imagePath = `assets/images/cardfronts/${card.name.toLowerCase().replace(/ /g, '')}.webp`;
+
+        cardHtml += `
+            <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="${imagePath}" class="card-img-top" alt="${card.name}">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>${card.specifics}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    cardHtml += '</div>';
+    return cardHtml;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     // Fetch the tarot JSON data
     fetch('assets/tarot.json')
@@ -34,84 +60,4 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         })
         .catch(error => console.error("Error loading tarot data:", error));
-
-    // Function to generate the card section (cards in rows of 4)
-    function generateCardSection(cards, suit) {
-        let cardHtml = '<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">';
-        cards.forEach(card => {
-            // Construct the image path based on card name and suit
-            const imagePath = `assets/images/cardfronts/${card.name.toLowerCase().replace(/ /g, '')}.webp`;
-
-            cardHtml += `
-                <div class="col">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="${imagePath}" class="card-img-top" alt="${card.name}">
-                            </div>
-                            <div class="flip-card-back">
-                                <p>${card.specifics}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-        });
-        cardHtml += '</div>';
-        return cardHtml;
-    }
-
-    // CSS for the card flip (if not already included)
-    const style = document.createElement('style');
-    style.innerHTML = `
-        .flip-card {
-            width: 200px;
-            height: 300px;
-            perspective: 1000px; /* Make sure 3D effect works */
-        }
-
-        .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d; /* Allow the flip */
-            transition: transform 0.5s;
-        }
-
-        .flip-card:hover .flip-card-inner {
-            transform: rotateY(180deg);
-        }
-
-        .flip-card-front, .flip-card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden; /* Hide back when rotated */
-        }
-
-        .flip-card-front {
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .flip-card-back {
-            background-color: #f8f8f8;
-            color: black;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            transform: rotateY(180deg); /* Initially hide back */
-        }
-
-        /* Optional styling for the card back text */
-        .flip-card-back p {
-            margin: 5px 0;
-            text-align: center;
-        }
-    `;
-    document.head.appendChild(style);
 });
