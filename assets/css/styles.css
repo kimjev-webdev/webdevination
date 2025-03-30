@@ -853,6 +853,103 @@ div#cards-container.row.mt-5 {
   margin-top: -13rem !important;  
 }
 
+/* learning page styles */  
+
+.cardgame-back img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cardgame {
+  width: 150px; /* adjust based on your design */
+  height: 200px; /* adjust based on your design */
+  margin: 10px;
+  perspective: 1000px;
+}
+
+.cardgame-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 0.6s;
+}
+
+.cardgame.flipped .cardgame-inner {
+  transform: rotateY(180deg);
+}
+
+.cardgame-front,
+.cardgame-back {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: #f1f1f1;
+}
+
+.cardgame-back {
+  transform: rotateY(180deg);
+}
+
+/* New styles for the card choice grid */
+.card-choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+  gap: 15px; /* Adds space between the cards */
+  justify-items: center; /* Center the cards within each grid cell */
+  margin-top: 20px; /* Adds some space between the description and the cards */
+}
+
+.card-choice {
+  width: 100px; /* Adjust the card width */
+  height: 150px; /* Adjust the card height */
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.card-choice:hover {
+  transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+.card-choice img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images are contained and maintain aspect ratio */
+}
+
+.card-description {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center; /* Center the description */
+}
+
+.score {
+  font-size: 24px;
+  margin-top: 20px;
+  text-align: center; /* Center the score text */
+}
+
+/* footer styles */
+div.footer {
+  background-color: transparent !important;
+  color: rgb(174, 255, 0) !important;
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
 
