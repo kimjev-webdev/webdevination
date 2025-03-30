@@ -35,22 +35,22 @@ function showButtons() {
 
     // Make the pickOneCard button visible
     setTimeout(() => {
-        pickOneCardButton.classList.add('visible'); // Show pickOneCard button
+        pickOneCardButton.classList.add('visible'); // Show pick one card button
     }, 500);
 
     // Make the pickThreeCards button visible
     setTimeout(() => {
-        pickThreeCardsButton.classList.add('visible'); // Show pickThreeCards button
+        pickThreeCardsButton.classList.add('visible'); // Show pick three cards button
     }, 1000);
 
     // Make the pickOneExplanation visible
     setTimeout(() => {
-        pickOneExplanation.classList.add('visible'); // Show explanation for pickOneCard
+        pickOneExplanation.classList.add('visible'); // Show explanation for a one card reading
     }, 1500);
 
     // Make the pickThreeExplanation visible
     setTimeout(() => {
-        pickThreeExplanation.classList.add('visible'); // Show explanation for pickThreeCards
+        pickThreeExplanation.classList.add('visible'); // Show explanation for three card reading   
     }, 1500);
 
     // Hide skip button after text is finished
@@ -60,7 +60,7 @@ function showButtons() {
 // Function to handle skip button click
 function handleSkipButtonClick() {
     typingInProgress = false; // Stop typing
-    terminalTextElement.textContent = textToType.join(''); // Display all the text at once
+    terminalTextElement.textContent = textToType.join(''); // Display all the text at once to avoid delay from terminal effect introduction text
 
     // Show buttons and explanations immediately
     showButtons();
