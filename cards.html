@@ -169,6 +169,11 @@
         </div>
     </div>
 
+    <footer>
+        <p>&copy; <span id="current-year"></span> WebDevination. All rights reserved.</p>
+        <p>Made with <i class="fa-solid fa-heart"></i> by Kim Piffy</p>
+    </footer>
+
     <script src="assets/js/cards.js"></script>
 
     <script
@@ -176,6 +181,10 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"
   ></script>
+  <script>
+    // JavaScript to dynamically set the current year in the footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 </body>
 
 </html>

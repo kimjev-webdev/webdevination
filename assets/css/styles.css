@@ -30,6 +30,7 @@
 }
 
 body {
+  min-height: 100vh;
   height: 100%;
   padding: 0;
   background-color: black;
@@ -187,7 +188,7 @@ cursor: pointer;
   display: none;
   text-align: center;
   position: absolute;
-  bottom: 20px;
+  bottom: 60px;
   font-size: 1rem;
 }
 
@@ -343,7 +344,7 @@ a.dropdown-item:hover {
 /*info page styles*/
 /* set the page body to mimic terminal */
 body.info {
-  margin: 100px 45px 100px 45px;
+  margin: 100px 45px 0px 45px;
   max-width: 100%;
 }
 
@@ -976,14 +977,26 @@ div#cards-container.row.mt-5 {
 }
 
 /* footer styles */
-div.footer {
+footer {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  align-self: self-end;
   background-color: transparent !important;
   color: rgb(174, 255, 0) !important;
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
-  font-size: 1rem;
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace !important;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
   text-align: center;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  margin-top: 90vh; /* Pushes the footer to the bottom */
 }
+
 
 
 /* media query */
@@ -1009,6 +1022,12 @@ div.footer {
     margin-top: 0vh;
     transform: translate(-2vw, 0vh);
   }
+}
+
+@media (max-width: 576px) {
+  .skip-button {
+    bottom: 60px;
+} 
 }
 
 @media (min-width: 768px) {
