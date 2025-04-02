@@ -941,8 +941,8 @@ div#cards-container.row.mt-5 {
   }
 
 .card-choices {
-  width: 20vw;
   height: auto;
+  justify-content: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns, equally spaced */
     grid-template-rows: repeat(2, 1fr);    /* 2 rows, equally spaced */
