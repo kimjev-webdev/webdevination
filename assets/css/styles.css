@@ -344,7 +344,7 @@ a.dropdown-item:hover {
 /*info page styles*/
 /* set the page body to mimic terminal */
 body.info {
-  margin: 100px 45px 0px 45px;
+  margin: 100px 60px 500px 60px;
   max-width: 100%;
 }
 
@@ -423,12 +423,20 @@ body.info {
 
 /* Buttons container: Make the buttons and explanations centered */
 .buttons-container {
-  display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+}
+
+.infolgscreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  text-align: center;
+
 }
 
 .card-button  {
@@ -983,7 +991,7 @@ footer {
   align-items: center !important;
   justify-content: flex-end !important;
   align-self: self-end;
-  background-color: transparent !important;
+  background-color: transparent;
   color: rgb(174, 255, 0) !important;
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
   font-family: 'Cascadia Code', Consolas, 'Courier New', monospace !important;
@@ -1065,10 +1073,30 @@ footer {
 }
 }
 
+@media (max-width: 992px) {
+  .card-choice {
+    width: 20vw;
+  }
+} 
+
+@media (min-width: 992px){
+  #buttons-container .col-12.col-sm-6 .image-container img {
+    width: 120px;
+}
+
+.cardgame-select {
+width: 30% !important;
+}
+}
+
 /* Show the rotate screen icon and prompt on devices with portrait orientation */
 @media only screen and (orientation: portrait) {
   .rotate-prompt {
     display: block;
+  }
+
+  footer {
+    background-color: black !important;
   }
 }
 

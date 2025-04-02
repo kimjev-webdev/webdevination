@@ -18,11 +18,56 @@ fetch('./assets/tarot.json')
     console.error('Error loading tarot deck:', error);
   });
 
+// Shuffle the tarot deck
+function shuffleDeck(shuffledDeck) {
+  for (let i = shuffledDeck.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledDeck[i], shuffledDeck[j]] = [shuffledDeck[j], shuffledDeck[i]]; // Swap
+  }
+}
+
+// Shuffle animation for card stack (Optional)
+function shuffleAnimation() {
+  const cards = document.querySelectorAll(".shufflecard");
+
+  // Set initial positions and opacity for animation reset
+  cards.forEach(card => {
+    card.style.opacity = "1";
+    card.style.transform = "translate(0, 0)";
+  });
+
+  // Scatter the cards
+  cards.forEach(card => {
+    const randomX = Math.random() * 500 - 250; // Random position between -250 and 250
+    const randomY = Math.random() * 500 - 250; // Random position between -250 and 250
+    const randomRotation = Math.random() * 720 - 360; // Random rotation between -360 and 360 degrees
+
+    setTimeout(() => {
+      card.style.transition = "transform 1s ease-out, opacity 1s ease-out";
+      card.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${randomRotation}deg)`;
+      card.style.opacity = "0.6"; // Slightly transparent when scattered
+    }, Math.random() * 200); // Random delay to make it look more chaotic
+  });
+
+  // After 3 seconds, return cards to center position
+  setTimeout(() => {
+    cards.forEach(card => {
+      card.style.transition = "transform 1s ease-in, opacity 1s ease-in";
+      card.style.transform = "translate(0, 0)"; // Return to center
+      card.style.opacity = "1"; // Fully opaque
+    });
+  }, 3000); // 3 seconds delay before returning cards
+}
+
 // Initialize the game
 function initializeGame() {
   currentCardIndex = 0;
   score = 0;
   document.getElementById('score').textContent = `Score: ${score}`;
+
+  shuffleDeck(tarotData); // Shuffle the tarot deck here
+  shuffleAnimation(); // Optionally add shuffle animation for visual effect
+  
   showCardDescription(); // Show description for the first card
   showCardChoices(); // Show four random card choices
 }
@@ -50,7 +95,7 @@ function showCardChoices() {
   }
 
   // Shuffle choices so the correct one is in a random position
-  shuffleArray(choices);
+  shuffleDeck(choices);
 
   const choicesContainer = document.getElementById('card-choices');
   choicesContainer.innerHTML = ''; // Clear the previous choices
@@ -71,14 +116,6 @@ function showCardChoices() {
 
     choicesContainer.appendChild(cardElement);
   });
-}
-
-// Shuffle array function (Fisher-Yates shuffle)
-function shuffleArray(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap elements
-  }
 }
 
 // Handle card selection by the user
