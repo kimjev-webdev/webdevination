@@ -3,13 +3,43 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.querySelector("#questionInput");
   const responseBox = document.querySelector("#oracle-response");
 
+  // Create or select a character counter
+  let counter = document.querySelector("#char-count");
+  if (!counter) {
+    counter = document.createElement("div");
+    counter.id = "char-count";
+    counter.style.marginTop = "0.5rem";
+    counter.style.fontSize = "0.9rem";
+    counter.style.color = "#aaa";
+    input.parentNode.insertBefore(counter, input.nextSibling);
+  }
+
+  // Set max length
+  const maxChars = 500;
+
+  // Update character count
+  input.addEventListener("input", () => {
+    const currentLength = input.value.length;
+    counter.textContent = `${currentLength} / ${maxChars}`;
+
+    if (currentLength > maxChars) {
+      counter.style.color = "red";
+    } else {
+      counter.style.color = "#aaa";
+    }
+  });
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const question = input.value.trim();
     if (!question) return;
 
-    // Optional: Add some animation or loading indicator
+    if (question.length > maxChars) {
+      responseBox.textContent = "⚠️ Your question is too powerful. Please shorten it to 500 characters or fewer.";
+      return;
+    }
+
     responseBox.textContent = "🔮 Consulting the stars...";
 
     try {
