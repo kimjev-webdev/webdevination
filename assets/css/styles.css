@@ -1,0 +1,1132 @@
+/* animations */
+/* animations for the letters and icons on landing page */
+@keyframes flashText {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* animation for rotate icon which appears on horizontal phones on landing page */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* End at 360 degrees (one full rotation) */
+  }
+}
+
+/* universal styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  padding: 0;
+  background-color: black;
+  background-image: url('../images/tarotbg.webp');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat; /* Adjust as needed */
+  width: auto;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+}
+
+/* general body styles */
+body.p {
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+  font-family: 'Tourney', monospace;
+  text-transform: uppercase !important;
+  letter-spacing: 1vw;
+  box-shadow: none;
+  background-color: transparent !important;
+  text-decoration: none !important;
+  text-align: center;
+  border: transparent !important;
+  outline: none !important;
+  color:  rgb(174, 255, 0) !important;  
+  text-shadow: 0 0 5px  #2aff1a, 0 0 10px  #2aff1a, 0 0 20px  #2aff1a;
+}
+
+button:hover {
+cursor: pointer;
+text-decoration: none !important;
+background-color: transparent !important;
+border: transparent;
+outline: none;
+color:  rgb(174, 255, 0) !important;  
+text-shadow: 0 0 5px  #2aff1a, 0 0 10px  #2aff1a, 0 0 20px  #2aff1a;
+transform: scale(1.1);
+animation: flashText 1s infinite;
+}
+
+i {
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  color: rgb(174, 255, 0);
+}
+
+/* landing page specific body styles */
+body.landing {
+  font-family: 'Tourney', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* alignment for landing page container - central to viewport */
+.container.landing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  position: absolute;
+  width: 100vw;
+  height: 30vh;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  white-space: nowrap;
+}
+
+/* letter alignment for landing page animation */
+.letter {
+  position: relative;
+  font-size: 4.5vw;
+  margin: 0 0px;
+  display: inline-block;
+  width: 5vw;
+  height: 5vw;
+  text-align: center;
+  line-height: 6vw;
+}
+
+/* icon alignment for landing page animation */
+.letter i.material-icons {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  font-size: 3.5vw;
+  width: 3vw;
+  line-height: 5.5vw;
+  visibility: hidden;
+  transform: translateX(-2vw);
+  margin-top: 0.5vh;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* ensure letters overlay symbols correctly */
+.letter .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+} 
+
+/* container for enter button */
+.overlay {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center; 
+  width: 100vw;
+  height: 30vh;
+  background-color: transparent;
+  flex-direction: column;
+  z-index: 2;
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+.container:hover .overlay {
+  display: flex;
+}
+
+/*sizing and alignment for enter button */
+.enter-button {
+  display: inline-block;
+  margin: 3vh;
+  padding: 3vh;
+  font-size: 4.5vw;
+}
+
+/* flash effect for button */
+.enter-button {
+  animation: flashText 1s infinite; 
+}
+
+/* promy user to  click on the animation to enter at any point even before the sequence has finished */
+.container,
+.overlay,
+.enter-button {
+cursor: pointer;
+}
+
+/* hide rotate screen prompt by default */
+.rotate-prompt {
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  display: none;
+  text-align: center;
+  position: absolute;
+  bottom: 60px;
+  font-size: 1rem;
+}
+
+i.rotate-icon {
+  margin: 10px;
+}
+
+/* navbar styles */
+.navbar {
+  background-color: transparent !important;
+  padding: 20px;
+}
+
+ /* navbar brand margin */
+ i.fa-pasted-svg-1 {
+  margin-left: 7px;
+ }
+
+ /* navbar item positioning */
+.nav-item {
+  position: relative;
+}
+
+/* navbar link styling */
+.nav-link {
+  display: block;
+  margin-right: 5px;
+  font-size: 16px;
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  background-color: #000000;
+  border: 1px solid rgb(174, 255, 0);
+  border-radius: 5px 5px 0 0;
+  padding: 10px 15px;
+  text-align: center;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  text-decoration: none;
+}
+
+
+.navlink.active, .nav-item:hover .nav-link {
+  background-color: rgb(174, 255, 0);
+  color: #000000;
+} 
+  
+.nav-link.active {
+  border-bottom: 1px solid rgb(174, 255, 0);
+  box-shadow: inset 0 3px 5px rgb(174, 255, 0);
+}
+
+/* remove margin for last item */
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+/* hamburger icon custom sizing */
+i.fa-bars {
+ size: 2.5vw !important;
+}
+
+.dropdown-menu, .dropdown-menu:has(.dropdown:hover) {
+  background-color: #000;
+  border: 1px solid rgb(174, 255, 0);
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+}
+
+
+a.dropdown-item {
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  background-color: #000;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a 0 0 10px #2aff1a 0 0 20px #2aff1a;
+text-align: center;
+}
+
+a.dropdown-item:hover {
+  background-color: rgb(174, 255, 0);
+  color: #000;
+  text-shadow: 0 0 5px #2aff1a 0 0 10px #2aff1a 0 0 20px #2aff1a;
+}
+
+/* Font color on hover */
+.nav-link:hover {
+  background-color: rgb(174, 255, 0);
+  color: black;
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+}
+
+/* --- Styling for the icon bars (hamburger) --- */
+.icon-bar {
+  display: block;
+  width: 30px;
+  height: 4px;
+  text-shadow: 0 5px #2aff1a, 0 10px #2aff1a, 0 20px #2aff1a; /* Light gray color for bars */
+  border-radius: 2px;
+  margin: 4px 0; /* Spacing between bars */
+  transition: all 0.2s ease; /* Smooth transition */
+}
+
+/* Transform into a cross when the navbar is expanded (menu opened) */
+.navbar-toggler:not(.collapsed) .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%; /* Origin of the rotation at the top-left corner */
+}
+.navbar-toggler:not(.collapsed) .middle-bar {
+  opacity: 0; /* Hide the middle bar */
+}
+
+.navbar-toggler:not(.collapsed) .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%; /* Origin of the rotation at the bottom-left corner */
+}
+
+/* Reset the hamburger icon when collapsed (menu closed) */
+.navbar-toggler.collapsed .top-bar {
+  transform: translateY(0) rotate(0); /* Reset the top bar */
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1; /* Ensure the middle bar is visible */
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: translateY(0) rotate(0); /* Reset the bottom bar */
+}
+
+/* Ensure hamburger icon is visible when the menu is collapsed */
+.navbar-toggler.collapsed .top-bar,
+.navbar-toggler.collapsed .middle-bar,
+.navbar-toggler.collapsed .bottom-bar {
+  opacity: 1; /* Ensures the bars are visible in collapsed state */
+}
+
+/* --- General Navbar Styles --- */
+.navbar-toggler:focus {
+  outline: none; /* Remove the focus outline */
+  box-shadow: none; /* Remove the focus shadow */
+}
+
+#site-nav .navbar-toggle {
+  float: right;
+  text-align: right;
+  border: 0px;
+  margin-right: 0px;
+  margin-top: 38px;
+}
+
+.top-bar, .middle-bar, .bottom-bar {
+  background-color: rgb(174, 255, 0);
+  text-shadow: 0 5px #2aff1a, 0 10px #2aff1a, 0 20px #2aff1a;
+}
+
+/*info page styles*/
+/* set the page body to mimic terminal */
+body.info {
+  margin: 100px 60px 500px 60px;
+  max-width: 100%;
+}
+
+.terminal {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+/* skip button allows user to load page contents without delay */
+.skip-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+
+/* extra styling for explination text on info page */
+#terminalText {
+  text-align: justify;
+  padding: 0 30px 0 30px;
+  white-space: normal;        
+  word-wrap: normal;     
+  line-height: 1.5;          
+  overflow: hidden;           
+}
+
+/* initially hide the cardback images */
+#buttons-container .col-12.col-sm-6 img {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  display: block;
+  margin: auto;
+  width: 75px; /* Adjust size */
+  height: auto;
+}
+
+/* Make the images visible when the 'visible' class is added */
+#buttons-container .col-12.col-sm-6 img.visible {
+  display: visible;
+}
+
+/* Use flexbox on the parent container of the images only */
+#buttons-container .col-12.col-sm-6 .image-container {
+  display: flex;
+  justify-content: center;  /* Align images horizontally in the row */
+  gap: 10px;  /* Space between images */
+}
+
+/* Ensure images inside the .image-container align in a row */
+#buttons-container .col-12.col-sm-6 .image-container img {
+  margin: 0;
+  width: 75px; /* Adjust the size as necessary */
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Keep the rest of the content in the column layout */
+#buttons-container .col-12.col-sm-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center the content horizontally */
+  justify-content: center; /* Center the content vertically */
+}
+
+/* Ensure buttons are aligned in the center */
+#buttons-container .col-12.col-sm-6 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ /* Add some space below each button */
+}
+
+/* Buttons container: Make the buttons and explanations centered */
+.buttons-container {
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.infolgscreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  text-align: center;
+
+}
+
+h2.title {
+  font-size: 2.5rem;
+  letter-spacing: 1vw;
+  text-align: center;
+  margin-bottom: 20px;
+}       
+
+#question {
+  width: 80rem;
+  color: black;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: 'Cascadia Code', monospace; 
+}
+
+.response-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 1rem;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.card-button  {
+  display: block;
+  margin: auto;
+  padding: 10px 0px;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 1vw;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0; /* Initially hidden */
+  text-transform: capitalize;
+}
+
+
+.explanation {
+  margin: 0 30px 30px 30px;
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  font-size: 14px;
+  align-items: center;
+  text-align: justify;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-20px); /* Start below */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.inforow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.buttons-container.visible,
+.card-button.visible,
+.explanation.visible {
+  opacity: 1 !important;
+  transform: translateY(0); /* Move to normal position */
+}
+
+a {
+  text-decoration: none;
+}
+
+/* card details page styles */
+body.cards {
+  margin: 100px 60px 100px 60px;
+  padding: 20px;
+  height: 100vh;
+}
+
+/* Styles for the card flip */
+.flip-card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px; /* Make sure 3D effect works */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; /* Allow the flip */
+  transition: transform 0.5s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back when rotated */
+}
+
+.flip-card-front {
+  background-color: transparent !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-back {
+  font-size: 14px;
+  background-color: transparent !important;
+  color:rgb(174, 255, 0) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transform: rotateY(180deg); /* Initially hide back */
+}
+
+/* Optional styling for the card back text */
+.flip-card-back p {
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  margin: 5px 0;
+  line-height: 1rem;
+  text-align: center;
+}
+
+.flip-card-back {
+  font-size: 14px;
+}
+
+
+.accordion-item {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.accordion-body {
+  border: none !important;
+}
+
+.accordion-button {
+  text-align: center !important;
+  background-color: transparent !important;
+  color: rgb(174, 255, 0) !important;
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  font-family: "Tourney", monospace;
+  font-size: 3vw;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer !important;
+  transition: 0.3s;
+  border: none !important;
+  box-shadow: none !important;
+  display: block;
+  animation: flashText 1s infinite;
+}
+
+.card-body {
+  background-color: transparent !important;
+  border: none;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.card {
+  background-color: transparent !important;
+}
+
+.card-img , .card-img-top {
+  border-radius: 15px !important;
+}
+
+/* one card reading styles  */
+body.onecard {
+  margin: 100px 60px 100px 60px;
+  max-width: 100%;
+  display: inline-block;
+  justify-content: center;
+  align-items: flex-start;
+  width: auto;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.instcol {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center;
+  align-items: center;  
+}
+
+.onecardheader {
+  margin-bottom: 3vh;
+  font-family: "Tourney", monospace;
+  flex-wrap: wrap;
+  font-size: 2.5rem;
+  letter-spacing: 1vw;
+}
+
+.leftonecard {
+  flex-grow: 1;
+overflow: visible !important;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+#deck {
+  position: relative;
+  width: 175px;
+  height: auto;
+}
+
+ .onecardrow {
+  align-items: flex-start;
+  justify-content: space-between;
+
+}
+
+.shufflecard {
+  display: flex;
+  justify-content: center;
+ align-items: center;
+  width: 175px;
+  height: auto;
+  background-size: cover;
+  border-radius: 5px;
+  transition: transform 0.5s ease, top 0.5s ease, left 0.5s ease;
+  z-index: 0;
+}
+
+button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
+  font-family: "Tourney", monospace !important;
+  font-size: 2rem !important;
+  letter-spacing: 1vw;
+}
+
+.button.shufflebtn {
+  margin: 20px 30px 20px 30px !important;
+}
+
+.buttton.dealbtn {
+  margin: 0px 30px 0px 30px !important;
+}
+
+
+#selected-cardone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  margin: 0 20px 0 20px;
+}
+
+/* CARD FLIP STYLES */
+.selected-card {
+  width: 175px;
+  height: auto;
+  transition: transform 1s ease-in-out;
+  border-radius: 15px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+
+/* Ensures card starts with back visible */
+.selected-card .card-front, 
+.selected-card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 1s ease-in-out;
+}
+
+/* Initially show back, hide front */
+.selected-card .card-back {
+  transform: rotateY(0deg);
+}
+
+.selected-card .card-front {
+  transform: rotateY(180deg);
+}
+
+/* Flip card to reveal front */
+.selected-card.flip {
+  transform: rotateY(180deg);
+}
+
+/* CARD IMAGE STYLES */
+.selected-card img {
+  border-radius: 15px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-front, .card-back {
+  overflow: visible;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 1s;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+.card-info.p {
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace !important;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+p.card-response {
+  align-items: center;
+}
+
+.dealcol {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-stack {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin: 0 0 100px 0;
+  overflow: visible;
+}
+
+.shufflecard {
+  position: absolute;
+  width: 175px;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+#instructions {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-evenly;
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.onecardp {
+  text-align: justify !important;
+}
+
+.card-name {
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  line-height: 2.5rem;
+  font-size: 2rem;
+  max-width: 35vw;
+  letter-spacing: 1vw;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-details-text {
+  color: rgb(174, 255, 0);
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  font-size: 1rem;
+  align-self: center;
+  text-align: justify;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 35vw;
+}
+
+#instructions-column {
+  width: 100%;
+  margin: 10px;
+}
+
+#card-column {
+  width: 100%;
+  margin: 10px;
+}
+
+/* three cards */
+
+#threecard-stack {
+  visibility: hidden;
+}
+
+#cards-container {
+  visibility: hidden;
+}
+
+.threecard {
+  margin: 100px 60px 100px 60px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: auto;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.threecard.p.card-details-text {
+  text-align: center;
+}
+
+#past.card, #present.card, #future.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+div.col-12.threeshuffle {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0 100px 0;
+  overflow: visible;
+}
+
+div#cards-container.row.mt-5 {
+  margin-top: -13rem !important;  
+}
+
+/* learning page styles */  
+
+.cardgame-back img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cardgame {
+  width: 150px; /* adjust based on your design */
+  height: 200px; /* adjust based on your design */
+  margin: 10px;
+  perspective: 1000px;
+}
+
+.cardgame-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 0.6s;
+}
+
+.cardgame.flipped .cardgame-inner {
+  transform: rotateY(180deg);
+}
+
+.cardgame-front,
+.cardgame-back {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: #f1f1f1;
+}
+
+.cardgame-back {
+  transform: rotateY(180deg);
+}
+
+/* New styles for the card choice grid */
+
+.game-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100vh; /* Full screen height */
+   /* Optional padding */
+  }
+
+  .cardgame-select {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardgame-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardgame-text {
+    font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+    font-size: 1rem;
+    text-align: center; /* Center the description */
+    margin: 20px 60px 20px 60px;
+  }
+
+.card-choices {
+  height: auto;
+  justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns, equally spaced */
+    grid-template-rows: repeat(2, 1fr);    /* 2 rows, equally spaced */
+    gap: 15px;                             /* Optional: Space between items */                      /* Optional: Full screen height */
+    
+    /* Align items towards the center cross of the grid */
+    place-items: center;                   /* Centers both horizontally and vertically */
+  }
+.card-choice {
+  width: 10vw; /* Adjust the card width */
+  height: auto; /* Adjust the card height */
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.card-choice:hover {
+  transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+.card-choice img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images are contained and maintain aspect ratio */
+}
+
+.card-description {
+  max-width: 20vw;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  text-align: center; /* Center the description */
+}
+
+.score {
+  font-size: 24px;
+  margin-top: 20px;
+  text-align: center; /* Center the score text */
+}
+
+/* footer styles */
+footer {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  align-self: self-end;
+  background-color: transparent;
+  color: rgb(174, 255, 0) !important;
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace !important;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  margin-top: 90vh; /* Pushes the footer to the bottom */
+}
+
+
+
+/* media query */
+/* Move icons on landing page up slightly on phones and tablets */
+
+@media (max-width: 320px) {
+  .leftonecard {
+    margin-top: 200px;
+  } 
+}
+
+@media (min-width: 300px) and (max-width: 370px) {
+  .letter i.material-icons {
+    font-size: 4.5vw;
+    margin-top: 0vh;
+    transform: translate(-2vw, 0.2vh);
+  }
+}
+
+@media (min-width: 370px) and (max-width: 576px) {
+  .letter i.material-icons {
+    font-size: 4.5vw;
+    margin-top: 0vh;
+    transform: translate(-2vw, 0vh);
+  }
+}
+
+@media (max-width: 576px) {
+  .skip-button {
+    bottom: 60px;
+} 
+}
+
+@media (min-width: 768px) {
+  .inforow {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .card-name {
+    max-width: 100%;
+  }
+
+  .card-details-text {
+    max-width: 100%;
+  }
+
+  .col-sm-6 {
+    max-width: 100%;
+  }
+
+  div#cards-container.row.mt-5 {
+    display: flex;
+    flex-direction: column;
+}
+}
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .shufflebtn, .dealbtn {   
+  font-size: 2vw !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;      
+}
+}
+
+@media (max-width: 992px) {
+  .card-choice {
+    width: 20vw;
+  }
+} 
+
+@media (min-width: 992px){
+  #buttons-container .col-12.col-sm-6 .image-container img {
+    width: 120px;
+}
+
+.cardgame-select {
+width: 30% !important;
+}
+}
+
+/* Show the rotate screen icon and prompt on devices with portrait orientation */
+@media only screen and (orientation: portrait) {
+  .rotate-prompt {
+    display: block;
+  }
+
+  footer {
+    background-color: black !important;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .rotate-prompt {
+    display: none;
+  }
+}
