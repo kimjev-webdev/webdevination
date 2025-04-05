@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     input.parentNode.insertBefore(counter, input.nextSibling);
   }
 
-  // Set max length
   const maxChars = 500;
 
   // Update character count
@@ -35,11 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentLength = input.value.length;
     counter.textContent = `${currentLength} / ${maxChars}`;
 
-    if (currentLength > maxChars) {
-      counter.style.color = "red";
-    } else {
-      counter.style.color = "#aaa";
-    }
+    counter.style.color = currentLength > maxChars ? "red" : "#aaa";
   });
 
   form.addEventListener("submit", async (e) => {
@@ -56,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     responseBox.textContent = "🔮 Consulting the stars...";
 
     try {
-      const res = await fetch("http://localhost:3000/oracle", {
+      const res = await fetch("/oracle", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -66,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const data = await res.json();
       if (data.answer) {
-        typeOracleMessage(data.answer, responseBox); // 💫 Here’s the magic!
+        typeOracleMessage(data.answer, responseBox);
       } else {
         responseBox.textContent = "🕯️ The Oracle is silent...";
       }
@@ -76,3 +71,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
