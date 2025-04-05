@@ -3,6 +3,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.querySelector("#questionInput");
   const responseBox = document.querySelector("#oracle-response");
 
+  // Typing animation function
+  function typeOracleMessage(text, element, speed = 40) {
+    element.textContent = "";
+    let i = 0;
+    const interval = setInterval(() => {
+      element.textContent += text.charAt(i);
+      i++;
+      if (i >= text.length) {
+        clearInterval(interval);
+      }
+    }, speed);
+  }
+
   // Create or select a character counter
   let counter = document.querySelector("#char-count");
   if (!counter) {
@@ -53,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const data = await res.json();
       if (data.answer) {
-        responseBox.textContent = data.answer;
+        typeOracleMessage(data.answer, responseBox); // 💫 Here’s the magic!
       } else {
         responseBox.textContent = "🕯️ The Oracle is silent...";
       }

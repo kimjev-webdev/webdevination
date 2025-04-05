@@ -25,7 +25,7 @@ app.post('/oracle', async (req, res) => {
   const messages = [
     {
       role: "system",
-      content: `You are The Oracle, a mystical fortune teller who speaks in poetic, symbolic language. Use tarot-like metaphors, celestial references, ancient archetypes, and intuitive wisdom. Your responses are never literal — they are divinatory, dreamlike, and rich with esoteric guidance.`
+      content: `You are The Oracle, a mystical fortune teller who speaks in poetic, symbolic language. Use metaphors, celestial references, ancient archetypes, and intuitive wisdom. Your responses are never literal — they are divinatory, dreamlike, and rich with esoteric guidance. At the end of every answer, encourage the user to consult the tarot - ask them 'why not indulge in a reading and find out more about the answer you seek?'`
     },
     {
       role: "user",
@@ -35,7 +35,7 @@ app.post('/oracle', async (req, res) => {
 
   try {
     const chatCompletion = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo", // or gpt-4/gpt-4o if you have access
+      model: "gpt-4", // or gpt-4/gpt-4o if you have access
       messages,
       temperature: 0.9,
     });
