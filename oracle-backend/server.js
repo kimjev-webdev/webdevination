@@ -5,11 +5,15 @@ import { config } from 'dotenv';
 import { OpenAI } from 'openai';
 
 config(); // Load .env variables
+
 const app = express();
 const port = 3000;
 
+// ✅ Create the OpenAI client with project support
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY,
+  project: process.env.OPENAI_PROJECT_ID,
+  organization: process.env.OPENAI_ORG_ID, // Optional
 });
 
 app.use(cors());
@@ -31,7 +35,7 @@ app.post('/oracle', async (req, res) => {
 
   try {
     const chatCompletion = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
+      model: "gpt-3.5-turbo", // or gpt-4/gpt-4o if you have access
       messages,
       temperature: 0.9,
     });
@@ -40,7 +44,7 @@ app.post('/oracle', async (req, res) => {
     res.json({ answer });
   } catch (error) {
     console.error("OpenAI Error:", error);
-    res.status(500).json({ error: 'The spirits are unavailable. Try again later.' });
+    res.status(500).json({ error: '🕯️ The Oracle could not reach the beyond. Try again later.' });
   }
 });
 
