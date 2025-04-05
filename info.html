@@ -123,12 +123,13 @@
     
 
     <div class="row infolgscreen">
-      <div class="col-12">
-      <h2>ALL WORK NO PLAY?</h2>
-      <p>Learn the cards with our fun, interactive game. Match the correct card image to it's interpretation to score points!</p>
-      <a href="learn.html">
-      <button id="gameButton" class="gameeButton">Click Here</button>
-    </a>
+        <h2 class="title">🔮 Ask the Oracle</h2>
+        <form id="oracle-form">
+          <input type="text" id="question" placeholder="Type your question..." required />
+          <button type="submit">REVEAL YOUR FATE</button>
+        </form>
+        <div id="response" class="response-box"></div>
+      </div>
         </div>    
     </div>
   </div>
@@ -141,6 +142,7 @@
   </footer>
 
     <script src="./assets/js/info.js"></script>
+    <script src="./assets/js/oracle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
       // JavaScript to dynamically set the current year in the footer
