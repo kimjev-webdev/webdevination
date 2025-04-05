@@ -51,10 +51,14 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(55, 0, 60, 0.6); /* Aubergine with 60% opacity */
+  background-color: rgba(31, 0, 71, 0.514); /* Aubergine with 60% opacity */
   z-index: 1;
   pointer-events: none; /* Allows clicks to pass through */
 }
+
+main, header, footer, div, div.row, .column, .container, section, article, pre, button, a, p, h1, h2, h3, h4, h5, h6, textarea, input, select, label, span {
+  z-index: 2; /* Ensures content is above the overlay */
+} 
 
 /* general body styles */
 body.p {
