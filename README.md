@@ -162,7 +162,7 @@ This project brings divination into the modern age, creating a space where the i
 #### Primary Goal 
 The primary objective of WebDevination is to seamlessly bring the ancient art of tarot reading into the digital age without compromising the experience. By blending modern web technology with the mystical world of divination, the site aims to create an immersive, authentic tarot experience that feels both modern and personal, guiding users through the process of self-discovery in a digital space.
 
-Further business goals are:
+#### Further business goals are:
 
 <details>
 <summary>Maintain Personal Connection</summary>
@@ -278,16 +278,27 @@ Further business goals are:
 
 <details><summary>Wireframes</summary>
 
-### 1. Landing Page Wireframe (index.html)
+### 1. Landing Page Wireframes (index.html)
 
-Mobile
-![]() 
+| Mobile                                                   |   Desktop                                               |
+|:----------------------------------------------------------:|:-----------------------------------------------------------:|
+| <img src="assets/images/wireframes/indexmobile.webp" height="200"/> | <img src="assets/images/wireframes/indexdesktop.webp" height="200"/> |
+| <img src="assets/images/wireframes/indexmobile2.webp" height="200"/> | <img src="assets/images/wireframes/indexdesktop2.webp" height="200"/> |
 
-Desktop 
-### 2. Info, Reading Selection & Oracle Page (info.html)
-![]()
-### 3. One Card Reading Page Wireframme (onecard.html)
-![]() 
+### 2. Info, Reading Selection & Oracle Page Wireframes (info.html)
+
+| Mobile                                                   |   Desktop                                               |
+|:----------------------------------------------------------:|:-----------------------------------------------------------:|
+| <img src="assets\images\wireframes\infomobile.webp" height="200"/> | <img src="assets\images\wireframes\infodesktop.webp" height="200"/> |
+
+### 3. One Card Reading Page Wireframes (info.html)
+
+| Mobile                                                   |   Desktop                                               |
+|:----------------------------------------------------------:|:-----------------------------------------------------------:|
+| <img src="assets\images\wireframes\onecardmobile.webp" height="200"/> | <img src="assets\images\wireframes\onecarddesktop.webp" height="200"/> |
+| <img src="assets\images\wireframes\onecardmobileshuffle.webp" height="200"/> | <img src="assets\images\wireframes\onecarddesktopshuffle.webp" height="200"/> |
+| <img src="assets\images\wireframes\onecardmobilereading.webp" height="200"/> | <img src="assets\images\wireframes\onecarddesktopreading.webp" height="200"/> |
+
 ### 4. Three Card Reading Page Wireframe (threecard.html)
 ![]() 
 ### 5. Card Designs & Interpretation Supplement Page Wireframe (cards.html)
