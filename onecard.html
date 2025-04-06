@@ -26,8 +26,10 @@
       src="https://kit.fontawesome.com/40e23bfd7e.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -60,7 +62,7 @@
               style="color: rgb(174, 255, 0)"
             ></i>
           </a>
-    
+
           <!-- hamburger button for mobile -->
           <button
             class="navbar-toggler collapsed"
@@ -76,7 +78,7 @@
             <span class="icon-bar middle-bar"></span>
             <span class="icon-bar bottom-bar"></span>
           </button>
-    
+
           <!-- navigation links (collapsed by default on mobile) -->
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
@@ -94,8 +96,14 @@
                   Readings
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="onecard.html">One Card</a></li>
-                  <li><a class="dropdown-item" href="threecard.html">Three Cards</a></li>
+                  <li>
+                    <a class="dropdown-item" href="onecard.html">One Card</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="threecard.html"
+                      >Three Cards</a
+                    >
+                  </li>
                 </ul>
               </li>
               <a class="nav-link" href="cards.html">Cards</a>
@@ -105,34 +113,71 @@
         </div>
       </nav>
     </header>
-    
+
     <div class="container-fluid leftonecard">
       <div class="row onecardrow">
         <h2 class="onecardheader">ONE CARD READING</h2>
         <div class="col-12 col-md-6 instcol">
           <!-- Left Column: Instructions and Buttons -->
           <div id="instructions">
-         
-            <p class="onecardp">Take the time to centre yourself. Take a few deep breaths. When a clear question arises, 
-              'shuffle' the deck, and then 'draw' a card to reveal the insight you desire.<br><br>Trust your intuition, Seeker! Be open, and willing to accept that you may not recieve the outcome you had hoped for.<br><br> Rest assured; whatever is meant to be WILL be...</p>
+            <p class="onecardp">
+              Take the time to centre yourself. Take a few deep breaths. When a
+              clear question arises, 'shuffle' the deck, and then 'draw' a card
+              to reveal the insight you desire.<br /><br />Trust your intuition,
+              Seeker! Be open, and willing to accept that you may not recieve
+              the outcome you had hoped for.<br /><br />
+              Rest assured; whatever is meant to be WILL be...
+            </p>
             <button id="shuffle" class="btn btn-primary shufflebtn">
-                SHUFFLE
-            </button><br>
-            <button id="deal" class="btn btn-success dealbtn">DRAW</button> 
+              SHUFFLE</button
+            ><br />
+            <button id="deal" class="btn btn-success dealbtn">DRAW</button>
           </div>
         </div>
 
         <div class="col-12 col-md-6">
           <!-- Right Column: Shuffled Cards and Selected Card -->
           <div class="card-stack" id="card-stack">
-            <img class="shufflecard" src="assets/images/cardbacks.webp" alt="Card 1"/>
-            <img class="shufflecard" src="assets/images/cardbacks.webp" alt="Card 2"/>
-            <img class="shufflecard" src="assets/images/cardbacks.webp" alt="Card 3"/>
-            <img class="shufflecard" src="assets/images/cardbacks.webp" alt="Card 4"/>
-            <img class="shufflecard" src="assets/images/cardbacks.webp" alt="Card 5"/>
-            <img class="shufflecard" src="assets/images/cardbacks.webp" alt="Card 6"/>
-            <img class="shufflecard" src="assets/images/cardbacks.webp" alt="Card 7"/>
-            <img class="shufflecard" src="assets/images/cardbacks.webp" alt="Card 8"/>
+            <img
+              class="shufflecard"
+              src="assets/images/cardbacks.webp"
+              alt="Card 1"
+            />
+            <img
+              class="shufflecard"
+              src="assets/images/cardbacks.webp"
+              alt="Card 2"
+            />
+            <img
+              class="shufflecard"
+              src="assets/images/cardbacks.webp"
+              alt="Card 3"
+            />
+            <img
+              class="shufflecard"
+              src="assets/images/cardbacks.webp"
+              alt="Card 4"
+            />
+            <img
+              class="shufflecard"
+              src="assets/images/cardbacks.webp"
+              alt="Card 5"
+            />
+            <img
+              class="shufflecard"
+              src="assets/images/cardbacks.webp"
+              alt="Card 6"
+            />
+            <img
+              class="shufflecard"
+              src="assets/images/cardbacks.webp"
+              alt="Card 7"
+            />
+            <img
+              class="shufflecard"
+              src="assets/images/cardbacks.webp"
+              alt="Card 8"
+            />
           </div>
 
           <div id="selected-cardone" class="selected-cardone">
@@ -143,22 +188,24 @@
     </div>
 
     <footer>
-      <p>&copy; <span id="current-year"></span> WebDevination. All rights reserved.</p>
+      <p>
+        &copy; <span id="current-year"></span> WebDevination. All rights
+        reserved.
+      </p>
       <p>Made with <i class="fa-solid fa-heart"></i> by Kim Piffy</p>
-  </footer>
+    </footer>
 
     <script type="module" src="./assets/js/utilities.js"></script>
     <script type="module" src="./assets/js/onecard.js"></script>
     <script>
       // JavaScript to dynamically set the current year in the footer
-      document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    
   </body>
 </html>
-

@@ -1,6 +1,6 @@
 <h1 align="center"> Welcome to WebDevination </h1>
 
-<img src="assets\images\readmefiles\webdevinationtitle.JPG" alt="WebDevination" width="100%"/>
+<img src="assets\images\readmefiles\landingtitle.webp" alt="WebDevination" width="100%"/>
 
 [WebDevination](http://webdevination.onrender.com/) is a portmanteau of web development and divination. This project seeks to blend the ancient art of tarot reading with the power of modern technology. The interactive tarot game is designed to offer a unique user experience that updates the divinatory experience within a digital framework.
 
@@ -300,7 +300,14 @@ The primary objective of WebDevination is to seamlessly bring the ancient art of
 | <img src="assets\images\wireframes\onecardmobilereading.webp" height="200"/> | <img src="assets\images\wireframes\onecarddesktopreading.webp" height="200"/> |
 
 ### 4. Three Card Reading Page Wireframe (threecard.html)
-![]() 
+
+
+| Mobile                                                   |   Desktop                                               |
+|:----------------------------------------------------------:|:-----------------------------------------------------------:|
+| <img src="assets\images\wireframes\onecardmobile.webp" height="200"/> | <img src="assets\images\wireframes\threecarddesktop.webp" height="200"/> |
+| <img src="assets\images\wireframes\onecardmobileshuffle.webp" height="200"/> | <img src="assets\images\wireframes\threecarddesktopshuffle.webp" height="200"/> |
+| <img src="assets\images\wireframes\threecaardmobilereading.webp" height="200"/> | <img src="assets\images\wireframes\threecarddesktopreaading.webp" height="200"/> |
+
 ### 5. Card Designs & Interpretation Supplement Page Wireframe (cards.html)
 ![]() 
 ### 6. Learn Tarot Matching Game Page (learn.html)
