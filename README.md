@@ -302,7 +302,7 @@ Desktop
 
 <img style="margin: 20px" align="left" width="400" height="400" src="assets/images/profileimage.webp"> <br>
 
-<details><summary><h3>Terminal Green</h3></summary>
+<details><summary>Terminal Green</summary>
 
 #### Origins and Purpose
 In the early days of computing, monochrome CRT (cathode-ray tube) monitors often displayed text in shades of green on black. This phosphorescent green was not just an aesthetic choice—it was a practical one:
@@ -316,7 +316,7 @@ Even today, many digital terminal themes use shades of green on black—this is 
 
 </details> 
 
-### <details><summary>Webdevination's Neon Green</summary>  
+<details><summary>Webdevination's Neon Green</summary>  
 
 #### Artistic Reinterpretation
 
