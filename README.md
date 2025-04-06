@@ -276,8 +276,7 @@ Further business goals are:
 
 <h3 id="8">1. Wireframes</h3>
 
-<details>
-<summary>Wireframes</summary>
+<details><summary>Wireframes</summary>
 
 ### 1. Landing Page Wireframe (index.html)
 
@@ -297,32 +296,13 @@ Desktop
 ![]() 
 </details>
 
-</details>
-
-<details>
-<summary>Desktop Wireframes</summary>
-
-### 1. Landing Page Wireframe (index.html)
-![]() 
-### 2. Info, Reading Selection & Oracle Page (info.html)
-![]()
-### 3. One Card Reading Page Wireframme (onecard.html)
-![]() 
-### 4. Three Card Reading Page Wireframe (threecard.html)
-![]() 
-### 5. Card Designs & Interpretation Supplement Page Wireframe (cards.html)
-![]() 
-### 6. Learn Tarot Matching Game Page (learn.html)
-![]() 
-</details>
-
 <h3 id="9"> 2. Color Palette</h3>
 
 ![](assets/images/colorpalette.webp)
 
 <img style="margin: 20px" align="left" width="400" height="400" src="assets/images/profileimage.webp"> <br>
 
-### <details><summary>Terminal Green</summary>
+<details><summary><h3>Terminal Green</h3></summary>
 
 #### Origins and Purpose
 In the early days of computing, monochrome CRT (cathode-ray tube) monitors often displayed text in shades of green on black. This phosphorescent green was not just an aesthetic choice—it was a practical one:
