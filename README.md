@@ -2,12 +2,13 @@
 
 <img src="assets\images\readmefiles\webdevinationtitle.JPG" alt="WebDevination" width="100%"/>
 
-[WebDevination](https://kimjev-webdev.github.io/webdevination/) is a portmanteau of *web development* and *divination*, combining the ancient art of tarot reading with the power of modern technology. The interactive tarot game is designed to offer a unique user experience that updates the divinatory experience within a digital framework.
+[WebDevination](http://webdevination.onrender.com/) is a portmanteau of web development and divination. This project seeks to blend the ancient art of tarot reading with the power of modern technology. The interactive tarot game is designed to offer a unique user experience that updates the divinatory experience within a digital framework.
 
-With design influences drawn from the classic terminal interface, the site introduces users to the concept of *techno-divination* which seeks to refresh and replicate the personal nature of in person fortune telling. Javascript aids interactivity and helps to provide this authentic experience.
+With design influences drawn from the classic terminal interface, combined with a beautiful set of cards generated using MidJourney, the site introduces users to the concept of techno-divination which seeks to refresh and replicate the personal nature of in-person fortune telling. Javascript aids interactivity and helps to provide this authentic experience.
 
-Each reading encourages the user to tap into their intuition and explore not only the meaning of the cards but also themselves. This project brings divination into the modern age, creating a space where the internet is justified as the perfect transcendental, immaterial, environment for this practice which enables deeper connection and self-reflection.
+The single card reading, and three card reading both encourage the user to tap into their intuition and use the cards for introspective inquiry. A revolutionary 'techno oracle' powered by ChatGPT offers a unique and exciting addition to the cards, providing mysterious, metaphysical responses to the users questions. In addition to the card reading and AI oracle features, the site includes a dedicated page where users can explore the unique card designs and familiarise themselves with more specific meanings. For those wishing to learn or remember the cards, there's also an interactive game that challenges users to match card descriptions to the correct images, reinforcing their understanding in a fun and engaging way.
 
+This project brings divination into the modern age, creating a space where the internet is justified as the perfect transcendental, immaterial environment for this practice which enables deeper connection and self-reflection.
 ## Table of Contents
 
 <details>
@@ -244,8 +245,7 @@ Further business goals are:
 
 <details>
 <summary>Navigation</summary>
-<li> An easy-to-navigate menu that includes links.</li>
-<li>A footer with navigation links, social links and newsletter sign up so option to connect is on every page.</li>
+<li> An easy-to-navigate menu that includes links which guide users around the site.</li>
  </details>
 
  <details>
@@ -276,33 +276,24 @@ Further business goals are:
 
 <h3 id="8">1. Wireframes</h3>
 
-<details>
-<summary>Mobile Wireframes</summary>
+<details><summary>Wireframes</summary>
 
-### 1. Homepage Wireframe
-![](assets/images/indexwfmobile.webp) 
-### 2. About Page Wireframe
-![](assets/images/aboutwfmobile.webp)
-![](assets/images/aboutwfmobile2.webp)
-### 3. Gallery Page Wireframe 
-![](assets/images/gallerywfmobile.webp) 
-### 4. Contact Page Wireframe
-![](assets/images/contactwfmobile.webp) 
-</details>
+### 1. Landing Page Wireframe (index.html)
 
-</details>
+Mobile
+![]() 
 
-<details>
-<summary>Desktop Wireframes</summary>
-
-### 1. Homepage Wireframe
-![](assets/images/indexwfdesktop.webp) 
-### 2. About Page Wireframe
-![](assets/images/aboutwfdesktop.webp) 
-### 3. Gallery Page Wireframe 
-![](assets/images/gallerywfdesktop.webp) 
-### 4. Contact Page Wireframe
-![](assets/images/contactwfdesktop.webp) 
+Desktop 
+### 2. Info, Reading Selection & Oracle Page (info.html)
+![]()
+### 3. One Card Reading Page Wireframme (onecard.html)
+![]() 
+### 4. Three Card Reading Page Wireframe (threecard.html)
+![]() 
+### 5. Card Designs & Interpretation Supplement Page Wireframe (cards.html)
+![]() 
+### 6. Learn Tarot Matching Game Page (learn.html)
+![]() 
 </details>
 
 <h3 id="9"> 2. Color Palette</h3>
@@ -311,15 +302,45 @@ Further business goals are:
 
 <img style="margin: 20px" align="left" width="400" height="400" src="assets/images/profileimage.webp"> <br>
 
-### Why Violet?
+<details><summary>Terminal Green</summary>
 
-Originally, a single aesthetically pleasing colour ( #9256f6) was chosen for use on button hovers, clicks, links and for use in some titles. The reason that a violet hue was selected for the portfolio website is because it has a direct relationship with Kim's use of ultra-violet light in her art exhibitions - the color itself carries meaning, and tells a story about Kim's artwork. From this base color two secondary violet hues ( #a781f1 and #5f18ea) were selected to account for accessibility and contrast criteria. An artistic 'flower petal' shaped border on Kim's profile image on the [about](https:/kimjev-webdev.github.io/Unit1/about.html) page makes use of all 3 violet tones, next to segments of the pattern which forms the background on the [contact](https:/kimjev-webdev.github.io/Unit1/contact.html) page. The profile image border, therefore, draws together all of the colors used across the site which prevents the use of #5f18ea on white background, and use of #a781f1 on black backgrounds looking hapchance, and instead makes the selection a concious style choice which is WCAG compliant.
+#### Origins and Purpose
+In the early days of computing, monochrome CRT (cathode-ray tube) monitors often displayed text in shades of green on black. This phosphorescent green was not just an aesthetic choice—it was a practical one:
+CRT monitors used phosphor compounds to emit light when struck by an electron beam. The P1 phosphor, used in many displays, naturally emitted a green glow.
 
-<br>
+Readability - Green on black provided excellent contrast, reducing eye strain for prolonged periods of coding or command-line use.
+Longevity - Green phosphor had a long persistence, meaning characters stayed visible slightly longer without flicker, enhancing clarity.
+
+#### Modern Digital Terminals and Nostalgia
+Even today, many digital terminal themes use shades of green on black—this is partly for readability, but largely due to nostalgic appeal. It taps into the retro-futuristic aesthetic of early hacking culture, matrix visuals, and vintage computing.
+
+</details> 
+
+<details><summary>Webdevination's Neon Green</summary>  
+
+#### Artistic Reinterpretation
+
+The chosen green (rgb(174, 255, 0)) is brighter and more neon than classic terminal green. This is a subtle but impactful tweak that nods to the developer's own visual language. 
+Since the card deck was generated by training midjourney with the developer's own artwork which often uses flourescent hues, this tone was also picked to coompliment the designs in the deck; bold, mystical, luminous.
+Neon green feels more otherworldly than dull phosphor green. Even without a text shadow it is almost glowing - representing arcane energy, which aligns with the mystical, divinatory interface.
+
+#### Adding Glow Through Text Shadow
+The layered text-shadow:
+
+text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+
+creates a radiant aura around each glyph. This emulates the soft bloom that would have been seen on CRT displays and further accentuates the "terminal meets tarot" feel:
+
+Visual Depth - The glow give the text an extra dimension making the experience feel more tactile. 
+It also adds and enchanting feel which references mystical glyphs perfect for a digital oracle/mystic experience.
+
+</details>
 
 <h3 id="10"> 3. Icons</h3>
 
-A combination of icons from the FontAwesome library have been utilized in the navbar, footer and contact page (after form submission). As well as stock icons, several custom icons were created and used for the navbar branding and amongst social icons in the footer. 
+A combination of icons from Google and Font Awesome have been used across the site. 
+
+from the FontAwesome library have been utilized in the navbar, footer and contact page (after form submission). As well as stock icons, several custom icons were created and used for the navbar branding and amongst social icons in the footer. 
 
 <img style="margin: 20px" align="left" width="600" src="assets/images/faicons.webp"> <br> This selection of icons from the Font Awesome library are styled with a combination of Bootstrap's inline styling and custom CSS which targets custom classes applied to the  tag. Font Awesome's own [literal sizing scale](https://docs.fontawesome.com/web/style/size) is also utilized inline to scale the icons. 
 
@@ -328,7 +349,7 @@ Two custom icons were created using SVG files uploaded to the Font Awesome libra
 
 <h3 id="11"> 4. Fonts </h3>
 
-#### Primary Font - Rumei House
+#### Primary Font - Tourney 
 
 Rumei House was purchased under lisence from [MyFonts.com](https://www.myfonts.com/collections/rumei-house-font-imoodev?srsltid=AfmBOorYh8r2v8qMe3nCv5gwRjpZThU-3WT1UXSih-AlNUYzToOGvVYH)
 
@@ -353,7 +374,7 @@ Rumei House has been capitalized wherever it is used across the site.
 
 ![](assets/images/overlayps.webp)
 
-#### Secondary Font - Montserrat
+#### Secondary Font - Cascadia Code 
 
 <img style="margin: 20px" align="right" width="400" height="auto" src="assets/images/montserratprev.webp">
 
