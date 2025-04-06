@@ -386,6 +386,7 @@ body.info {
 
 /* extra styling for explination text on info page */
 #terminalText {
+  font-family: 'Source Code Pro', monospace;
   text-align: justify;
   padding: 0 30px 0 30px;
   white-space: normal;        
@@ -459,7 +460,7 @@ body.info {
 }
 
 h2.title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 1vw;
   text-align: center;
   margin-bottom: 20px;
@@ -472,8 +473,10 @@ align-items: center;}
 
   textarea#questionInput {
     width: 70%;
+    text-align: center;
     max-width: 88vw;
-    font-size: 14px;
+    font-family: "Source Code Pro", monospace;  
+    font-size: 1rem;
     padding: 30px 12px;
     border-radius: 10px;
     border: 1px solid #2aff1a;
@@ -516,15 +519,16 @@ box-shadow: #2aff1a;
 }
 
 #questionInput::placeholder, #questionInput {
-  font-size: 1.5rem;  
-  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;  
+  font-family: "Source Code Pro", monospace !important; 
   color: #000000;
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
 
-.char-count {
-  margin: 10px 0px 10px 0px;
-  font-size: 1.5rem;
+#char-count {
+  margin: 20px 0px 0px 0px;
+  font-size: 1rem;
+  font-family: "Source Code Pro", monospace !important;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 } 
@@ -689,7 +693,7 @@ body.cards {
 
 /* one card reading styles  */
 body.onecard {
-  margin: 100px 60px 100px 60px;
+  margin: 100px 80px 100px 80px;
   max-width: 100%;
   display: inline-block;
   justify-content: center;
@@ -698,6 +702,15 @@ body.onecard {
   height: 100vh;
   overflow-x: hidden;
 }
+
+p.card-response {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 10px 0 10px 0px;
+}
+
+/* card details text */
 
 .instcol {
   display: flex;
@@ -753,16 +766,8 @@ button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
   font-family: "Tourney", monospace !important;
   font-size: 2rem !important;
   letter-spacing: 1vw;
+  margin: 10px 10px 10px 10px;
 }
-
-.button.shufflebtn {
-  margin: 20px 30px 20px 30px !important;
-}
-
-.buttton.dealbtn {
-  margin: 0px 30px 0px 30px !important;
-}
-
 
 #selected-cardone {
   display: flex;
@@ -872,7 +877,7 @@ p.card-response {
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
-justify-content: space-evenly;
+justify-content: center !important;
 font-family: "Source Code Pro", monospace;
   font-size: 1rem;
   text-align: center;
@@ -915,6 +920,14 @@ font-family: "Source Code Pro", monospace;
 }
 
 /* three cards */
+
+#intro-text {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+  text-align: justify;
+  text-align: center;
+  margin: 0 30px 0 50px;
+} 
 
 #threecard-stack {
   visibility: hidden;
@@ -965,6 +978,32 @@ div#cards-container.row.mt-5 {
   height: auto;
   object-fit: cover;
 }
+
+p {
+  font-family: "Source Code Pro", monospace; 
+  text-align: center; 
+}
+
+.score {
+  text-transform: uppercase; 
+  font-family: "Tourney", monospace !important;
+  font-size: 2rem;
+  letter-spacing: 1vw;    
+  text-align: center; /* Center the score text */
+  margin-top: 20px;
+} 
+
+#restart-button {
+  letter-spacing: 1VW;
+  font-family: "Tourney", monospace !important;
+  font-size: 2rem !important;
+}
+
+#restart-button:hover {   
+  animation: flashText 1s infinite;
+}
+
+
 
 .cardgame {
   width: 150px; /* adjust based on your design */
