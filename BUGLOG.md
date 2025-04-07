@@ -27,8 +27,6 @@
 | 2025-04-03 00:00:00 | Animation stuck on shuffle sequence        | JS             | Added JS reset logic to clear previous animation state on redraw.                                  |
 | 2025-04-05 00:00:00 | Oracle feature not wired to backend        | JS/Node.js     | Connected Oracle front-end to server.js and got AI responses flowing.                              |
 | 2025-04-05 00:00:00 | .env not properly ignored in Git           | Config         | Updated .gitignore to correctly exclude .env and sensitive files.                                  |
-| 2025-04-05 00:00:00 | Push to remote failing                     | Git/Config     | Tested push after resolving potential credential or sync issues.                                   |
 | 2025-04-05 00:00:00 | Oracle deployment prep                     | Node.js/Deploy | Created .env.example, cleaned up deployment structure, and pushed server configuration for Render. |
-| 2025-04-06 00:00:00 | Final polish pending                       | CSS            | Placeholder commit for styling pass still in progress.                                             |
 | 2025-04-06 00:00:00 | Oracle font not applying to response       | CSS            | Updated styles to ensure Source Code Pro was applied to Oracle output.                             |
 | 2025-04-06 00:00:00 | Local not matching remote                  | Merge/Sync     | Synced local changes with Oracle integration and updated .gitignore for backend.                   |
