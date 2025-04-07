@@ -282,22 +282,22 @@ The primary objective of WebDevination is to seamlessly bring the ancient art of
 
 | Mobile                                                   |   Desktop                                               |
 |:----------------------------------------------------------:|:-----------------------------------------------------------:|
-| <img src="assets/images/wireframes/indexmobile.webp" height="200"/> | <img src="assets/images/wireframes/indexdesktop.webp" height="200"/> |
-| <img src="assets/images/wireframes/indexmobile2.webp" height="200"/> | <img src="assets/images/wireframes/indexdesktop2.webp" height="200"/> |
+| <img src="assets/images/wireframes/indexmob1.webp" height="200"/> | <img src="assets/images/wireframes/indexdt1.webp" height="200"/> |
+| <img src="assets/images/wireframes/indexmob2.webp" height="200"/> | <img src="assets/images/wireframes/indexdt2.webp" height="200"/> |
 
 ### 2. Info, Reading Selection & Oracle Page Wireframes (info.html)
 
 | Mobile                                                   |   Desktop                                               |
 |:----------------------------------------------------------:|:-----------------------------------------------------------:|
-| <img src="assets\images\wireframes\infomobile.webp" height="200"/> | <img src="assets\images\wireframes\infodesktop.webp" height="200"/> |
+| <img src="assets\images\wireframes\infomob.webp" height="200"/> | <img src="assets\images\wireframes\infodt.webp" height="200"/> |
 
 ### 3. One Card Reading Page Wireframes (info.html)
 
 | Mobile                                                   |   Desktop                                               |
 |:----------------------------------------------------------:|:-----------------------------------------------------------:|
-| <img src="assets\images\wireframes\onecardmobile.webp" height="200"/> | <img src="assets\images\wireframes\onecarddesktop.webp" height="200"/> |
-| <img src="assets\images\wireframes\onecardmobileshuffle.webp" height="200"/> | <img src="assets\images\wireframes\onecarddesktopshuffle.webp" height="200"/> |
-| <img src="assets\images\wireframes\onecardmobilereading.webp" height="200"/> | <img src="assets\images\wireframes\onecarddesktopreading.webp" height="200"/> |
+| <img src="assets\images\wireframes\onecardmob1.webp" height="200"/> | <img src="assets\images\wireframes\onecarddt1.webp" height="200"/> |
+| <img src="assets\images\wireframes\onecardmob2.webp" height="200"/> | <img src="assets\images\wireframes\onecarddt2.webp" height="200"/> |
+| <img src="assets\images\wireframes\onecardmob3.webp" height="200"/> | <img src="assets\images\wireframes\onecarddt3.webp" height="200"/> |
 
 ### 4. Three Card Reading Page Wireframe (threecard.html)
 
@@ -712,7 +712,7 @@ The user story testing section of the testing document can be found [here](TESTI
 
 <h3 id="61"> 7. Bugs </h3>
 
-A comprehensive log of all debugging actions taken throughout the project timeline can be found [here](BUGLOG.md)
+A comprehensive log of all debugging actions taken throughout the project timeline can be found [here](BUGLOG.md).
 
 <h2 id="61a"> Deployment </h2>
 
