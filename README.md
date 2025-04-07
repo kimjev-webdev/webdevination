@@ -304,9 +304,9 @@ The primary objective of WebDevination is to seamlessly bring the ancient art of
 
 | Mobile                                                   |   Desktop                                               |
 |:----------------------------------------------------------:|:-----------------------------------------------------------:|
-| <img src="assets\images\wireframes\onecardmobile.webp" height="200"/> | <img src="assets\images\wireframes\threecarddesktop.webp" height="200"/> |
-| <img src="assets\images\wireframes\onecardmobileshuffle.webp" height="200"/> | <img src="assets\images\wireframes\threecarddesktopshuffle.webp" height="200"/> |
-| <img src="assets\images\wireframes\threecaardmobilereading.webp" height="200"/> | <img src="assets\images\wireframes\threecarddesktopreaading.webp" height="200"/> |
+| <img src="assets\images\wireframes\threecardmob1.webp" height="200"/> | <img src="assets\images\wireframes\threecarddt1.webp" height="200"/> |
+| <img src="assets\images\wireframes\threecardmob2.webp" height="200"/> | <img src="assets\images\wireframes\threecarddt2.webp" height="200"/> |
+| <img src="assets\images\wireframes\threecardmob3.webp" height="200"/> | <img src="assets\images\wireframes\threecarddt3.webp" height="200"/> |
 
 ### 5. Card Designs & Interpretation Supplement Page Wireframe (cards.html)
 ![]() 
