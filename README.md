@@ -712,7 +712,7 @@ The user story testing section of the testing document can be found [here](TESTI
 
 <h3 id="61"> 7. Bugs </h3>
 
-Details of known bugs can be found [here](TESTING.md#bugs)
+A comprehensive log of all debugging actions taken throughout the project timeline can be found [here](BUGLOG.md)
 
 <h2 id="61a"> Deployment </h2>
 
