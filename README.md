@@ -316,9 +316,7 @@ The primary objective of WebDevination is to seamlessly bring the ancient art of
 
 <h3 id="9"> 2. Color Palette</h3>
 
-![](assets/images/colorpalette.webp)
-
-<img style="margin: 20px" align="left" width="400" height="400" src="assets/images/profileimage.webp"> <br>
+![](assets/images/readmefiles/pallette.webp)
 
 <details><summary>Terminal Green</summary>
 
