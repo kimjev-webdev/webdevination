@@ -356,7 +356,7 @@ It also adds and enchanting feel which references mystical glyphs perfect for a 
 
 A combination of icons from Google and Font Awesome, and the Crystal Ball Emoji have been used on the site. 
 
-For the landing page a selection of google icons were used to emphasise the connection between technology and mysticism. They offer a symbolic hint at the avenues explored through tarot. Below is a table showing the icons that 'flash between letters' in the landing sequence:
+For the landing page a selection of google icons were used to emphasise the connection between technology and mysticism. Below is a table showing the icons that 'flash between letters' in the landing sequence. Some of these icons are designed to represent irrelevant ideas and are given new meaning in the context of divination. The table below outlines the icons used and their intended meaning. 
 
 | Icon Preview | Icon Name | Description |
 |--------------|-----------|-------------|
@@ -365,12 +365,12 @@ For the landing page a selection of google icons were used to emphasise the conn
 | ![](assets/images/readmefiles/icons/saved_search.webp) | `saved_search` | Saved search represents looking inwards/ personal insight |
 | ![](assets/images/readmefiles/icons/self_improvement.webp) | `self_improvement` | Meditation / inner growth |
 | ![](assets/images/readmefiles/icons/paid.webp) | `paid` | Payment / Coin / Value / Suit of Pentacles|
-| ![]() | `remove_red_eye` | Visionary / Third Eye / Perception |
+| ![](assets/images/readmefiles/icons/remove_red_eye.webp) | `remove_red_eye` | Visionary / Third Eye / Perception |
 | ![](assets/images/readmefiles/icons/electric_bolt.webp) | `electric_bolt` | Energy  or Lifeforce|
 | ![](assets/images/readmefiles/icons/emoji_events.webp) | `emoji_events` | Trophy / achievement - represents suit of Cups|
 | ![](assets/images/readmefiles/icons/flare.webp) | `flare` | Flare / light / sparkle / alchemy / fire |
 | ![](assets/images/readmefiles/icons/emoji_nature.webp) | `emoji_nature` | Nature / spiritual connection |
-| ![]() | `auto_awesome` | Sparkles / magic |
+| ![](assets/images/readmefiles/icons/auto_awesome.webp) | `auto_awesome` | Sparkles / magic |
 | ![](assets/images/readmefiles/icons/public.webp) | `public` | Globe / world - The world card |
 | ![](assets/images/readmefiles/icons/psychology_alt.webp) | `psychology_alt` | Brain / psyche |
 
