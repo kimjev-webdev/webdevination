@@ -400,18 +400,21 @@ Font Awesome's styling utilities have aided the 'flashing' of the icon, achieved
   The crystal ball emoji was used in the title of the A.I oracle feature to help captivate the users attention. The color of the emoji also compliments the card designs featured on the info page and breaks up the otherwise heavy neon green and black elements.  
 </p>
 <br>
-<br>
 
 <h3 id="11"> 4. Fonts </h3>
 
+Typography plays a vital role in reinforcing the aesthetic and metaphysical tone of the project. Two distinct typefaces—Tourney and Source Code Pro—were chosen to complement the terminal-style theme and enhance the user’s immersive experience.
+
 #### Primary Font - Tourney 
 
-Rumei House was purchased under lisence from [MyFonts.com](https://www.myfonts.com/collections/rumei-house-font-imoodev?srsltid=AfmBOorYh8r2v8qMe3nCv5gwRjpZThU-3WT1UXSih-AlNUYzToOGvVYH)
+Tourney was selected and installed from the [Google Fonts Library](https://fonts.google.com/specimen/Tourney).
 
-A psychedelic, maximalist, and very stylized font was chosen for headings and buttons for several reasons.
-* It clearly represents aspects of Kim's artistic style and therefore compliments the content of the website.
-* When capitalized the font fits into a 'box shape' which makes it intuitivley identifiable as a button. 
-* The box-like letters also allow the text to look aesthetically pleasing when justified. 
+Tourney is a bold, futuristic display font that immediately conveys the tone of mysticism meeting modernity. It was chosen for headers and buttons because:
+
+* It's condensed, geometric forms feel cryptic and alien—perfect for esoteric symbolism.
+* The all-uppercase style evokes a commanding presence.
+* It's synthetic, digital personality aligns with the site's techno-terminal aesthetic, making each heading feel like a cosmic interface label.
+* By using Tourney on interactive elements (like buttons), the site invokes the feeling of activating a spell or accessing a sacred machine.
 <br>
 <br>
 
@@ -421,26 +424,24 @@ Graphic images of text elements were used on the carousel overlay text and on th
 
 Due to time constraints and current skill levels it made more sense to apply images in place of the text elements. The images all contain alt-text which matches the writing displayed in the image. 
 
-The user is familiarised with the 'Rumei House' font representing 'clickable content' through its use in the navbar, a conventional element on most websites. After learning through the use of the font in this location, combined with a hover effect on the menu items, it becomes clear that any text in Rumei House font which displays a purple hover color is likely to be a button. This eliminates confusion which could be caused by the lack of outline and background that is a usual style convention of buttons. The 'call to action' placements also solidify that text displayed in Rumei House is usually a button. 
-
-The discerning quality between RumeinHouse being used as headers and as buttons is the size along with the hover color - a clear size difference between elements displayed on similiar pages notifies users that one aspect is a title, and the other is a button.
-
-Rumei House has been capitalized wherever it is used across the site. 
+### MENTION CHARACTER SPACING , FONT WEIGHT, FLASH ON BUTTONS DISTINGUISHING FROM HEADERS - WITH CURSOR POINTERS CAPITALISATION, GLOW AND COLOR
 
 ![](assets/images/overlayps.webp)
 
-#### Secondary Font - Cascadia Code 
+#### Secondary Font - Source Code Pro
 
 <img style="margin: 20px" align="right" width="400" height="auto" src="assets/images/montserratprev.webp">
 
-Montserrat Font was chosen and uploaded from [Google Fonts](https://fonts.google.com/specimen/Montserrat) for several reasons.
-* Sans-serif makes it easy to read across all devices.
-* The letterforms are curvy which means they compliment the 'flowing' forms of Rumei House. 
-* Montserrat has clean, geometric letterforms which make it feel modern and structured.
-* It is offered in a wide range of weights, from thin to bold which makes it easy to style.  
-* It has tall uppercase letters which make it look effective when capitalised.    
+Source Code Pro was selected and installed via [Google Fonts Library](https://fonts.google.com/specimen/Source+Code+Pro?query=source+code).
 
-Everywhere that Montserrat is used on the website it is styled to be capitalized apart from on the about page where the largest bodies of text are located. This is to ensure that the paragraphs are easy to read.  This keeps the text looking punchy and to the point. Minimal text is used where possible and so Montserrat can really only found in the footer, in placeholders on the contact form and, as mentioned, in the paragraphs on the about page. 
+Source Code Pro, a monospaced font originally designed for code editors, was selected for all paragraph and informational text because:
+
+* It resembles terminal output, which reinforces the core theme of a divinatory operating system or magical console.
+* Its clear, even spacing makes it highly readable for long stretches of mystical or instructional text.
+* It subtly nods to the fusion of logic and intuition, structure and spirit—echoing the balance found in both coding and tarot interpretation.
+* This font grounds the experience, giving users the sense that they are reading sacred data or decoding a digital grimoire.
+
+#### MENTION GLOW AND COLOR AND FONT WEIGHT FOR READABILITY
 
 <h3 id="12"> 5. Images </h3>
 
