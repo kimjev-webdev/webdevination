@@ -920,6 +920,11 @@ font-family: "Source Code Pro", monospace;
   margin: 10px;
 }
 
+img.onecardadvert {
+  width: auto;
+  height: 20vh;
+}
+
 /* three cards */
 
 #intro-text {
