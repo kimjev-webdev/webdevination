@@ -354,9 +354,30 @@ It also adds and enchanting feel which references mystical glyphs perfect for a 
 
 <h3 id="10"> 3. Icons</h3>
 
-A combination of icons from Google and Font Awesome have been used across the site. 
+A combination of icons from Google and Font Awesome, and the Crystal Ball Emoji have been used on the site. 
 
-from the FontAwesome library have been utilized in the navbar, footer and contact page (after form submission). As well as stock icons, several custom icons were created and used for the navbar branding and amongst social icons in the footer. 
+For the landing page a selection of google icons were used to emphasise the connection between technology and mysticism. They offer a symbolic hint at the avenues explored through tarot. Below is a table showing the icons that 'flash between letters' in the landing sequence:
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+| Icon Preview | Icon Name | Description |
+|--------------|-----------|-------------|
+| <i class="material-icons">key</i> | `key` | Key represents access or unlocking secrets/mysteries |
+| <i class="material-icons">blur_on</i> | `blur_on` | Blurred effect represents mystical aura |
+| <i class="material-icons">saved_search</i> | `saved_search` | Saved search represents looking inwards/ personal insight |
+| <i class="material-icons">self_improvement</i> | `self_improvement` | Meditation / inner growth |
+| <i class="material-icons">paid</i> | `paid` | Payment / Coin / Value / Suit of Pentacles|
+| <i class="material-icons">remove_red_eye</i> | `remove_red_eye` | Visionary / Third Eye / Perception |
+| <i class="material-icons">electric_bolt</i> | `electric_bolt` | Energy  or Lifeforce|
+| <i class="material-icons">emoji_events</i> | `emoji_events` | Trophy / achievement - represents suit of Cups|
+| <i class="material-icons">flare</i> | `flare` | Flare / light / sparkle / alchemy / fire |
+| <i class="material-icons">emoji_nature</i> | `emoji_nature` | Nature / spiritual connection |
+| <i class="material-icons">auto_awesome</i> | `auto_awesome` | Sparkles / magic |
+| <i class="material-icons">public</i> | `public` | Globe / world - The world card |
+| <i class="material-icons">psychology_alt</i> | `psychology_alt` | Brain / psyche |
+
+
+Above are the icons from the FontAwesome library have been utilized in the navbar, footer and contact page (after form submission). As well as stock icons, several custom icons were created and used for the navbar branding and amongst social icons in the footer. 
 
 <img style="margin: 20px" align="left" width="600" src="assets/images/faicons.webp"> <br> This selection of icons from the Font Awesome library are styled with a combination of Bootstrap's inline styling and custom CSS which targets custom classes applied to the  tag. Font Awesome's own [literal sizing scale](https://docs.fontawesome.com/web/style/size) is also utilized inline to scale the icons. 
 
