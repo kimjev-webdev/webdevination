@@ -358,23 +358,21 @@ A combination of icons from Google and Font Awesome, and the Crystal Ball Emoji 
 
 For the landing page a selection of google icons were used to emphasise the connection between technology and mysticism. They offer a symbolic hint at the avenues explored through tarot. Below is a table showing the icons that 'flash between letters' in the landing sequence:
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 | Icon Preview | Icon Name | Description |
 |--------------|-----------|-------------|
-| <i class="material-icons">key</i> | `key` | Key represents access or unlocking secrets/mysteries |
-| <i class="material-icons">blur_on</i> | `blur_on` | Blurred effect represents mystical aura |
-| <i class="material-icons">saved_search</i> | `saved_search` | Saved search represents looking inwards/ personal insight |
-| <i class="material-icons">self_improvement</i> | `self_improvement` | Meditation / inner growth |
-| <i class="material-icons">paid</i> | `paid` | Payment / Coin / Value / Suit of Pentacles|
-| <i class="material-icons">remove_red_eye</i> | `remove_red_eye` | Visionary / Third Eye / Perception |
-| <i class="material-icons">electric_bolt</i> | `electric_bolt` | Energy  or Lifeforce|
-| <i class="material-icons">emoji_events</i> | `emoji_events` | Trophy / achievement - represents suit of Cups|
-| <i class="material-icons">flare</i> | `flare` | Flare / light / sparkle / alchemy / fire |
-| <i class="material-icons">emoji_nature</i> | `emoji_nature` | Nature / spiritual connection |
-| <i class="material-icons">auto_awesome</i> | `auto_awesome` | Sparkles / magic |
-| <i class="material-icons">public</i> | `public` | Globe / world - The world card |
-| <i class="material-icons">psychology_alt</i> | `psychology_alt` | Brain / psyche |
+| ![](assets/images/readmefiles/icons/key.webp) | `key` | Key represents access or unlocking secrets/mysteries |
+| ![](assets/images/readmefiles/icons/blur_on.webp) | `blur_on` | Blurred effect represents mystical aura |
+| ![](assets/images/readmefiles/icons/saved_search.webp) | `saved_search` | Saved search represents looking inwards/ personal insight |
+| ![](assets/images/readmefiles/icons/self_improvement.webp) | `self_improvement` | Meditation / inner growth |
+| ![](assets/images/readmefiles/icons/paid.webp) | `paid` | Payment / Coin / Value / Suit of Pentacles|
+| ![]() | `remove_red_eye` | Visionary / Third Eye / Perception |
+| ![](assets/images/readmefiles/icons/electric_bolt.webp) | `electric_bolt` | Energy  or Lifeforce|
+| ![](assets/images/readmefiles/icons/emoji_events.webp) | `emoji_events` | Trophy / achievement - represents suit of Cups|
+| ![](assets/images/readmefiles/icons/flare.webp) | `flare` | Flare / light / sparkle / alchemy / fire |
+| ![](assets/images/readmefiles/icons/emoji_nature.webp) | `emoji_nature` | Nature / spiritual connection |
+| ![]() | `auto_awesome` | Sparkles / magic |
+| ![](assets/images/readmefiles/icons/public.webp) | `public` | Globe / world - The world card |
+| ![](assets/images/readmefiles/icons/psychology_alt.webp) | `psychology_alt` | Brain / psyche |
 
 
 Above are the icons from the FontAwesome library have been utilized in the navbar, footer and contact page (after form submission). As well as stock icons, several custom icons were created and used for the navbar branding and amongst social icons in the footer. 
