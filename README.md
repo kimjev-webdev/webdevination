@@ -418,19 +418,13 @@ Tourney is a bold, futuristic display font that immediately conveys the tone of 
 <br>
 <br>
 
- <img style="margin: 20px" align="left" width="400" src="assets/images/nametext.webp">
-
-Graphic images of text elements were used on the carousel overlay text and on the about page to work around alignment complications. CSS text justification properties ('text-justify: justified') is only applicable when text is overspilling onto the next line, and even with several other style adjustments in place the desired outcome was complicated to achieve. 
-
-Due to time constraints and current skill levels it made more sense to apply images in place of the text elements. The images all contain alt-text which matches the writing displayed in the image. 
+ #### ADD IMAGE
 
 ### MENTION CHARACTER SPACING , FONT WEIGHT, FLASH ON BUTTONS DISTINGUISHING FROM HEADERS - WITH CURSOR POINTERS CAPITALISATION, GLOW AND COLOR
 
-![](assets/images/overlayps.webp)
-
 #### Secondary Font - Source Code Pro
 
-<img style="margin: 20px" align="right" width="400" height="auto" src="assets/images/montserratprev.webp">
+#### ADD IMAGE
 
 Source Code Pro was selected and installed via [Google Fonts Library](https://fonts.google.com/specimen/Source+Code+Pro?query=source+code).
 
