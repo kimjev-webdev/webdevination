@@ -354,7 +354,7 @@ It also adds and enchanting feel which references mystical glyphs perfect for a 
 
 <h3 id="10"> 3. Icons</h3>
 
-A combination of icons from Google and Font Awesome, and the Crystal Ball Emoji have been used on the site. 
+A combination of icons from Google Material Icons, Font Awesome, and an Emoji have been used throughout this project. Icons have played a crucial role in solidifying the link between technology and esotericism. The landing page, info page, navbar and footer all utilize icons to enhance the design choices of the tarot site. 
 
 For the landing page a selection of google icons were used to emphasise the connection between technology and mysticism. Below is a table showing the icons that 'flash between letters' in the landing sequence. Some of these icons are designed to represent irrelevant ideas and are given new meaning in the context of divination. The table below outlines the icons used and their intended meaning. 
 
