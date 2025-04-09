@@ -922,8 +922,59 @@ font-family: "Source Code Pro", monospace;
 
 img.onecardadvert {
   width: auto;
-  height: 20vh;
+  height: 40vh;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+.win95-window {
+  width: 320px;
+  border: 2px solid rgb(174, 255, 0);
+  background: #C0C0C0;
+  font-family: 'Source Code Pro', sans-serif;
+  box-shadow: 2px 2px 0px #2aff1a, -1px -1px 0px #fff;
+}
+
+.win95-title-bar {
+  background: rgb(174, 255, 0);
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 6px;
+  font-size: 14px;
+  height: 22px;
+  border-bottom: 2px solid rgb(174, 255, 0);
+}
+
+.win95-buttons {
+  display: flex;
+  gap: 2px;
+}
+
+.win95-btn {
+  width: 18px;
+  height: 18px;
+  background: rgb(174, 255, 0);
+  border: 1px solid rgba(0, 0, 0, 0.904);
+  font-size: 12px;
+  padding: 0;
+  line-height: 14px;
+  box-shadow: inset -1px -1px 0px #fff, inset 1px 1px 0px #404040;
+  cursor: default;
+}
+
+.win95-body {
+  padding: 10px;
+  background: black;
+  color: rgb(174, 255, 0);
+  font-size: 13px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+}
+
 
 /* three cards */
 
