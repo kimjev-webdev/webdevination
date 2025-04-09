@@ -923,11 +923,12 @@ font-family: "Source Code Pro", monospace;
 img.onecardadvert {
   width: auto;
   height: 40vh;
+  display: block;
+  margin: 0 auto 10px auto;
 }
 
 .win95-window {
-  width:min-content;
-  height: 40vh;
+  display: inline-block;
   border: 2px solid rgb(174, 255, 0);
   background: #C0C0C0;
   font-family: 'Source Code Pro', sans-serif;
@@ -935,6 +936,7 @@ img.onecardadvert {
 }
 
 .win95-title-bar {
+  font-family: 'Source Code Pro' monospace;
   background: rgb(174, 255, 0);
   color: black;
   display: flex;
