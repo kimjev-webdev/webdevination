@@ -925,10 +925,9 @@ img.onecardadvert {
   height: 40vh;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-
 .win95-window {
-  width: 320px;
+  width:min-content;
+  height: 40vh;
   border: 2px solid rgb(174, 255, 0);
   background: #C0C0C0;
   font-family: 'Source Code Pro', sans-serif;
@@ -955,6 +954,7 @@ img.onecardadvert {
 .win95-btn {
   width: 18px;
   height: 18px;
+  color: black;
   background: rgb(174, 255, 0);
   border: 1px solid rgba(0, 0, 0, 0.904);
   font-size: 12px;
