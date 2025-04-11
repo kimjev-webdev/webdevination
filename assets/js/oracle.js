@@ -1,22 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
+  initOracleApp();
+});
+
+// Entry point
+function initOracleApp() {
   const form = document.querySelector("#oracle-form");
   const input = document.querySelector("#questionInput");
   const responseBox = document.querySelector("#oracle-response");
 
-  // Typing animation function
-  function typeOracleMessage(text, element, speed = 40) {
-    element.textContent = "";
-    let i = 0;
-    const interval = setInterval(() => {
-      element.textContent += text.charAt(i);
-      i++;
-      if (i >= text.length) {
-        clearInterval(interval);
-      }
-    }, speed);
-  }
+  const counter = setupCharacterCounter(input);
+  const maxChars = 500;
 
-  // Create or select a character counter
+  setupCharacterCountListener(input, counter, maxChars);
+  setupFormSubmitHandler(form, input, responseBox, maxChars);
+}
+
+// Typing animation
+function typeOracleMessage(text, element, speed = 40) {
+  element.textContent = "";
+  let i = 0;
+  const interval = setInterval(() => {
+    element.textContent += text.charAt(i);
+    i++;
+    if (i >= text.length) {
+      clearInterval(interval);
+    }
+  }, speed);
+}
+
+// Create or reuse character counter
+function setupCharacterCounter(input) {
   let counter = document.querySelector("#char-count");
   if (!counter) {
     counter = document.createElement("div");
@@ -26,20 +39,22 @@ document.addEventListener("DOMContentLoaded", () => {
     counter.style.color = "#aaa";
     input.parentNode.insertBefore(counter, input.nextSibling);
   }
+  return counter;
+}
 
-  const maxChars = 500;
-
-  // Update character count
+// Attach input listener for live character count
+function setupCharacterCountListener(input, counter, maxChars) {
   input.addEventListener("input", () => {
     const currentLength = input.value.length;
     counter.textContent = `${currentLength} / ${maxChars}`;
-
     counter.style.color = currentLength > maxChars ? "red" : "#aaa";
   });
+}
 
+// Handle form submission
+function setupFormSubmitHandler(form, input, responseBox, maxChars) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     const question = input.value.trim();
     if (!question) return;
 
@@ -49,26 +64,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     responseBox.textContent = "🔮 Consulting the stars...";
-
-    try {
-      const res = await fetch("/oracle", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ question }),
-      });
-
-      const data = await res.json();
-      if (data.answer) {
-        typeOracleMessage(data.answer, responseBox);
-      } else {
-        responseBox.textContent = "🕯️ The Oracle is silent...";
-      }
-    } catch (err) {
-      console.error(err);
-      responseBox.textContent = "🌫️ The mists are unclear. Try again soon.";
-    }
+    await fetchOracleResponse(question, responseBox);
   });
-});
+}
+
+// Call the backend and show the Oracle's response
+async function fetchOracleResponse(question, responseBox) {
+  try {
+    const res = await fetch("/oracle", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question }),
+    });
+
+    const data = await res.json();
+    if (data.answer) {
+      typeOracleMessage(data.answer, responseBox);
+    } else {
+      responseBox.textContent = "🕯️ The Oracle is silent...";
+    }
+  } catch (err) {
+    console.error(err);
+    responseBox.textContent = "🌫️ The mists are unclear. Try again soon.";
+  }
+}
 

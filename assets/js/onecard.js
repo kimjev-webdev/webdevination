@@ -1,4 +1,3 @@
-//Functions for the one card tarot reading 
 
 // Handle Shuffle button click (with animation)
 function handleShuffleButtonClick(shuffledDeck, cardStack, selectedCardContainer) {
