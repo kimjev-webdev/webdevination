@@ -639,7 +639,7 @@ body.cards {
   font-family: "Source Code Pro", monospace;
   margin: 5px 0;
   line-height: 1rem;
-  text-align: center;
+  text-align: left !important;
 }
 
 .flip-card-back {
