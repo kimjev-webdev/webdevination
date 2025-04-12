@@ -1024,6 +1024,9 @@ div.col-12.threeshuffle {
   overflow: visible;
 }
 
+.text-center {
+  margin: 0px 10px;
+}
 div#cards-container.row.mt-5 {
   margin-top: -13rem !important;  
 }
