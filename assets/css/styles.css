@@ -36,13 +36,11 @@
 
 body {
   min-height: 100vh;
-  height: 100vh;
   padding: 0;
   background-color: black;
   background-image: url('../images/tarotbg.webp');
-  background-size: cover;
   background-repeat: no-repeat; /* Adjust as needed */
-  width: auto;
+  min-width: 100vw;
   color: rgb(174, 255, 0);
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
@@ -52,9 +50,9 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.904); /* Aubergine with 60% opacity */
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.904); 
   z-index: 1;
   pointer-events: none; /* Allows clicks to pass through */
 }
@@ -583,24 +581,26 @@ a {
 }
 
 /* card details page styles */
-body.cards {
-  margin: 100px 60px 100px 60px;
+body.cards {   
+  margin-top: 100px; 
   padding: 20px;
-  height: 100vh;
 }
 
-/* Styles for the card flip */
 .flip-card {
-  width: 200px;
-  height: 300px;
-  perspective: 1000px; /* Make sure 3D effect works */
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  max-width: 100%;
+  margin: 0 auto;
+  perspective: 1000px;
 }
 
-.flip-card-inner {
-  position: relative;
+.flip-card-inner,
+.flip-card-front,
+.flip-card-back {
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d; /* Allow the flip */
+  position: relative;
+  transform-style: preserve-3d;
   transition: transform 0.5s;
 }
 
@@ -608,11 +608,10 @@ body.cards {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden; /* Hide back when rotated */
+  backface-visibility: hidden;
 }
 
 .flip-card-front {
@@ -625,27 +624,21 @@ body.cards {
 .flip-card-back {
   font-size: 14px;
   background-color: transparent !important;
-  color:rgb(174, 255, 0) !important;
+  color: rgb(174, 255, 0) !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  transform: rotateY(180deg); /* Initially hide back */
+  transform: rotateY(180deg);
 }
 
-/* Optional styling for the card back text */
 .flip-card-back p {
   font-family: "Source Code Pro", monospace;
   margin: 5px 0;
   line-height: 1rem;
   text-align: left !important;
 }
-
-.flip-card-back {
-  font-size: 14px;
-}
-
 
 .accordion-item {
   background-color: transparent !important;
@@ -654,6 +647,16 @@ body.cards {
 
 .accordion-body {
   border: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.accordion-body > .row {
+  display: flex;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 1.5rem !important;
 }
 
 .accordion-button {
@@ -664,17 +667,35 @@ body.cards {
   font-family: "Tourney", monospace;
   font-size: 3vw;
   padding: 10px 20px;
-  border: none;
+  border: none !important;
   cursor: pointer !important;
   transition: 0.3s;
-  border: none !important;
   box-shadow: none !important;
-  display: block;
+  justify-content: center !important;
+  gap: 10px; /* adds spacing between text and the icon */
+}
+
+
+.accordion-item > h2 > .accordion-button {
+  justify-content: center !important;
+}
+
+
+accordion-button:hover {
   animation: flashText 1s infinite;
 }
 
 .accordion-button i {
   transition: transform 0.3s ease;
+}
+
+#suitOfCups .accordion-button,
+#suitOfWands .accordion-button,
+#suitOfSwords .accordion-button,
+#suitOfPentacles .accordion-button {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  letter-spacing: normal;
 }
 
 .card-body {
@@ -692,9 +713,16 @@ body.cards {
   background-color: transparent !important;
 }
 
-.card-img , .card-img-top {
+.card-img, .card-img-top {
   border-radius: 15px !important;
 }
+
+.accordion-button::after {
+  display: none !important;
+}
+
+
+
 
 /* one card reading styles  */
 body.onecard {
@@ -820,16 +848,6 @@ button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
 .selected-card.flip {
   transform: rotateY(180deg);
 }
-
-#suitOfCups .accordion-button,
-#suitOfWands .accordion-button,
-#suitOfSwords .accordion-button,
-#suitOfPentacles .accordion-button {
-  font-family: 'Source Code Pro', monospace;
-  font-size: 16px;
-  letter-spacing: normal;
-}
-
 
 /* CARD IMAGE STYLES */
 .selected-card img {
