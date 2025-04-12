@@ -38,6 +38,7 @@ body {
   min-height: 100vh;
   margin-top: 100px;
   padding: 0;
+  background-size: cover;
   background-color: black;
   background-image: url('../images/tarotbg.webp');
   background-repeat: no-repeat; /* Adjust as needed */
@@ -47,6 +48,10 @@ body {
 }
 
 /* general body styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 p {
   font-family: "Source Code Pro", monospace;
 }
@@ -345,13 +350,7 @@ a.dropdown-item:hover {
 
 /*info page styles*/
 /* set the page body to mimic terminal */
-body.info {
-  min-width: 100vw;
-  max-height: fit-content;
-}
-
 .terminal {
-  max-width: 90vw;
   text-align: center;
 }
 
@@ -432,6 +431,11 @@ body.info {
   transition: opacity 1s ease-in-out;
 }
 
+.image-container {
+  display: flex;
+  align-items: flex-start;
+}
+
 .infolgscreen {
   max-width: 90vw;
   display: flex;
@@ -452,7 +456,8 @@ h2.title {
 #oracle-form {
   display: flex;
   flex-direction: column; 
-align-items: center;}
+align-items: center;
+}
 
   textarea#questionInput {
     width: 70%;
@@ -477,7 +482,7 @@ align-items: center;}
   .oracleButton {
     background-color: rgb(174, 255, 0);
     color: #000000;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
@@ -521,13 +526,17 @@ box-shadow: #2aff1a;
   display: block;
   margin: auto;
   padding: 10px 0px;
-  font-size: 2.5rem;
-  line-height: 2.5rem;
+  font-size: 2rem;
+  line-height: 2rem;
   letter-spacing: 1vw;
   cursor: pointer;
   transition: 0.3s;
   opacity: 0; /* Initially hidden */
   text-transform: capitalize;
+}
+
+.card-button:hover {
+  animation: flashText 1s infinite;
 }
 
 #oracle-response::after {
@@ -552,7 +561,7 @@ box-shadow: #2aff1a;
   max-width: 90vw;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .buttons-container.visible,
@@ -738,15 +747,11 @@ accordion-button:hover {
 
 /* one card reading styles  */
 body.onecard {
-  margin: 100px 80px 100px 80px;
-  max-width: 100%;
-  display: inline-block;
-  justify-content: center;
-  align-items: flex-start;
-  width: auto;
-  height: 100vh;
+  padding: 0;
+  min-height: 100vh;
   overflow-x: hidden;
 }
+
 
 p.card-response {
   font-family: "Source Code Pro", monospace;
@@ -767,7 +772,7 @@ p.card-response {
 }
 
 .onecardheader {
-  margin-bottom: 3vh;
+  margin-bottom: 2.5rem;
   font-family: "Tourney", monospace;
   flex-wrap: wrap;
   font-size: 2.5rem;
@@ -775,12 +780,11 @@ p.card-response {
 }
 
 .leftonecard {
-  flex-grow: 1;
 overflow: visible !important;
 display: flex;
+flex-direction: column;
 align-items: flex-start;
 justify-content: center;
-flex-wrap: wrap;
 }
 
 #deck {
@@ -928,6 +932,7 @@ font-family: "Source Code Pro", monospace;
 }
 
 .onecardp {
+  max-width: 80%;
   text-align: justify !important;
 }
 
@@ -936,7 +941,6 @@ font-family: "Source Code Pro", monospace;
   flex-wrap: wrap;
   line-height: 2.5rem;
   font-size: 2rem;
-  max-width: 35vw;
   letter-spacing: 1vw;
   text-align: center;
   text-transform: uppercase;
@@ -950,7 +954,12 @@ font-family: "Source Code Pro", monospace;
   text-align: justify;
   display: flex;
   flex-wrap: wrap;
-  max-width: 35vw;
+}
+
+.card-name,
+.card-details-text {
+  max-width: 85%;
+  box-sizing: border-box;
 }
 
 #instructions-column {
@@ -964,19 +973,26 @@ font-family: "Source Code Pro", monospace;
 }
 
 img.onecardadvert {
-  width: auto;
-  height: 40vh;
-  display: block;
-  margin: 0 auto 10px auto;
-}
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin: 0 auto;
+  }
 
 .win95-window {
-  display: inline-block;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   border: 2px solid rgb(174, 255, 0);
   background: #C0C0C0;
   font-family: 'Source Code Pro', sans-serif;
   box-shadow: 2px 2px 0px #2aff1a, -1px -1px 0px #fff;
+  margin: 20px auto; /* center it horizontally */
 }
+
 
 .win95-title-bar {
   font-family: 'Source Code Pro' monospace;
@@ -999,7 +1015,7 @@ img.onecardadvert {
 .win95-btn {
   width: 18px;
   height: 18px;
-  color: black;
+  color: black !important;
   background: rgb(174, 255, 0);
   border: 1px solid rgba(0, 0, 0, 0.904);
   font-size: 12px;
@@ -1301,6 +1317,10 @@ footer {
 
 .row.win95-window {
   display: none;
+}
+
+.card-button {
+  font-size: 1.5rem;
 }
 }
 
