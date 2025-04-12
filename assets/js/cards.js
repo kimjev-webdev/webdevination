@@ -10,7 +10,7 @@ function generateCardSection(cards, suit) {
             .replace(/CAREER:/g, "<strong>✨ CAREER:</strong>")
             .replace(/FINANCE:/g, "<strong>💰 FINANCE:</strong>")
             .replace(/HEALTH:/g, "<strong>🌿 HEALTH:</strong>")
-            .replace(/\n/g, "<br>");
+            .replace(/\n/g, "<br><br>");
 
         cardHtml += `
             <div class="col">
