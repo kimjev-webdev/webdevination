@@ -67,4 +67,26 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         })
         .catch(error => console.error("Error loading tarot data:", error));
+
+    // Add chevron flip logic
+    const accordionButtons = document.querySelectorAll(".accordion-button");
+
+    accordionButtons.forEach(button => {
+        const icon = button.querySelector("i");
+
+        const targetId = button.getAttribute("data-bs-target");
+        const target = document.querySelector(targetId);
+
+        if (target && icon) {
+            target.addEventListener("show.bs.collapse", () => {
+                icon.classList.remove("fa-chevron-down");
+                icon.classList.add("fa-chevron-up");
+            });
+
+            target.addEventListener("hide.bs.collapse", () => {
+                icon.classList.remove("fa-chevron-up");
+                icon.classList.add("fa-chevron-down");
+            });
+        }
+    });
 });
