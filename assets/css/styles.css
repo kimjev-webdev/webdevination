@@ -742,6 +742,13 @@ accordion-button:hover {
   max-width: 80vw;
 }
 
+.suit-intro {
+  font-family: "Source Code Pro", monospace;
+  color: rgb(174, 255, 0);
+  text-align: justify;
+  margin: 0 auto;
+  max-width: 80vw  !important;  
+}
 
 /* one card reading styles  */
 body.onecard {
