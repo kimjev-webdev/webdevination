@@ -1,555 +1,550 @@
 {
-  "tarot": [
+"tarot": [
     {
       "name": "The Fool",
       "image": "assets/images/cardfronts/thefool.webp",
-      "interpretation": "New beginnings, inviting you to embrace spontaneity and embark on a new adventure with faith.", 
-      "specifics": "In love, it speaks of a fresh start and the potential for an exciting connection. Career-wise, it encourages taking a leap of faith or starting something unconventional. Financially, it warns against rash decisions but celebrates freedom and potential. In health, it asks you to listen to your body and embrace the unknown.",
+      "interpretation": "New beginnings, inviting you to embrace spontaneity and embark on a new adventure with faith.",
+      "specifics": "LOVE: A fresh start. New & exciting connection. CAREER: Take a leap of faith. Start something unconventional. FINANCE: A warning against rash decisions but celebrate your freedom. HEALTH: Listen to your body. Embrace the unknown.",
       "response": "Maybe"
     },
     {
       "name": "The Magician",
       "image": "assets/images/cardfronts/themagician.webp",
-      "interpretation": "Master your abilities and harness your inner strength to manifest your desires and be the creator of your reality.", 
-     "specifics": "In love, it indicates confidence and attraction, where you have the tools to create the relationship you desire. For your career, it signals a time when your skills will allow you to succeed. Financially, it suggests you have the ability to manifest wealth through hard work. In terms of health, it reminds you to take charge of your well-being.",
+      "interpretation": "Master your abilities and harness your inner strength to manifest your desires and be the creator of your reality.",
+      "specifics": "LOVE: Confidence and attraction. Create the relationship you desire. CAREER: Your skills will allow you to succeed. FINANCE: You have the ability to manifest wealth through hard work. HEALTH: Take charge of your well-being.",
       "response": "Yes"
     },
     {
       "name": "The High Priestess",
       "image": "assets/images/cardfronts/thehighpriestess.webp",
-      "interpretation": "Trust your intuition, embrace mystery and cultivate inner wisdom to guide you on a deeper, more spiritual path.", 
-      "specifics": "In love, it speaks to hidden feelings or needing to trust your gut in your relationships. Career-wise, it suggests you may not have all the answers but trusting yourself foremost will lead you to success. In money, it advises caution and looking beyond the surface. For health, listen to your body’s quiet signals.",
+      "interpretation": "Trust your intuition, embrace mystery and cultivate inner wisdom to guide you on a deeper, more spiritual path.",
+      "specifics": "LOVE: Mystery deepens. Trust your intuition. CAREER: Patience pays off. Observe before acting. FINANCE: Not all is revealed. Avoid impulsive moves. HEALTH: Tune into your inner voice. Seek calm and reflection.",
       "response": "Maybe"
     },
     {
       "name": "The Empress",
       "image": "assets/images/cardfronts/theempress.webp",
-      "interpretation": "Channel abundance! Cultivate personal growth by nurturing your creative energy. Bring your ideas to life.", 
-      "specifics": "In love, it signifies deep, caring relationships and fertility. Career-wise, it signals growth, creativity, and a period of prosperity. For finances, this card indicates the potential for a comfortable and abundant life. Health-wise, it asks you to nurture yourself and enjoy the pleasures of life.",
+      "interpretation": "Channel abundance! Cultivate personal growth by nurturing your creative energy. Bring your ideas to life.",
+      "specifics": "LOVE: Nurturing connection. Growth and sensuality. CAREER: Creativity thrives. Projects bloom. FINANCE: Abundance flows through generosity and care. HEALTH: Focus on self-care, fertility, and nourishment.",
       "response": "Yes"
     },
     {
       "name": "The Emperor",
       "image": "assets/images/cardfronts/theemperor.webp",
-      "interpretation": "Embody leadership, establish authority, and create stability to build a strong, secure foundation.", 
-      "specifics": "In love, it reflects a strong relationship where security is a priority. In career, it suggests a position of power, or the need to assert control and be ambitious. Financially, it represents stability and the need for a solid foundation. In health, it reflects strong discipline and control.",
+      "interpretation": "Embody leadership, establish authority, and create stability to build a strong, secure foundation.",
+      "specifics": "LOVE: Stability and structure in relationships. CAREER: Authority brings success. Lead with confidence. FINANCE: Financial control yields security. HEALTH: Establish routine. Strength through discipline.",
       "response": "Yes"
     },
     {
       "name": "The Hierophant",
       "image": "assets/images/cardfronts/thehierophant.webp",
-      "interpretation": "Honor tradition, seek spiritual growth, and embrace guidance to deepen your connection with higher wisdom.", 
-      "specifics": "In love, it suggests seeking stability and perhaps a relationship that follows traditional values. Career-wise, it indicates the importance of mentorship or following established paths. With money, it advises staying within your comfort zone and avoiding risky ventures. In health, it suggests a need for discipline and regular routines.",
+      "interpretation": "Honor tradition, seek spiritual growth, and embrace guidance to deepen your connection with higher wisdom.",
+      "specifics": "LOVE: Commitment deepens. Traditional bonds favored. CAREER: Follow established paths. Learn from mentors. FINANCE: Conventional wisdom leads to gains. HEALTH: Rituals and support systems bring balance.",
       "response": "Maybe"
     },
     {
       "name": "The Lovers",
       "image": "assets/images/cardfronts/thelovers.webp",
       "interpretation": "Embrace deep connections and trust your choices, fostering harmony and alignment in relationships.",
-      "specifics": "In love, it signifies a strong bond and the need to make a decision about your relationship. Career-wise, it suggests a choice between two paths or partnerships. Financially, it may indicate a financial decision that requires careful consideration. In health, it speaks to the balance between mind and body.",
+      "specifics": "LOVE: A powerful union or choice in love. CAREER: Align work with passion and values. FINANCE: Decisions must reflect your heart\u2019s truth. HEALTH: Emotional harmony supports physical wellness.",
       "response": "Yes"
     },
     {
       "name": "The Chariot",
       "image": "assets/images/cardfronts/thechariot.webp",
       "interpretation": "Achieve victory through determination and control. Harness your willpower to overcome obstacles.",
-      "specifics": "In love, it suggests triumph over obstacles and the need to keep pushing forward. Career-wise, it speaks to achieving success through focus and willpower. In money, it advises staying strong and disciplined to reach your goals. Health-wise, it encourages taking action for self-improvement.",
+      "specifics": "LOVE: Push past obstacles. Stay aligned together. CAREER: Determination drives success. FINANCE: Keep focus to reach goals. HEALTH: Act with purpose. Steer toward wellness.",
       "response": "Yes"
     },
     {
       "name": "Strength",
       "image": "assets/images/cardfronts/strength.webp",
-      "interpretation": "You are so resilient! Tap into your inner power, and be courageous. Rest assuredm, you can face any challenge with confidence.",
-      "specifics": "In love, it signifies the strength of your relationship and the ability to overcome challenges together. Career-wise, it suggests that you have the inner strength to face any obstacles. Financially, it indicates the need to stay strong and resilient in the face of financial challenges. In health, it speaks to the importance of maintaining inner balance and emotional strength.",
+      "interpretation": "Tap into your inner power, and be courageous. Rest assured, you can face any challenge with confidence.",
+      "specifics": "LOVE: Inner strength supports lasting love. CAREER: Courage overcomes work challenges. FINANCE: Stay resilient during strain. HEALTH: Mind-body balance brings vitality.",
       "response": "Yes"
     },
     {
       "name": "The Hermit",
       "image": "assets/images/cardfronts/thehermit.webp",
       "interpretation": "Embrace introspection, seek wisdom, and find clarity through solitude. Listen to your inner guide.",
-      "specifics": "In love, it suggests taking time to reflect on your relationship and seek inner guidance. Career-wise, it indicates a period of introspection and self-discovery. For finances, it advises taking a step back to evaluate your financial situation. In health, it speaks to the importance of self-care and reflection.",
+      "specifics": "LOVE: Take space to reflect on connection. CAREER: Inner guidance shapes your path. FINANCE: Assess quietly before decisions. HEALTH: Solitude heals. Prioritize self-care.",
       "response": "Maybe"
     },
     {
       "name": "Wheel of Fortune",
       "image": "assets/images/cardfronts/wheeloffortune.webp",
-      "interpretation": "Embrace the cycles of life. Go with the flow; surrender.",
-      "specifics": "In love, it suggests that things are changing and evolving in your relationship. Career-wise, it indicates a change in fortune or unexpected opportunities. Financially, it speaks to the ebb and flow of money and the need to adapt to changing circumstances. In health, it signifies the ups and downs of life and the importance of adapting to change.",
+      "interpretation": "Embrace the cycles of life. Go with the flow; surrender. The only constant is change.",
+      "specifics": "LOVE: Fate shifts relationships. Trust cycles. CAREER: Change opens new chances. FINANCE: Financial upswing or reset. HEALTH: Embrace change. Flow brings healing.",
       "response": "Maybe"
     },
     {
       "name": "Justice",
       "image": "assets/images/cardfronts/justice.webp",
       "interpretation": "Be steadfast in your morals. Try to be fair, embrace the truth even if it is difficult. Balance is key.",
-      "specifics": "In love, it signifies the need for honesty and fairness in your relationship. Career-wise, it indicates legal matters or the need to make a decision based on facts. Financially, it speaks to the importance of balancing your finances and making fair decisions. In health, it suggests the need to take a balanced approach to your well-being.",
+      "specifics": "LOVE: Fairness restores harmony. CAREER: Act with integrity. Truth leads. FINANCE: Balanced choices bring stability. HEALTH: Seek alignment and accountability.",
       "response": "Yes"
     },
     {
       "name": "The Hanged Man",
       "image": "assets/images/cardfronts/thehangedman.webp",
       "interpretation": "Sometimes the besy choice is to wait for clarity. Practice patience as you await new insights and opportunity for growth.",
-      "specifics": "In love, it suggests needing to pause and view the relationship from a different angle. Career-wise, it indicates a time to reflect before making a move. For money, it suggests that things are in a holding pattern. In health, it warns of delays or needing rest to see things clearly.",
+      "specifics": "LOVE: See love from a new angle. CAREER: Pause before progress. FINANCE: Let go of control for clarity. HEALTH: Surrender brings healing.",
       "response": "Maybe"
     },
     {
       "name": "Death",
       "image": "assets/images/cardfronts/death.webp",
       "interpretation": "Are you ready to metamorphose?  It's time to let go so you can transform. Prepare for new beginnings.",
-      "specifics": "In love, it can indicate the end of a cycle, making way for something new. Career-wise, it signals a major change that may lead to new opportunities. Financially, it suggests the end of one phase and the beginning of another. In health, it calls for letting go of old habits.",
+      "specifics": "LOVE: Endings bring new beginnings. CAREER: Let go to grow. FINANCE: Shed what no longer serves. HEALTH: Transform habits for renewal.",
       "response": "No"
     },
     {
       "name": "Temperance",
       "image": "assets/images/cardfronts/temperance.webp",
       "interpretation": "Seek harmony. Find balance. Practice moderation to create peace and flow in your life.",
-      "specifics": "In love, it advises patience and finding balance within the relationship. In career, it suggests a balanced approach to challenges. For finances, it speaks to managing resources wisely and harmoniously. In health, it indicates a time to adopt moderation and healthy routines.",
+      "specifics": "LOVE: Create harmony together. CAREER: Balance action with patience. FINANCE: Steady growth, not extremes. HEALTH: Moderation supports healing.",
       "response": "Maybe"
     },
     {
       "name": "The Devil",
       "image": "assets/images/cardfronts/thedevil.webp",
-      "interpretation": "Where is temptation leading you? In order to regain self control and personal freedom, there is a need to break free from addictive tendencies and detach from materialistic greed.",
-      "specifics": "In love, it may represent unhealthy attachments or toxic relationships. Career-wise, it could indicate feeling stuck or trapped in a situation. Financially, it suggests caution and avoiding excess. For health, it warns against overindulgence.",
+      "interpretation": "Where is temptation leading you? In order to regain self control there is a need to break free from addictive tendencies.",
+      "specifics": "LOVE: Beware toxic ties. Break free. CAREER: Feeling stuck? Reclaim your power. FINANCE: Avoid temptations. HEALTH: Cut harmful habits.",
       "response": "No"
     },
     {
       "name": "The Tower",
       "image": "assets/images/cardfronts/thetower.webp",
-      "interpretation": "Sudden upheaval & destruction. As false foundations crumble and truth prevails you will be lead to liberation from the chains of greed and materialism.",
-      "specifics": "In love, it indicates a shocking or unexpected event that could change the relationship. Career-wise, it could mean a dramatic shift or disruption. Financially, it warns of unexpected losses or events. In health, it signifies sudden changes or revelations.",
+      "interpretation": "Sudden upheaval & destruction. Only when false foundations will liberation follow.",
+      "specifics": "LOVE: Sudden truth shakes bonds. CAREER: A breakdown sparks change. FINANCE: Upheaval clears the slate. HEALTH: Wake-up call prompts action.",
       "response": "No"
     },
     {
       "name": "The Star",
       "image": "assets/images/cardfronts/thestar.webp",
       "interpretation": "Embrace hope, find inspiration, and experience renewal as you reconnect with your inner self and the universe.",
-      "specifics": "In love, it speaks to peace and healing in your relationship. Career-wise, it represents hope and a time of positive direction. Financially, it signals blessings and recovery from hardships. In health, it brings a sense of rejuvenation and vitality.",
+      "specifics": "LOVE: Hope rekindles love. CAREER: Inspiration fuels progress. FINANCE: Recovery and renewal ahead. HEALTH: Healing and faith guide recovery.",
       "response": "Yes"
     },
     {
       "name": "The Moon",
       "image": "assets/images/cardfronts/themoon.webp",
-      "interpretation": "Navigate illusion, uncover hidden truths, and embrace intuition to illuminate your path through uncertainty.",
-      "specifics": "In love, it warns of deception or uncertainty, urging you to tap into your intuition. Career-wise, it suggests navigating uncertainty and listening to your inner voice. With money, it advises caution and avoiding illusions. In health, it warns of hidden issues or confusion.",
+      "interpretation": "Explore your subconcious to uncover hidden truths. Tap into your intuition to illuminate your path.",
+      "specifics": "LOVE: Illusions cloud clarity. CAREER: Trust your gut. FINANCE: Avoid deception or risk. HEALTH: Listen to dreams and intuition.",
       "response": "Maybe"
     },
     {
       "name": "The Sun",
       "image": "assets/images/cardfronts/thesun.webp",
-      "interpretation": "Clarity & success. Experience joy, vitality, and success as you bask in the illuminating energy of positivity and personal growth.",
-      "specifics": "In love, it signals happiness and harmony within a relationship. Career-wise, it indicates success and achievement. Financially, it speaks of abundance and prosperity. In health, it signifies vitality and overall well-being.",
+      "interpretation": "Clarity & success. Experience joy and vitality! Bask in the illuminating energy of positivity and personal growth.",
+      "specifics": "LOVE: Joyful connection radiates. CAREER: Success shines through. FINANCE: Prosperity and happiness align. HEALTH: Vitality, energy, glowing health.",
       "response": "Yes"
     },
     {
       "name": "Judgement",
       "image": "assets/images/cardfronts/judgement.webp",
-      "interpretation": "Undergo self-reflection, embrace rebirth, and heed your inner calling to transform your life and awaken your true purpose.",
-      "specifics": "In love, it speaks of the transformative powers of a relationship, where both partners grow and evolve. Career-wise, it suggests the need to evaluate past decisions and make a fresh start. With money, it indicates a financial awakening and a chance to move forward. In health, it signals recovery and spiritual renewal.",
+      "interpretation": "Undergo self-reflection, and heed your inner calling to transform your life and awaken your true purpose.",
+      "specifics": "LOVE: Growth through honest reflection. CAREER: Rebirth or second chance. FINANCE: Evaluate past to improve future. HEALTH: Time to awaken and heal.",
       "response": "Yes"
     },
     {
       "name": "The World",
       "image": "assets/images/cardfronts/theworld.webp",
       "interpretation": "Experience completion and a sense of wholeness. You can celebrate success, and feel fulfilled as you are reaching the end of a significant cycle.",
-      "specifics": "In love, it signifies a fulfilling and balanced relationship. Career-wise, it indicates success, recognition, and the end of a cycle. For finances, it speaks of abundance, achievement, and completion. In health, it reflects a time of good overall health and vitality.",
+      "specifics": "LOVE: Fulfillment and lasting union. CAREER: Completion and recognition. FINANCE: Abundant success arrives. HEALTH: Full circle wellness.",
       "response": "Yes"
     },
     {
       "name": "Ace of Cups",
       "image": "assets/images/cardfronts/aceofcups.webp",
-      "interpretation": "Embrace new emotional beginnings, cultivate deep love, and experience spiritual renewal as your heart opens to growth.",
-      "specifics": "In love, it signifies the start of a deep and fulfilling connection, where emotions flow freely. Career-wise, it suggests a creative or spiritually aligned opportunity on the horizon. Financially, it can indicate a new venture or emotional satisfaction from your work, though not necessarily wealth. For health, it signals a time of emotional healing and revitalization.",
+      "interpretation": "New emotional beginnings. You  will experience spiritual renewal as your heart opens to growth.",
+      "specifics": "LOVE: New emotional beginning. CAREER: A heartfelt opportunity appears. FINANCE: Emotional reward over material gain. HEALTH: Healing through emotional openness.",
       "response": "Yes"
     },
     {
       "name": "Two of Cups",
       "image": "assets/images/cardfronts/twoofcups.webp",
       "interpretation": "Celebrate unity, mutual attraction, and harmonious partnerships as deep connections foster balance and understanding.",
-      "specifics": "In love, it indicates a balanced and equal relationship, where both partners are deeply connected. Career-wise, it suggests the formation of a successful partnership or collaboration. For money, it may indicate a shared financial venture or mutual support. In health, it speaks to the importance of balance and emotional well-being.",
+      "specifics": "LOVE: Deep connection and harmony. CAREER: Partnership brings success. FINANCE: Shared resources benefit all. HEALTH: Balance through emotional bonds.",
       "response": "Yes"
     },
-{
+    {
       "name": "Three of Cups",
       "image": "assets/images/cardfronts/threeofcups.webp",
       "interpretation": "Rejoice in celebration, friendship, and community, as shared joy and support strengthen bonds and create harmony.",
-      "specifics": "In love, it represents a joyful and harmonious period in a relationship, with a focus on emotional fulfillment. Career-wise, it indicates success through teamwork and collaboration. Financially, it may indicate spending time with loved ones, enjoying the fruits of your labor, or receiving a reward. For health, it speaks to emotional support and a period of rejuvenation.",
+      "specifics": "LOVE: Joyful union, friendship thrives. CAREER: Celebrate team victories. FINANCE: Rewards come from community. HEALTH: Emotional uplift through connection.",
       "response": "Yes"
     },
     {
       "name": "Four of Cups",
       "image": "assets/images/cardfronts/fourofcups.webp",
       "interpretation": "You may have missed a great opportunity. Reflect on your emotions, overcome apathy, and open yourself to new opportunities as you move beyond complacency.",
-      "specifics": "In love, it indicates dissatisfaction or emotional disconnection, suggesting you may be overlooking what is right in front of you. Career-wise, it warns of complacency or a lack of motivation. Financially, it suggests a period of emotional stagnation or discontent with your current financial situation. In health, it signals emotional neglect or ignoring your well-being.",
+      "specifics": "LOVE: Emotional distance or boredom. CAREER: Uninspired by routine. FINANCE: Apathy blocks new gains. HEALTH: Seek emotional engagement.",
       "response": "Maybe"
     },
     {
       "name": "Five of Cups",
       "image": "assets/images/cardfronts/fiveofcups.webp",
       "interpretation": "Loss, grief, and regret. Confront your disappointment and try to keep your heart open. Stay hopeful as new opportunities will eventually emerge after sorrow.",
-      "specifics": "In love, it speaks of emotional pain, disappointment, or the end of a relationship. Career-wise, it indicates a setback or failure, but also the need to focus on what remains rather than what’s lost. Financially, it can indicate a financial disappointment, though hope still exists. For health, it signifies emotional suffering that could manifest physically.",
+      "specifics": "LOVE: Grieving loss, but love remains. CAREER: Disappointment clears path. FINANCE: Let go and rebuild. HEALTH: Healing starts with acceptance.",
       "response": "No"
     },
     {
       "name": "Six of Cups",
       "image": "assets/images/cardfronts/sixofcups.webp",
       "interpretation": "Find space to be playful and to reconnect with the joy of innocence. Try speaking to your inner child. You may find comfort in happy memories.",
-      "specifics": "In love, it indicates a relationship full of emotional warmth, sometimes from the past or rooted in familiarity. Career-wise, it may suggest a return to past projects or revisiting something you once loved. Financially, it speaks to comfort and security, possibly coming from family or old investments. In health, it speaks to finding comfort in your past routines or healing through nostalgia.",
+      "specifics": "LOVE: Sweet nostalgia or reunion. CAREER: Return to joyful work. FINANCE: Old investments may flourish. HEALTH: Reconnect with simple pleasures.",
       "response": "Yes"
     },
     {
       "name": "Seven of Cups",
       "image": "assets/images/cardfronts/sevenofcups.webp",
       "interpretation": "While it is important to explore your dreams, try to discern between illusion and reality in order to make the right decisions.",
-      "specifics": "In love, it suggests that you may be faced with many options, but some may not be as fulfilling as they seem. Career-wise, it can indicate a time of confusion or an overwhelming number of choices, but not all are worth pursuing. Financially, it warns against getting lost in illusions or unrealistic expectations. In health, it advises clarity and grounding your emotions.",
+      "specifics": "LOVE: Many options, unclear motives. CAREER: Too many ideas, need focus. FINANCE: Fantasy distorts reality. HEALTH: Ground yourself emotionally.",
       "response": "Maybe"
     },
     {
       "name": "Eight of Cups",
       "image": "assets/images/cardfronts/eightofcups.webp",
-      "interpretation": "It may be time to walk away from something that no longer serves you. Embrace change and seek emotional fulfillment elsewhere.", 
-      "specifics": "In love, it suggests leaving behind an emotionally unfulfilling relationship in search of something more meaningful. Career-wise, it may indicate leaving a job or project that no longer inspires you. Financially, it can signify walking away from a bad investment or financial loss. In health, it indicates the need to let go of unhealthy habits.",
+      "interpretation": "It may be time to walk away from something that no longer serves you. Embrace change and seek emotional fulfillment elsewhere.",
+      "specifics": "LOVE: Walk away to grow. CAREER: Leave what no longer serves. FINANCE: Release unfulfilling goals. HEALTH: Step toward emotional healing.",
       "response": "No"
     },
     {
       "name": "Nine of Cups",
       "image": "assets/images/cardfronts/nineofcups.webp",
       "interpretation": "Celebrate your achievements and find joy in the present moment. In what ways do you feel content, satisfied and emotionally fulfilled?",
-      "specifics": "In love, it indicates a period of emotional satisfaction and happiness within a relationship. Career-wise, it speaks to achieving your goals and feeling proud of your accomplishments. Financially, it represents the fulfillment of material wishes or success. In health, it suggests a period of good health and emotional well-being.",
+      "specifics": "LOVE: Emotional satisfaction. CAREER: Enjoy hard-won success. FINANCE: Material wishes come true. HEALTH: Happiness enhances wellness.",
       "response": "Yes"
     },
     {
       "name": "Ten of Cups",
       "image": "assets/images/cardfronts/tenofcups.webp",
       "interpretation": "Experience profound happiness, harmonious relationships, and lasting fulfillment as you celebrate the completion of a joyful cycle.",
-      "specifics": "In love, it represents a blissful, loving relationship, and the realization of emotional dreams. Career-wise, it speaks to achieving emotional satisfaction in your work life. Financially, it suggests a harmonious and abundant time. In health, it reflects vitality and overall well-being.",
+      "specifics": "LOVE: Harmony and deep joy. CAREER: Fulfillment through purpose. FINANCE: Abundance with loved ones. HEALTH: Emotional contentment brings peace.",
       "response": "Yes"
     },
     {
       "name": "Page of Cups",
       "image": "assets/images/cardfronts/pageofcups.webp",
       "interpretation": "A messenger brings good news, often related to emotional or creative matters. This invites you to embrace your inner child, foster imagination, and remain open to new emotional experiences.",
-      "specifics": "In love, it suggests a new, emotionally fulfilling connection, often based on fresh feelings. Career-wise, it represents creative projects or a new opportunity that aligns with your passions. Financially, it may indicate an unexpected or intuitive opportunity, though it requires careful consideration. For health, it signals emotional healing and renewal.",
+      "specifics": "LOVE: New feelings or crush. CAREER: Creative ideas bloom. FINANCE: A small but welcome gift. HEALTH: Gentle emotional healing begins.",
       "response": "Yes"
     },
     {
       "name": "Knight of Cups",
       "image": "assets/images/cardfronts/knightofcups.webp",
-      "interpretation": "Embark on a quest for romance, inspiration, and artistic expression, as you navigate a world filled with emotional depth and creative pursuits.",
-      "specifics": "In love, it can indicate the end of a cycle, making way for something new. Career-wise, it signals a major change that may lead to new opportunities. Financially, it suggests the end of one phase and the beginning of another. In health, it calls for letting go of old habits.",
+      "interpretation": "Embark on a quest for a romantic life. Seek inspiration. Fill your world with emotional and creative pursuits.",
+      "specifics": "LOVE: Romantic offer incoming. CAREER: Chase your dreams with heart. FINANCE: Let passion guide income. HEALTH: Tune into emotional flow.",
       "response": "Yes"
     },
     {
       "name": "Queen of Cups",
       "image": "assets/images/cardfronts/queenofcups.webp",
-      "interpretation": "Emotional intelligence, compassion, and nurturing. Embody empathy and foster a deep connection with your inner self.",
-      "specifics": "In love, it signifies deep emotional understanding and intuitive connections. Career-wise, it suggests using empathy and compassion in your professional life. For finances, it suggests using intuition and emotional intelligence to guide financial decisions. In health, it indicates emotional balance and self-care.",
+      "interpretation": "You embody emotional intelligence, compassion, and nurturing. Remain empathetic but also foster a deep connection with your inner self.",
+      "specifics": "LOVE: Deep emotional support. CAREER: Empathy enhances success. FINANCE: Intuition helps decisions. HEALTH: Prioritize emotional balance.",
       "response": "Yes"
     },
     {
       "name": "King of Cups",
       "image": "assets/images/cardfronts/kingofcups.webp",
-      "interpretation": "Exhibit emotional maturity, compassion, and wisdom, balancing intellect and feelings to nurture and support others effectively.",
-      "specifics": "In love, it indicates a relationship built on emotional depth and mutual understanding. Career-wise, it suggests a leadership role where emotional intelligence plays a key part. For finances, it indicates wisdom and balance in managing wealth. In health, it signals a balanced approach to mental and emotional well-being.",
+      "interpretation": "Exhibit emotional maturity, compassion, and wisdom, balancing your intellect and feelings will help you nurture and support others effectively without destroying yourself.",
+      "specifics": "LOVE: Maturity and compassion. CAREER: Lead with empathy. FINANCE: Wise, steady support. HEALTH: Balanced emotional health.",
       "response": "Yes"
     },
     {
       "name": "Ace of Wands",
       "image": "assets/images/cardfronts/aceofwands.webp",
       "interpretation": "Creative energy sparks new beginnings, fueling you to be bold in your actions. Opportunities for growth and success unfold, urging you to embrace your passions and move forward with confidence.",
-      "specifics": "In love, it represents a passionate new start or a rekindling of romance. Career-wise, it indicates the spark of an exciting new project or an entrepreneurial opportunity. Financially, it suggests a fresh idea or approach to earning money. In health, it speaks to revitalization and the start of a period of energy and vitality.",
+      "specifics": "LOVE: Passion ignites anew. CAREER: Bold start, creative spark. FINANCE: New venture promising growth. HEALTH: Vitality and energy surge.",
       "response": "Yes"
     },
     {
       "name": "Two of Wands",
       "image": "assets/images/cardfronts/twoofwands.webp",
-      "interpretation": "Seize opportunities for expansion and progress. Step beyond your comfort zone to explore new horizons. As you take clear, decisive action, the world unfolds with potential, inviting you to shape your own destiny." ,
-      "specifics": "In love, it can suggest a relationship where both partners are considering their future together. Career-wise, it indicates the need to assess your options before making a major decision. Financially, it speaks to the beginning of a long-term plan, with an eye on growth. In health, it encourages you to consider both your long-term wellness and immediate action.",
+      "interpretation": "Seize opportunities for expansion and progress. Step beyond your comfort zone to explore new horizons. As you take clear, decisive action, the world unfolds with potential, inviting you to shape your own destiny.",
+      "specifics": "LOVE: Planning a future together. CAREER: Choose your path boldly. FINANCE: Long-term goals take shape. HEALTH: Act with steady vision.",
       "response": "Yes"
     },
     {
       "name": "Three of Wands",
       "image": "assets/images/cardfronts/threeofwands.webp",
       "interpretation": "Embrace expansion and progress, stepping beyond your comfort zone to explore new horizons. The choices you make will open up a world of potential. You are being invited to shape your own destiny.",
-      "specifics": "In love, it represents a relationship that is progressing and moving toward a promising future. Career-wise, it indicates success through foresight and planning, with new opportunities on the horizon. Financially, it suggests the anticipation of profits or the reward of past investments. In health, it points to progress in personal wellness goals.",
+      "specifics": "LOVE: Love expands with distance. CAREER: Results of efforts unfold. FINANCE: Growth from past choices. HEALTH: Progress is underway.",
       "response": "Yes"
     },
     {
       "name": "Four of Wands",
       "image": "assets/images/cardfronts/fourofwands.webp",
       "interpretation": "This period marks a stable foundation, highlighting achievements and shared happiness. A time of celebration, harmony, and community. Events can foster a sense of belonging and support.",
-      "specifics": "In love, it suggests a strong, committed relationship with a solid foundation. Career-wise, it indicates a time of stability and achievement, possibly celebrating a milestone. Financially, it suggests security and the possibility of enjoying the fruits of your labor. In health, it points to emotional and physical stability and well-being.",
+      "specifics": "LOVE: Stability and celebration. CAREER: Milestones bring joy. FINANCE: Enjoy financial peace. HEALTH: Rest and rejoice.",
       "response": "Yes"
     },
     {
       "name": "Five of Wands",
       "image": "assets/images/cardfronts/fiveofwands.webp",
-      "interpretation": "Engage in spirited competition, where differing opinions and ambitions ignite personal growth and innovation. This dynamic environment challenges you to assert your ideas, fostering resilience and adaptability.", 
-      "specifics": "In love, it suggests that there may be misunderstandings or challenges to overcome. Career-wise, it points to competition or conflicts in the workplace, requiring you to navigate with care. Financially, it suggests challenges in your finances, possibly involving competition or dispute. In health, it indicates stress or tension that might be affecting your well-being.",
+      "interpretation": "Engage in spirited competition, where differing opinions and ambitions ignite personal growth and innovation. This dynamic environment challenges you to assert your ideas, fostering resilience and adaptability.",
+      "specifics": "LOVE: Tension sparks growth. CAREER: Compete to improve. FINANCE: Disagreements over money. HEALTH: Stress needs release.",
       "response": "Maybe"
     },
     {
       "name": "Six of Wands",
       "image": "assets/images/cardfronts/sixofwands.webp",
-      "interpretation": "The Six of Wands represents victory, recognition, and success.",
-      "specifics": "In love, it signifies a victorious and harmonious relationship, where mutual admiration plays a role. Career-wise, it suggests recognition for your efforts and the successful completion of a project. Financially, it indicates public recognition or rewards for past investments. In health, it represents triumph over challenges and recovery.",
+      "interpretation": "Step into the spotlight with pride! Your perseverance has brought recognition and well-earned success.",
+      "specifics": "LOVE: Admired and appreciated. CAREER: Public success and praise. FINANCE: Rewards are visible. HEALTH: Triumph after struggle.",
       "response": "Yes"
     },
     {
       "name": "Seven of Wands",
       "image": "assets/images/cardfronts/sevenofwands.webp",
-      "interpretation": "The Seven of Wands represents standing your ground, defense, and overcoming challenges.",
-      "specifics": "In love, it indicates the need to protect your relationship from external pressures. Career-wise, it points to a competitive situation where you must assert yourself. Financially, it suggests that you may need to defend your financial position or resist temptation. In health, it signals the need to defend your well-being against stress or external influences.",
+      "interpretation": "Stand tall in the face of challenge. Defend your position with confidence and stay true to your path.",
+      "specifics": "LOVE: Protect what matters. CAREER: Defend your position. FINANCE: Hold your ground. HEALTH: Persistence brings strength.",
       "response": "Maybe"
     },
     {
       "name": "Eight of Wands",
       "image": "assets/images/cardfronts/eightofwands.webp",
-      "interpretation": "The Eight of Wands signifies fast movement, swift progress, and action.",
-      "specifics": "In love, it indicates a fast-moving relationship or communication that brings clarity. Career-wise, it points to quick developments, fast results, or an important decision coming to a head. Financially, it suggests rapid changes or sudden gains, bringing speed to your financial progress. In health, it suggests a quick recovery or an urgent need to take action.",
+      "interpretation": "Momentum is building! Swift changes and rapid developments are moving you closer to your goals.",
+      "specifics": "LOVE: Fast-moving romance. CAREER: Rapid progress unfolds. FINANCE: Quick wins or news. HEALTH: Swift recovery possible.",
       "response": "Yes"
     },
     {
       "name": "Nine of Wands",
       "image": "assets/images/cardfronts/nineofwands.webp",
-      "interpretation": "The Nine of Wands represents perseverance, resilience, and the final stretch of a difficult journey.",
-      "specifics": "In love, it suggests that you may be weary, but there’s still hope for the relationship if you keep pushing forward. Career-wise, it indicates the need to hold on during a tough period, with success near but not yet achieved. Financially, it suggests that you’re close to overcoming obstacles but must remain vigilant. In health, it signals the need for strength and perseverance through a health challenge.",
+      "interpretation": "You have come so far! Gather your strength and resilience for the final stretch. Victory is near.",
+      "specifics": "LOVE: Love endures through trials. CAREER: You're almost there. FINANCE: Push through final stretch. HEALTH: Resilience matters most.",
       "response": "Maybe"
     },
     {
       "name": "Ten of Wands",
       "image": "assets/images/cardfronts/tenofwands.webp",
-      "interpretation": "The Ten of Wands represents burden, responsibility, and exhaustion.",
-      "specifics": "In love, it indicates a relationship that feels overwhelming, possibly with too many obligations or responsibilities. Career-wise, it suggests overwork and burnout, and the need to lighten your load. Financially, it signals that you may be overburdened by debt or financial stress. In health, it suggests physical or emotional exhaustion, and the need to delegate or ask for help.",
+      "interpretation": "The weight is heavy, but you carry it with resolve. Consider what burdens can be released to find ease.",
+      "specifics": "LOVE: Burdened by pressure. CAREER: Too much responsibility. FINANCE: Finances feel heavy. HEALTH: Rest and lighten your load.",
       "response": "No"
     },
     {
       "name": "Page of Wands",
       "image": "assets/images/cardfronts/pageofwands.webp",
-      "interpretation": "The Page of Wands represents enthusiasm, exploration, and new beginnings.", 
-      "specifics" : "In love, it suggests a new relationship or the start of a passionate adventure. Career-wise, it indicates a new project or opportunity that excites you. Financially, it may indicate a new investment or financial venture that sparks your interest. In health, it speaks to the need for physical activity and exploration.", 
+      "interpretation": "Adventure calls! Let curiosity guide you as you embrace fresh ideas and passionate inspiration.",
+      "specifics": "LOVE: A flirt sparks excitement. CAREER: Enthusiasm opens doors. FINANCE: New ideas bring funds. HEALTH: Energy fuels renewal.",
       "response": "Yes"
     },
     {
       "name": "Knight of Wands",
       "image": "assets/images/cardfronts/knightofwands.webp",
-      "interpretation": "The Knight of Wands represents action, courage, and fast movement.",
-      "specifics": "In love, it suggests a passionate and dynamic energy, but possibly fleeting or impulsive. Career-wise, it signals rapid progress and bold, daring decisions that could lead to success. Financially, it may suggest impulsive spending or the need for quick action to seize an opportunity. In health, it points to high energy and vitality, but also warns against burning out.",
+      "interpretation": "Move boldly and act with heart. Energy and ambition propel you toward daring new pursuits.",
+      "specifics": "LOVE: Passionate but impulsive. CAREER: Bold moves, fast pace. FINANCE: Risk brings reward. HEALTH: Chase fitness goals.",
       "response": "Yes"
     },
     {
       "name": "Queen of Wands",
       "image": "assets/images/cardfronts/queenofwands.webp",
-      "interpretation": "The Queen of Wands represents confidence, creativity, and passion.",
-      "specifics": "In love, it suggests a strong, independent partner or a relationship where both partners inspire and empower each other. Career-wise, it signals leadership and the ability to take charge of creative projects. Financially, it speaks to using your intuition and energy to make wise decisions. In health, it indicates vitality, strength, and the confidence to take care of yourself.",
+      "interpretation": "Radiate with warmth and confidence. Creativity flows freely when you trust in your inner fire.",
+      "specifics": "LOVE: Charisma draws others in. CAREER: Lead with confidence. FINANCE: Prosperity through passion. HEALTH: Radiate vibrant energy.",
       "response": "Yes"
     },
     {
       "name": "King of Wands",
       "image": "assets/images/cardfronts/kingofwands.webp",
-      "interpretation": "The King of Wands represents leadership, vision, and mastery.",
-      "specifics": "In love, it indicates a relationship where one partner takes a strong, authoritative role, or it can suggest a dominant energy in the relationship. Career-wise, it signals a powerful, visionary leadership position or entrepreneurial success. Financially, it indicates taking control of your financial situation and being strategic in your investments. In health, it signifies the power of will and the ability to take charge of your physical well-being.",
+      "interpretation": "Lead with vision and courage. Channel your wisdom into bold action and unwavering purpose.",
+      "specifics": "LOVE: Take charge in love. CAREER: Vision drives success. FINANCE: Strategic growth ahead. HEALTH: Confidence fuels vitality.",
       "response": "Yes"
     },
-{ 
+    {
       "name": "Ace of Swords",
       "image": "assets/images/cardfronts/aceofswords.webp",
-      "interpretation": "The Ace of Swords signifies clarity, new ideas, and breakthrough moments.",
-      "specifics": "In love, it represents cutting through confusion and gaining clarity in a relationship. Career-wise, it indicates a new direction or insight that will lead to success. Financially, it points to a new idea or strategy that can help solve financial challenges. In health, it speaks to mental clarity and the ability to make decisions that will improve your well-being.",
+      "interpretation": "Clarity strikes like lightning! New insight awakens truth, empowering you to see through the fog in your mind.",
+      "specifics": "LOVE: Clarity in relationships. CAREER: Truth cuts through confusion. FINANCE: Smart decisions pay off. HEALTH: Clear thinking heals.",
       "response": "Yes"
     },
     {
       "name": "Two of Swords",
       "image": "assets/images/cardfronts/twoofswords.webp",
-      "interpretation": "The Two of Swords represents indecision, a crossroads, and the need to make a tough choice.",
-      "specifics": "In love, it suggests a relationship where you're torn between two options or unsure of the next step. Career-wise, it points to a decision that needs to be made, but you may be avoiding it due to fear of conflict. Financially, it signifies the need to make a choice between two different paths. In health, it indicates mental strain due to unresolved issues, requiring you to make decisions to move forward.",
+      "interpretation": "In any moment of inner tension it is wise to pause, reflect, and trust that clarity will arise from your inner stillness.",
+      "specifics": "LOVE: Hard love choices ahead. CAREER: Stuck between jobs or roles. FINANCE: Avoidance delays change. HEALTH: Denial blocks progress.",
       "response": "Maybe"
     },
     {
       "name": "Three of Swords",
       "image": "assets/images/cardfronts/threeofswords.webp",
-      "interpretation": "The Three of Swords represents heartbreak, emotional pain, and grief.",
-      "specifics": "In love, it suggests sorrow, betrayal, or a difficult breakup that needs healing. Career-wise, it can indicate disappointment or a challenging situation that has left you feeling hurt. Financially, it may represent a loss or setback that causes emotional distress. In health, it signifies emotional pain that could be affecting your physical well-being.",
+      "interpretation": "Wounds of the heart ache the loudest. Allow yourself to grieve deeply. Know that healing begins in acceptance.",
+      "specifics": "LOVE: Heartbreak and sorrow. CAREER: Loss leads to new truth. FINANCE: Painful setback to heal. HEALTH: Emotional pain affects body.",
       "response": "No"
     },
     {
       "name": "Four of Swords",
       "image": "assets/images/cardfronts/fourofswords.webp",
-      "interpretation": "The Four of Swords represents rest, recovery, and taking time to heal.",
-      "specifics": "In love, it suggests a period of reflection and rest after a difficult emotional experience. Career-wise, it points to the need to step back and recharge before making major decisions. Financially, it speaks to a need for a break from financial stress or a time of waiting. In health, it suggests rest is needed to recover from illness or exhaustion.",
+      "interpretation": "Step back from the noise. Rest, recover, and allow silence to restore your spirit.",
+      "specifics": "LOVE: Time apart brings clarity. CAREER: Step back to recharge. FINANCE: Rest before big choices. HEALTH: Deep rest restores balance.",
       "response": "Maybe"
     },
     {
       "name": "Five of Swords",
       "image": "assets/images/cardfronts/fiveofswords.webp",
-      "interpretation": "The Five of Swords represents conflict, defeat, and the aftermath of battle.",
-      "specifics": "In love, it suggests that a relationship may be characterized by arguments or a sense of one-upmanship. Career-wise, it indicates rivalry or a win-at-all-costs mentality that leaves you feeling empty. Financially, it can represent a loss due to conflict or poor decisions. In health, it signals mental or emotional stress, and the need for peace.",
+      "interpretation": "Even in victory, there may be loss. Consider the cost of conflict before drawing your sword.",
+      "specifics": "LOVE: Conflict with no winners. CAREER: Pyrrhic victory looms. FINANCE: Costs outweigh gains. HEALTH: Stress drains energy.",
       "response": "No"
     },
     {
       "name": "Six of Swords",
       "image": "assets/images/cardfronts/sixofswords.webp",
-      "interpretation": "The Six of Swords represents transition, moving on, and healing from past wounds.",
-      "specifics": "In love, it suggests moving away from conflict or emotional hardship towards a calmer, more peaceful place. Career-wise, it indicates a period of transition, such as a change in direction or leaving behind a difficult situation. Financially, it speaks to moving past financial struggles or relocating for new opportunities. In health, it suggests recovery and the process of moving towards better physical or emotional health.",
+      "interpretation": "The journey ahead will bring you peace. Release the past and embrace the calm that follows from this storm.",
+      "specifics": "LOVE: Moving on brings peace. CAREER: Transition leads forward. FINANCE: Leaving stress behind. HEALTH: Healing journey begins.",
       "response": "Yes"
     },
     {
       "name": "Seven of Swords",
       "image": "assets/images/cardfronts/sevenofswords.webp",
-      "interpretation": "The Seven of Swords represents deception, stealth, and strategy.", 
-      "specifics": "In love, it suggests dishonesty or hidden truths, and a need to address trust issues. Career-wise, it points to the need for careful strategy, or it could indicate someone being deceitful in your professional environment. Financially, it signals a need to be cautious of fraud or shady dealings. In health, it advises against ignoring symptoms or avoiding medical attention.",
+      "interpretation": "Be wise with your intentions. Secrets, strategy, or self-deception will only cloud your path and steer you astray.",
+      "specifics": "LOVE: Hidden truths emerge. CAREER: Strategy or deceit ahead. FINANCE: Watch for sneaky behavior. HEALTH: Avoid self-deception.",
       "response": "Maybe"
     },
     {
       "name": "Eight of Swords",
       "image": "assets/images/cardfronts/eightofswords.webp",
-      "interpretation": "The Eight of Swords represents restriction, fear, and mental entrapment.",
-      "specifics": "In love, it suggests feeling trapped in a relationship or unable to move forward due to self-imposed limitations. Career-wise, it points to a feeling of being stuck or limited in your options, often caused by fear. Financially, it signals a sense of being trapped by debt or financial obligations. In health, it represents feeling restricted by mental or emotional barriers.",
+      "interpretation": "You hold the key to your own shackles. Let go of your limiting beliefs and step into your power.",
+      "specifics": "LOVE: Feeling stuck or trapped. CAREER: Limitations are mental. FINANCE: Fear restricts action. HEALTH: Free your thoughts.",
       "response": "No"
     },
     {
       "name": "Nine of Swords",
       "image": "assets/images/cardfronts/nineofswords.webp",
-      "interpretation": "The Nine of Swords represents anxiety, worry, and sleepless nights.",
-      "specifics": "In love, it indicates emotional distress or the fear of losing someone. Career-wise, it points to stress and sleepless nights over work-related issues or a looming decision. Financially, it suggests anxiety about your financial future or dealing with past mistakes. In health, it signals high levels of stress that may be affecting your physical and mental well-being.",
+      "interpretation": "The mind weaves heavy shadows. You must acknowledge your fears and begin unravelling them with care.",
+      "specifics": "LOVE: Worry disrupts closeness. CAREER: Sleepless over stress. FINANCE: Anxiety clouds judgment. HEALTH: Mental health needs care.",
       "response": "No"
     },
     {
       "name": "Ten of Swords",
       "image": "assets/images/cardfronts/tenofswords.webp",
-      "interpretation": "The Ten of Swords signifies betrayal, ruin, and the end of a difficult cycle.",
-      "specifics": "In love, it represents heartbreak or the painful end of a relationship. Career-wise, it indicates a painful loss or failure, but it also signals the end of a difficult period. Financially, it points to the end of a financial struggle or the collapse of a project. In health, it suggests a final collapse or the need to recover from a long-standing issue.",
+      "interpretation": "Though everything seems lost, this is the end of your suffering. The most beautiful daybreak always follows the deepest night.",
+      "specifics": "LOVE: Painful ending. Let go. CAREER: Collapse clears the slate. FINANCE: Rock bottom, time to rise. HEALTH: Release brings relief.",
       "response": "No"
     },
     {
       "name": "Page of Swords",
       "image": "assets/images/cardfronts/pageofswords.webp",
-      "interpretation": "The Page of Swords represents curiosity, intellect, and vigilance.",
-      "specifics": "In love, it suggests a need for open communication and honest conversations. Career-wise, it points to an energetic, youthful approach to work or a new project requiring intellectual focus. Financially, it indicates a need to stay alert for new opportunities or potential risks. In health, it suggests using mental clarity to overcome challenges.",
+      "interpretation": "A curious mind awakens. Questions stir...insight emerges from observation and thought.",
+      "specifics": "LOVE: Curiosity stirs love. CAREER: Ask questions, stay sharp. FINANCE: Seek new info first. HEALTH: Investigate wellness options.",
       "response": "Yes"
     },
     {
       "name": "Knight of Swords",
       "image": "assets/images/cardfronts/knightofswords.webp",
-      "interpretation": "The Knight of Swords represents swift action, assertiveness, and boldness.",
-      "specifics": "In love, it suggests a fast-moving relationship or an impulsive decision that needs careful thought. Career-wise, it points to fast progress, decisiveness, and the need to be quick on your feet. Financially, it suggests making bold moves or taking risks in order to achieve success. In health, it signals high energy but warns against rushing without considering the consequences.",
+      "interpretation": "Charge ahead with fierce clarity, but be mindful not to cut corners in your pursuit of truth.",
+      "specifics": "LOVE: Act fast but think twice. CAREER: Rush into action. FINANCE: Bold choices, quick change. HEALTH: High energy, risk burnout.",
       "response": "Yes"
     },
     {
       "name": "Queen of Swords",
       "image": "assets/images/cardfronts/queenofswords.webp",
-      "interpretation": "The Queen of Swords represents intellect, clarity, and the ability to make objective decisions.",
-      "specifics": "In love, it signifies a relationship based on clear communication and emotional honesty. Career-wise, it points to using your intelligence and analytical skills to solve problems and make decisions. Financially, it encourages logical thinking and wise decision-making. In health, it suggests a need for clear, practical solutions to health challenges.",
+      "interpretation": "With sharp insight and calm resolve, speak truth with compassion and pierce through the viels of illusion.",
+      "specifics": "LOVE: Honest talk clears air. CAREER: Logic guides success. FINANCE: Wisdom brings security. HEALTH: Stay objective and clear.",
       "response": "Yes"
     },
     {
       "name": "King of Swords",
       "image": "assets/images/cardfronts/kingofswords.webp",
-      "interpretation": "The King of Swords represents authority, truth, and strategic thinking.",
-      "specifics": "In love, it suggests a relationship built on respect, intellect, and truth. Career-wise, it indicates leadership, wisdom, and the ability to make sound decisions. Financially, it signals the importance of using intellect and strategy to improve your financial situation. In health, it suggests clear thinking and a disciplined approach to health and wellness.",
+      "interpretation": "Lead with reason and a clear sense of justice! Your wisdom cuts through confusion and offers others the steady guidance they seek.",
+      "specifics": "LOVE: Detached but fair love. CAREER: Authority through intellect. FINANCE: Strategic decisions win. HEALTH: Disciplined mind helps body.",
       "response": "Yes"
     },
     {
       "name": "Ace of Pentacles",
       "image": "assets/images/cardfronts/aceofpentacles.webp",
-      "interpretation": "The Ace of Pentacles signifies new beginnings, prosperity, and material gains.",
-      "specifics": "In love, it indicates the potential for a stable, grounded relationship with long-term potential. Career-wise, it suggests a new opportunity that could bring financial security and success. Financially, this card represents a gift or a new source of income, bringing wealth and abundance. In health, it points to a period of good physical health and vitality.",
+      "interpretation": "A seed of abundance takes root. Nurture this new opportunity carefullly and watch it grow into stability.",
+      "specifics": "LOVE: Solid love begins. CAREER: Job or offer rooted in growth. FINANCE: New stream of income. HEALTH: Strong physical start.",
       "response": "Yes"
     },
     {
       "name": "Two of Pentacles",
       "image": "assets/images/cardfronts/twoofpentacles.webp",
-      "interpretation": "The Two of Pentacles represents balance, adaptability, and juggling priorities.",
-      "specifics": "In love, it suggests the need to balance emotional and practical matters within the relationship. Career-wise, it indicates juggling multiple tasks or responsibilities but with the potential for success through flexibility. Financially, it represents managing your resources wisely and finding balance between saving and spending. In health, it suggests managing stress or taking a balanced approach to well-being.",
+      "interpretation": "Balance is a dance. Stay flexible as you juggle priorities and adapt to life's changing rhythm.",
+      "specifics": "LOVE: Juggling priorities in love. CAREER: Balance competing tasks. FINANCE: Budget carefully. HEALTH: Adapt to shifting needs.",
       "response": "Maybe"
     },
     {
       "name": "Three of Pentacles",
       "image": "assets/images/cardfronts/threeofpentacles.webp",
-      "interpretation": "The Three of Pentacles symbolizes collaboration, skill, and craftsmanship.",
-      "specifics": "In love, it indicates a relationship that is built on teamwork, mutual effort, and shared goals. Career-wise, it suggests success through collaboration or a project requiring skilled contributions from multiple people. Financially, it points to the benefits of working together with others to build something lasting. In health, it signals the need to take a practical, team-oriented approach to healing.",
+      "interpretation": "Great things are built together. Collaboration and shared vision bring your efforts to life.",
+      "specifics": "LOVE: Build love with teamwork. CAREER: Success through collaboration. FINANCE: Group ventures thrive. HEALTH: Skilled support helps.",
       "response": "Yes"
     },
     {
       "name": "Four of Pentacles",
       "image": "assets/images/cardfronts/fourofpentacles.webp",
-      "interpretation": "The Four of Pentacles represents security, stability, and a strong attachment to material wealth.",
-      "specifics": "In love, it suggests holding onto a relationship out of fear of losing security or stability, which may cause possessiveness. Career-wise, it indicates a focus on financial security, but it warns against being too rigid or afraid of taking risks. Financially, it points to a need for careful management of your resources but warns against becoming overly obsessed with money. In health, it signifies a need to focus on maintaining balance and not overindulging.",
+      "interpretation": "Security feels comfortable, but your rigidity can block the flow. Trust, be giving and greatful in order to receive.",
+      "specifics": "LOVE: Guarded emotions block flow. CAREER: Holding too tight limits growth. FINANCE: Save but don\u2019t hoard. HEALTH: Loosen control.",
       "response": "Maybe"
     },
     {
       "name": "Five of Pentacles",
       "image": "assets/images/cardfronts/fiveofpentacles.webp",
-      "interpretation": "The Five of Pentacles represents hardship, struggle, and feeling left out in the cold.",
-      "specifics": "In love, it suggests emotional or financial hardship affecting the relationship, potentially leading to feelings of isolation. Career-wise, it points to financial loss, job insecurity, or a period of hardship that will require perseverance. Financially, it signals difficulties, but also the possibility of support if you reach out for help. In health, it may indicate physical illness or the need to focus on recovery from a difficult period.",
+      "interpretation": "Even in hardship, hope flickers. Seek support and know that this winter will thaw.",
+      "specifics": "LOVE: Loneliness or rejection. CAREER: Job loss or fear. FINANCE: Hard times. Seek aid. HEALTH: Physical or emotional depletion.",
       "response": "No"
     },
     {
       "name": "Six of Pentacles",
       "image": "assets/images/cardfronts/sixofpentacles.webp",
-      "interpretation": "The Six of Pentacles signifies generosity, balance, and financial assistance.",
-      "specifics": "In love, it suggests a balanced relationship where both parties contribute equally, with mutual care and support. Career-wise, it points to generosity at work, either receiving a raise or helping others advance. Financially, it represents fair distribution of wealth, charity, or a loan being repaid. In health, it signals the need for balanced care and being generous with your energy towards others.",
+      "interpretation": "Give with grace, receive with gratitude. Balance is found in generosity and fair exchange.",
+      "specifics": "LOVE: Mutual giving and care. CAREER: Promotion or help ahead. FINANCE: Give and receive wisely. HEALTH: Balance energy exchange.",
       "response": "Yes"
     },
     {
       "name": "Seven of Pentacles",
       "image": "assets/images/cardfronts/sevenofpentacles.webp",
-      "interpretation": "The Seven of Pentacles represents patience, assessment, and long-term planning.",
-      "specifics": "In love, it indicates a need to evaluate where the relationship is heading and whether your efforts are being reciprocated. Career-wise, it suggests that you may need to reassess your current path and consider a more strategic approach for long-term success. Financially, it signals that the fruits of your labor are on the horizon, but you need to be patient and wait for them to materialize. In health, it represents the need to evaluate your health habits and make adjustments for long-term well-being.",
+      "interpretation": "You've planted the seeds but you must be patient. Trust that growth will come at the right time.",
+      "specifics": "LOVE: Assess relationship\u2019s worth. CAREER: Patience with long-term goals. FINANCE: Wait for payoff. HEALTH: Progress takes time.",
       "response": "Maybe"
     },
     {
       "name": "Eight of Pentacles",
       "image": "assets/images/cardfronts/eightofpentacles.webp",
-      "interpretation": "The Eight of Pentacles represents hard work, dedication, and mastering your craft.",
-      "specifics": "In love, it suggests a relationship that requires effort and attention to detail but has the potential for growth. Career-wise, it signifies honing your skills, learning new ones, and working diligently to achieve your goals. Financially, it indicates the importance of hard work and consistent effort to build wealth. In health, it speaks to the need for dedication to improving your physical well-being through small but consistent actions.",
+      "interpretation": "Dedicate yourself to your craft. Every step forward brings mastery, meaning, and reward.",
+      "specifics": "LOVE: Invest in growth together. CAREER: Skill brings recognition. FINANCE: Steady income builds. HEALTH: Work at self-improvement.",
       "response": "Yes"
     },
     {
       "name": "Nine of Pentacles",
       "image": "assets/images/cardfronts/nineofpentacles.webp",
-      "interpretation": "The Nine of Pentacles symbolizes independence, luxury, and financial success.",
-      "specifics": "In love, it suggests a relationship where both partners are financially independent and enjoy the finer things in life. Career-wise, it indicates success through hard work and dedication, leading to financial independence. Financially, it represents financial security, luxury, and the ability to enjoy the fruits of your labor. In health, it signifies good health, self-care, and the ability to enjoy the benefits of a healthy lifestyle.",  
+      "interpretation": "Luxury in simplicity. Relish in your independence and the beauty you've cultivated through your effort.",
+      "specifics": "LOVE: Enjoy independence in love. CAREER: Success and self-sufficiency. FINANCE: Luxury from hard work. HEALTH: Comfort and balance.",
       "response": "Yes"
     },
     {
       "name": "Ten of Pentacles",
       "image": "assets/images/cardfronts/tenofpentacles.webp",
-      "interpretation": "The Ten of Pentacles represents wealth, legacy, and family security.",
-      "specifics": "In love, it indicates a stable and long-lasting relationship with a strong foundation. Career-wise, it signifies achieving great success, often through family ties or generational wealth, and the potential for building a legacy. Financially, it represents long-term financial stability and the accumulation of wealth. In health, it suggests good health and a strong support system.",
+      "interpretation": "Legacy blooms with strong roots. Family, tradition, and financial security create lasting harmony.",
+      "specifics": "LOVE: Lasting love and family roots. CAREER: Legacy and stability. FINANCE: Wealth across generations. HEALTH: Enduring vitality.",
       "response": "Yes"
     },
     {
       "name": "Page of Pentacles",
       "image": "assets/images/cardfronts/pageofpentacles.webp",
-      "interpretation": "The Page of Pentacles signifies new opportunities, curiosity, and learning.",
-      "specifics": "In love, it suggests the beginning of a grounded and committed relationship or an opportunity to learn more about a potential partner. Career-wise, it represents the start of a new project or venture that requires dedication and learning. Financially, it signals the potential for growth and new income opportunities, particularly through education or skill development. In health, it encourages a practical and thoughtful approach to wellness.",
+      "interpretation": "A spark of potential lights the way. Pursue your curiosity and let learning shape your path.",
+      "specifics": "LOVE: Curious about connection. CAREER: Learn new skills. FINANCE: Seed of stability planted. HEALTH: Take practical steps.",
       "response": "Yes"
     },
     {
       "name": "Knight of Pentacles",
       "image": "assets/images/cardfronts/knightofpentacles.webp",
-      "interpretation": "The Knight of Pentacles represents hard work, responsibility, and attention to detail.",
-      "specifics": "In love, it suggests a stable, dependable relationship where both partners are committed and grounded. Career-wise, it indicates steady progress, persistence, and a focus on achieving long-term goals. Financially, it advises a methodical approach to building wealth, with a focus on security. In health, it represents a disciplined approach to maintaining your health and well-being.",
+      "interpretation": "Steady progress wins the race. Stay grounded, patient, and loyal to the task at hand.",
+      "specifics": "LOVE: Loyal and steady love. CAREER: Hard work brings reward. FINANCE: Cautious growth ahead. HEALTH: Discipline supports wellness.",
       "response": "Yes"
     },
     {
       "name": "Queen of Pentacles",
       "image": "assets/images/cardfronts/queenofpentacles.webp",
-      "interpretation": "The Queen of Pentacles represents nurturing, abundance, and practical care.",
-      "specifics": "In love, it signifies a relationship where both partners provide emotional and material support to each other. Career-wise, it suggests a focus on creating a secure, supportive environment and using your resources wisely. Financially, it represents abundance and the ability to create stability through careful planning. In health, it suggests focusing on nurturing your physical and mental well-being.",
+      "interpretation": "Your nurturing spirit brings comfort. You can create stability through gentle cultivation and grounded care.",
+      "specifics": "LOVE: Nurturing, earthy love. CAREER: Success through care. FINANCE: Prosperity managed wisely. HEALTH: Holistic self-care focus.",
       "response": "Yes"
     },
     {
       "name": "King of Pentacles",
       "image": "assets/images/cardfronts/kingofpentacles.webp",
-      "interpretation": "The King of Pentacles represents wealth, stability, and material mastery.",
-      "specifics": "In love, it indicates a relationship built on mutual respect, trust, and material security. Career-wise, it signals financial mastery, successful investments, and long-term stability. Financially, it represents great wealth, financial security, and the ability to build an empire. In health, it suggests the need for stability and maintaining a strong, healthy body.",
+      "interpretation": "Build with confidence. Abundance is cultivated with discipline, integrity, and compassionate use of power.",
+      "specifics": "LOVE: A secure and generous bond. CAREER: Lead with grounded power. FINANCE: Wealth through wisdom. HEALTH: Strength from routine.",
       "response": "Yes"
-    }
-  ]
-}
-
-
-
-  
-
+   }
+    ]
+  }
