@@ -84,9 +84,22 @@ function displayCardInColumn(card, column) {
 
     // After the flip animation, reveal card details
     setTimeout(() => {
-      showCardDetails(card, column); // Show card details after flip (from utilities.js)
+      showCardDetails(card, column); // Show card details after flip
     }, 500); // Delay showing details to allow the flip to finish
   }, 1000); // Delay to ensure the back is visible first
+}
+
+// Show only the interpretation (not the response)
+function showCardDetails(card, column) {
+  const cardInfo = document.createElement('div');
+  cardInfo.classList.add('card-info');
+
+  const interpretationPara = document.createElement('p');
+  interpretationPara.classList.add('card-details-text');
+  interpretationPara.textContent = card.interpretation;
+
+  cardInfo.appendChild(interpretationPara);
+  column.appendChild(cardInfo);
 }
 
 // DOMContentLoaded event listener
