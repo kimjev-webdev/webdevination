@@ -2,8 +2,15 @@
 function generateCardSection(cards, suit) {
     let cardHtml = '<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">';
     cards.forEach(card => {
-        // Construct the image path based on card name and suit
         const imagePath = `assets/images/cardfronts/${card.name.toLowerCase().replace(/ /g, '')}.webp`;
+
+        // Replace headers with emojis, bold tags, and convert \n to <br>
+        const specificsHtml = card.specifics
+            .replace(/LOVE:/g, "<strong>💜 LOVE:</strong>")
+            .replace(/CAREER:/g, "<strong>✨ CAREER:</strong>")
+            .replace(/FINANCE:/g, "<strong>💰 FINANCE:</strong>")
+            .replace(/HEALTH:/g, "<strong>🌿 HEALTH:</strong>")
+            .replace(/\n/g, "<br>");
 
         cardHtml += `
             <div class="col">
@@ -13,7 +20,7 @@ function generateCardSection(cards, suit) {
                             <img src="${imagePath}" class="card-img-top" alt="${card.name}">
                         </div>
                         <div class="flip-card-back">
-                            <p>${card.specifics}</p>
+                            <p>${specificsHtml}</p>
                         </div>
                     </div>
                 </div>
