@@ -1053,13 +1053,11 @@ img.onecardadvert {
 }
 
 .threecard {
-  margin: 100px 60px 100px 60px;
-  max-width: 100%;
+  min-width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: auto;
-  height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -1361,3 +1359,5 @@ width: 30% !important;
     display: none;
   }
 }
+
+
