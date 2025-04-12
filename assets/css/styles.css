@@ -821,6 +821,16 @@ button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
   transform: rotateY(180deg);
 }
 
+#suitOfCups .accordion-button,
+#suitOfWands .accordion-button,
+#suitOfSwords .accordion-button,
+#suitOfPentacles .accordion-button {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  letter-spacing: normal;
+}
+
+
 /* CARD IMAGE STYLES */
 .selected-card img {
   border-radius: 15px;
