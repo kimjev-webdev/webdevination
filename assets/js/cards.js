@@ -31,6 +31,29 @@ function generateCardSection(cards, suit) {
     return cardHtml;
 }
 
+// Function to insert the Major Arcana intro paragraph before the cards
+function insertMajorArcanaIntro() {
+    const introHtml = `
+        <div id="majorArcanaIntro" class="intro-paragraph mb-4">
+            <p>The Major Arcana is the sacred spine of the tarot, a luminous thread that weaves through the soul’s incarnate journey. These 22 archetypal cards are not mere symbols; they are cosmic initiations — mirrors of the soul's growth, echoes of ancient wisdom, and portals to the mysteries of life, death, and rebirth.</p>
+            <p>We begin as The Fool; innocence unbound. With a knapsack of dreams and a heart full of wonder, we step off the cliff and begins the journey through the Major Arcana.</p>
+            <p>Each card encountered is a lesson, a challenge, a transformation.</p>
+            <p>We meet <strong>The Magician</strong>, who teaches manifestation and will; <strong>The High Priestess</strong>, who whispers of inner realms and mystery. With <strong>The Empress</strong> and <strong>The Emperor</strong>, we learns the sacred dance of nurturance and order. <strong>The Hierophant</strong> initiates us into tradition and spiritual law, while <strong>The Lovers</strong> present the divine puzzle of love and choice.</p>
+            <p><strong>The Chariot</strong> is driven by our will, and <strong>Strength</strong> teaches us that true power lies in compassion. In <strong>The Hermit</strong>, we finds wisdom in solitude. <strong>The Wheel of Fortune</strong> spins — fate stirs, and we learn that the only constant is change.</p>
+            <p>We face <strong>Justice</strong>, who asks us for balance. We are forced to surrender with <strong>The Hanged Man</strong>, and we metaphorically die with <strong>Death</strong> — but oh, how sweet the death of the old self!? <strong>Temperance</strong> restores the light after our rebirth. Then comes the shadow: <strong>The Devil</strong> tempts us, but <strong>The Tower</strong> with weak foundations alway falls.</p>
+            <p>But <strong>The Star</strong>is born from collapse. It brings with it a glistening and extrospective hope. <strong>The Moon</strong> reveals all illusion, and <strong>The Sun</strong> shines with divine clarity. <strong>Judgement</strong> calls us to rise from the ashes — and finally, in the macrocosm of <strong>The World</strong>, the soul is at one with all that is. The journey is finally complete…until a new cycle begins.</p>
+        </div>
+    `;
+
+    const cardContainer = document.getElementById("majorArcanaCards");
+    if (cardContainer) {
+        const introWrapper = document.createElement("div");
+        introWrapper.innerHTML = introHtml;
+        cardContainer.parentNode.insertBefore(introWrapper, cardContainer);
+    }
+}
+
+// DOMContentLoaded logic
 document.addEventListener("DOMContentLoaded", function () {
     // Fetch the tarot JSON data
     fetch('assets/tarot.json')
@@ -54,10 +77,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const majorArcana = data.tarot.filter(card => majorArcanaNames.includes(card.name));
             const minorArcana = data.tarot.filter(card => !majorArcanaNames.includes(card.name));
 
-            // Generate Major Arcana HTML (cards in rows of 4)
+            // Insert the Major Arcana intro paragraph before the card container
+            insertMajorArcanaIntro();
+
+            // Generate Major Arcana HTML
             majorArcanaCards.innerHTML = generateCardSection(majorArcana, 'major');
 
-            // Filter the minor arcana by suit and generate card sections for each suit
+            // Generate Minor Arcana sections by suit
             const suits = ['wands', 'cups', 'swords', 'pentacles'];
 
             suits.forEach(suit => {
@@ -68,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error loading tarot data:", error));
 
-    // Add chevron flip logic
+    // Add chevron flip logic to accordion buttons
     const accordionButtons = document.querySelectorAll(".accordion-button");
 
     accordionButtons.forEach(button => {
