@@ -1,550 +1,550 @@
 {
-"tarot": [
+  "tarot": [
     {
       "name": "The Fool",
       "image": "assets/images/cardfronts/thefool.webp",
       "interpretation": "New beginnings, inviting you to embrace spontaneity and embark on a new adventure with faith.",
-      "specifics": "LOVE: A fresh start. New & exciting connection. CAREER: Take a leap of faith. Start something unconventional. FINANCE: A warning against rash decisions but celebrate your freedom. HEALTH: Listen to your body. Embrace the unknown.",
+      "specifics": "LOVE: A fresh start. New & exciting connection.\nCAREER: Take a leap of faith. Start something unconventional.\nFINANCE: A warning against rash decisions but celebrate your freedom.\nHEALTH: Listen to your body. Embrace the unknown.",
       "response": "Maybe"
     },
     {
       "name": "The Magician",
       "image": "assets/images/cardfronts/themagician.webp",
       "interpretation": "Master your abilities and harness your inner strength to manifest your desires and be the creator of your reality.",
-      "specifics": "LOVE: Confidence and attraction. Create the relationship you desire. CAREER: Your skills will allow you to succeed. FINANCE: You have the ability to manifest wealth through hard work. HEALTH: Take charge of your well-being.",
+      "specifics": "LOVE: Confidence and attraction. Create the relationship you desire.\nCAREER: Your skills will allow you to succeed.\nFINANCE: You have the ability to manifest wealth through hard work.\nHEALTH: Take charge of your well-being.",
       "response": "Yes"
     },
     {
       "name": "The High Priestess",
       "image": "assets/images/cardfronts/thehighpriestess.webp",
       "interpretation": "Trust your intuition, embrace mystery and cultivate inner wisdom to guide you on a deeper, more spiritual path.",
-      "specifics": "LOVE: Mystery deepens. Trust your intuition. CAREER: Patience pays off. Observe before acting. FINANCE: Not all is revealed. Avoid impulsive moves. HEALTH: Tune into your inner voice. Seek calm and reflection.",
+      "specifics": "LOVE: Mystery deepens. Trust your intuition.\nCAREER: Patience pays off. Observe before acting.\nFINANCE: Not all is revealed. Avoid impulsive moves.\nHEALTH: Tune into your inner voice. Seek calm and reflection.",
       "response": "Maybe"
     },
     {
       "name": "The Empress",
       "image": "assets/images/cardfronts/theempress.webp",
       "interpretation": "Channel abundance! Cultivate personal growth by nurturing your creative energy. Bring your ideas to life.",
-      "specifics": "LOVE: Nurturing connection. Growth and sensuality. CAREER: Creativity thrives. Projects bloom. FINANCE: Abundance flows through generosity and care. HEALTH: Focus on self-care, fertility, and nourishment.",
+      "specifics": "LOVE: Nurturing connection. Growth and sensuality.\nCAREER: Creativity thrives. Projects bloom.\nFINANCE: Abundance flows through generosity and care.\nHEALTH: Focus on self-care, fertility, and nourishment.",
       "response": "Yes"
     },
     {
       "name": "The Emperor",
       "image": "assets/images/cardfronts/theemperor.webp",
       "interpretation": "Embody leadership, establish authority, and create stability to build a strong, secure foundation.",
-      "specifics": "LOVE: Stability and structure in relationships. CAREER: Authority brings success. Lead with confidence. FINANCE: Financial control yields security. HEALTH: Establish routine. Strength through discipline.",
+      "specifics": "LOVE: Stability and structure in relationships.\nCAREER: Authority brings success. Lead with confidence.\nFINANCE: Financial control yields security.\nHEALTH: Establish routine. Strength through discipline.",
       "response": "Yes"
     },
     {
       "name": "The Hierophant",
       "image": "assets/images/cardfronts/thehierophant.webp",
       "interpretation": "Honor tradition, seek spiritual growth, and embrace guidance to deepen your connection with higher wisdom.",
-      "specifics": "LOVE: Commitment deepens. Traditional bonds favored. CAREER: Follow established paths. Learn from mentors. FINANCE: Conventional wisdom leads to gains. HEALTH: Rituals and support systems bring balance.",
+      "specifics": "LOVE: Commitment deepens. Traditional bonds favored.\nCAREER: Follow established paths. Learn from mentors.\nFINANCE: Conventional wisdom leads to gains.\nHEALTH: Rituals and support systems bring balance.",
       "response": "Maybe"
     },
     {
       "name": "The Lovers",
       "image": "assets/images/cardfronts/thelovers.webp",
       "interpretation": "Embrace deep connections and trust your choices, fostering harmony and alignment in relationships.",
-      "specifics": "LOVE: A powerful union or choice in love. CAREER: Align work with passion and values. FINANCE: Decisions must reflect your heart\u2019s truth. HEALTH: Emotional harmony supports physical wellness.",
+      "specifics": "LOVE: A powerful union or choice in love.\nCAREER: Align work with passion and values.\nFINANCE: Decisions must reflect your heart\u2019s truth.\nHEALTH: Emotional harmony supports physical wellness.",
       "response": "Yes"
     },
     {
       "name": "The Chariot",
       "image": "assets/images/cardfronts/thechariot.webp",
       "interpretation": "Achieve victory through determination and control. Harness your willpower to overcome obstacles.",
-      "specifics": "LOVE: Push past obstacles. Stay aligned together. CAREER: Determination drives success. FINANCE: Keep focus to reach goals. HEALTH: Act with purpose. Steer toward wellness.",
+      "specifics": "LOVE: Push past obstacles. Stay aligned together.\nCAREER: Determination drives success.\nFINANCE: Keep focus to reach goals.\nHEALTH: Act with purpose. Steer toward wellness.",
       "response": "Yes"
     },
     {
       "name": "Strength",
       "image": "assets/images/cardfronts/strength.webp",
       "interpretation": "Tap into your inner power, and be courageous. Rest assured, you can face any challenge with confidence.",
-      "specifics": "LOVE: Inner strength supports lasting love. CAREER: Courage overcomes work challenges. FINANCE: Stay resilient during strain. HEALTH: Mind-body balance brings vitality.",
+      "specifics": "LOVE: Inner strength supports lasting love.\nCAREER: Courage overcomes work challenges.\nFINANCE: Stay resilient during strain.\nHEALTH: Mind-body balance brings vitality.",
       "response": "Yes"
     },
     {
       "name": "The Hermit",
       "image": "assets/images/cardfronts/thehermit.webp",
       "interpretation": "Embrace introspection, seek wisdom, and find clarity through solitude. Listen to your inner guide.",
-      "specifics": "LOVE: Take space to reflect on connection. CAREER: Inner guidance shapes your path. FINANCE: Assess quietly before decisions. HEALTH: Solitude heals. Prioritize self-care.",
+      "specifics": "LOVE: Take space to reflect on connection.\nCAREER: Inner guidance shapes your path.\nFINANCE: Assess quietly before decisions.\nHEALTH: Solitude heals. Prioritize self-care.",
       "response": "Maybe"
     },
     {
       "name": "Wheel of Fortune",
       "image": "assets/images/cardfronts/wheeloffortune.webp",
       "interpretation": "Embrace the cycles of life. Go with the flow; surrender. The only constant is change.",
-      "specifics": "LOVE: Fate shifts relationships. Trust cycles. CAREER: Change opens new chances. FINANCE: Financial upswing or reset. HEALTH: Embrace change. Flow brings healing.",
+      "specifics": "LOVE: Fate shifts relationships. Trust cycles.\nCAREER: Change opens new chances.\nFINANCE: Financial upswing or reset.\nHEALTH: Embrace change. Flow brings healing.",
       "response": "Maybe"
     },
     {
       "name": "Justice",
       "image": "assets/images/cardfronts/justice.webp",
       "interpretation": "Be steadfast in your morals. Try to be fair, embrace the truth even if it is difficult. Balance is key.",
-      "specifics": "LOVE: Fairness restores harmony. CAREER: Act with integrity. Truth leads. FINANCE: Balanced choices bring stability. HEALTH: Seek alignment and accountability.",
+      "specifics": "LOVE: Fairness restores harmony.\nCAREER: Act with integrity. Truth leads.\nFINANCE: Balanced choices bring stability.\nHEALTH: Seek alignment and accountability.",
       "response": "Yes"
     },
     {
       "name": "The Hanged Man",
       "image": "assets/images/cardfronts/thehangedman.webp",
       "interpretation": "Sometimes the besy choice is to wait for clarity. Practice patience as you await new insights and opportunity for growth.",
-      "specifics": "LOVE: See love from a new angle. CAREER: Pause before progress. FINANCE: Let go of control for clarity. HEALTH: Surrender brings healing.",
+      "specifics": "LOVE: See love from a new angle.\nCAREER: Pause before progress.\nFINANCE: Let go of control for clarity.\nHEALTH: Surrender brings healing.",
       "response": "Maybe"
     },
     {
       "name": "Death",
       "image": "assets/images/cardfronts/death.webp",
       "interpretation": "Are you ready to metamorphose?  It's time to let go so you can transform. Prepare for new beginnings.",
-      "specifics": "LOVE: Endings bring new beginnings. CAREER: Let go to grow. FINANCE: Shed what no longer serves. HEALTH: Transform habits for renewal.",
+      "specifics": "LOVE: Endings bring new beginnings.\nCAREER: Let go to grow.\nFINANCE: Shed what no longer serves.\nHEALTH: Transform habits for renewal.",
       "response": "No"
     },
     {
       "name": "Temperance",
       "image": "assets/images/cardfronts/temperance.webp",
       "interpretation": "Seek harmony. Find balance. Practice moderation to create peace and flow in your life.",
-      "specifics": "LOVE: Create harmony together. CAREER: Balance action with patience. FINANCE: Steady growth, not extremes. HEALTH: Moderation supports healing.",
+      "specifics": "LOVE: Create harmony together.\nCAREER: Balance action with patience.\nFINANCE: Steady growth, not extremes.\nHEALTH: Moderation supports healing.",
       "response": "Maybe"
     },
     {
       "name": "The Devil",
       "image": "assets/images/cardfronts/thedevil.webp",
       "interpretation": "Where is temptation leading you? In order to regain self control there is a need to break free from addictive tendencies.",
-      "specifics": "LOVE: Beware toxic ties. Break free. CAREER: Feeling stuck? Reclaim your power. FINANCE: Avoid temptations. HEALTH: Cut harmful habits.",
+      "specifics": "LOVE: Beware toxic ties. Break free.\nCAREER: Feeling stuck? Reclaim your power.\nFINANCE: Avoid temptations.\nHEALTH: Cut harmful habits.",
       "response": "No"
     },
     {
       "name": "The Tower",
       "image": "assets/images/cardfronts/thetower.webp",
       "interpretation": "Sudden upheaval & destruction. Only when false foundations will liberation follow.",
-      "specifics": "LOVE: Sudden truth shakes bonds. CAREER: A breakdown sparks change. FINANCE: Upheaval clears the slate. HEALTH: Wake-up call prompts action.",
+      "specifics": "LOVE: Sudden truth shakes bonds.\nCAREER: A breakdown sparks change.\nFINANCE: Upheaval clears the slate.\nHEALTH: Wake-up call prompts action.",
       "response": "No"
     },
     {
       "name": "The Star",
       "image": "assets/images/cardfronts/thestar.webp",
       "interpretation": "Embrace hope, find inspiration, and experience renewal as you reconnect with your inner self and the universe.",
-      "specifics": "LOVE: Hope rekindles love. CAREER: Inspiration fuels progress. FINANCE: Recovery and renewal ahead. HEALTH: Healing and faith guide recovery.",
+      "specifics": "LOVE: Hope rekindles love.\nCAREER: Inspiration fuels progress.\nFINANCE: Recovery and renewal ahead.\nHEALTH: Healing and faith guide recovery.",
       "response": "Yes"
     },
     {
       "name": "The Moon",
       "image": "assets/images/cardfronts/themoon.webp",
       "interpretation": "Explore your subconcious to uncover hidden truths. Tap into your intuition to illuminate your path.",
-      "specifics": "LOVE: Illusions cloud clarity. CAREER: Trust your gut. FINANCE: Avoid deception or risk. HEALTH: Listen to dreams and intuition.",
+      "specifics": "LOVE: Illusions cloud clarity.\nCAREER: Trust your gut.\nFINANCE: Avoid deception or risk.\nHEALTH: Listen to dreams and intuition.",
       "response": "Maybe"
     },
     {
       "name": "The Sun",
       "image": "assets/images/cardfronts/thesun.webp",
       "interpretation": "Clarity & success. Experience joy and vitality! Bask in the illuminating energy of positivity and personal growth.",
-      "specifics": "LOVE: Joyful connection radiates. CAREER: Success shines through. FINANCE: Prosperity and happiness align. HEALTH: Vitality, energy, glowing health.",
+      "specifics": "LOVE: Joyful connection radiates.\nCAREER: Success shines through.\nFINANCE: Prosperity and happiness align.\nHEALTH: Vitality, energy, glowing health.",
       "response": "Yes"
     },
     {
       "name": "Judgement",
       "image": "assets/images/cardfronts/judgement.webp",
       "interpretation": "Undergo self-reflection, and heed your inner calling to transform your life and awaken your true purpose.",
-      "specifics": "LOVE: Growth through honest reflection. CAREER: Rebirth or second chance. FINANCE: Evaluate past to improve future. HEALTH: Time to awaken and heal.",
+      "specifics": "LOVE: Growth through honest reflection.\nCAREER: Rebirth or second chance.\nFINANCE: Evaluate past to improve future.\nHEALTH: Time to awaken and heal.",
       "response": "Yes"
     },
     {
       "name": "The World",
       "image": "assets/images/cardfronts/theworld.webp",
       "interpretation": "Experience completion and a sense of wholeness. You can celebrate success, and feel fulfilled as you are reaching the end of a significant cycle.",
-      "specifics": "LOVE: Fulfillment and lasting union. CAREER: Completion and recognition. FINANCE: Abundant success arrives. HEALTH: Full circle wellness.",
+      "specifics": "LOVE: Fulfillment and lasting union.\nCAREER: Completion and recognition.\nFINANCE: Abundant success arrives.\nHEALTH: Full circle wellness.",
       "response": "Yes"
     },
     {
       "name": "Ace of Cups",
       "image": "assets/images/cardfronts/aceofcups.webp",
       "interpretation": "New emotional beginnings. You  will experience spiritual renewal as your heart opens to growth.",
-      "specifics": "LOVE: New emotional beginning. CAREER: A heartfelt opportunity appears. FINANCE: Emotional reward over material gain. HEALTH: Healing through emotional openness.",
+      "specifics": "LOVE: New emotional beginning.\nCAREER: A heartfelt opportunity appears.\nFINANCE: Emotional reward over material gain.\nHEALTH: Healing through emotional openness.",
       "response": "Yes"
     },
     {
       "name": "Two of Cups",
       "image": "assets/images/cardfronts/twoofcups.webp",
       "interpretation": "Celebrate unity, mutual attraction, and harmonious partnerships as deep connections foster balance and understanding.",
-      "specifics": "LOVE: Deep connection and harmony. CAREER: Partnership brings success. FINANCE: Shared resources benefit all. HEALTH: Balance through emotional bonds.",
+      "specifics": "LOVE: Deep connection and harmony.\nCAREER: Partnership brings success.\nFINANCE: Shared resources benefit all.\nHEALTH: Balance through emotional bonds.",
       "response": "Yes"
     },
     {
       "name": "Three of Cups",
       "image": "assets/images/cardfronts/threeofcups.webp",
       "interpretation": "Rejoice in celebration, friendship, and community, as shared joy and support strengthen bonds and create harmony.",
-      "specifics": "LOVE: Joyful union, friendship thrives. CAREER: Celebrate team victories. FINANCE: Rewards come from community. HEALTH: Emotional uplift through connection.",
+      "specifics": "LOVE: Joyful union, friendship thrives.\nCAREER: Celebrate team victories.\nFINANCE: Rewards come from community.\nHEALTH: Emotional uplift through connection.",
       "response": "Yes"
     },
     {
       "name": "Four of Cups",
       "image": "assets/images/cardfronts/fourofcups.webp",
       "interpretation": "You may have missed a great opportunity. Reflect on your emotions, overcome apathy, and open yourself to new opportunities as you move beyond complacency.",
-      "specifics": "LOVE: Emotional distance or boredom. CAREER: Uninspired by routine. FINANCE: Apathy blocks new gains. HEALTH: Seek emotional engagement.",
+      "specifics": "LOVE: Emotional distance or boredom.\nCAREER: Uninspired by routine.\nFINANCE: Apathy blocks new gains.\nHEALTH: Seek emotional engagement.",
       "response": "Maybe"
     },
     {
       "name": "Five of Cups",
       "image": "assets/images/cardfronts/fiveofcups.webp",
       "interpretation": "Loss, grief, and regret. Confront your disappointment and try to keep your heart open. Stay hopeful as new opportunities will eventually emerge after sorrow.",
-      "specifics": "LOVE: Grieving loss, but love remains. CAREER: Disappointment clears path. FINANCE: Let go and rebuild. HEALTH: Healing starts with acceptance.",
+      "specifics": "LOVE: Grieving loss, but love remains.\nCAREER: Disappointment clears path.\nFINANCE: Let go and rebuild.\nHEALTH: Healing starts with acceptance.",
       "response": "No"
     },
     {
       "name": "Six of Cups",
       "image": "assets/images/cardfronts/sixofcups.webp",
       "interpretation": "Find space to be playful and to reconnect with the joy of innocence. Try speaking to your inner child. You may find comfort in happy memories.",
-      "specifics": "LOVE: Sweet nostalgia or reunion. CAREER: Return to joyful work. FINANCE: Old investments may flourish. HEALTH: Reconnect with simple pleasures.",
+      "specifics": "LOVE: Sweet nostalgia or reunion.\nCAREER: Return to joyful work.\nFINANCE: Old investments may flourish.\nHEALTH: Reconnect with simple pleasures.",
       "response": "Yes"
     },
     {
       "name": "Seven of Cups",
       "image": "assets/images/cardfronts/sevenofcups.webp",
       "interpretation": "While it is important to explore your dreams, try to discern between illusion and reality in order to make the right decisions.",
-      "specifics": "LOVE: Many options, unclear motives. CAREER: Too many ideas, need focus. FINANCE: Fantasy distorts reality. HEALTH: Ground yourself emotionally.",
+      "specifics": "LOVE: Many options, unclear motives.\nCAREER: Too many ideas, need focus.\nFINANCE: Fantasy distorts reality.\nHEALTH: Ground yourself emotionally.",
       "response": "Maybe"
     },
     {
       "name": "Eight of Cups",
       "image": "assets/images/cardfronts/eightofcups.webp",
       "interpretation": "It may be time to walk away from something that no longer serves you. Embrace change and seek emotional fulfillment elsewhere.",
-      "specifics": "LOVE: Walk away to grow. CAREER: Leave what no longer serves. FINANCE: Release unfulfilling goals. HEALTH: Step toward emotional healing.",
+      "specifics": "LOVE: Walk away to grow.\nCAREER: Leave what no longer serves.\nFINANCE: Release unfulfilling goals.\nHEALTH: Step toward emotional healing.",
       "response": "No"
     },
     {
       "name": "Nine of Cups",
       "image": "assets/images/cardfronts/nineofcups.webp",
       "interpretation": "Celebrate your achievements and find joy in the present moment. In what ways do you feel content, satisfied and emotionally fulfilled?",
-      "specifics": "LOVE: Emotional satisfaction. CAREER: Enjoy hard-won success. FINANCE: Material wishes come true. HEALTH: Happiness enhances wellness.",
+      "specifics": "LOVE: Emotional satisfaction.\nCAREER: Enjoy hard-won success.\nFINANCE: Material wishes come true.\nHEALTH: Happiness enhances wellness.",
       "response": "Yes"
     },
     {
       "name": "Ten of Cups",
       "image": "assets/images/cardfronts/tenofcups.webp",
       "interpretation": "Experience profound happiness, harmonious relationships, and lasting fulfillment as you celebrate the completion of a joyful cycle.",
-      "specifics": "LOVE: Harmony and deep joy. CAREER: Fulfillment through purpose. FINANCE: Abundance with loved ones. HEALTH: Emotional contentment brings peace.",
+      "specifics": "LOVE: Harmony and deep joy.\nCAREER: Fulfillment through purpose.\nFINANCE: Abundance with loved ones.\nHEALTH: Emotional contentment brings peace.",
       "response": "Yes"
     },
     {
       "name": "Page of Cups",
       "image": "assets/images/cardfronts/pageofcups.webp",
       "interpretation": "A messenger brings good news, often related to emotional or creative matters. This invites you to embrace your inner child, foster imagination, and remain open to new emotional experiences.",
-      "specifics": "LOVE: New feelings or crush. CAREER: Creative ideas bloom. FINANCE: A small but welcome gift. HEALTH: Gentle emotional healing begins.",
+      "specifics": "LOVE: New feelings or crush.\nCAREER: Creative ideas bloom.\nFINANCE: A small but welcome gift.\nHEALTH: Gentle emotional healing begins.",
       "response": "Yes"
     },
     {
       "name": "Knight of Cups",
       "image": "assets/images/cardfronts/knightofcups.webp",
       "interpretation": "Embark on a quest for a romantic life. Seek inspiration. Fill your world with emotional and creative pursuits.",
-      "specifics": "LOVE: Romantic offer incoming. CAREER: Chase your dreams with heart. FINANCE: Let passion guide income. HEALTH: Tune into emotional flow.",
+      "specifics": "LOVE: Romantic offer incoming.\nCAREER: Chase your dreams with heart.\nFINANCE: Let passion guide income.\nHEALTH: Tune into emotional flow.",
       "response": "Yes"
     },
     {
       "name": "Queen of Cups",
       "image": "assets/images/cardfronts/queenofcups.webp",
       "interpretation": "You embody emotional intelligence, compassion, and nurturing. Remain empathetic but also foster a deep connection with your inner self.",
-      "specifics": "LOVE: Deep emotional support. CAREER: Empathy enhances success. FINANCE: Intuition helps decisions. HEALTH: Prioritize emotional balance.",
+      "specifics": "LOVE: Deep emotional support.\nCAREER: Empathy enhances success.\nFINANCE: Intuition helps decisions.\nHEALTH: Prioritize emotional balance.",
       "response": "Yes"
     },
     {
       "name": "King of Cups",
       "image": "assets/images/cardfronts/kingofcups.webp",
       "interpretation": "Exhibit emotional maturity, compassion, and wisdom, balancing your intellect and feelings will help you nurture and support others effectively without destroying yourself.",
-      "specifics": "LOVE: Maturity and compassion. CAREER: Lead with empathy. FINANCE: Wise, steady support. HEALTH: Balanced emotional health.",
+      "specifics": "LOVE: Maturity and compassion.\nCAREER: Lead with empathy.\nFINANCE: Wise, steady support.\nHEALTH: Balanced emotional health.",
       "response": "Yes"
     },
     {
       "name": "Ace of Wands",
       "image": "assets/images/cardfronts/aceofwands.webp",
       "interpretation": "Creative energy sparks new beginnings, fueling you to be bold in your actions. Opportunities for growth and success unfold, urging you to embrace your passions and move forward with confidence.",
-      "specifics": "LOVE: Passion ignites anew. CAREER: Bold start, creative spark. FINANCE: New venture promising growth. HEALTH: Vitality and energy surge.",
+      "specifics": "LOVE: Passion ignites anew.\nCAREER: Bold start, creative spark.\nFINANCE: New venture promising growth.\nHEALTH: Vitality and energy surge.",
       "response": "Yes"
     },
     {
       "name": "Two of Wands",
       "image": "assets/images/cardfronts/twoofwands.webp",
       "interpretation": "Seize opportunities for expansion and progress. Step beyond your comfort zone to explore new horizons. As you take clear, decisive action, the world unfolds with potential, inviting you to shape your own destiny.",
-      "specifics": "LOVE: Planning a future together. CAREER: Choose your path boldly. FINANCE: Long-term goals take shape. HEALTH: Act with steady vision.",
+      "specifics": "LOVE: Planning a future together.\nCAREER: Choose your path boldly.\nFINANCE: Long-term goals take shape.\nHEALTH: Act with steady vision.",
       "response": "Yes"
     },
     {
       "name": "Three of Wands",
       "image": "assets/images/cardfronts/threeofwands.webp",
       "interpretation": "Embrace expansion and progress, stepping beyond your comfort zone to explore new horizons. The choices you make will open up a world of potential. You are being invited to shape your own destiny.",
-      "specifics": "LOVE: Love expands with distance. CAREER: Results of efforts unfold. FINANCE: Growth from past choices. HEALTH: Progress is underway.",
+      "specifics": "LOVE: Love expands with distance.\nCAREER: Results of efforts unfold.\nFINANCE: Growth from past choices.\nHEALTH: Progress is underway.",
       "response": "Yes"
     },
     {
       "name": "Four of Wands",
       "image": "assets/images/cardfronts/fourofwands.webp",
       "interpretation": "This period marks a stable foundation, highlighting achievements and shared happiness. A time of celebration, harmony, and community. Events can foster a sense of belonging and support.",
-      "specifics": "LOVE: Stability and celebration. CAREER: Milestones bring joy. FINANCE: Enjoy financial peace. HEALTH: Rest and rejoice.",
+      "specifics": "LOVE: Stability and celebration.\nCAREER: Milestones bring joy.\nFINANCE: Enjoy financial peace.\nHEALTH: Rest and rejoice.",
       "response": "Yes"
     },
     {
       "name": "Five of Wands",
       "image": "assets/images/cardfronts/fiveofwands.webp",
       "interpretation": "Engage in spirited competition, where differing opinions and ambitions ignite personal growth and innovation. This dynamic environment challenges you to assert your ideas, fostering resilience and adaptability.",
-      "specifics": "LOVE: Tension sparks growth. CAREER: Compete to improve. FINANCE: Disagreements over money. HEALTH: Stress needs release.",
+      "specifics": "LOVE: Tension sparks growth.\nCAREER: Compete to improve.\nFINANCE: Disagreements over money.\nHEALTH: Stress needs release.",
       "response": "Maybe"
     },
     {
       "name": "Six of Wands",
       "image": "assets/images/cardfronts/sixofwands.webp",
       "interpretation": "Step into the spotlight with pride! Your perseverance has brought recognition and well-earned success.",
-      "specifics": "LOVE: Admired and appreciated. CAREER: Public success and praise. FINANCE: Rewards are visible. HEALTH: Triumph after struggle.",
+      "specifics": "LOVE: Admired and appreciated.\nCAREER: Public success and praise.\nFINANCE: Rewards are visible.\nHEALTH: Triumph after struggle.",
       "response": "Yes"
     },
     {
       "name": "Seven of Wands",
       "image": "assets/images/cardfronts/sevenofwands.webp",
       "interpretation": "Stand tall in the face of challenge. Defend your position with confidence and stay true to your path.",
-      "specifics": "LOVE: Protect what matters. CAREER: Defend your position. FINANCE: Hold your ground. HEALTH: Persistence brings strength.",
+      "specifics": "LOVE: Protect what matters.\nCAREER: Defend your position.\nFINANCE: Hold your ground.\nHEALTH: Persistence brings strength.",
       "response": "Maybe"
     },
     {
       "name": "Eight of Wands",
       "image": "assets/images/cardfronts/eightofwands.webp",
       "interpretation": "Momentum is building! Swift changes and rapid developments are moving you closer to your goals.",
-      "specifics": "LOVE: Fast-moving romance. CAREER: Rapid progress unfolds. FINANCE: Quick wins or news. HEALTH: Swift recovery possible.",
+      "specifics": "LOVE: Fast-moving romance.\nCAREER: Rapid progress unfolds.\nFINANCE: Quick wins or news.\nHEALTH: Swift recovery possible.",
       "response": "Yes"
     },
     {
       "name": "Nine of Wands",
       "image": "assets/images/cardfronts/nineofwands.webp",
       "interpretation": "You have come so far! Gather your strength and resilience for the final stretch. Victory is near.",
-      "specifics": "LOVE: Love endures through trials. CAREER: You're almost there. FINANCE: Push through final stretch. HEALTH: Resilience matters most.",
+      "specifics": "LOVE: Love endures through trials.\nCAREER: You're almost there.\nFINANCE: Push through final stretch.\nHEALTH: Resilience matters most.",
       "response": "Maybe"
     },
     {
       "name": "Ten of Wands",
       "image": "assets/images/cardfronts/tenofwands.webp",
       "interpretation": "The weight is heavy, but you carry it with resolve. Consider what burdens can be released to find ease.",
-      "specifics": "LOVE: Burdened by pressure. CAREER: Too much responsibility. FINANCE: Finances feel heavy. HEALTH: Rest and lighten your load.",
+      "specifics": "LOVE: Burdened by pressure.\nCAREER: Too much responsibility.\nFINANCE: Finances feel heavy.\nHEALTH: Rest and lighten your load.",
       "response": "No"
     },
     {
       "name": "Page of Wands",
       "image": "assets/images/cardfronts/pageofwands.webp",
       "interpretation": "Adventure calls! Let curiosity guide you as you embrace fresh ideas and passionate inspiration.",
-      "specifics": "LOVE: A flirt sparks excitement. CAREER: Enthusiasm opens doors. FINANCE: New ideas bring funds. HEALTH: Energy fuels renewal.",
+      "specifics": "LOVE: A flirt sparks excitement.\nCAREER: Enthusiasm opens doors.\nFINANCE: New ideas bring funds.\nHEALTH: Energy fuels renewal.",
       "response": "Yes"
     },
     {
       "name": "Knight of Wands",
       "image": "assets/images/cardfronts/knightofwands.webp",
       "interpretation": "Move boldly and act with heart. Energy and ambition propel you toward daring new pursuits.",
-      "specifics": "LOVE: Passionate but impulsive. CAREER: Bold moves, fast pace. FINANCE: Risk brings reward. HEALTH: Chase fitness goals.",
+      "specifics": "LOVE: Passionate but impulsive.\nCAREER: Bold moves, fast pace.\nFINANCE: Risk brings reward.\nHEALTH: Chase fitness goals.",
       "response": "Yes"
     },
     {
       "name": "Queen of Wands",
       "image": "assets/images/cardfronts/queenofwands.webp",
       "interpretation": "Radiate with warmth and confidence. Creativity flows freely when you trust in your inner fire.",
-      "specifics": "LOVE: Charisma draws others in. CAREER: Lead with confidence. FINANCE: Prosperity through passion. HEALTH: Radiate vibrant energy.",
+      "specifics": "LOVE: Charisma draws others in.\nCAREER: Lead with confidence.\nFINANCE: Prosperity through passion.\nHEALTH: Radiate vibrant energy.",
       "response": "Yes"
     },
     {
       "name": "King of Wands",
       "image": "assets/images/cardfronts/kingofwands.webp",
       "interpretation": "Lead with vision and courage. Channel your wisdom into bold action and unwavering purpose.",
-      "specifics": "LOVE: Take charge in love. CAREER: Vision drives success. FINANCE: Strategic growth ahead. HEALTH: Confidence fuels vitality.",
+      "specifics": "LOVE: Take charge in love.\nCAREER: Vision drives success.\nFINANCE: Strategic growth ahead.\nHEALTH: Confidence fuels vitality.",
       "response": "Yes"
     },
     {
       "name": "Ace of Swords",
       "image": "assets/images/cardfronts/aceofswords.webp",
       "interpretation": "Clarity strikes like lightning! New insight awakens truth, empowering you to see through the fog in your mind.",
-      "specifics": "LOVE: Clarity in relationships. CAREER: Truth cuts through confusion. FINANCE: Smart decisions pay off. HEALTH: Clear thinking heals.",
+      "specifics": "LOVE: Clarity in relationships.\nCAREER: Truth cuts through confusion.\nFINANCE: Smart decisions pay off.\nHEALTH: Clear thinking heals.",
       "response": "Yes"
     },
     {
       "name": "Two of Swords",
       "image": "assets/images/cardfronts/twoofswords.webp",
       "interpretation": "In any moment of inner tension it is wise to pause, reflect, and trust that clarity will arise from your inner stillness.",
-      "specifics": "LOVE: Hard love choices ahead. CAREER: Stuck between jobs or roles. FINANCE: Avoidance delays change. HEALTH: Denial blocks progress.",
+      "specifics": "LOVE: Hard love choices ahead.\nCAREER: Stuck between jobs or roles.\nFINANCE: Avoidance delays change.\nHEALTH: Denial blocks progress.",
       "response": "Maybe"
     },
     {
       "name": "Three of Swords",
       "image": "assets/images/cardfronts/threeofswords.webp",
       "interpretation": "Wounds of the heart ache the loudest. Allow yourself to grieve deeply. Know that healing begins in acceptance.",
-      "specifics": "LOVE: Heartbreak and sorrow. CAREER: Loss leads to new truth. FINANCE: Painful setback to heal. HEALTH: Emotional pain affects body.",
+      "specifics": "LOVE: Heartbreak and sorrow.\nCAREER: Loss leads to new truth.\nFINANCE: Painful setback to heal.\nHEALTH: Emotional pain affects body.",
       "response": "No"
     },
     {
       "name": "Four of Swords",
       "image": "assets/images/cardfronts/fourofswords.webp",
       "interpretation": "Step back from the noise. Rest, recover, and allow silence to restore your spirit.",
-      "specifics": "LOVE: Time apart brings clarity. CAREER: Step back to recharge. FINANCE: Rest before big choices. HEALTH: Deep rest restores balance.",
+      "specifics": "LOVE: Time apart brings clarity.\nCAREER: Step back to recharge.\nFINANCE: Rest before big choices.\nHEALTH: Deep rest restores balance.",
       "response": "Maybe"
     },
     {
       "name": "Five of Swords",
       "image": "assets/images/cardfronts/fiveofswords.webp",
       "interpretation": "Even in victory, there may be loss. Consider the cost of conflict before drawing your sword.",
-      "specifics": "LOVE: Conflict with no winners. CAREER: Pyrrhic victory looms. FINANCE: Costs outweigh gains. HEALTH: Stress drains energy.",
+      "specifics": "LOVE: Conflict with no winners.\nCAREER: Pyrrhic victory looms.\nFINANCE: Costs outweigh gains.\nHEALTH: Stress drains energy.",
       "response": "No"
     },
     {
       "name": "Six of Swords",
       "image": "assets/images/cardfronts/sixofswords.webp",
       "interpretation": "The journey ahead will bring you peace. Release the past and embrace the calm that follows from this storm.",
-      "specifics": "LOVE: Moving on brings peace. CAREER: Transition leads forward. FINANCE: Leaving stress behind. HEALTH: Healing journey begins.",
+      "specifics": "LOVE: Moving on brings peace.\nCAREER: Transition leads forward.\nFINANCE: Leaving stress behind.\nHEALTH: Healing journey begins.",
       "response": "Yes"
     },
     {
       "name": "Seven of Swords",
       "image": "assets/images/cardfronts/sevenofswords.webp",
       "interpretation": "Be wise with your intentions. Secrets, strategy, or self-deception will only cloud your path and steer you astray.",
-      "specifics": "LOVE: Hidden truths emerge. CAREER: Strategy or deceit ahead. FINANCE: Watch for sneaky behavior. HEALTH: Avoid self-deception.",
+      "specifics": "LOVE: Hidden truths emerge.\nCAREER: Strategy or deceit ahead.\nFINANCE: Watch for sneaky behavior.\nHEALTH: Avoid self-deception.",
       "response": "Maybe"
     },
     {
       "name": "Eight of Swords",
       "image": "assets/images/cardfronts/eightofswords.webp",
       "interpretation": "You hold the key to your own shackles. Let go of your limiting beliefs and step into your power.",
-      "specifics": "LOVE: Feeling stuck or trapped. CAREER: Limitations are mental. FINANCE: Fear restricts action. HEALTH: Free your thoughts.",
+      "specifics": "LOVE: Feeling stuck or trapped.\nCAREER: Limitations are mental.\nFINANCE: Fear restricts action.\nHEALTH: Free your thoughts.",
       "response": "No"
     },
     {
       "name": "Nine of Swords",
       "image": "assets/images/cardfronts/nineofswords.webp",
       "interpretation": "The mind weaves heavy shadows. You must acknowledge your fears and begin unravelling them with care.",
-      "specifics": "LOVE: Worry disrupts closeness. CAREER: Sleepless over stress. FINANCE: Anxiety clouds judgment. HEALTH: Mental health needs care.",
+      "specifics": "LOVE: Worry disrupts closeness.\nCAREER: Sleepless over stress.\nFINANCE: Anxiety clouds judgment.\nHEALTH: Mental health needs care.",
       "response": "No"
     },
     {
       "name": "Ten of Swords",
       "image": "assets/images/cardfronts/tenofswords.webp",
       "interpretation": "Though everything seems lost, this is the end of your suffering. The most beautiful daybreak always follows the deepest night.",
-      "specifics": "LOVE: Painful ending. Let go. CAREER: Collapse clears the slate. FINANCE: Rock bottom, time to rise. HEALTH: Release brings relief.",
+      "specifics": "LOVE: Painful ending. Let go.\nCAREER: Collapse clears the slate.\nFINANCE: Rock bottom, time to rise.\nHEALTH: Release brings relief.",
       "response": "No"
     },
     {
       "name": "Page of Swords",
       "image": "assets/images/cardfronts/pageofswords.webp",
       "interpretation": "A curious mind awakens. Questions stir...insight emerges from observation and thought.",
-      "specifics": "LOVE: Curiosity stirs love. CAREER: Ask questions, stay sharp. FINANCE: Seek new info first. HEALTH: Investigate wellness options.",
+      "specifics": "LOVE: Curiosity stirs love.\nCAREER: Ask questions, stay sharp.\nFINANCE: Seek new info first.\nHEALTH: Investigate wellness options.",
       "response": "Yes"
     },
     {
       "name": "Knight of Swords",
       "image": "assets/images/cardfronts/knightofswords.webp",
       "interpretation": "Charge ahead with fierce clarity, but be mindful not to cut corners in your pursuit of truth.",
-      "specifics": "LOVE: Act fast but think twice. CAREER: Rush into action. FINANCE: Bold choices, quick change. HEALTH: High energy, risk burnout.",
+      "specifics": "LOVE: Act fast but think twice.\nCAREER: Rush into action.\nFINANCE: Bold choices, quick change.\nHEALTH: High energy, risk burnout.",
       "response": "Yes"
     },
     {
       "name": "Queen of Swords",
       "image": "assets/images/cardfronts/queenofswords.webp",
       "interpretation": "With sharp insight and calm resolve, speak truth with compassion and pierce through the viels of illusion.",
-      "specifics": "LOVE: Honest talk clears air. CAREER: Logic guides success. FINANCE: Wisdom brings security. HEALTH: Stay objective and clear.",
+      "specifics": "LOVE: Honest talk clears air.\nCAREER: Logic guides success.\nFINANCE: Wisdom brings security.\nHEALTH: Stay objective and clear.",
       "response": "Yes"
     },
     {
       "name": "King of Swords",
       "image": "assets/images/cardfronts/kingofswords.webp",
       "interpretation": "Lead with reason and a clear sense of justice! Your wisdom cuts through confusion and offers others the steady guidance they seek.",
-      "specifics": "LOVE: Detached but fair love. CAREER: Authority through intellect. FINANCE: Strategic decisions win. HEALTH: Disciplined mind helps body.",
+      "specifics": "LOVE: Detached but fair love.\nCAREER: Authority through intellect.\nFINANCE: Strategic decisions win.\nHEALTH: Disciplined mind helps body.",
       "response": "Yes"
     },
     {
       "name": "Ace of Pentacles",
       "image": "assets/images/cardfronts/aceofpentacles.webp",
       "interpretation": "A seed of abundance takes root. Nurture this new opportunity carefullly and watch it grow into stability.",
-      "specifics": "LOVE: Solid love begins. CAREER: Job or offer rooted in growth. FINANCE: New stream of income. HEALTH: Strong physical start.",
+      "specifics": "LOVE: Solid love begins.\nCAREER: Job or offer rooted in growth.\nFINANCE: New stream of income.\nHEALTH: Strong physical start.",
       "response": "Yes"
     },
     {
       "name": "Two of Pentacles",
       "image": "assets/images/cardfronts/twoofpentacles.webp",
       "interpretation": "Balance is a dance. Stay flexible as you juggle priorities and adapt to life's changing rhythm.",
-      "specifics": "LOVE: Juggling priorities in love. CAREER: Balance competing tasks. FINANCE: Budget carefully. HEALTH: Adapt to shifting needs.",
+      "specifics": "LOVE: Juggling priorities in love.\nCAREER: Balance competing tasks.\nFINANCE: Budget carefully.\nHEALTH: Adapt to shifting needs.",
       "response": "Maybe"
     },
     {
       "name": "Three of Pentacles",
       "image": "assets/images/cardfronts/threeofpentacles.webp",
       "interpretation": "Great things are built together. Collaboration and shared vision bring your efforts to life.",
-      "specifics": "LOVE: Build love with teamwork. CAREER: Success through collaboration. FINANCE: Group ventures thrive. HEALTH: Skilled support helps.",
+      "specifics": "LOVE: Build love with teamwork.\nCAREER: Success through collaboration.\nFINANCE: Group ventures thrive.\nHEALTH: Skilled support helps.",
       "response": "Yes"
     },
     {
       "name": "Four of Pentacles",
       "image": "assets/images/cardfronts/fourofpentacles.webp",
       "interpretation": "Security feels comfortable, but your rigidity can block the flow. Trust, be giving and greatful in order to receive.",
-      "specifics": "LOVE: Guarded emotions block flow. CAREER: Holding too tight limits growth. FINANCE: Save but don\u2019t hoard. HEALTH: Loosen control.",
+      "specifics": "LOVE: Guarded emotions block flow.\nCAREER: Holding too tight limits growth.\nFINANCE: Save but don\u2019t hoard.\nHEALTH: Loosen control.",
       "response": "Maybe"
     },
     {
       "name": "Five of Pentacles",
       "image": "assets/images/cardfronts/fiveofpentacles.webp",
       "interpretation": "Even in hardship, hope flickers. Seek support and know that this winter will thaw.",
-      "specifics": "LOVE: Loneliness or rejection. CAREER: Job loss or fear. FINANCE: Hard times. Seek aid. HEALTH: Physical or emotional depletion.",
+      "specifics": "LOVE: Loneliness or rejection.\nCAREER: Job loss or fear.\nFINANCE: Hard times. Seek aid.\nHEALTH: Physical or emotional depletion.",
       "response": "No"
     },
     {
       "name": "Six of Pentacles",
       "image": "assets/images/cardfronts/sixofpentacles.webp",
       "interpretation": "Give with grace, receive with gratitude. Balance is found in generosity and fair exchange.",
-      "specifics": "LOVE: Mutual giving and care. CAREER: Promotion or help ahead. FINANCE: Give and receive wisely. HEALTH: Balance energy exchange.",
+      "specifics": "LOVE: Mutual giving and care.\nCAREER: Promotion or help ahead.\nFINANCE: Give and receive wisely.\nHEALTH: Balance energy exchange.",
       "response": "Yes"
     },
     {
       "name": "Seven of Pentacles",
       "image": "assets/images/cardfronts/sevenofpentacles.webp",
       "interpretation": "You've planted the seeds but you must be patient. Trust that growth will come at the right time.",
-      "specifics": "LOVE: Assess relationship\u2019s worth. CAREER: Patience with long-term goals. FINANCE: Wait for payoff. HEALTH: Progress takes time.",
+      "specifics": "LOVE: Assess relationship\u2019s worth.\nCAREER: Patience with long-term goals.\nFINANCE: Wait for payoff.\nHEALTH: Progress takes time.",
       "response": "Maybe"
     },
     {
       "name": "Eight of Pentacles",
       "image": "assets/images/cardfronts/eightofpentacles.webp",
       "interpretation": "Dedicate yourself to your craft. Every step forward brings mastery, meaning, and reward.",
-      "specifics": "LOVE: Invest in growth together. CAREER: Skill brings recognition. FINANCE: Steady income builds. HEALTH: Work at self-improvement.",
+      "specifics": "LOVE: Invest in growth together.\nCAREER: Skill brings recognition.\nFINANCE: Steady income builds.\nHEALTH: Work at self-improvement.",
       "response": "Yes"
     },
     {
       "name": "Nine of Pentacles",
       "image": "assets/images/cardfronts/nineofpentacles.webp",
       "interpretation": "Luxury in simplicity. Relish in your independence and the beauty you've cultivated through your effort.",
-      "specifics": "LOVE: Enjoy independence in love. CAREER: Success and self-sufficiency. FINANCE: Luxury from hard work. HEALTH: Comfort and balance.",
+      "specifics": "LOVE: Enjoy independence in love.\nCAREER: Success and self-sufficiency.\nFINANCE: Luxury from hard work.\nHEALTH: Comfort and balance.",
       "response": "Yes"
     },
     {
       "name": "Ten of Pentacles",
       "image": "assets/images/cardfronts/tenofpentacles.webp",
       "interpretation": "Legacy blooms with strong roots. Family, tradition, and financial security create lasting harmony.",
-      "specifics": "LOVE: Lasting love and family roots. CAREER: Legacy and stability. FINANCE: Wealth across generations. HEALTH: Enduring vitality.",
+      "specifics": "LOVE: Lasting love and family roots.\nCAREER: Legacy and stability.\nFINANCE: Wealth across generations.\nHEALTH: Enduring vitality.",
       "response": "Yes"
     },
     {
       "name": "Page of Pentacles",
       "image": "assets/images/cardfronts/pageofpentacles.webp",
       "interpretation": "A spark of potential lights the way. Pursue your curiosity and let learning shape your path.",
-      "specifics": "LOVE: Curious about connection. CAREER: Learn new skills. FINANCE: Seed of stability planted. HEALTH: Take practical steps.",
+      "specifics": "LOVE: Curious about connection.\nCAREER: Learn new skills.\nFINANCE: Seed of stability planted.\nHEALTH: Take practical steps.",
       "response": "Yes"
     },
     {
       "name": "Knight of Pentacles",
       "image": "assets/images/cardfronts/knightofpentacles.webp",
       "interpretation": "Steady progress wins the race. Stay grounded, patient, and loyal to the task at hand.",
-      "specifics": "LOVE: Loyal and steady love. CAREER: Hard work brings reward. FINANCE: Cautious growth ahead. HEALTH: Discipline supports wellness.",
+      "specifics": "LOVE: Loyal and steady love.\nCAREER: Hard work brings reward.\nFINANCE: Cautious growth ahead.\nHEALTH: Discipline supports wellness.",
       "response": "Yes"
     },
     {
       "name": "Queen of Pentacles",
       "image": "assets/images/cardfronts/queenofpentacles.webp",
       "interpretation": "Your nurturing spirit brings comfort. You can create stability through gentle cultivation and grounded care.",
-      "specifics": "LOVE: Nurturing, earthy love. CAREER: Success through care. FINANCE: Prosperity managed wisely. HEALTH: Holistic self-care focus.",
+      "specifics": "LOVE: Nurturing, earthy love.\nCAREER: Success through care.\nFINANCE: Prosperity managed wisely.\nHEALTH: Holistic self-care focus.",
       "response": "Yes"
     },
     {
       "name": "King of Pentacles",
       "image": "assets/images/cardfronts/kingofpentacles.webp",
       "interpretation": "Build with confidence. Abundance is cultivated with discipline, integrity, and compassionate use of power.",
-      "specifics": "LOVE: A secure and generous bond. CAREER: Lead with grounded power. FINANCE: Wealth through wisdom. HEALTH: Strength from routine.",
+      "specifics": "LOVE: Secure and generous bond.\nCAREER: Lead with grounded power.\nFINANCE: Wealth through wisdom.\nHEALTH: Strength from routine.",
       "response": "Yes"
-   }
-    ]
-  }
+    }
+  ]
+}
