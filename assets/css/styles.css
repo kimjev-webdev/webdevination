@@ -794,7 +794,7 @@ button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
   font-family: "Tourney", monospace !important;
   font-size: 2rem !important;
   letter-spacing: 1vw;
-  margin: 10px 10px 10px 10px;
+  margin: 0px 10px 0px 10px;
 }
 
 #selected-cardone {
@@ -912,8 +912,12 @@ font-family: "Source Code Pro", monospace;
 }
 
 .onecardp {
-  max-width: 80%;
   text-align: justify !important;
+}
+
+.extratextbigscreen {
+  text-align: justify !important;
+  display: none;
 }
 
 .card-name {
@@ -1023,7 +1027,6 @@ img.onecardadvert {
   font-family: "Source Code Pro", monospace;
   font-size: 1rem;
   text-align: justify;
-  margin: 0 30px 0 50px;
 } 
 
 #threecard-stack {
@@ -1326,6 +1329,11 @@ footer {
 
 .cardgame-select {
 width: 30% !important;
+}
+
+.extratextbigscreen {
+  display: block;
+  text-align: justify !important;
 }
 }
 
