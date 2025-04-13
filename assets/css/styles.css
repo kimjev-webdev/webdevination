@@ -339,7 +339,7 @@ text-align: center;
   padding: 10px 20px;
   font-size: 2rem;
   transition: 0.3s;
-  z-index: 2;
+  z-index: 1 !important;
 }
 
 /* extra styling for explination text on info page */
@@ -1239,6 +1239,7 @@ footer {
    font-size: 0.75rem;
   line-height: 0.75rem;
   min-width: 100vw;
+  z-index: -1 !important;
 }
 
 
