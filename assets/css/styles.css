@@ -567,6 +567,10 @@ body.cards {
   padding: 20px;
 }
 
+.intro-paragraph, #majorArcanaIntro p{
+  text-align: justify !important;
+}
+
 .flip-card {
   width: 100%;
   aspect-ratio: 2 / 3;
@@ -1161,8 +1165,6 @@ p {
     align-items: center;
     align-content: center;
     justify-content: center;
-    height: 100vh; /* Full screen height */
-   /* Optional padding */
   }
 
   .cardgame-select {
