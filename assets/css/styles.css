@@ -266,19 +266,19 @@ text-align: center;
   padding: 1rem;
 }
 
-/* Navbar brand icon color */
+/* navbar brand (pentagram) icon color */
 .navbar-brand i {
   color: rgb(174, 255, 0);
 }
 
-/* Hamburger button styling */
+/* hamburger button styling */
 .navbar-toggler.glow-toggle {
   border: none;
   outline: none;
   padding: 0;
 }
 
-/* Hamburger bars */
+/* hamburger bars styling */
 .glow-toggle .bar {
   display: block;
   width: 30px;
@@ -290,7 +290,7 @@ text-align: center;
   box-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
 
-/* When toggler is open (menu expanded) - transform to X */
+/* when toggler is open (menu expanded) - transform to a cross */
 .glow-toggle:not(.collapsed) .bar:nth-child(1) {
   transform: translateY(10px) rotate(45deg);
 }
@@ -303,14 +303,10 @@ text-align: center;
   transform: translateY(-10px) rotate(-45deg);
 }
 
-/* Optional hover glow boost */
-.glow-toggle:hover .bar {
-  box-shadow: 0 0 10px #2aff1a, 0 0 15px #2aff1a, 0 0 25px #2aff1a;
-}
-/* --- general navbar styles --- */
+/* remove focus outline and focus shadow on toggler */
 .navbar-toggler:focus {
-  outline: none; /* Remove the focus outline */
-  box-shadow: none; /* Remove the focus shadow */
+  outline: none; 
+  box-shadow: none; 
 }
 
 /* navbar toggle button styles */   
@@ -322,7 +318,7 @@ text-align: center;
   margin-top: 38px;
 }
 
-/* --- info page styles --- 
+/* --- info page styles --- */
 
 /* terminal intro text alignment */
 .terminal {
@@ -563,7 +559,6 @@ box-shadow: #2aff1a;
 
 /* --- cards page styles --- */
 body.cards {   
-  margin-top: 100px; 
   padding: 20px;
 }
 
