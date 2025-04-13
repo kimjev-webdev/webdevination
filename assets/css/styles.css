@@ -339,6 +339,7 @@ text-align: center;
   padding: 10px 20px;
   font-size: 2rem;
   transition: 0.3s;
+  z-index: 2;
 }
 
 /* extra styling for explination text on info page */
@@ -1234,23 +1235,9 @@ p {
 
 /* footer styles */
 footer {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  align-self: self-end;
-  background-color: transparent;
-  color: rgb(174, 255, 0) !important;
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  font-family: "Source Code Pro", monospace !important;
-  font-size: 0.75rem;
+   font-size: 0.75rem;
   line-height: 0.75rem;
-  text-align: center;
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  z-index: 10;
-  margin-top: 90vh; /* Pushes the footer to the bottom */
+  min-width: 100vw;
 }
 
 

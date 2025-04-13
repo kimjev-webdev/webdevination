@@ -36,7 +36,7 @@ function insertMajorArcanaIntro() {
     const introHtml = `
         <div id="majorArcanaIntro" class="intro-paragraph mb-4">
             <p>The Major Arcana is the sacred spine of the tarot, a luminous thread that weaves through the soul’s incarnate journey. These 22 archetypal cards are not mere symbols; they are cosmic initiations — mirrors of the soul's growth, echoes of ancient wisdom, and portals to the mysteries of life, death, and rebirth.</p>
-            <p>We begin as The Fool; innocence unbound. With a knapsack of dreams and a heart full of wonder, we step off the cliff and begin the journey through the Major Arcana.</p>
+            <p>We begin as <strong>The Fool</strong>; innocence unbound. With a knapsack of dreams and a heart full of wonder, we step off the cliff and begin the journey through the Major Arcana.</p>
             <p>Each card encountered is a lesson, a challenge, a transformation.</p>
             <p>We meet <strong>The Magician</strong>, who teaches manifestation and will; <strong>The High Priestess</strong>, who whispers of inner realms and mystery. With <strong>The Empress</strong> and <strong>The Emperor</strong>, we learn the sacred dance of nurturance and order. <strong>The Hierophant</strong> initiates us into tradition and spiritual law, while <strong>The Lovers</strong> present the divine puzzle of love and choice.</p>
             <p><strong>The Chariot</strong> is driven by our will, and <strong>Strength</strong> teaches us that true power lies in compassion. In <strong>The Hermit</strong>, we find wisdom in solitude. <strong>The Wheel of Fortune</strong> spins — fate stirs, and we learn that the only constant is change.</p>
