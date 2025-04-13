@@ -30,6 +30,7 @@ body {
   margin-top: 100px;
   min-width: 100vw;
   padding: 0;
+  padding-bottom: 100px;
   background-size: cover;
   background-color: black;
   background-image: url('../images/tarotbg.webp');
@@ -569,12 +570,12 @@ box-shadow: #2aff1a;
 }
 
 /* --- cards page styles --- */
-body.cards {   
-  padding: 20px;
-}
-
 .intro-paragraph, #majorArcanaIntro p{
   text-align: justify !important;
+}
+
+.cardscont {
+  min-height: 100vh;  
 }
 
 .flip-card {
@@ -647,7 +648,7 @@ body.cards {
   justify-content: center;
   margin: 0 !important;
   padding: 0 !important;
-  gap: 1.5rem !important;
+  gap: 1rem !important;
 }
 
 .accordion-button {
@@ -1249,6 +1250,7 @@ footer {
 
 
 
+
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
 
@@ -1364,5 +1366,12 @@ width: 30% !important;
     display: none;
   }
 }
+
+@media (hover: hover) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
 
 
