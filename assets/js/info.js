@@ -1,24 +1,38 @@
 // This script handles the typing effect for the terminal text and the display of buttons and explanations.     
+
 // Function to type the terminal text
 function typeText() {
+    // Remove old cursor
+    const existingCursor = document.querySelector('.cursor');
+    if (existingCursor) existingCursor.remove();
+
     if (typingInProgress && currentTextIndex < textToType.length) {
         const currentText = textToType[currentTextIndex];
         
         if (currentCharIndex < currentText.length) {
             terminalTextElement.textContent += currentText[currentCharIndex];
             currentCharIndex++;
+            addCursor();
             setTimeout(typeText, 100); // Adjust typing speed
         } else {
-            // After typing a line, move to the next line after a delay
             terminalTextElement.textContent += '\n';
             currentTextIndex++;
             currentCharIndex = 0;
+            addCursor();
             setTimeout(typeText, 500); // Adjust delay between lines
         }
     } else if (currentTextIndex >= textToType.length) {
-        // Once typing is done, show buttons and explanations
+        addCursor(); // Keep cursor blinking after text finishes
         showButtons();
     }
+}
+
+// Function to add blinking cursor
+function addCursor() {
+    const cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    cursor.textContent = '|';
+    terminalTextElement.appendChild(cursor);
 }
 
 // Function to show buttons and explanations
@@ -60,18 +74,19 @@ function showButtons() {
 // Function to handle skip button click
 function handleSkipButtonClick() {
     typingInProgress = false; // Stop typing
-    terminalTextElement.textContent = textToType.join(''); // Display all the text at once to avoid delay from terminal effect introduction text
+    terminalTextElement.textContent = textToType.join('');
+    addCursor(); // Add blinking cursor at the end
 
     // Show buttons and explanations immediately
     showButtons();
 }
 
-// State variables (moved here after function declarations)
+// State variables
 let currentTextIndex = 0;
 let currentCharIndex = 0;
 let typingInProgress = true;
 
-// DOM elements (kept here, after the state variables)
+// DOM elements
 const terminalTextElement = document.getElementById('terminalText');
 const skipButton = document.getElementById('skipButton');
 const buttonsContainer = document.getElementById('buttons-container');
@@ -81,7 +96,7 @@ const pickOneExplanation = document.getElementById('pickOneExplanation');
 const pickThreeExplanation = document.getElementById('pickThreeExplanation');
 
 // Image elements
-const cardbacksOne = document.querySelectorAll('#buttons-container .col-12.col-md-6 img'); // Select the images above each button
+const cardbacksOne = document.querySelectorAll('#buttons-container .col-12.col-md-6 img');
 
 // Text to be typed out
 const textToType = [
@@ -91,7 +106,7 @@ const textToType = [
     "Two paths lay before you, but which one will you choose?\n",
 ];
 
-// Add event listener for skip button
+// Event listener for skip button
 skipButton.addEventListener('click', handleSkipButtonClick);
 
 // Start typing text when the page loads
