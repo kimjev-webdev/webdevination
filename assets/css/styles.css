@@ -1245,9 +1245,18 @@ footer {
    font-size: 0.75rem;
   line-height: 0.75rem;
   min-width: 100vw;
+  width: 100%;
   z-index: -1 !important;
 }
 
+  .site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers ALL child elements horizontally */
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
 
 
 
@@ -1357,13 +1366,20 @@ width: 30% !important;
 
 /* Show the rotate screen icon and prompt on devices with portrait orientation */
 @media only screen and (orientation: portrait) {
-  .rotate-prompt {
-    display: block;
-  }
+    .rotate-prompt {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      max-width: 100%;
+      font-size: 0.75rem;
+    }
 
-  footer {
-    background-color: black !important;
-  }
+    .rotate-prompt.i {
+      font-size: 2rem !important;
+    }
 }
 
 @media only screen and (orientation: landscape) {
