@@ -1,95 +1,83 @@
-// This file contains the logic for the three-card tarot reading game. 
-// It handles the shuffling of the tarot deck, drawing three cards, and displaying them in the PAST, PRESENT, and FUTURE columns. 
-// The game also includes a shuffle animation for the card stack and a function to display card details after drawing them.
+// this file contains the logic for the three-card tarot reading game. 
+// it handles the shuffling of the tarot deck, drawing three cards, and displaying them in the past, present, and future columns. 
+// the game also includes a shuffle animation for the card stack and a function to display card details after drawing them.
 
-// Handle Shuffle button click (with animation)
+// handle shuffle button click (with animation)
 function handleShuffleButtonClick(shuffledDeck, threecardStack, cardsContainer) {
-  // Show shuffled card stack and hide selected card container
-  threecardStack.style.visibility = 'visible'; // Make shuffled cards visible
-  cardsContainer.style.visibility = 'hidden'; // Hide the cards container
+  // show shuffled card stack and hide selected card container
+  threecardStack.style.display = 'flex';
+  cardsContainer.style.display = 'none';
 
-  shuffleDeck(shuffledDeck); // Shuffle deck (from utilities.js)
-  shuffleAnimation(); // Start shuffle animation (from utilities.js)
+  shuffleDeck(shuffledDeck); // shuffle deck (from utilities.js)
+  shuffleAnimation(); // start shuffle animation
 
   setTimeout(() => {
     alert("Deck shuffled! Click 'Deal' to draw three cards.");
-  }, 3500); // Wait for animation to finish before shuffling deck
+  }, 3500);
 }
 
-// Handle Deal button click (draw three cards)
+// handle deal button click (draw three cards)
 function handleDealButtonClick(shuffledDeck, threecardStack, cardsContainer, pastColumn, presentColumn, futureColumn) {
-  // Hide shuffled cards and show the cards container
-  threecardStack.style.visibility = 'hidden'; // Hide the shuffled card stack
-  cardsContainer.style.visibility = 'visible'; // Show the cards container
+  // hide shuffled card stack and show the cards container
+  threecardStack.style.display = 'none';
+  cardsContainer.style.display = 'flex';
 
-  // Shuffle the deck before drawing three random cards
-  shuffleDeck(shuffledDeck); // Shuffle deck (from utilities.js)
-  // Draw three random cards and display them in columns
+  shuffleDeck(shuffledDeck);
   drawThreeCards(shuffledDeck, pastColumn, presentColumn, futureColumn);
 }
 
-// Draw three random cards for the PAST, PRESENT, and FUTURE columns
+// draw three random cards for past, present, future
 function drawThreeCards(shuffledDeck, pastColumn, presentColumn, futureColumn) {
   if (shuffledDeck.length < 3) {
     alert("Not enough cards left in the deck!");
-    return; // Stop drawing if not enough cards are left
+    return;
   }
 
-  // Draw three cards and remove them from the shuffled deck
   const pastCard = shuffledDeck.pop();
   const presentCard = shuffledDeck.pop();
   const futureCard = shuffledDeck.pop();
 
-  // Show the cards in their respective columns
   displayCardInColumn(pastCard, pastColumn);
   displayCardInColumn(presentCard, presentColumn);
   displayCardInColumn(futureCard, futureColumn);
 }
 
-// Display the card in a given column
+// display the card in a given column
 function displayCardInColumn(card, column) {
-  // Create the card element (front and back)
+  // create the card element (front and back)
   const cardElement = document.createElement('div');
   cardElement.classList.add('selected-card');
   cardElement.setAttribute('data-interpretation', card.interpretation);
 
-  // Create the back of the card (initially visible)
   const cardBack = document.createElement('div');
   cardBack.classList.add('card-back');
-
   const cardBackImage = document.createElement('img');
-  cardBackImage.src = './assets/images/cardbacks.webp'; // Set card back image
+  cardBackImage.src = './assets/images/cardbacks.webp';
   cardBackImage.alt = 'Card Back';
   cardBack.appendChild(cardBackImage);
 
-  // Create the front of the card (hidden initially)
   const cardFront = document.createElement('div');
   cardFront.classList.add('card-front');
-
   const cardFrontImage = document.createElement('img');
-  cardFrontImage.src = card.image; // Use front image path from JSON
+  cardFrontImage.src = card.image;
+  cardFrontImage.alt = card.name;
   cardFront.appendChild(cardFrontImage);
 
-  // Append front and back to card element
   cardElement.appendChild(cardBack);
   cardElement.appendChild(cardFront);
 
-  // Append the card to the column
-  column.innerHTML = ''; // Clear any previous card
+  column.innerHTML = '';
   column.appendChild(cardElement);
 
-  // Ensure card back is displayed first, then flip after a delay
   setTimeout(() => {
-    cardElement.classList.add('flip'); // Trigger flip animation
-
-    // After the flip animation, reveal card details
+    cardElement.classList.add('flip');
     setTimeout(() => {
-      showCardDetails(card, column); // Show card details after flip
-    }, 500); // Delay showing details to allow the flip to finish
-  }, 1000); // Delay to ensure the back is visible first
+      showCardDetails(card, column);
+    }, 500);
+  }, 1000);
 }
 
-// Show only the interpretation (not the response)
+// show only the interpretation (not the response)
 function showCardDetails(card, column) {
   const cardInfo = document.createElement('div');
   cardInfo.classList.add('card-info');
@@ -102,32 +90,30 @@ function showCardDetails(card, column) {
   column.appendChild(cardInfo);
 }
 
-// DOMContentLoaded event listener
+// dom ready: load tarot and set up event listeners
 document.addEventListener('DOMContentLoaded', () => {
-  // Load the tarot JSON file and initialize the game logic
   fetch('./assets/tarot.json')
     .then(response => response.json())
     .then(data => {
       const tarotDeck = data.tarot;
       const shuffleButton = document.getElementById('shuffle-button');
       const dealButton = document.getElementById('deal-button');
-      const threecardStack = document.getElementById('threecard-stack'); // Changed this reference
+      const threecardStack = document.getElementById('threecard-stack');
       const cardsContainer = document.getElementById('cards-container');
       const pastColumn = document.getElementById('past');
       const presentColumn = document.getElementById('present');
       const futureColumn = document.getElementById('future');
 
-      // Ensure the threecard stack is visible when the page loads
-      threecardStack.style.visibility = 'visible'; // This line ensures visibility before any interaction
+      // make sure the threecard stack is shown at load
+      threecardStack.style.display = 'flex';
+      cardsContainer.style.display = 'none';
 
-      let shuffledDeck = [...tarotDeck]; // Create a copy of the tarot deck to shuffle
+      let shuffledDeck = [...tarotDeck];
 
-      // Handle Shuffle button click event
       shuffleButton.addEventListener('click', () => {
         handleShuffleButtonClick(shuffledDeck, threecardStack, cardsContainer);
       });
 
-      // Handle Deal button click event
       dealButton.addEventListener('click', () => {
         handleDealButtonClick(shuffledDeck, threecardStack, cardsContainer, pastColumn, presentColumn, futureColumn);
       });

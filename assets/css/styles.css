@@ -226,7 +226,7 @@ i.rotate-icon {
 }
 
 /* navbar link hover styles */  
-.navlink.active, .nav-item:hover .nav-link, .navlink:hover {
+.navlink.active, .nav-item:hover .nav-link, .navlink:hover, a.dropdown-item:hover {
   background-color: rgb(174, 255, 0);
   color: #000000;
   text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
@@ -246,11 +246,16 @@ i.rotate-icon {
 /* nav dropdown menu styles */
 .dropdown-menu, .dropdown-menu:has(.dropdown:hover), a.dropdown-item {
   background-color: #000;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
   
   .dropdown-menu, .dropdown-menu:has(.dropdown:hover) {
   border: 1px solid rgb(174, 255, 0);
   font-family: "Source Code Pro", monospace;
+  background-color: #000;
+  color: rgb(174, 255, 0);
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
 
 /* links in dropdown menu item styles */     
@@ -260,6 +265,7 @@ a.dropdown-item {
   text-shadow: 0 0 5px #2aff1a 0 0 10px #2aff1a 0 0 20px #2aff1a;
 text-align: center;
 }
+
 
 .navbar {
   background-color: transparent; /* Optional: adjust for your theme */
@@ -1026,23 +1032,29 @@ img.onecardadvert {
 #intro-text {
   font-family: "Source Code Pro", monospace;
   font-size: 1rem;
-  text-align: justify;
+  text-align: center;
+  margin: 10px 0 10px 0;
 } 
 
+p#intro-text.extratextbigscreenthree {
+  text-align: center !important;
+}
+
 #threecard-stack {
-  visibility: hidden;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 #cards-container {
-  visibility: hidden;
+  display: none; /* initially hidden */
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .threecard {
-  min-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -1068,9 +1080,7 @@ div.col-12.threeshuffle {
 .text-center {
   margin: 0px 10px;
 }
-div#cards-container.row.mt-5 {
-  margin-top: -13rem !important;  
-}
+
 
 /* learning page styles */  
 
@@ -1335,7 +1345,12 @@ width: 30% !important;
   display: block;
   text-align: justify !important;
 }
+
+#intro-text {
+  margin: 10px 0 10px 0;
+} 
 }
+
 
 /* Show the rotate screen icon and prompt on devices with portrait orientation */
 @media only screen and (orientation: portrait) {
