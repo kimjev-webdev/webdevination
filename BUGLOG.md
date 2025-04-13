@@ -30,3 +30,11 @@
 | 2025-04-05 | Oracle deployment prep                     | Node.js/Deploy | Created .env.example, cleaned up deployment structure, and pushed server configuration for Render. |
 | 2025-04-06 | Oracle font not applying to response       | CSS            | Updated styles to ensure Source Code Pro was applied to Oracle output.                             |
 | 2025-04-06 | Local not matching remote                  | Merge/Sync     | Synced local changes with Oracle integration and updated .gitignore for backend.                   |
+| 2025-04-06 | Font not consistently applied in styles.css        | CSS          | Applied Source Code Pro across site via styles.css font-family updates. |
+| 2025-04-06 | Rotate prompt misplaced on index.html              | HTML/CSS     | Moved rotate prompt inside footer in index.html to align properly on mobile. |
+| 2025-04-06 | Three-card reading logic included unwanted response categories | HTML/JS      | Stripped 'yes/no' response data from card interpretation in threecard.js. |
+| 2025-04-08 | General UI issue in styles.css                     | CSS          | Made structural layout fixes in styles.css. |
+| 2025-04-09 | Overlapping footer or header elements in styles.css | CSS          | Adjusted z-index values in styles.css to fix visual stacking issues. |
+| 2025-04-12 | Tarot data JSON had redundant interpretation text  | JS/Content   | Cleaned interpretation fields in tarot.json to improve clarity for learning game. |
+| 2025-04-12 | Uneven spacing on layout elements in styles.css    | CSS          | Tuned margin and padding settings in styles.css for consistent spacing. |
+| 2025-04-12 | Accordion chevrons did not reflect open/closed state | JS/CSS       | Synced chevron icon animation with accordion collapse logic using JS and CSS. |

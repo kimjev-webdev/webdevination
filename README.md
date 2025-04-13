@@ -692,7 +692,7 @@ The background image is the final visual 'wow' that aims to ensure website users
 
 <h3 id="52"></h3>
 
-### 8. [NAME](https://LINK) 
+### 8. [Chat GPT](https://LINK) 
 * WRITE HERE
 
 <h3 id="53"></h3>
