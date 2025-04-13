@@ -1,6 +1,6 @@
 // Function to generate the card section (cards in rows of 4)
 function generateCardSection(cards, suit) {
-    let cardHtml = '<div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-6 row-cols-xxl-6 g-4">';
+    let cardHtml = '<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-6 row-cols-xxl-6 g-4">';
     cards.forEach(card => {
         const imagePath = `assets/images/cardfronts/${card.name.toLowerCase().replace(/ /g, '')}.webp`;
 
