@@ -1254,8 +1254,6 @@ footer {
     padding: 1rem;
   }
 
-
-
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
 
@@ -1324,7 +1322,6 @@ footer {
   font-size: 1.5rem;
 }
 }
-
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .shufflebtn, .dealbtn {   
