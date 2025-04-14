@@ -1,10 +1,11 @@
-// Function to generate the card section (cards in rows of 4)
+
+// improved function to generate the card section with semantic structure and aria labels
 function generateCardSection(cards, suit) {
-    let cardHtml = '<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-6 row-cols-xxl-6 g-4">';
+    let cardHtml = `<section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-6 row-cols-xxl-6 g-4" role="region" aria-label="${suit.charAt(0).toUpperCase() + suit.slice(1)} cards">`;
+
     cards.forEach(card => {
         const imagePath = `assets/images/cardfronts/${card.name.toLowerCase().replace(/ /g, '')}.webp`;
 
-        // Replace headers with emojis, bold tags, and convert \n to <br>
         const specificsHtml = card.specifics
             .replace(/LOVE:/g, "<strong>💜 LOVE:</strong>")
             .replace(/CAREER:/g, "<strong>✨ CAREER:</strong>")
@@ -14,20 +15,22 @@ function generateCardSection(cards, suit) {
 
         cardHtml += `
             <div class="col">
-                <div class="flip-card" data-flipped="false">
+                <article class="flip-card" role="group" aria-labelledby="card-${card.name.replace(/\s+/g, '-').toLowerCase()}-title" data-flipped="false">
                     <div class="flip-card-inner">
-                        <div class="flip-card-front">
+                        <div class="flip-card-front" aria-hidden="false">
                             <img src="${imagePath}" class="card-img-top" alt="${card.name}">
                         </div>
-                        <div class="flip-card-back">
+                        <div class="flip-card-back" aria-hidden="true">
+                            <h3 id="card-${card.name.replace(/\s+/g, '-').toLowerCase()}-title" class="visually-hidden">${card.name}</h3>
                             <p>${specificsHtml}</p>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         `;
     });
-    cardHtml += '</div>';
+
+    cardHtml += '</section>';
     return cardHtml;
 }
 
@@ -74,7 +77,6 @@ function insertSuitIntro(suitId, storyText) {
 // Function to enable flip toggle on touch devices
 function enableTouchFlipBehavior() {
     const cards = document.querySelectorAll('.flip-card');
-
     cards.forEach(card => {
         card.addEventListener('click', function () {
             if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
@@ -148,7 +150,6 @@ The Suit of Pentacles teaches that success is not only about money — it’s ab
             majorArcanaCards.innerHTML = generateCardSection(majorArcana, 'major');
 
             const suits = ['wands', 'cups', 'swords', 'pentacles'];
-
             suits.forEach(suit => {
                 const suitCards = minorArcana.filter(card => card.name.toLowerCase().includes(suit));
                 const suitContainer = document.getElementById(`${suit}Cards`);
@@ -161,9 +162,7 @@ The Suit of Pentacles teaches that success is not only about money — it’s ab
         })
         .catch(error => console.error("Error loading tarot data:", error));
 
-    // Add chevron flip logic to accordion buttons
     const accordionButtons = document.querySelectorAll(".accordion-button");
-
     accordionButtons.forEach(button => {
         const icon = button.querySelector("i");
         const targetId = button.getAttribute("data-bs-target");
@@ -174,7 +173,6 @@ The Suit of Pentacles teaches that success is not only about money — it’s ab
                 icon.classList.remove("fa-chevron-down");
                 icon.classList.add("fa-chevron-up");
             });
-
             target.addEventListener("hide.bs.collapse", () => {
                 icon.classList.remove("fa-chevron-up");
                 icon.classList.add("fa-chevron-down");

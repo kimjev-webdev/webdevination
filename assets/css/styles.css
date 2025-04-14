@@ -574,10 +574,6 @@ box-shadow: #2aff1a;
   text-align: justify !important;
 }
 
-.cardscont {
-  min-height: 100vh;  
-}
-
 .flip-card {
   width: 100%;
   aspect-ratio: 2 / 3;

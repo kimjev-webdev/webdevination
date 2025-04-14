@@ -4,42 +4,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WebDevination Tarot Learning Game</title>
+  <title>WebDevination - Tarot Learning Game</title>
 
-  <!-- favicon set up -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+  <!-- seo meta data -->
+  <meta name="description" content="Enter the world of WebDevination. Discover your fate through tarot and consult the AI oracle — powered by code and creativity." />
+  <meta name="keywords" content="WebDevination, tarot, online tarot, AI oracle, digital tarot deck, tarot reading, GPT oracle, creative coding, mystic UI, Kim Piffy" />
+  <meta name="author" content="Kim Piffy" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="google" content="notranslate" />
+  <meta name="theme-color" content="#aeff00" />
+  <link rel="canonical" href="https://webdevination.onrender.com/" />
 
-  <!-- fonts and icons -->
-  <script src="https://kit.fontawesome.com/40e23bfd7e.js" crossorigin="anonymous"></script>
+  <!-- open graph info -->
+  <meta property="og:title" content="WebDevination – Unravel Your Cosmic Coding" />
+  <meta property="og:description" content="Let the machine guide your fate. The cards are waiting…" />
+  <meta property="og:image" content="https://webdevination.onrender.com/assets/images/ogimage.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://webdevination.onrender.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="WebDevination" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WebDevination – Unravel Your Cosmic Coding" />
+  <meta name="twitter:description" content="Let the machine guide your fate. The cards are waiting…" />
+  <meta name="twitter:image" content="https://webdevination.onrender.com/assets/images/ogimage.webp" />
+
+  <!-- apple mobile -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+  <!-- fonts & icons -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,600&display=swap" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/40e23bfd7e.js" crossorigin="anonymous"></script>
 
-  <!-- bootstrap css -->
+  <!-- bootstrap css link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
-  <!-- custom styles -->
-  <link rel="stylesheet" href="./assets/css/styles.css">
+  <!-- css styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-
 <body class="learn">
 
-  <!-- ========== header and navigation ========== -->
+  <!--  header and navigation -->
   <header class="fixed-top">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-
+       
         <!-- logo linking back to homepage -->
         <a class="navbar-brand" href="index.html" aria-label="go to homepage">
           <i class="fa-kit fa-pasted-svg-1 fa-2x fa-fade"></i>
         </a>
-
+       
         <!-- glowing hamburger toggler for mobile -->
         <button class="navbar-toggler collapsed glow-toggle" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -48,38 +79,33 @@
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
-
+       
         <!-- navigation links -->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-
+            
             <!-- dropdown menu -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                    Readings
-              </a>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Readings</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="onecard.html">One Card</a></li>
                 <li><a class="dropdown-item" href="threecard.html">Three Cards</a></li>
               </ul>
             </li>
-
+            
             <!-- other direct links -->
             <a class="nav-link" href="cards.html">Cards</a>
             <a class="nav-link" href="learn.html">Learn</a>
-
           </div>
         </div>
-
       </div>
     </nav>
   </header>
-
-  <!-- ========== main content ========== -->
+ 
+  <!-- main content -->
   <main class="container">
     <section class="row game-container">
-
+      
       <!-- heading and intro -->
       <h1>learn tarot</h1>
       <p class="cardgame-text">
@@ -88,50 +114,44 @@
         is designed to help you learn about the meanings and symbolism of each card in the tarot deck. Good luck and
         have fun!
       </p>
-
       <!-- card selection section -->
       <div class="col-12 col-md-6 cardgame-select">
         <div id="card-choices" class="card-choices">
           <!-- the 4 card choices will be dynamically inserted here -->
         </div>
       </div>
-
       <!-- card display and description section -->
       <div class="col-12 col-md-6 cardgame-display">
-
         <!-- prompt -->
         <p>Match this description to the correct card image:</p>
-
         <!-- description text -->
         <div id="card-description" class="card-description">
           <!-- description of the card will appear here -->
         </div>
-
         <!-- score display -->
         <div id="score" class="score">
           Score: 0
         </div>
-
         <!-- restart button -->
         <button id="restart-button" class="btn btn-primary">Restart</button>
       </div>
     </section>
   </main>
 
-  <!-- ========== footer ========== -->
+  <!-- footer -->
   <footer class="sticky-bottom text-center"> 
     <p>&copy; <span id="current-year"></span> WebDevination. All Rights Reserved.</p>
     <p>Made with <i class="fa-solid fa-heart"></i> by Kim Piffy</p>
   </footer>
 
-  <!-- js: bootstrap bundle -->
+  <!-- js bootstrap bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-  <!-- js: game logic -->
+ 
+    <!-- js game logic -->
   <script src="./assets/js/learn.js"></script>
-
-  <!-- js: dynamically set the current year in the footer -->
+  
+  <!-- js dynamically set the current year in the footer -->
   <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
