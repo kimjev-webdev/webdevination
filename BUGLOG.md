@@ -38,3 +38,4 @@
 | 2025-04-12 | Tarot data JSON had redundant interpretation text  | JS/Content   | Cleaned interpretation fields in tarot.json to improve clarity for learning game. |
 | 2025-04-12 | Uneven spacing on layout elements in styles.css    | CSS          | Tuned margin and padding settings in styles.css for consistent spacing. |
 | 2025-04-12 | Accordion chevrons did not reflect open/closed state | JS/CSS       | Synced chevron icon animation with accordion collapse logic using JS and CSS. |
+| 2025-04-14 | SEO + social sharing optimized               | Meta/Header    | Added meta tags for Open Graph & Twitter, tuned theme color, preload, canonical URL, and social preview image. |
