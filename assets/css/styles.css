@@ -274,8 +274,8 @@ text-align: center;
 
 
 .navbar {
-  background-color: transparent; /* Optional: adjust for your theme */
-  padding: 1rem;
+  background-color: transparent !important;
+  padding: 10px 15px 5px 0px;
 }
 
 /* navbar brand (pentagram) icon color */
@@ -777,7 +777,6 @@ overflow: visible !important;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-justify-content: center;
 }
 
 #deck {
@@ -1288,7 +1287,11 @@ footer {
 @media (max-width: 768px) {
   .card-name {
     max-width: 100%;
+
+  body.onecard {
+   margin-top: 0px;  
   }
+}
 
   .accordion-body > .row {
     margin: 0 20px 0 20px !important;
