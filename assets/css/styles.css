@@ -1079,13 +1079,14 @@ div.col-12.threeshuffle {
   flex-wrap: wrap;  
   justify-content: center;
   align-items: center;
-  margin: 100px 0 100px 0;
+  min-height: 200px;
   overflow: visible;
 }
 
 .text-center {
   margin: 0px 10px;
 }
+
 
 
 /* learning page styles */  
@@ -1291,7 +1292,11 @@ footer {
   body.onecard {
    margin-top: 0px;  
   }
+
+  .onecardrow {
+    padding: 0px 50px 0px 50px; 
 }
+  }
 
   .accordion-body > .row {
     margin: 0 20px 0 20px !important;
@@ -1317,6 +1322,10 @@ footer {
 
 .card-button {
   font-size: 1.5rem;
+}
+
+.threep {
+  margin: 0px 55px 0px 55px;
 }
 }
 
