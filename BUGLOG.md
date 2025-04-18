@@ -38,4 +38,7 @@
 | 2025-04-12 | Tarot data JSON had redundant interpretation text  | JS/Content   | Cleaned interpretation fields in tarot.json to improve clarity for learning game. |
 | 2025-04-12 | Uneven spacing on layout elements in styles.css    | CSS          | Tuned margin and padding settings in styles.css for consistent spacing. |
 | 2025-04-12 | Accordion chevrons did not reflect open/closed state | JS/CSS       | Synced chevron icon animation with accordion collapse logic using JS and CSS. |
-| 2025-04-14 | SEO + social sharing optimized               | Meta/Header    | Added meta tags for Open Graph & Twitter, tuned theme color, preload, canonical URL, and social preview image. |
+| 2025-04-14 | SEO + social sharing optimized               | Meta/Head   | Added meta tags for Open Graph & Twitter, tuned theme color, preload, canonical URL, and social preview image. |
+| 2025-04-18 | Navigation style bugs fixed              | Navigation/Header    | Implemented seperate nav.js to aid in hover and focus effects. Implemented collapse on readings when not hovered - user no longer has to click to close Readings tab. |
+| 2025-04-18 | Repetitive color and text-glow style instructions         | HTML/CSS    | Where feasible replaced duplicate color and text glow instructions with generic .text-glow utiliity applied across the site. |
+| 2025-04-18 | flashText animation and transform: scale(1:1) not effective on info.html 'Pick One Card' and 'Pick Three Card' headings.       | HTML/CSS    | Attempted to implement dynamically, add important class and remove conflicting instructions. Was able to apply the transformation but flashText is still not being applied to these buttons. Revisit in future.  |

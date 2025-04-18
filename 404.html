@@ -21,11 +21,56 @@
             padding: 50px;
         }
 </style>
+<header class="fixed-top text-glow">
+    <nav class="navbar navbar-expand-lg text-glow">
+      <div class="container-fluid text-glow">
+
+        <!-- logo linking back to homepage -->
+        <a class="navbar-brand text-glow" href="index.html" aria-label="Go to Homepage">
+          <i class="fa-kit fa-pasted-svg-1 fa-2x fa-fade text-glow"></i>
+        </a>
+
+        <!-- glowing hamburger toggler for mobile -->
+        <button class="navbar-toggler collapsed glow-toggle text-glow" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+          aria-label="Expand page navigation.">
+          <span class="bar text-glow"></span>
+          <span class="bar text-glow"></span>
+          <span class="bar text-glow"></span>
+        </button>
+
+        <!-- navigation links -->
+        <div class="collapse navbar-collapse text-glow" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto text-glow">
+            <!-- readings dropdown -->
+            <li class="nav-item dropdown text-glow">
+              <a class="nav-link dropdown-toggle text-glow" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Readings
+              </a>
+              <ul class="dropdown-menu text-glow" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="onecard.html">One Card</a></li>
+                <li><a class="dropdown-item" href="threecard.html">Three Cards</a></li>
+              </ul>
+            </li>
+            <!-- other direct links -->
+            <a class="nav-link" href="cards.html">Cards</a>
+            <a class="nav-link" href="learn.html">Learn</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
 <i class="fa-kit fa-pasted-svg-1 fa-10x fa-fade text-glow text-center-custom" style="color: rgb(174, 255, 0);"></i>
     <h1>404 ERROR!</h1>
     <h2>PAGE NOT FOUND</h2>
     <p>Sorry, the page you are looking for does not exist.</p>
     <p>It might have been removed, had its name changed, or is temporarily unavailable.</p>
-   
+</main>
+    <footer>
+        <p>© 2023 WebDevination. All rights reserved.</p>
+        <p>Made with <i class="fa-solid fa-heart"></i> by WebDevination</p>
+    </footer>
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear()</script> 
+    <script src="assets/js/nav.js"></script>
 </body>
 </html>

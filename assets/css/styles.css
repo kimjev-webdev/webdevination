@@ -18,14 +18,14 @@
   51%, 100% { opacity: 0; }
 }
 
-/* --- universal styles --- */
+/* --- universal styles ---*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
+/* body styles */
 body {
   min-height: 100vh;
   margin-top: 100px;
@@ -35,11 +35,9 @@ body {
   background-color: black !important;
   background-image: url('../images/tarotbg.webp');
   background-repeat: no-repeat; /* Adjust as needed */
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
 
-/* general body styles */
+/* general styles */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -50,7 +48,7 @@ p {
 }
 
 /* primary font styling for headers and buttons */
-h1, h2, h3, h4, h5, h6, button, button:hover {
+h1, h2, h3, h4, h5, h6, button, button:hover, button:active button:focus {
   font-family: 'Tourney', monospace;
   text-transform: uppercase !important;
   letter-spacing: 1vw;
@@ -60,19 +58,18 @@ h1, h2, h3, h4, h5, h6, button, button:hover {
   text-align: center;
   border: transparent !important;
   outline: none !important;
-color:  rgb(174, 255, 0) !important;  
-text-shadow: 0 0 5px  #2aff1a, 0 0 10px  #2aff1a, 0 0 20px  #2aff1a;
 }
 
-/* aid UX let user identiify clickable elements */  
+/* aid ux/accessibility let user identiify clickable elements */  
 button, button:hover { 
 cursor: pointer;
 }
 
 /* button hover effect */ 
 button:hover {
-transform: scale(1.1);
-animation: flashText 1s infinite;
+transform: scale(1.1) !important;
+animation: flashText 1s infinite !important;
+color: rgb(174, 255, 0) !important;
 }
 
 /* natural click in effect so user know when a button has been selected" */   
@@ -80,14 +77,13 @@ button:active {
   transform: scale(0.92);
 }
 
-/* icon colour and glow */ 
-i {
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  color: rgb(174, 255, 0);
+/* consolidated glow utility */
+.text-glow {
+  color: rgb(174, 255, 0) !important;
+  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a !important;  
 }
 
-/* --- landing page styles --- */
-
+/* --- landing page styles (index.html) -- */
 /* specific styles for the landing page body */
 body.landing {
   font-family: 'Tourney', monospace;
@@ -208,9 +204,10 @@ i.rotate-icon {
 /* --- navbar styles --- */
 .navbar {
   background-color: transparent !important;
+  padding: 10px 15px 5px 0px;
 }
 
- /* navbar item positioning */
+/* navbar item positioning */
 .nav-item {
   position: relative;
 }
@@ -226,19 +223,20 @@ i.rotate-icon {
   border-radius: 5px 5px 0 0;
   padding: 10px 15px;
   text-align: center;
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
   text-decoration: none;
+  color: rgb(174, 255, 0);
+  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;   
 }
 
-/* navbar link hover styles */  
-.navlink.active, .nav-item:hover .nav-link, .nav-link:hover, a.dropdown-item:hover {
-  background-color: rgb(174, 255, 0);
+/* navbar link hover styles */
+.nav-link:hover,
+.nav-item:hover .nav-link,
+a.dropdown-item:hover {
   color: #000000;
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-} 
+  background-color: rgb(174, 255, 0);
+}
 
-/* navbar active link styles */   
+/* navbar active link styles */
 .nav-link.active {
   border-bottom: 1px solid rgb(174, 255, 0);
   box-shadow: inset 0 3px 5px rgb(174, 255, 0);
@@ -249,41 +247,28 @@ i.rotate-icon {
   margin-right: 0;
 }
 
-/* nav dropdown menu styles */
-.dropdown-menu, .dropdown-menu:has(.dropdown:hover), a.dropdown-item {
+/* dropdown menu styles */
+.dropdown-menu {
   background-color: #000;
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-}
-  
-  .dropdown-menu, .dropdown-menu:has(.dropdown:hover) {
   border: 1px solid rgb(174, 255, 0);
   font-family: "Source Code Pro", monospace;
-  background-color: #000;
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
 
-/* links in dropdown menu item styles */     
+/* links in dropdown menu item styles */
 a.dropdown-item {
   font-family: "Source Code Pro", monospace;
+  text-align: center;
   color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a 0 0 10px #2aff1a 0 0 20px #2aff1a;
-text-align: center;
+  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;
 }
 
-
-.navbar {
-  background-color: transparent !important;
-  padding: 10px 15px 5px 0px;
+/* show dropdown menu when 'show' class is added */
+.dropdown-menu.show {
+  display: block;
 }
 
-/* navbar brand (pentagram) icon color */
-.navbar-brand i {
-  color: rgb(174, 255, 0);
-}
-
-/* hamburger button styling */
+/* --- hamburger icon styles/responsive navbar --- */
+/* Hamburger button styling */
 .navbar-toggler.glow-toggle {
   border: none;
   outline: none;
@@ -296,10 +281,10 @@ text-align: center;
   width: 30px;
   height: 4px;
   margin: 6px auto;
-  background-color: rgb(174, 255, 0);
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  background-color: rgb(174, 255, 0); 
+  box-shadow: 0 0 5px rgb(174, 255, 0), 0 0 10px rgb(174, 255, 0), 0 0 20px rgb(174, 255, 0);
 }
 
 /* when toggler is open (menu expanded) - transform to a cross */
@@ -317,11 +302,11 @@ text-align: center;
 
 /* remove focus outline and focus shadow on toggler */
 .navbar-toggler:focus {
-  outline: none; 
-  box-shadow: none; 
+  outline: none;
+  box-shadow: none;
 }
 
-/* navbar toggle button styles */   
+/* navbar toggle button styles */
 #site-nav .navbar-toggle {
   float: right;
   text-align: right;
@@ -330,8 +315,29 @@ text-align: center;
   margin-top: 38px;
 }
 
-/* --- info page styles --- */
+/* default state: green text on black background */
+.nav-link.menu-current {
+  color: rgb(174, 255, 0) !important;
+  background-color: #000 !important;
+  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
+}
 
+/* hover state: black text on green background */
+.nav-link.menu-current:hover {
+  color: #000 !important;
+  background-color: rgb(174, 255, 0) !important;
+  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;  
+}
+
+/* active dropdown state: black text on green background */
+.nav-item.dropdown.dropdown-open > .nav-link {
+  color: #000 !important;
+  background-color: rgb(174, 255, 0) !important;
+  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
+}
+
+
+/* --- readings menu item styles (info.html) --- */
 /* terminal intro text alignment */
 .terminal {
   text-align: center;
@@ -384,12 +390,10 @@ text-align: center;
   letter-spacing: 1vw;
   transition: 0.3s;
   opacity: 0; 
+  color: rgb(174, 255, 0);
+  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
 }
 
-/* card button hover effect */  
-.card-button:hover {
-  animation: flashText 1s infinite !important;
-}
 
 /* reading explination text styles */
 .explanation {
@@ -476,6 +480,7 @@ a {
   align-items: flex-start;
 }
 
+/* AI oracle container styles */    
 /* ensure the oracle container is aligned in a row and centered */
 .infolgscreen {
   display: flex;
@@ -503,6 +508,7 @@ align-items: center;
 
 /* text entry box for oracle form styles */  
   textarea#questionInput {
+    background-color: rgb(174, 255, 0);
     width: 70%;
     text-align: center;
     max-width: 88vw;
@@ -514,8 +520,7 @@ align-items: center;
     box-sizing: border-box;
     line-height: 1.5;
     font-family: inherit;
-    background-color: rgb(174, 255, 0);
-  box-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+    box-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
     color: #000000;
     white-space: pre-wrap;         
     word-wrap: break-word;        
@@ -527,14 +532,13 @@ align-items: center;
     font-size: 2rem;
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
 
   /* oracles response box styles */ 
 .response-box {
   margin: 15px 30px 30px 30px;
-  color: rgb(174, 255, 0);
-box-shadow: #2aff1a;
+  box-shadow: #2aff1a;
   padding: 1.5rem;
   background-color: transparent !important; 
   font-size: 14px;
@@ -547,21 +551,21 @@ box-shadow: #2aff1a;
   text-align: justify;
 }
 
+/* oracle type question box font styles */
 #questionInput::placeholder, #questionInput {
   font-size: 1rem;  
   font-family: "Source Code Pro", monospace !important; 
   color: #000000;
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 }
 
+/* character counter styles */  
 #char-count {
   margin: 20px 0px 0px 0px;
   font-size: 1rem;
   font-family: "Source Code Pro", monospace !important;
-  color: rgb(174, 255, 0) !important; 
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
 } 
 
+/* oracle response text styles including blinking cursor. */   
 #oracle-response::after {
   content: '|';
   animation: blink 1s infinite;
@@ -569,11 +573,12 @@ box-shadow: #2aff1a;
   color: #88ff88;
 }
 
-/* --- cards page styles --- */
+/* --- research cards page styles (cards.html)--- */
 .intro-paragraph, #majorArcanaIntro p{
   text-align: justify !important;
 }
 
+/*  styles to flip cards on hover or select*/
 .flip-card {
   width: 100%;
   aspect-ratio: 2 / 3;
@@ -612,7 +617,6 @@ box-shadow: #2aff1a;
 .flip-card-back {
   font-size: 14px;
   background-color: transparent !important;
-  color: rgb(174, 255, 0) !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -650,8 +654,6 @@ box-shadow: #2aff1a;
 .accordion-button {
   text-align: center !important;
   background-color: transparent !important;
-  color: rgb(174, 255, 0) !important;
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
   font-family: "Tourney", monospace;
   font-size: 3rem;
   padding: 10px 20px;
@@ -660,7 +662,7 @@ box-shadow: #2aff1a;
   transition: 0.3s;
   box-shadow: none !important;
   justify-content: center !important;
-  gap: 10px; /* adds spacing between text and the icon */
+  gap: 10px;
 }
 
 
@@ -691,8 +693,6 @@ accordion-button:hover {
 .card-body {
   background-color: transparent !important;
   border: none;
-  color: rgb(174, 255, 0);
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
   font-family: "Source Code Pro", monospace;
   text-align: center;
   font-size: 16px;
@@ -714,7 +714,6 @@ accordion-button:hover {
 .intro-paragraph {
   padding: 30px 0 0 0;
   text-align: justify !important;
-  color: rgb(174, 255, 0);
   position: relative;
   z-index: 2;
 }
@@ -732,7 +731,6 @@ accordion-button:hover {
 
 .suit-intro {
   font-family: "Source Code Pro", monospace;
-  color: rgb(174, 255, 0);
   text-align: justify;
   margin: 0 auto;
   max-width: 80vw  !important;  
@@ -943,7 +941,6 @@ font-family: "Source Code Pro", monospace;
 }
 
 .card-details-text {
-  color: rgb(174, 255, 0);
   font-family: "Source Code Pro", monospace;
   font-size: 1rem;
   align-self: center;
@@ -1227,7 +1224,7 @@ p {
 }
 
 
-/* footer styles */
+/*--- footer styles ---*/
 footer {
    font-size: 0.75rem;
   line-height: 0.75rem;
@@ -1235,15 +1232,6 @@ footer {
   width: 100%;
   z-index: -1 !important;
 }
-
-  .site-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers ALL child elements horizontally */
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-  }
 
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
@@ -1400,49 +1388,5 @@ width: 30% !important;
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
-}
-
-
-
-
-
-/* === custom utility classes === */
-
-.flexbox {
-  display: flex;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.column-flex {
-  flex-direction: column;
-}
-
-.text-glow {
-  color: rgb(174, 255, 0);
-}
-
-.code-text {
-  font-family: "Source Code Pro", monospace;
-}
-
-.text-center-custom {
-  text-align: center;
-}
-
-.w-100-custom {
-  width: 100%;
 }
 

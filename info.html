@@ -60,29 +60,29 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
-<body class="info">
-  <header class="fixed-top">
+<body class="info text-glow">
+  <header class="fixed-top text-glow">
 
     <!-- navigation bar at the top -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg text-glow">
+      <div class="container-fluid text-glow">
         <!-- pentagram/logo -->
-        <a class="navbar-brand" href="index.html" aria-label="Go to Homepage">
-          <i class="fa-kit fa-pasted-svg-1 fa-2x fa-fade"></i>
+        <a class="navbar-brand text-glow" href="index.html" aria-label="Go to Homepage">
+          <i class="fa-kit fa-pasted-svg-1 fa-2x fa-fade text-glow"></i>
         </a>
         <!-- hamburger button -->
-        <button class="navbar-toggler collapsed glow-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Expand page navigation.">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <button class="navbar-toggler collapsed glow-toggle text-glow" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Expand page navigation.">
+          <span class="bar text-glow"></span>
+          <span class="bar text-glow"></span>
+          <span class="bar text-glow"></span>
         </button>
         <!-- collapsible nav links -->
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto">
+        <div class="collapse navbar-collapse text-glow" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto text-glow">
             <!-- dropdown -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Readings</a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class="nav-item dropdown text-glow">
+              <a class="nav-link dropdown-toggle text-glow" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Readings</a>
+              <ul class="dropdown-menu text-glow" aria-labelledby="navbarDropdown">
                 <li>
                   <a class="dropdown-item" href="onecard.html">One Card</a>
                 </li>
@@ -99,8 +99,8 @@
       </div>
     </nav>
   </header>
-  <main class="container min-vh-100">
-    <section class="row terminal">
+  <main class="container min-vh-100 text-glow">
+    <section class="row terminal text-glow">
       <pre id="terminalText"></pre>
     </section>
 
@@ -147,28 +147,29 @@
       </section>
 
       <!-- oracle section --> 
-      <section class="row infolgscreen">
-        <h2 class="title">🔮 Ask the Oracle</h2>
+      <section class="row infolgscreen text-glow">
+        <h2 class="title text-glow">🔮 Ask the Oracle</h2>
         <form id="oracle-form">
           <textarea id="questionInput" placeholder="Type your question..." required maxlength="500" rows="5"></textarea>
           <div id="char-count">0 / 500</div>
-          <button class="oracleButton" type="submit">REVEAL YOUR FATE</button>
+          <button class="oracleButton text-glow" type="submit">REVEAL YOUR FATE</button>
         </form>
-        <div id="oracle-response" class="oracle-response"></div>
+        <div id="oracle-response" class="oracle-response text-glow"></div>
       </section>
     </div>
 
     <!-- skip button -->
-    <button id="skipButton" class="skip-button">SKIP</button>
+    <button id="skipButton" class="skip-button text-glow">SKIP</button>
   </main>
 
   <!-- footer -->
-  <footer class="text-center"> 
+  <footer class="text-center text-glow"> 
     <p>&copy; <span id="current-year"></span> WebDevination. All Rights Reserved.</p>
-    <p>Made with <i class="fa-solid fa-heart"></i> by Kim Piffy</p>
+    <p>Made with <i class="fa-solid fa-heart text-glow"></i> by Kim Piffy</p>
   </footer>
   
   <!-- js custom & bootstrap -->
+  <script src="assets/js/nav.js"></script>
   <script src="./assets/js/info.js"></script>
   <script src="./assets/js/oracle.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
