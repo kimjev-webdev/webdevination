@@ -1,5 +1,5 @@
-// this file contains the logic for the three-card tarot reading game. 
-// it handles the shuffling of the tarot deck, drawing three cards, and displaying them in the past, present, and future columns. 
+// this file contains the logic for the three-card tarot reading game.
+// it handles the shuffling of the tarot deck, drawing three cards, and displaying them in the past, present, and future columns.
 // the game also includes a shuffle animation for the card stack and a function to display card details after drawing them.
 
 // handle shuffle button click (with animation)
@@ -42,9 +42,22 @@ function drawThreeCards(shuffledDeck, pastColumn, presentColumn, futureColumn) {
   displayCardInColumn(futureCard, futureColumn);
 }
 
-// display the card in a given column
+// display the card in a given column, and insert the heading AFTER the flip
 function displayCardInColumn(card, column) {
-  // create the card element (front and back)
+  column.innerHTML = ''; // Clear previous content
+
+  // Create vertical wrapper for content
+  const wrapper = document.createElement('div');
+  wrapper.classList.add('card-container', 'd-flex', 'flex-column', 'align-items-center', 'text-center');
+
+  // Create heading element (but don't add it yet)
+  const heading = document.createElement('h3');
+  heading.classList.add('mt-3');
+  if (column.id === 'past') heading.textContent = 'Past';
+  else if (column.id === 'present') heading.textContent = 'Present';
+  else if (column.id === 'future') heading.textContent = 'Future';
+
+  // Create card flip element
   const cardElement = document.createElement('div');
   cardElement.classList.add('selected-card');
   cardElement.setAttribute('data-interpretation', card.interpretation);
@@ -66,19 +79,23 @@ function displayCardInColumn(card, column) {
   cardElement.appendChild(cardBack);
   cardElement.appendChild(cardFront);
 
-  column.innerHTML = '';
-  column.appendChild(cardElement);
+  // Add only the card to start
+  wrapper.appendChild(cardElement);
+  column.appendChild(wrapper);
 
+  // Animate flip, then add heading and text
   setTimeout(() => {
     cardElement.classList.add('flip');
+
     setTimeout(() => {
-      showCardDetails(card, column);
+      wrapper.insertBefore(heading, cardElement); // Add heading BEFORE card
+      showCardDetails(card, wrapper);             // Add interpretation BELOW card
     }, 500);
   }, 1000);
 }
 
 // show only the interpretation (not the response)
-function showCardDetails(card, column) {
+function showCardDetails(card, wrapper) {
   const cardInfo = document.createElement('div');
   cardInfo.classList.add('card-info');
 
@@ -87,7 +104,7 @@ function showCardDetails(card, column) {
   interpretationPara.textContent = card.interpretation;
 
   cardInfo.appendChild(interpretationPara);
-  column.appendChild(cardInfo);
+  wrapper.appendChild(cardInfo);
 }
 
 // dom ready: load tarot and set up event listeners
@@ -104,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const presentColumn = document.getElementById('present');
       const futureColumn = document.getElementById('future');
 
-      // make sure the threecard stack is shown at load
+      // initial view: show shuffled stack, hide card results
       threecardStack.style.display = 'flex';
       cardsContainer.style.display = 'none';
 
