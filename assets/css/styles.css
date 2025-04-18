@@ -1105,10 +1105,10 @@ p {
 .score {
   text-transform: uppercase; 
   font-family: "Tourney", monospace !important;
-  font-size: 2rem;
   letter-spacing: 1vw;    
   text-align: center; /* Center the score text */
-  margin-top: 20px;
+  margin-top: 5px;
+  font-size: 2rem;  
 } 
 
 #restart-button {
@@ -1229,11 +1229,6 @@ p {
   text-align: justify;
 }
 
-.score {
-  font-size: 24px;
-  margin-top: 20px;
-  text-align: center; /* Center the score text */
-}
 
 /* footer styles */
 footer {
@@ -1332,7 +1327,19 @@ footer {
 
 @media (max-width: 992px) {
   .card-choice {
-    width: 20vw;
+    width: 8.5rem;
+  }
+
+  .game-container {
+    margin: 0 50px 50px 50px;
+  }
+
+  .cardgame-display {
+    margin-top: 20px;
+  }
+
+  .card-description {
+    max-width: 100%;
   }
 } 
 
