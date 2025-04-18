@@ -39,7 +39,7 @@ function shuffleAnimation() {
       card.style.transform = "translate(0, 0)"; // Return to center
       card.style.opacity = "1"; // Fully opaque
     });
-  }, 3000); // 3 seconds delay before returning cards
+  }, 1000); // 3 seconds delay before returning cards
 }
 
 // Draw a card and display it
