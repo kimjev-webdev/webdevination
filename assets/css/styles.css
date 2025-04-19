@@ -950,7 +950,7 @@ font-family: "Source Code Pro", monospace;
 
 .card-name,
 .card-details-text {
-  max-width: 85%;
+  max-width: 95%;
   box-sizing: border-box;
 }
 
@@ -1078,9 +1078,6 @@ div.col-12.threeshuffle {
   min-height: 200px;
   overflow: visible;
 }
-
-
-
 
 /* learning page styles */  
 
@@ -1297,7 +1294,7 @@ footer {
   }
 
   .card-details-text {
-    max-width: 100%;
+    max-width: 75%;
   }
 
   .col-sm-6 {
@@ -1317,8 +1314,18 @@ footer {
   font-size: 1.5rem;
 }
 
-.threep {
-  margin: 0px 55px 0px 55px;
+.threeintrorow {
+  margin: 0 45px 0 45px;
+}
+
+.extratextbigscreenthree {
+  display: none;    }
+
+button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
+margin: 0px 5px 0px 5px;  }
+
+.onecardrow {
+  margin: 0px 40px 0px 40px;
 }
 }
 
