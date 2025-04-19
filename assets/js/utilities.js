@@ -1,107 +1,134 @@
-// This script handles the shuffling of the tarot deck and card drawing functionality
-// Shuffling the deck, animating the shuffle, and drawing cards. It also includes a function to display card details after drawing a card
+// === Function Declarations (Hoisted to Top) ===
 
-// Shuffle the tarot deck
+function injectWin95Modal() {
+  if (document.getElementById('win95Modal')) return;
+
+  const modalHTML = `
+    <div class="modal fade" id="win95Modal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content win95-modal win95-window text-glow">
+          <div class="win95-title-bar">
+            <span class="win95-title-text">SHUFFLE COMPLETE</span>
+            <div class="win95-buttons">
+              <button type="button" class="win95-btn text-glow" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fa-light fa-x"></i>
+              </button>
+            </div>
+          </div>
+          <div class="win95-body">
+            <p>Deck shuffled! Now click ‘DRAW’ to pick a card.</p>
+            <div class="ok-wrap">
+              <button class="win95-ok-btn" id="win95-ok" data-bs-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  const modalContainer = document.createElement('div');
+  modalContainer.innerHTML = modalHTML;
+  document.body.appendChild(modalContainer);
+
+  const enterListener = function (e) {
+    const modal = document.getElementById('win95Modal');
+    const isVisible = modal && modal.getAttribute('aria-hidden') === 'false';
+    if (e.key === 'Enter' && isVisible) {
+      const okBtn = document.getElementById('win95-ok');
+      if (okBtn) okBtn.click();
+    }
+  };
+
+  document.removeEventListener('keydown', enterListener);
+  document.addEventListener('keydown', enterListener);
+}
+
 function shuffleDeck(shuffledDeck) {
   for (let i = shuffledDeck.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [shuffledDeck[i], shuffledDeck[j]] = [shuffledDeck[j], shuffledDeck[i]]; // Swap
+    [shuffledDeck[i], shuffledDeck[j]] = [shuffledDeck[j], shuffledDeck[i]];
   }
 }
 
-// Shuffle animation for card stack
 function shuffleAnimation() {
   const cards = document.querySelectorAll(".shufflecard");
 
-  // Set initial positions and opacity for animation reset
-  cards.forEach(card => {
+  cards.forEach(function (card) {
     card.style.opacity = "1";
     card.style.transform = "translate(0, 0)";
   });
 
-  // Scatter the cards
-  cards.forEach(card => {
-    const randomX = Math.random() * 500 - 250; // Random position between -250 and 250
-    const randomY = Math.random() * 500 - 250; // Random position between -250 and 250
-    const randomRotation = Math.random() * 720 - 360; // Random rotation between -360 and 360 degrees
+  cards.forEach(function (card) {
+    const randomX = Math.random() * 500 - 250;
+    const randomY = Math.random() * 500 - 250;
+    const randomRotation = Math.random() * 720 - 360;
 
-    setTimeout(() => {
+    setTimeout(function () {
       card.style.transition = "transform 1s ease-out, opacity 1s ease-out";
       card.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${randomRotation}deg)`;
-      card.style.opacity = "0.6"; // Slightly transparent when scattered
-    }, Math.random() * 200); // Random delay to make it look more chaotic
+      card.style.opacity = "0.6";
+    }, Math.random() * 200);
   });
 
-  // After 3 seconds, return cards to center position
-  setTimeout(() => {
-    cards.forEach(card => {
+  setTimeout(function () {
+    cards.forEach(function (card) {
       card.style.transition = "transform 1s ease-in, opacity 1s ease-in";
-      card.style.transform = "translate(0, 0)"; // Return to center
-      card.style.opacity = "1"; // Fully opaque
+      card.style.transform = "translate(0, 0)";
+      card.style.opacity = "1";
     });
-  }, 1000); // 3 seconds delay before returning cards
+  }, 1000);
 }
 
-// Draw a card and display it
-function drawCard(shuffledDeck, selectedCardContainer, isShuffled = false) {
+function drawCard(shuffledDeck, selectedCardContainer, isShuffled) {
   if (shuffledDeck.length === 0) {
     alert("No more cards in the deck!");
-    return; // Stop drawing if no cards are left
+    return;
   }
 
-  // If the deck has not been shuffled, shuffle it before drawing
   if (!isShuffled) {
     shuffleDeck(shuffledDeck);
-    isShuffled = true; // Mark that the deck has been shuffled
+    isShuffled = true;
   }
 
-  const drawnCard = shuffledDeck.pop(); // Get the first card and remove it from the shuffled deck
+  const drawnCard = shuffledDeck.pop();
 
-  // Create the card element (front and back)
   const cardElement = document.createElement('div');
   cardElement.classList.add('selected-card');
   cardElement.setAttribute('data-name', drawnCard.name);
   cardElement.setAttribute('data-response', drawnCard.response);
   cardElement.setAttribute('data-interpretation', drawnCard.interpretation);
 
-  // Create the back of the card (initially visible)
   const cardBack = document.createElement('div');
   cardBack.classList.add('card-back');
 
   const cardBackImage = document.createElement('img');
-  cardBackImage.src = './assets/images/cardbacks.webp'; // Set card back image
+  cardBackImage.src = './assets/images/cardbacks.webp';
   cardBackImage.alt = 'Card Back';
   cardBack.appendChild(cardBackImage);
 
-  // Create the front of the card (hidden initially)
   const cardFront = document.createElement('div');
   cardFront.classList.add('card-front');
 
   const cardFrontImage = document.createElement('img');
-  cardFrontImage.src = drawnCard.image; // Use front image path from JSON
+  cardFrontImage.src = drawnCard.image;
   cardFrontImage.alt = drawnCard.name;
   cardFront.appendChild(cardFrontImage);
 
-  // Append front and back to card element
   cardElement.appendChild(cardBack);
   cardElement.appendChild(cardFront);
 
-  // Add the card to the selected card container
-  selectedCardContainer.innerHTML = ''; // Clear any previous cards
+  selectedCardContainer.innerHTML = '';
   selectedCardContainer.appendChild(cardElement);
 
-  // Ensure card back is displayed first, then flip after a delay
-  setTimeout(() => {
-    cardElement.classList.add('flip'); // Trigger flip animation
+  setTimeout(function () {
+    cardElement.classList.add('flip');
 
-    // After the flip animation, reveal card details
-    setTimeout(() => {
-      showCardDetails(drawnCard, selectedCardContainer); // Show card details after flip
-    }, 500); // Delay showing details to allow the flip to finish
-  }, 1000); // Delay to ensure the back is visible first
+    setTimeout(function () {
+      showCardDetails(drawnCard, selectedCardContainer);
+    }, 500);
+  }, 1000);
 }
 
-// Display the card details
 function showCardDetails(card, selectedCardContainer) {
   const cardDetails = `
     <div class="card-info">
@@ -112,13 +139,15 @@ function showCardDetails(card, selectedCardContainer) {
   selectedCardContainer.innerHTML += cardDetails;
 }
 
-// DOMContentLoaded event listener
-document.addEventListener('DOMContentLoaded', () => {
-  const cardbacksOne = document.querySelectorAll('#buttons-container .col-12.col-md-6 img'); // Select the images above each button
+// === DOM Ready Hook ===
 
-  // Export these functions to be used in other scripts
+document.addEventListener('DOMContentLoaded', function () {
+  const cardbacksOne = document.querySelectorAll('#buttons-container .col-12.col-md-6 img');
+
+  // Expose functions globally to other scripts
   window.shuffleDeck = shuffleDeck;
   window.shuffleAnimation = shuffleAnimation;
   window.drawCard = drawCard;
   window.showCardDetails = showCardDetails;
+  window.injectWin95Modal = injectWin95Modal;
 });

@@ -12,8 +12,8 @@ function handleShuffleButtonClick(shuffledDeck, threecardStack, cardsContainer) 
   shuffleAnimation(); // start shuffle animation
 
   setTimeout(() => {
-    alert("Deck shuffled! Click 'Deal' to draw three cards.");
-  }, 3500);
+    alert("Deck shuffled! Click 'DRAW' to pick three cards.");
+  }, 1200);
 }
 
 // handle deal button click (draw three cards)
