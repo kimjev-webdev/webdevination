@@ -54,6 +54,29 @@
   }
 }
 
+@keyframes portalOpen {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes portalClose {
+  0% {
+    transform: scale(10) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-720deg);
+    opacity: 0;
+  }
+}
+
+
 /* --- universal styles ---*/
 /* all pages -preloader styles */
 #preloader {
@@ -86,13 +109,11 @@
 .portal-ring {
   width: 120px;
   height: 120px;
-  border: 4px solid #aeff00;
+  border: 1px solid #aeff00b7;
   border-radius: 50%;
-  animation: portalExpand 1.5s ease forwards;
   box-shadow: 0 0 20px #aeff00, 0 0 40px #00ff99, 0 0 60px #2aff1a;
   z-index: 3;
 }
-
 /* mask to make center of portal darker*/
 .mask-center {
   position: absolute;
