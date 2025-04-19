@@ -899,6 +899,7 @@ align-items: flex-start;
 }
 
 .shufflecard {
+  z-index: 2;
   display: flex;
   justify-content: center;
  align-items: center;
@@ -1106,6 +1107,7 @@ img.onecardadvert {
   padding: 2px 6px;
   font-size: 14px;
   height: 22px;
+  border-radius: 5px;
   border-bottom: 2px solid rgb(174, 255, 0);
 }
 
@@ -1129,6 +1131,7 @@ img.onecardadvert {
 
 .win95-body {
   padding: 10px;
+  border-radius: 5px;
   background: rgb(174, 255, 0);;
   color: black;
   font-size: 13px;
@@ -1138,6 +1141,68 @@ img.onecardadvert {
   border-bottom: 2px solid #808080;
 }
 
+/* modal styles */  
+.win95-modal {
+  padding: 0 !important;
+  background: #aeff00;
+  border: 2px solid black;
+  box-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+  font-family: 'Source Code Pro', monospace;
+  z-index: 1050;
+}
+
+.modal-dialog {
+  max-width: 400px;
+  margin: 10vh auto;
+}
+
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(2px);
+}
+
+.win95-title-text {
+  flex: 1;
+  font-weight: bold;
+  padding-left: 4px;
+}
+
+.win95-title-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgb(174, 255, 0);
+  color: black;
+  padding: 2px 6px;
+  font-size: 14px;
+  height: 22px;
+  border-bottom: 2px solid rgb(174, 255, 0);
+  width: 100%;
+}
+
+.ok-wrap {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.win95-ok-btn {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 14px;
+  padding: 2px 18px;
+  background: #C0C0C0;
+  border: 2px outset #fff;
+  color: black;
+  cursor: pointer;
+  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
+  box-shadow: inset -1px -1px #808080, inset 1px 1px #fff;
+  transition: all 0.1s ease-in-out;
+}
+
+.win95-ok-btn:active {
+  border: 2px inset #fff;
+  box-shadow: inset 1px 1px #808080, inset -1px -1px #fff;
+  transform: translateY(1px);
+}
 
 /* three cards */
 

@@ -46,3 +46,4 @@
 | 2025-04-19 | Contents of `rotate-prompt` not aligned to center of VP       | HTML/CSS    | Changed `max-width: 100%` to `min-width: 100%` |
 | 2025-04-19 | Card draw 'flipping backs' overlaying footer on `threecards.html`       | HTML/CSS    | Inline `margin-bottom` increased to `300px` on `main` - pushes footer below dynamic container. |
 | 2025-04-19 | Preloader 'portal' doesn't enter viewport smoothly. | CSS   | Added `opacity: 0;` and `transform: scale(0.1);` to the portal and mask.  |
+| 2025-04-20 | Win95-style modal triggers `aria-hidden` focus warning in Chrome console. | JS / Accessibility | Focus was being applied to the OK button before `aria-hidden="false"` had updated. Added `requestAnimationFrame`, a slight delay, and a visibility check using `getBoundingClientRect()` to ensure modal is both visible and accessible before calling `.focus()`. |
