@@ -651,21 +651,19 @@ align-items: center;
 }
 
 .accordion-button {
-  text-align: center !important;
-  background-color: transparent !important;
-  font-family: "Tourney", monospace;
   font-size: 3rem;
-  padding: 10px 20px;
+  padding: 10px 60px;
   border: none !important;
   cursor: pointer !important;
   transition: 0.3s;
   box-shadow: none !important;
-  justify-content: center !important;
-  gap: 10px;
+ flex-wrap: wrap;
+ min-width: 100%;
 }
 
 
 .accordion-item > h2 > .accordion-button {
+  text-align: center;
   justify-content: center !important;
   margin: 30px 0 0 0;
 }
@@ -1265,6 +1263,20 @@ footer {
 .extratextbigscreenthree {
   text-align: justify !important;
 }
+
+.exploreheader, .accordion-item > h2 > .accordion-button {
+  font-size: 8vw;
+}
+
+.explorep, .intro-paragraph {
+  max-width: 65vw;
+}
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .exploreheader, .accordion-item > h2 > .accordion-button {  
+    font-size: 2rem;
+  } 
 }
 
 @media (min-width: 768px) {
