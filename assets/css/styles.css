@@ -1201,6 +1201,7 @@ img.onecardadvert {
 }
 
 .win95-ok-btn:active {
+  color: #000;
   border: 2px inset #fff;
   box-shadow: inset 1px 1px #808080, inset -1px -1px #fff;
   transform: translateY(1px);
