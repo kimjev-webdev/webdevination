@@ -1269,6 +1269,10 @@ div.col-12.threeshuffle {
 
 /* learning page styles */  
 
+.learn {
+  overflow-x: hidden;
+}
+
 .cardgame-back img {
   width: 100%;
   height: auto;
