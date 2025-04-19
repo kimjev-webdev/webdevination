@@ -188,7 +188,6 @@ cursor: pointer;
 
 /* hide rotate screen prompt by default */
 .rotate-prompt {
-  font-family: "Source Code Pro", monospace;
   display: none;
   text-align: center;
   position: absolute;
@@ -411,7 +410,7 @@ a.dropdown-item {
 .buttons-container.visible,
 .card-button.visible,
 .explanation.visible {
-  opacity: 1 !important;
+  opacity: 1;
   transform: translateY(0);
 }
 
@@ -1369,7 +1368,7 @@ width: 30% !important;
       justify-content: center;
       gap: 0.5rem;
       margin-bottom: 0.5rem;
-      max-width: 100%;
+      min-width: 100%;
       font-size: 0.75rem;
     }
 
