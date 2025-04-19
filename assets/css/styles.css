@@ -671,6 +671,8 @@ align-items: center;
 
 /* character counter styles */  
 #char-count {
+color: rgb(174, 255, 0) !important;
+text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
   margin: 20px 0px 0px 0px;
   font-size: 1rem;
   font-family: "Source Code Pro", monospace !important;
