@@ -61,6 +61,13 @@
 </head>
 <body class="learn text-glow">
 
+    <!-- preloader -->
+<div id="preloader">
+  <div class="sparkles"></div>
+  <div class="mask-center"></div> <!-- ← the stencil mask -->
+  <div class="portal-ring"></div>
+</div>
+
   <!--  header and navigation -->
   <header class="fixed-top text-glow">
     <nav class="navbar navbar-expand-lg text-glow">
@@ -144,9 +151,6 @@
     <p>Made with <i class="fa-solid fa-heart text-glow"></i> by Kim Piffy</p>
   </footer>
 
-  <!--nav color bug js-->
-  <script src="assets/js/nav.js"></script>
-
   <!-- js bootstrap bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -156,5 +160,8 @@
   
   <!-- js dynamically set the current year in the footer -->
   <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+
+   <!-- js for nav hover colors and preloader portal-->
+   <script src="assets/js/nav.js"></script>
 </body>
 </html>

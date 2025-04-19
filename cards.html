@@ -61,6 +61,14 @@
 </head>
 
 <body class="cards text-glow">
+
+  <!-- preloader -->
+  <div id="preloader">
+    <div class="sparkles"></div>
+    <div class="mask-center"></div> <!-- ← the stencil mask -->
+    <div class="portal-ring"></div>
+  </div>
+
   <!--  header an navigation -->
   <header class="fixed-top text-glow">
     <nav class="navbar navbar-expand-lg text-glow">
@@ -233,12 +241,14 @@
   </footer>
 
   <!-- js custom & bootstrap -->
-  <script src="assets/js/nav.js"></script>
   <script src="assets/js/cards.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <!-- js to dynamically set the current year in the footer -->
   <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+
+ <!-- js for nav hover colors and preloader portal-->
+ <script src="assets/js/nav.js"></script>
 </body>
 </html>

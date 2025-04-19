@@ -18,7 +18,93 @@
   51%, 100% { opacity: 0; }
 }
 
+/* animation for the portal ring */ 
+@keyframes portalSpin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* animation for the portal ring expansion */ 
+@keyframes portalExpand {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(720deg) scale(10);
+    opacity: 0;
+  }
+}
+
+/* animation for the sparkles on preloader */
+@keyframes sparkleFloat {
+  0%   { background-position: 0 0, 0 0; }
+  100% { background-position: 100px 100px, -100px -100px; }
+}
+
+/* animation for the mask expansion on preloader */ 
+@keyframes maskExpand {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
 /* --- universal styles ---*/
+/* all pages -preloader styles */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #000 0%, #050505 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* preloader dots */
+.sparkles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(#aeff00 1px, transparent 1px),
+    radial-gradient(#00ffcc 1px, transparent 1px);
+  background-size: 20px 20px, 40px 40px;
+  animation: sparkleFloat 3s linear infinite;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* preloader portal */
+.portal-ring {
+  width: 120px;
+  height: 120px;
+  border: 4px solid #aeff00;
+  border-radius: 50%;
+  animation: portalExpand 1.5s ease forwards;
+  box-shadow: 0 0 20px #aeff00, 0 0 40px #00ff99, 0 0 60px #2aff1a;
+  z-index: 3;
+}
+
+/* mask to make center of portal darker*/
+.mask-center {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: #000;
+  border-radius: 50%;
+  z-index: 2;
+  animation: maskExpand 1.5s ease forwards
+}
+
+/* universal reset styles */  
 * {
   margin: 0;
   padding: 0;
@@ -283,7 +369,7 @@ a.dropdown-item {
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
   background-color: rgb(174, 255, 0); 
-  box-shadow: 0 0 5px rgb(174, 255, 0), 0 0 10px rgb(174, 255, 0), 0 0 20px rgb(174, 255, 0);
+  box-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;
 }
 
 /* when toggler is open (menu expanded) - transform to a cross */
@@ -334,7 +420,6 @@ a.dropdown-item {
   background-color: rgb(174, 255, 0) !important;
   text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
 }
-
 
 /* --- readings menu item styles (info.html) --- */
 /* terminal intro text alignment */
@@ -392,7 +477,6 @@ a.dropdown-item {
   color: rgb(174, 255, 0);
   text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
 }
-
 
 /* reading explination text styles */
 .explanation {
