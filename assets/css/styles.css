@@ -1039,7 +1039,7 @@ img.onecardadvert {
 } 
 
 p#intro-text.extratextbigscreenthree {
-  text-align: center !important;
+  text-align: center;
 }
 
 #threecard-stack {
@@ -1261,6 +1261,15 @@ footer {
   .skip-button {
     bottom: 60px;
 } 
+
+/* justify intro text on three card reading on smaller screens */
+#intro-text { 
+    text-align: justify !important;
+}
+
+.extratextbigscreenthree {
+  text-align: justify !important;
+}
 }
 
 @media (min-width: 768px) {
@@ -1359,7 +1368,7 @@ width: 30% !important;
 }
 
 
-/* Show the rotate screen icon and prompt on devices with portrait orientation */
+/* show the rotate screen icon and prompt on index.html when devices are held in portrait orientation */
 @media only screen and (orientation: portrait) {
     .rotate-prompt {
       flex-direction: column;
@@ -1372,18 +1381,20 @@ width: 30% !important;
       font-size: 0.75rem;
     }
 
+  /* rotate phone screen icon */  
     .rotate-prompt.i {
       font-size: 2rem !important;
     }
 }
 
+/* hide the rotate screen icon and prompt on index.html when devices are held in landscape orientation */
 @media only screen and (orientation: landscape) {
   .rotate-prompt {
     display: none;
   }
 }
 
-@media (hover: hover) {
+@media (hover:hover) {
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
