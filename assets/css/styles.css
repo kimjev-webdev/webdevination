@@ -358,7 +358,7 @@ a.dropdown-item {
   position: relative;
   font-family: 'Source Code Pro', monospace;
   text-align: justify;
-  padding: 0 60px 0 60px;
+  padding: 0 65px 0 65px;
   white-space: normal;        
   word-wrap: pre-wrap;     
   line-height: 1.5;          
@@ -1110,8 +1110,6 @@ p {
 #restart-button:hover {   
   animation: flashText 1s infinite;
 }
-
-
 
 .cardgame {
   width: 150px; /* adjust based on your design */
