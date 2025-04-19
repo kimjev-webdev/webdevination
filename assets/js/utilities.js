@@ -10,7 +10,7 @@ function injectWin95Modal() {
           <div class="win95-title-bar">
             <span class="win95-title-text">SHUFFLE COMPLETE</span>
             <div class="win95-buttons">
-              <button type="button" class="win95-btn text-glow" data-bs-dismiss="modal" aria-label="Close">
+              <button type="button" class="win95-btn" data-bs-dismiss="modal" aria-label="Close">
                 <i class="fa-light fa-x"></i>
               </button>
             </div>

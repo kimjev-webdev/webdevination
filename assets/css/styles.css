@@ -180,9 +180,9 @@ cursor: pointer;
 
 /* button hover effect */ 
 button:hover {
-transform: scale(1.1) !important;
-animation: flashText 1s infinite !important;
-color: rgb(174, 255, 0) !important;
+transform: scale(1.1);
+animation: flashText 1s infinite;
+color: rgb(174, 255, 0);
 }
 
 /* natural click in effect so user know when a button has been selected" */   
@@ -1191,17 +1191,27 @@ img.onecardadvert {
   font-family: 'Source Code Pro', monospace;
   font-size: 14px;
   padding: 2px 18px;
-  background: #C0C0C0;
+  background-color: rgb(174, 255, 0);
   border: 2px outset #fff;
   color: black;
   cursor: pointer;
   text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
   box-shadow: inset -1px -1px #808080, inset 1px 1px #fff;
   transition: all 0.1s ease-in-out;
+  letter-spacing: 0;
+}
+
+.win95-ok-btn:hover, .win95-ok-btn:focus{
+  font-family: 'Source Code Pro', monospace !important;
+  color: #000 !important;
+  animation: none !important; 
+  border: 2px inset #ffffff !important;
+  transform: translateY(1px);
+  background-color: rgb(174, 255, 0);
+  letter-spacing: 0;
 }
 
 .win95-ok-btn:active {
-  color: #000;
   border: 2px inset #fff;
   box-shadow: inset 1px 1px #808080, inset -1px -1px #fff;
   transform: translateY(1px);
