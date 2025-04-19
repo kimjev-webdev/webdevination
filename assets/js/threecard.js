@@ -1,24 +1,37 @@
-// this file contains the logic for the three-card tarot reading game.
-// it handles the shuffling of the tarot deck, drawing three cards, and displaying them in the past, present, and future columns.
-// the game also includes a shuffle animation for the card stack and a function to display card details after drawing them.
+// === Function Declarations (Hoisted) ===
 
-// handle shuffle button click (with animation)
 function handleShuffleButtonClick(shuffledDeck, threecardStack, cardsContainer) {
-  // show shuffled card stack and hide selected card container
   threecardStack.style.display = 'flex';
   cardsContainer.style.display = 'none';
 
-  shuffleDeck(shuffledDeck); // shuffle deck (from utilities.js)
-  shuffleAnimation(); // start shuffle animation
+  shuffleDeck(shuffledDeck);
+  shuffleAnimation();
 
-  setTimeout(() => {
-    alert("Deck shuffled! Click 'DRAW' to pick three cards.");
+  setTimeout(function () {
+    injectWin95Modal();
+
+    const modalElement = document.getElementById('win95Modal');
+    const okButton = modalElement.querySelector('.win95-ok-btn');
+    const modal = new bootstrap.Modal(modalElement);
+
+    modalElement.addEventListener('shown.bs.modal', function () {
+      requestAnimationFrame(function () {
+        setTimeout(function () {
+          const isAriaVisible = modalElement.getAttribute('aria-hidden') === 'false';
+          const isActuallyVisible = modalElement.getBoundingClientRect().width > 0;
+
+          if (isAriaVisible && isActuallyVisible && okButton) {
+            okButton.focus();
+          }
+        }, 50);
+      });
+    }, { once: true });
+
+    modal.show();
   }, 1200);
 }
 
-// handle deal button click (draw three cards)
 function handleDealButtonClick(shuffledDeck, threecardStack, cardsContainer, pastColumn, presentColumn, futureColumn) {
-  // hide shuffled card stack and show the cards container
   threecardStack.style.display = 'none';
   cardsContainer.style.display = 'flex';
 
@@ -26,7 +39,6 @@ function handleDealButtonClick(shuffledDeck, threecardStack, cardsContainer, pas
   drawThreeCards(shuffledDeck, pastColumn, presentColumn, futureColumn);
 }
 
-// draw three random cards for past, present, future
 function drawThreeCards(shuffledDeck, pastColumn, presentColumn, futureColumn) {
   if (shuffledDeck.length < 3) {
     alert("Not enough cards left in the deck!");
@@ -42,22 +54,18 @@ function drawThreeCards(shuffledDeck, pastColumn, presentColumn, futureColumn) {
   displayCardInColumn(futureCard, futureColumn);
 }
 
-// display the card in a given column, and insert the heading AFTER the flip
 function displayCardInColumn(card, column) {
-  column.innerHTML = ''; // Clear previous content
+  column.innerHTML = '';
 
-  // Create vertical wrapper for content
   const wrapper = document.createElement('div');
   wrapper.classList.add('card-container', 'd-flex', 'flex-column', 'align-items-center', 'text-center');
 
-  // Create heading element (but don't add it yet)
   const heading = document.createElement('h3');
   heading.classList.add('mt-3');
   if (column.id === 'past') heading.textContent = 'Past';
   else if (column.id === 'present') heading.textContent = 'Present';
   else if (column.id === 'future') heading.textContent = 'Future';
 
-  // Create card flip element
   const cardElement = document.createElement('div');
   cardElement.classList.add('selected-card');
   cardElement.setAttribute('data-interpretation', card.interpretation);
@@ -79,22 +87,19 @@ function displayCardInColumn(card, column) {
   cardElement.appendChild(cardBack);
   cardElement.appendChild(cardFront);
 
-  // Add only the card to start
   wrapper.appendChild(cardElement);
   column.appendChild(wrapper);
 
-  // Animate flip, then add heading and text
-  setTimeout(() => {
+  setTimeout(function () {
     cardElement.classList.add('flip');
 
-    setTimeout(() => {
-      wrapper.insertBefore(heading, cardElement); // Add heading BEFORE card
-      showCardDetails(card, wrapper);             // Add interpretation BELOW card
+    setTimeout(function () {
+      wrapper.insertBefore(heading, cardElement);
+      showCardDetails(card, wrapper); // from utilities.js
     }, 500);
   }, 1000);
 }
 
-// show only the interpretation (not the response)
 function showCardDetails(card, wrapper) {
   const cardInfo = document.createElement('div');
   cardInfo.classList.add('card-info');
@@ -107,11 +112,12 @@ function showCardDetails(card, wrapper) {
   wrapper.appendChild(cardInfo);
 }
 
-// dom ready: load tarot and set up event listeners
-document.addEventListener('DOMContentLoaded', () => {
+// === DOM Ready ===
+
+document.addEventListener('DOMContentLoaded', function () {
   fetch('./assets/tarot.json')
-    .then(response => response.json())
-    .then(data => {
+    .then(function (response) { return response.json(); })
+    .then(function (data) {
       const tarotDeck = data.tarot;
       const shuffleButton = document.getElementById('shuffle-button');
       const dealButton = document.getElementById('deal-button');
@@ -121,19 +127,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const presentColumn = document.getElementById('present');
       const futureColumn = document.getElementById('future');
 
-      // initial view: show shuffled stack, hide card results
       threecardStack.style.display = 'flex';
       cardsContainer.style.display = 'none';
 
       let shuffledDeck = [...tarotDeck];
 
-      shuffleButton.addEventListener('click', () => {
+      shuffleButton.addEventListener('click', function () {
         handleShuffleButtonClick(shuffledDeck, threecardStack, cardsContainer);
       });
 
-      dealButton.addEventListener('click', () => {
+      dealButton.addEventListener('click', function () {
         handleDealButtonClick(shuffledDeck, threecardStack, cardsContainer, pastColumn, presentColumn, futureColumn);
       });
     })
-    .catch(error => console.error('Error loading tarot deck:', error));
+    .catch(function (error) {
+      console.error('Error loading tarot deck:', error);
+    });
 });
