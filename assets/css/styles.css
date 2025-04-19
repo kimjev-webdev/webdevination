@@ -76,7 +76,6 @@
   }
 }
 
-
 /* --- universal styles ---*/
 /* all pages -preloader styles */
 #preloader {
@@ -109,10 +108,14 @@
 .portal-ring {
   width: 120px;
   height: 120px;
-  border: 1px solid #aeff00b7;
+  border: 1px solid rgb(174, 255, 0)0;
   border-radius: 50%;
-  box-shadow: 0 0 20px #aeff00, 0 0 40px #00ff99, 0 0 60px #2aff1a;
+  box-shadow: rgb(174, 255, 0) 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;
   z-index: 3;
+
+  /* Smooth startup */
+  opacity: 0;
+  transform: scale(0.1);
 }
 /* mask to make center of portal darker*/
 .mask-center {
@@ -122,7 +125,10 @@
   background-color: #000;
   border-radius: 50%;
   z-index: 2;
-  animation: maskExpand 1.5s ease forwards
+
+  /* Match portal ring entrance */
+  opacity: 0;
+  transform: scale(0.1);
 }
 
 /* universal reset styles */  

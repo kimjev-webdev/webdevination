@@ -45,3 +45,4 @@
 | 2025-04-19 | UPDATE `flashText` animation and `transform: scale(1:1)` not effective on info.html `'Pick One Card'` and `'Pick Three Card'` headings.       | HTML/CSS    | Successfully located issue at `.card-button.visible` and removed `important` from `opacity: 1;`. Animation and scale now succesfully applied to `'Pick One Card'` and `'Pick Three Card'` headings.  |
 | 2025-04-19 | Contents of `rotate-prompt` not aligned to center of VP       | HTML/CSS    | Changed `max-width: 100%` to `min-width: 100%` |
 | 2025-04-19 | Card draw 'flipping backs' overlaying footer on `threecards.html`       | HTML/CSS    | Inline `margin-bottom` increased to `300px` on `main` - pushes footer below dynamic container. |
+| 2025-04-19 | Preloader 'portal' doesn't enter viewport smoothly. | CSS   | Added `opacity: 0;` and `transform: scale(0.1);` to the portal and mask.  |

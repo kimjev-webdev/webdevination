@@ -60,8 +60,11 @@ function playPortalAnimation() {
   const direction = getNextPortalDirection();
   const animName = direction === 'open' ? 'portalOpen' : 'portalClose';
 
-  portal.style.animation = `${animName} 1.5s ease forwards`;
-  mask.style.animation = `${animName} 1.5s ease forwards`;
+  // Use smooth cubic-bezier easing
+  const animationStyle = `${animName} 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards`;
+
+  portal.style.animation = animationStyle;
+  mask.style.animation = animationStyle;
 }
 
 // Handles fade-out and removal of the portal preloader
