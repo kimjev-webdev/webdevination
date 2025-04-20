@@ -28,7 +28,7 @@ function typeOracleMessage(text, element, speed = 40) {
   }, speed);
 }
 
-// Create or reuse character counter
+// Character counter
 function setupCharacterCounter(input) {
   let counter = document.querySelector("#char-count");
   if (!counter) {
@@ -42,7 +42,6 @@ function setupCharacterCounter(input) {
   return counter;
 }
 
-// Attach input listener for live character count
 function setupCharacterCountListener(input, counter, maxChars) {
   input.addEventListener("input", () => {
     const currentLength = input.value.length;
@@ -51,7 +50,7 @@ function setupCharacterCountListener(input, counter, maxChars) {
   });
 }
 
-// Handle form submission
+// Form submit logic
 function setupFormSubmitHandler(form, input, responseBox, maxChars) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -68,7 +67,7 @@ function setupFormSubmitHandler(form, input, responseBox, maxChars) {
   });
 }
 
-// Call the backend and show the Oracle's response
+// Send request to backend
 async function fetchOracleResponse(question, responseBox) {
   try {
     const res = await fetch("/oracle", {
@@ -88,4 +87,3 @@ async function fetchOracleResponse(question, responseBox) {
     responseBox.textContent = "🌫️ The mists are unclear. Try again soon.";
   }
 }
-
