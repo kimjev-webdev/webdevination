@@ -597,7 +597,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin: 50px 60px 50px 60px;
   text-align: center;
 }
 

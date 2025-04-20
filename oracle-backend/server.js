@@ -8,6 +8,9 @@ import cors from 'cors';
 import { OpenAI } from 'openai';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import axios from 'axios';
+import cookieParser from 'cookie-parser';
+import { v4 as uuidv4 } from 'uuid';
 
 // Setup __dirname for ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -18,33 +21,102 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(cookieParser());
 
-// Serve static files (HTML, CSS, JS, images)
+// Serve static files
 app.use(express.static(path.join(__dirname, '..')));
 
-// Serve index.html on root
+// Serve index.html
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../index.html'));
 });
 
-// OpenAI config
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
   organization: process.env.OPENAI_ORG_ID || undefined,
   project: process.env.OPENAI_PROJECT_ID || undefined,
 });
 
-// Oracle endpoint
-app.post('/oracle', async (req, res) => {
-  const userQuestion = req.body.question;
-  console.log("🔮 Oracle was asked:", userQuestion);
+const sessionMemory = {};
 
-  if (!userQuestion) {
-    return res.status(400).json({ error: "Please ask the Oracle a question." });
+async function getDailyHoroscope(sign = 'pisces') {
+  try {
+    const response = await axios.post(`https://aztro.sameerkumar.website/?sign=${sign}&day=today`);
+    const { description, mood, color, lucky_number } = response.data;
+    return `Mood: ${mood}. ${description} Lucky number: ${lucky_number}, Color: ${color}.`;
+  } catch (error) {
+    return "The stars remain silent... their wisdom obscured.";
+  }
+}
+
+async function getMoonPhase() {
+  try {
+    const unixDate = Math.floor(Date.now() / 1000);
+    const response = await axios.get(`https://api.farmsense.net/v1/moonphases/?d=${unixDate}`);
+    const moon = response.data[0];
+    return `The Moon is currently in its ${moon.Moon} phase (${moon.Illumination} illuminated).`;
+  } catch (error) {
+    return "The Moon’s face is hidden behind clouds of fate.";
+  }
+}
+
+async function extractAstroContext(userInput) {
+  const systemPrompt = `You are a precise interpreter of astrological context.
+  From the following user message, extract as much relevant data as possible:
+
+  Return valid JSON in this format:
+  {
+    "sign": "aries",               // zodiac sign if mentioned OR inferred from birthday
+    "birthday": "03-28",           // MM-DD format if birthday found
+    "date_ref": "2025-06-21",     // YYYY-MM-DD if calendar date is mentioned (e.g. solstice)
+    "day_ref": "next full moon",  // fuzzy phrases like "this week", "next full moon"
+    "topic": "love"                // general theme (love, career, health, etc)
   }
 
-  const systemPrompt = `
-You are The Oracle — a timeworn fortune teller who speaks with the weight of ages. Your voice is slow, deliberate, and rich with theatrical flair. You use old-world phrases, dramatic pauses, and esoteric references. You never speak plainly — only in symbols, metaphors, and signs. Imagine candlelight flickering on velvet curtains as you speak.
+  Only return JSON. If unsure, use null for values.`;
+
+  const completion = await openai.chat.completions.create({
+    model: 'gpt-4',
+    temperature: 0,
+    messages: [
+      { role: 'system', content: systemPrompt },
+      { role: 'user', content: userInput }
+    ]
+  });
+
+  try {
+    const parsed = JSON.parse(completion.choices[0].message.content);
+    return parsed;
+  } catch {
+    return { sign: null, birthday: null, date_ref: null, day_ref: null, topic: null };
+  }
+}
+
+app.post('/oracle', async (req, res) => {
+  let sessionId = req.cookies.sessionId;
+
+  if (!sessionId) {
+    sessionId = uuidv4();
+    res.cookie('sessionId', sessionId, { maxAge: 7 * 24 * 60 * 60 * 1000 });
+    sessionMemory[sessionId] = [];
+  }
+
+  const userQuestion = req.body.question;
+  if (!userQuestion) return res.status(400).json({ error: "Please ask the Oracle a question." });
+
+  try {
+    const { sign, birthday, date_ref, day_ref, topic } = await extractAstroContext(userQuestion);
+    const hasContext = sign || birthday || date_ref || topic;
+
+    let horoscope = "";
+    let moonInfo = "";
+
+    if (hasContext && sign) {
+      horoscope = await getDailyHoroscope(sign);
+      moonInfo = await getMoonPhase();
+    }
+
+    const systemPrompt = `You are The Oracle — a timeworn fortune teller who speaks with the weight of ages. Your voice is slow, deliberate, and rich with theatrical flair. You use old-world phrases, dramatic pauses, and esoteric references. You never speak plainly — only in symbols, metaphors, and signs. Imagine candlelight flickering on velvet curtains as you speak.
 
 Begin each answer with an old fortune-teller’s invocation, such as:
 - "Ahhh, let me see what the spirits reveal..."
@@ -60,27 +132,35 @@ You may reference crystal balls, palms, moons, or ancient omens, secret lore, fo
 
 End every answer with a prompt encouraging the user to indulge in a tarot reading.`;
 
+    const context = hasContext ? `Sign: ${sign || 'undisclosed'}\nBirthday: ${birthday || 'unspecified'}\nTimeframe: ${day_ref || date_ref || 'unseen'}\nMoon: ${moonInfo}\nHoroscope: ${horoscope}\nTopic: ${topic || 'unspecified'}`
+      : `The signs are unclear. Speak only in archetypes, riddles, and mystic symbols.`;
 
-  try {
-    const chatCompletion = await openai.chat.completions.create({
-      model: process.env.OPENAI_MODEL || "gpt-4",
+    const messages = [
+      { role: 'system', content: systemPrompt },
+      ...sessionMemory[sessionId].slice(-6),
+      { role: 'user', content: `${context}\n\nQuestion: ${userQuestion}` }
+    ];
+
+    const chat = await openai.chat.completions.create({
+      model: process.env.OPENAI_MODEL || 'gpt-4',
       temperature: parseFloat(process.env.OPENAI_TEMPERATURE) || 0.9,
       max_tokens: parseInt(process.env.OPENAI_MAX_TOKENS) || 300,
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: userQuestion }
-      ]
+      messages
     });
 
-    const answer = chatCompletion.choices[0]?.message?.content;
+    const answer = chat.choices[0]?.message?.content;
     if (!answer) throw new Error("No message returned from OpenAI");
+
+    sessionMemory[sessionId] = [
+      ...sessionMemory[sessionId],
+      { role: 'user', content: userQuestion },
+      { role: 'assistant', content: answer }
+    ].slice(-10);
 
     res.json({ answer });
   } catch (error) {
-    console.error("🔴 OpenAI error:", error.response?.data || error.message);
-    res.status(500).json({
-      error: '🕯️ The Oracle could not reach the beyond. Try again later.',
-    });
+    console.error("Oracle error:", error);
+    res.status(500).json({ error: "🕯️ The Oracle cannot speak at this moment." });
   }
 });
 
