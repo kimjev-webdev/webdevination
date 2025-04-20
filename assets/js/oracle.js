@@ -13,6 +13,7 @@ function initOracleApp() {
 
   setupCharacterCountListener(input, counter, maxChars);
   setupFormSubmitHandler(form, input, responseBox, maxChars);
+  setupInputBehavior(input, form); // 👈 New
 }
 
 // Typing animation
@@ -47,6 +48,22 @@ function setupCharacterCountListener(input, counter, maxChars) {
     const currentLength = input.value.length;
     counter.textContent = `${currentLength} / ${maxChars}`;
     counter.style.color = currentLength > maxChars ? "red" : "#aaa";
+  });
+}
+
+// Placeholder + Enter key logic
+function setupInputBehavior(input, form) {
+  input.addEventListener("focus", () => {
+    if (input.placeholder === "Type your question...") {
+      input.placeholder = "";
+    }
+  });
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      form.requestSubmit(); // Submit form on Enter
+    }
   });
 }
 
