@@ -619,9 +619,8 @@ align-items: center;
 /* text entry box for oracle form styles */  
   textarea#questionInput {
     background-color: rgb(174, 255, 0);
-    width: 70%;
+    min-width: 100%;  
     text-align: center;
-    max-width: 88vw;
     font-family: "Source Code Pro", monospace;  
     font-size: 1rem;
     padding: 30px 12px;
