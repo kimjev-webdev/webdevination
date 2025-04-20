@@ -1521,9 +1521,6 @@ footer {
   margin: 0 45px 0 45px;
 }
 
-.extratextbigscreenthree {
-  display: none;    }
-
 button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
 margin: 0px 5px 0px 5px;  }
 
@@ -1544,6 +1541,9 @@ margin: 0px 5px 0px 5px;  }
   .card-choice {
     width: 8.5rem;
   }
+
+  .extratextbigscreenthree {
+    display: none;    }
 
   .game-container {
     margin: 0 50px 50px 50px;
