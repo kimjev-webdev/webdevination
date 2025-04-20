@@ -1517,10 +1517,6 @@ footer {
   font-size: 1.5rem;
 }
 
-.threeintrorow {
-  margin: 0 45px 0 45px;
-}
-
 button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
 margin: 0px 5px 0px 5px;  }
 
@@ -1561,6 +1557,10 @@ margin: 0px 5px 0px 5px;  }
 @media (min-width: 992px){
   #buttons-container .col-12.col-sm-6 .image-container img {
     width: 120px;
+}
+
+.threeintrorow {
+  margin: 0 45px 0 45px;
 }
 
 .cardgame-select {
