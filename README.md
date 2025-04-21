@@ -436,31 +436,36 @@ Tourney was selected and installed from the [Google Fonts Library](https://fonts
 
 Tourney is a bold, futuristic display font that immediately conveys the tone of mysticism meeting modernity. It was chosen for headers and buttons because:
 
-* It's condensed, geometric forms feel cryptic and alien—perfect for esoteric symbolism.
-* The all-uppercase style evokes a commanding presence.
+* It's condensed, geometric forms feel cryptic and alien —perfect for esoteric symbolism.
+* The uppercase style evokes a commanding presence and ritualistic formality.
 * It's synthetic, digital personality aligns with the site's techno-terminal aesthetic, making each heading feel like a cosmic interface label.
 * By using Tourney on interactive elements (like buttons), the site invokes the feeling of activating a spell or accessing a sacred machine.
-<br>
-<br>
+* Buttons using Tourney feature hover-based flash animations to clearly distinguish them from static headers.
+* This visual flash, combined with a cursor pointer and a subtle `transform: scale(1,1)` effect, signals the button's interactivity and sets it apart from passive text.
+* Letter-spacing is increased on both headers and buttons to enhance its glyphic, rune-like energy.
+* Tourney appears in bright green tones that echo the mystic-glow palette used throughout the site.
 
- #### ADD IMAGE
+![](assets/images/tourney.jpg)
 
 ### MENTION CHARACTER SPACING , FONT WEIGHT, FLASH ON BUTTONS DISTINGUISHING FROM HEADERS - WITH CURSOR POINTERS CAPITALISATION, GLOW AND COLOR
 
 #### Secondary Font - Source Code Pro
 
-#### ADD IMAGE
+![](assets/images/sourcecodepro.jpg)
 
 Source Code Pro was selected and installed via [Google Fonts Library](https://fonts.google.com/specimen/Source+Code+Pro?query=source+code).
 
 Source Code Pro, a monospaced font originally designed for code editors, was selected for all paragraph and informational text because:
 
-* It resembles terminal output, which reinforces the core theme of a divinatory operating system or magical console.
-* Its clear, even spacing makes it highly readable for long stretches of mystical or instructional text.
-* It subtly nods to the fusion of logic and intuition, structure and spirit—echoing the balance found in both coding and tarot interpretation.
-* This font grounds the experience, giving users the sense that they are reading sacred data or decoding a digital grimoire.
+* It evokes the aesthetic of terminal interfaces, reinforcing the site's identity as a mystical operating system or divinatory console.
+* It's fixed-width spacing makes it easy to scan and consistently legible, ideal for AI responses, tooltips, card descriptions, and modal text.
+* The slightly italicized variant has been implemented to create a sense of quietness — as if the user is being whispered to by the machine, or gently told their fortune by a sentient digital oracle.
+* Weights 400 and 500 were selected from the Google Fonts library to strike a balance between clarity and tone—bold enough to be readable, but light enough to feel elegant.
+* The fallback stack is: `font-family: 'Source Code Pro', monospace;`
+* This ensures that, in the absence of the Google font, the browser defaults to any available monospaced font. This choice is intentional: terminal-style text doesn’t need embellishment—as long as it’s monospaced, it retains the intended feel of a sacred codebase.
 
-#### MENTION GLOW AND COLOR AND FONT WEIGHT FOR READABILITY
+Fallback preview: 
+![](assets/images/monospace.jpg)
 
 <h3 id="12"> 5. Images </h3>
 
