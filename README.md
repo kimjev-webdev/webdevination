@@ -68,7 +68,7 @@ This project brings divination into the modern age, creating a space where the i
 2. <a href="#28">Draw Feature</a>
 3. <a href="#29">Card Images & Descriptions</a>
 4. <a href="#30">Modal</a>
-5 <a href="#31">Fake Advertisment</a>
+5. <a href="#31">Fake Advertisment</a>
 
 </details>
 <details>
