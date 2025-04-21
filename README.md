@@ -490,7 +490,7 @@ Across the site Bootstrap 5 and Custom CSS are used interchangably to achieve th
 The navbar can be found on all pages apart from the landing page
 It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components/navbar/) copied from Bootstrap 5 and then customized. It is fully responsive thanks to Bootstrap 5’s navbar-expand-lg and collapse behavior.
 
-| ![Navbar 1](assets/images/readmefiles/navbar2.JPG)<br>![Navbar 2](assets/images/readmefiles/navbar3.JPG) | 
+| <img src="assets/images/readmefiles/navbar2.JPG" alt="Navbar 1" style="width: 45%;"><br><img src="assets/images/readmefiles/navbar3.JPG" alt="Navbar 2" style="width: 45%;"> | 
 * Fully responsive layout using Bootstrap 5’s `navbar-expand-lg` and collapse behavior.  
 * Dropdown menu under "Readings" links to the One Card and Three Card spread pages.  
 * Transparent background allows visuals and text to stylishly pass through the navbar.  
@@ -500,6 +500,7 @@ It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components
 * Custom glow effects on links (`text-glow`) enhance interactivity and mood.  
 * Mobile menu transforms into a glowing X icon when toggled.  
 * Utilizes a monospaced, mystic-coded style (`Source Code Pro`). |
+
 
 
 
