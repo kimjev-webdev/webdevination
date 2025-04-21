@@ -472,18 +472,30 @@ Fallback preview:
 
 ![](assets/images/readmefiles/images.jpg)
 
-The images selected for the site should provide a visual overview of Kim's experience as an artist, as well as a clear idea of her visual language and style. The gallery hosts pictures of Kim's surface pattern designs and creative direction for fashion photography, her textile banners, her mixed-media artwork, art exhibitions and illustration which shows a dynamic approach to creativity.  
+The tarot deck featured throughout this project was entirely custom-made using MidJourney, with artistic direction, structure, and refinement handled manually to ensure continuity, symbolism, and visual cohesion.
 
-* Images are a combination of photographs and mockups of Kim's work which help to give a clear and concise layout to the gallery.
-* 3 responsive columns are used to give a basic masonry style effect. 
-* All images are high quality, and therefore have large file sizes. To aid loading times all images were compressed.
-* All images are uploaded in 'webp' format to aid UX and provide superior lossless and lossy compression to the images in the gallery.
-* Lazy loading (loading="lazy") was used to improve UX.
-* With more time and experience the gallery would benefit from [Blur Hash](https://blurha.sh/) implementation to improve UX.
-* With more time and experience the gallery would benefit from other feature such as zoom hover or displaying in larger format when clicked. 
+#### Original Art as Style Input
+* The process began by feeding MidJourney with the developer’s own neon-infused illustrations and painted works. This not only grounded the deck in a unique personal style, but also allowed MidJourney to reflect consistent textures and color palettes from the onset. 
+#### Prompt Engineering with Purpose
+* Prompts were carefully refined to align with the structure and symbolism of the original Rider–Waite–Smith tarot deck. Figures, objects, and settings were all influenced by this historic reference point, preserving the archetypal and symbolic elements of each card whilst evolving the aesthetic into something futuristic and enigmatic.
+#### Stylistic Cohesion
+* The neon tones of the developer’s own artwork, echoed throughout the card illustrations, were intentionally designed to complement the terminal-green hue used in the site’s typography and UI. This unifies the deck with the digital interface, visually complementing the 'operating system' that surrounds the cards.
+#### Hand-Crafted Typography & Borders
+* After generating the artwork, every card was brought into Adobe Illustrator, where each card front was then framed with a matching border.
+* Using consistent geometry and visual weight gives the deck a unified identity.
+* The intricate Art Nouveau-style border work offers a psychedelic but classical edge, amplifying the mystical and ornamental feel of the deck as though each card is a sacred or mystical object.
+#### Custom Card Backs
+* Used in 'card flips'
+* Separate card back designs were created to mirror the same visual language as the fronts.
+* These backs incorporate the name of the project 'WEBDEVINATION' acting as a subtle signature. The psychedelic font and pattern on the back of the cards reflect the deck’s ritualistic function and digital mystique. The green hue on the backs matches with the terminal and `text-glow` class to give synergy between the other design elements and the cards themselves.
+#### Curation & Optimization
+* Final card artwork was selected from hundreds of MidJourney iterations and lightly refined before being exported as WebP files for maximum performance online.
+* Card images and descriptions are all loaded dynamically through the json file `tarot.json`
+#### Symbolic Integrity
+* Although visually modern, the iconography, gestures, and spatial structures of the cards remain true to the symbolic language of traditional tarot ensuring that each one still carries its archetypal resonance and interpretive power.
 
 <h3 id="13">Styling</h3>
-Across the site Bootstrap 5 and Custom CSS are used interchangably to achieve the desired styles. As an absaloute beginner, the methods of achieving style results were largly trial and error and a lot of experimentation. In some cases, styling could have been achieved through Bootstrap inline, which would have saved some time, but for the sake of learning, using the custom CSS to target elements has achieved the same results and added a depth of understanding. 
+
 
 <h2 id="14"></h2>
 
