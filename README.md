@@ -450,7 +450,6 @@ Tourney is a bold, futuristic display font that immediately conveys the tone of 
 Tourney/button example: 
 ![](assets/images/readmefiles/tourneybutton.webp)
 
-
 #### Secondary Font - Source Code Pro
 
 ![](assets/images/readmefiles/sourcecodepro.jpg)
@@ -508,11 +507,6 @@ It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components
 * Mobile menu transforms into a glowing X icon when toggled.  
 * Utilizes a monospaced, mystic-coded style (`Source Code Pro`). |
 
-
-
-
-
-
 <h3 id="17">2. Footer</h3>
 
 ![](assets/images/readmefiles/footer1.jpg)
@@ -526,8 +520,7 @@ It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components
 
 <h3 id="18">3. Preloader</h3>
 
-![](assets/images/readmefiles/preloader1.webp)
-![](assets/images/readmefiles/preloader2.webp)
+![](assets/images/readmefiles/preloader.webp)
 
 *Handled through nav.js
 *Fullscreen overlay that displays on initial page load.
@@ -536,7 +529,6 @@ It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components
 *CSS animations (@keyframes) manage scaling, rotation, and opacity.
 *Lightweight and optimized for fast performance across devices.
 * Adds an immersive mystical "gateway" effect to the UX - enhancing the convergence between technology and mysticism. 
-
 
 <h2 id="18">Features - Homepage</h2>
 
