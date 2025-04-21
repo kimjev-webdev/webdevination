@@ -691,105 +691,109 @@ The background image is the final visual 'wow' that aims to ensure website users
 * JavaScript has been implimented so that on form submission a secondary window appears which includes Kim's direct email should the user want to reach out in more detail.
 * The language used in headers 'Get in touch' and 'Speak Soon' aims to inform users but also maintain the relaxed communication that is used in headers on the about page. 
 
-<h2 id="31"></h2> 
-<h2 id="32">Technologies Used - Languages</h2> 
+<h2 id="38"></h2> 
+<h2 id="39">Technologies Used</h2>
+<h3 id="40">Languages</h3>
 
-<h3 id="33">1. HTML</h3>
-* This is the page markup language used.
+#### 1. HTML
+The foundational markup language used to structure all pages across the site, including the Oracle, card gallery, spreads, and modals.
 
-<h3 id="34">2. CSS</h3>
-* This is used for styling the elements.
+#### 2. CSS
+Responsible for the entire visual language of the project. Custom classes were written to manage layout, color, animation, interactivity, and theming. Over 100 hand-authored classes power the site’s unique styling system.
 
-<h3 id="35">3. JavaScript</h3>
-* Simple JS instructions are used on the forms in the footer and on the [contact](contact.html) page.
+#### 3. JavaScript
+Powers dynamic behavior throughout the site. From controlling the navbar and shuffling cards to managing portal animations, dropdown logic, and Oracle input/output — JavaScript gives the site life and movement.
 
-<h2 id="36">Technologies Used - Framework</h2>
+<h3 id="41">Frameworks</h3>
 
-<h3 id="37"></h3>
+#### 1.  [Bootstrap 5](https://getbootstrap.com/)
+Used as a responsive layout foundation and for components like the navbar, modals, and accordion galleries. Utility classes were also used throughout, though heavily customized to create a completely original aesthetic.
 
-### 1. [Bootstrap 5](https://getbootstrap.com/)
-* Bootstrap 5 boilerplate code was implemented throughout the site as a blueprint for many of the elements.
+#### 2. Express.js
+Provides the lightweight backend framework for the AI Oracle, handling routes, requests, and API integration.
 
-<h2 id="38">Technologies Used - Libraries</h2>
+#### 3. Node.js
+Runs the server-side logic for the Oracle, allowing API calls to OpenAI, Aztro, and Farmsense while managing environment variables and user session memory.
 
-<h3 id="39"></h3>
+<h3 id="42">Libraries & APIs</h3>
 
-### 1. [Google Fonts](https://fonts.google.com/)
-* Google Fonts was utilized for installing the Montserrat body/secondary font.
+#### 1. [Font Awesome](https://fontawesome.com/)
+Used throughout for iconography, including social links and the custom navbar pentagram icon.
 
-<h3 id="40"></h3>
+#### 2. OpenAI API
+Generates poetic, symbolic responses based on user questions and astrological context.
 
-### 2. [Font Awesome](https://fontawesome.com/)
-* Font Awesome was utlized for installing icons and also used for hosting custom icons. 
+#### 3. Aztro API
+Supplies real-time daily horoscopes based on user-provided birth date or zodiac sign.
 
-<h2 id="41">Technologies Used - Platforms</h2>
+#### 4. Farmsense API
+Delivers current moon phase data to enrich the Oracle's predictions with lunar energy.
 
-<h3 id="42"></h3>
+#### 5. [Google Fonts](https://fonts.google.com/)
+Used to import and serve the project’s two core typefaces 'Tourney' and 'Source Code Pro'
 
-### 1. [Github](https://github.com)
-* Hosts the deployed version of the site and also stores the code. 
+<h3 id="43">Platforms</a>
 
-<h3 id="43"></h2>
+#### 1. [Github](https://github.com)
 
-### 2. [Gitpod](https://www.gitpod.io/)
-* Hosts the IDE used for the project development.
+Hosts the deployed frontend via GitHub Pages and stores the full project codebase with version control.
 
-<h2 id="44">Technologies Used - Other Tools</h2>
+#### 2. [Render](https://render.com)
+Hosts the backend Oracle service and allows secure management of API keys via environment variables.
 
-<h3 id="45"></h3>
+#### 3. [VS Code](https://code.visualstudio.com)
+The core IDE used to design, build, and test all code for both the frontend and backend.
 
-### 1. [MidJourney](https://www.midjourney.com/)
-* A.I  trained  with [portfolio images](https://kimjev-webdev.github.io/kimjevon/gallery.html) from the gallery on Kim Jevon's Portfolio site. These images provided style references. Prompts were written with symbols derived from the traditional [Rider-Waite tarot deck](https://en.wikipedia.org/wiki/Rider%E2%80%93Waite_Tarot).
+<h3 id="44">Other Tools</a>
 
-<h3 id="46"></h3>
+#### 1. [MidJourney](https://www.midjourney.com/)
+AI image generation tool trained with original artwork from Kim Jevon’s portfolio. Used to generate the full tarot deck with prompts referencing Rider-Waite symbolism. it was also used to generate images for the fake fortune teller advertisment. 
 
-### 2. [Adobe Illustrator](https://www.adobe.com/uk/products/illustrator/ipad.html)
-* The iPad application was used to create card borders, backs and other graphic elements.
+#### 2. [Adobe Illustrator](https://www.adobe.com/uk/products/illustrator/ipad.html)
+Used to create hand-drawn card borders, typeset labels, and design consistent backs/fronts for all 78 tarot cards.
 
-<h3 id="47"></h3>
+#### 3. [To WebP](https://towebp.io/)
+Converts all images to .webp format for optimized loading and sharp, high-fidelity visuals on all devices.
 
-### 3. [To WebP](https://towebp.io/)
-* Used to convert all images to webp format.
+#### 4. [Trimmy](https://app.trimmy.io/)
+Used to crop and clean the exported tarot images, ensuring perfect alignment and consistency in visual spacing.
 
-<h3 id="48"></h3>
+#### 5. [Balsamiq](https://balsamiq.com)
+For sketching and visualizing early wireframes and planning responsive layouts.
 
-### 4. [Trimmy](https://app.trimmy.io/)
-* Used to remove white/empty space from around the card designs after exporting from Adobe Illustrator. 
+#### 6. [Favicon](https://favicon.io/) 
+Used to generate the site’s favicon and icon manifest files.
 
-<h3 id="49"></h3>
+#### 7. [Procreate](https://procreate.com/) 
+Used to paint over, clean up, or manually correct MidJourney outputs — removing unwanted elements or enhancing details that the AI misinterpreted.
 
-### 5. [Balsamiq](https://balsamiq.com)
-* Used to create wireframes.
+#### 8. [ChatGPT](https://chatgpt.com/)
+Used to brainstorm, refine prompts, debug code, and provides the mystical language for the Oracle itself. 
 
-<h3 id="50"></h3>
 
-### 6. [Favicon](https://favicon.io/) 
-* Used to create the websites Favicon files.
 
-<h3 id="51"></h3>
 
-### 7. [Procreate](https://procreate.com/) 
-* Used to remove and alter elements on the MidJourney generated designs. e.g where the A.I has misread a prompt and added extra coins/cups to the design. e.g where the a.i had added in aesthetically unwanted elements which needed to be removed. 
 
-<h3 id="52"></h3>
 
-### 8. [Chat GPT](https://LINK) 
-* WRITE HERE
 
-<h3 id="53"></h3>
 
-### 9. [NAME](https://LINK) 
-* WRITE HERE
 
-<h3 id="54"></h3>
 
-### 10. [NAME](https://LINK) 
-* WRITE HERE
 
-<h3 id="54a"></h3>
 
-### 11. [NAME](https://LINK) 
-* WRITE HERE
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <h2 id="55">Testing</h2>
 
