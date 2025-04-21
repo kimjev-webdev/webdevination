@@ -393,13 +393,17 @@ Font Awesome's styling utilities have aided the 'flashing' of the icon, achieved
 </p>
 <br>
 
-#### Emoji
+#### Emoji's
 
+Emoji's are implemented on the site as playful supplements to the UX. 
 <p align="left">
   <img src="assets/images/readmefiles/icons/crystal_ball.webp" alt="Heart Icon" width="100" style="float: left; margin-right: 20px;"><br>
   The crystal ball emoji was used in the title of the A.I oracle feature to help captivate the users attention. The color of the emoji also compliments the card designs featured on the info page and breaks up the otherwise heavy neon green and black elements.  
 </p>
 <br>
+
+The four emoj's below reference the element's that the Minor Arcana suits correspond to. They are found inside the accordion for the Minor Arcana next to the suit titles on the 'Cards' page 
+🔥💦🌪️🌳
 
 <h3 id="11"> 4. Fonts </h3>
 
@@ -462,7 +466,8 @@ Across the site Bootstrap 5 and Custom CSS are used interchangably to achieve th
 
 ![](assets/images/navfull.webp)
 
-The navbar was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components/navbar/) copied from Bootstrap 5 and then customized. 
+The navbar can be found on all pages apart from the landing page
+It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components/navbar/) copied from Bootstrap 5 and then customized. 
 
 <img style="margin: 20px;" align="right" width="400px" height="auto" src="assets/images/navcollapse.webp">
 
