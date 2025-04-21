@@ -488,19 +488,19 @@ Across the site Bootstrap 5 and Custom CSS are used interchangably to achieve th
 ![](assets/images/navfull.webp)
 
 The navbar can be found on all pages apart from the landing page
-It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components/navbar/) copied from Bootstrap 5 and then customized. 
+It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components/navbar/) copied from Bootstrap 5 and then customized. It is fully responsive thanks to Bootstrap 5’s navbar-expand-lg and collapse behavior.
 
 <img style="margin: 20px;" align="right" width="400px" height="auto" src="assets/images/navcollapse.webp">
 
-* The navbar is as simple as possible to aid the UX. 
-* 3 pages with clear and obvious headings make the site easy to navigate.
-* The navbar uses Rumei House font for links.
-* The left hand side of the navbar has the badge version of Kim's logo. This operates as a homepage link to aid navigation.
-* The badge logo has been implemented as a custom icon, created and uploaded to Font Awesome.
-* The navbar is responsive and collapsible utilizing the universal 'hamburger' icon on smaller devices. 
-* Bootstrap's navbar toggler icon (hamburger for collapsible responsive menu) has been replaced with a Font Awesome alternative which makes it easier to target with CSS, including adding the purple hover effect.
-* All buttons in the navbar have this purple rollover.
-* The navbar uses 'fixed-top' to keep it visible on even when the page is scrolled down. 
+* Fully responsive layout using Bootstrap 5’s navbar-expand-lg and collapse behavior.
+* Dropdown menu under "Readings" links to the One Card and Three Card spread pages.
+* Transparent background allows visuals and text to stylishly pass through the navbar.
+* Despite the fact that on index.html, users are prompted to rotate their device horizontally for optimal experience - all paragraph text and headings are styled to fit within the space between the navbar brand and the hamburger icon, maintaining readability and styling both horizontally and vertically just incase a user misses the 'roate screen prompt' on the landing page. 
+* Uses a custom Font Awesome pentagram icon as the brand element, referencing both the occult and the suit of Pentacles.
+* The pentagram icon links back to index.html and features a pulsing glow animation that mirrors button keyframe styles.
+* Custom glow effects on links (text-glow) enhance interactivity and mood.
+* Mobile menu transforms into a glowing X icon when toggled.
+* Utilizes a monospaced, mystic-coded style (Source Code Pro).
 
 
 <h3 id="17">2. Footer</h3>
@@ -509,16 +509,22 @@ It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components
 
 <img style="margin: 20px;" align="right" width="400" height="auto" src="assets/images/footerjs.webp">
 
-The footer is located at the bottom of every page, and was created from a [boilerplate](https://getbootstrap.com/docs/5.3/components/card/#header-and-footer) provided by Bootstrap 5.
+* Fixed at the bottom of every page, styled with subtle glow and low opacity text.
+* Display the current year dynamically using JavaScript
+* Includes the developers name and copyright
+* Heart icon incorporated to match with index.html use of icons.
+* Minimal styling and small font size to remain non-distracting.
+* Inherits glow and font styling from global .text-glow and Source Code Pro.
 
-* The footer is responsive, forming 3 columns on larger screens and on smaller devices it collapses into one column. 
-* There is an empty column nested within the footer to help assist in aligning the central column despite the aysmetrical widths of the two outside columns. 
-* The footer includes an email sign up 'call to action' which utilizes placeholder text to explain to the user that they are signing up for a newsletter.
-* The email sign up uses JavaScript to change the SIGN UP button text to THANKS! Which allows the user to understand that the form has been submitted without taking up extra space. This whole column is designed to be as comprehensive as possible without comprimising UX.
-* The 'SIGN UP' button on the email sign up is greyed out to communicate that the email hasn't been entered and this transitions to white once it has been filled in. 
-* The central column includes social links encouraging users to stay connected and find out more about Kim.
-* The final column contains the page navigation links which aid site navigation. 
-* There is space in the final column for a PRIVACY section to contain the privacy policy once this has been created.
+<h3 id="18">3. Preloader</h3>
+*Handled through nav.js
+*Fullscreen overlay that displays on initial page load.
+*Portal-style animation: a glowing circle that expands on entry and contracts on exit.
+*Alternates between entry/exit using JavaScript sessionStorage to make the user feel like they are entering and leaving the portal between each page.
+*CSS animations (@keyframes) manage scaling, rotation, and opacity.
+*Lightweight and optimized for fast performance across devices.
+* Adds an immersive mystical "gateway" effect to the UX - enhancing the convergence between technology and mysticism. 
+
 
 <h2 id="18">Features - Homepage</h2>
 
