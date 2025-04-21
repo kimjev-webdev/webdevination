@@ -475,24 +475,41 @@ Fallback preview:
 The tarot deck featured throughout this project was entirely custom-made using MidJourney, with artistic direction, structure, and refinement handled manually to ensure continuity, symbolism, and visual cohesion.
 
 #### Original Art as Style Input
-* The process began by feeding MidJourney with the developer’s own neon-infused illustrations and painted works. This not only grounded the deck in a unique personal style, but also allowed MidJourney to reflect consistent textures and color palettes from the onset. 
+
+* The process began by feeding MidJourney with the developer’s own neon-infused illustrations and painted works. This not only grounded the deck in a unique personal style, but also allowed MidJourney to reflect consistent textures and color palettes from the onset.
+  
 #### Prompt Engineering with Purpose
+
 * Prompts were carefully refined to align with the structure and symbolism of the original Rider–Waite–Smith tarot deck. Figures, objects, and settings were all influenced by this historic reference point, preserving the archetypal and symbolic elements of each card whilst evolving the aesthetic into something futuristic and enigmatic.
+
 #### Stylistic Cohesion
+
 * The neon tones of the developer’s own artwork, echoed throughout the card illustrations, were intentionally designed to complement the terminal-green hue used in the site’s typography and UI. This unifies the deck with the digital interface, visually complementing the 'operating system' that surrounds the cards.
+
 #### Hand-Crafted Typography & Borders
+
 * After generating the artwork, every card was brought into Adobe Illustrator, where each card front was then framed with a matching border.
 * Using consistent geometry and visual weight gives the deck a unified identity.
 * The intricate Art Nouveau-style border work offers a psychedelic but classical edge, amplifying the mystical and ornamental feel of the deck as though each card is a sacred or mystical object.
+* The neon green stroke path around the black swirls in the border matches with the neon green terminal text.
+
 #### Custom Card Backs
+
 * Used in 'card flips'
 * Separate card back designs were created to mirror the same visual language as the fronts.
 * These backs incorporate the name of the project 'WEBDEVINATION' acting as a subtle signature. The psychedelic font and pattern on the back of the cards reflect the deck’s ritualistic function and digital mystique. The green hue on the backs matches with the terminal and `text-glow` class to give synergy between the other design elements and the cards themselves.
+  
 #### Curation & Optimization
+
 * Final card artwork was selected from hundreds of MidJourney iterations and lightly refined before being exported as WebP files for maximum performance online.
 * Card images and descriptions are all loaded dynamically through the json file `tarot.json`
+
 #### Symbolic Integrity
+
 * Although visually modern, the iconography, gestures, and spatial structures of the cards remain true to the symbolic language of traditional tarot ensuring that each one still carries its archetypal resonance and interpretive power.
+
+<br>
+<br>
 
 <h3 id="13">6. Styling</h3>
 
