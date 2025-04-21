@@ -491,8 +491,7 @@ The navbar can be found on all pages apart from the landing page
 It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components/navbar/) copied from Bootstrap 5 and then customized. It is fully responsive thanks to Bootstrap 5’s navbar-expand-lg and collapse behavior.
 
 
-<img src="assets/images/readmefiles/navbar2.JPG" style="width: 50%;">
-<img src="assets/images/readmefiles/navbar3.JPG" style="width: 50%;">
+<img src="assets/images/readmefiles/navbar2.JPG" style="width: 45%;"> <img src="assets/images/readmefiles/navbar3.JPG" style="width: 45%;">
 
 * Fully responsive layout using Bootstrap 5’s navbar-expand-lg and collapse behavior.
 * Dropdown menu under "Readings" links to the One Card and Three Card spread pages.
