@@ -87,6 +87,7 @@ This project brings divination into the modern age, creating a space where the i
 
 </details>
 </details>
+</details>
 
 <details>
 <summary><a href="#39">Technologies Used</a></summary>
@@ -137,6 +138,7 @@ This project brings divination into the modern age, creating a space where the i
 7. <a href="#54">Procreate</a>  
 </details>
 </details>
+</details>
 
 <details>
 <summary><a href="#55">Testing</a></summary>
@@ -150,11 +152,14 @@ This project brings divination into the modern age, creating a space where the i
 7. <a href="#61">Bugs</a>
 </details>
 
+
 <details>
 <summary><a href="#61a">Deployment</a></summary>
   
 1. <a href="#61b">Github Deployment</a>
 2. <a href="#61c">Render Deployment</a>
+
+</details>
 
 <details>
 <summary><a href="#62">Credits</a></summary>
