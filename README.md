@@ -432,6 +432,8 @@ Typography plays a vital role in reinforcing the aesthetic and metaphysical tone
 
 #### Primary Font - Tourney 
 
+![](assets/images/readmefiles/tourney.jpg)
+
 Tourney was selected and installed from the [Google Fonts Library](https://fonts.google.com/specimen/Tourney).
 
 Tourney is a bold, futuristic display font that immediately conveys the tone of mysticism meeting modernity. It was chosen for headers and buttons because:
@@ -445,9 +447,7 @@ Tourney is a bold, futuristic display font that immediately conveys the tone of 
 * Letter-spacing is increased on both headers and buttons to enhance its glyphic, rune-like energy.
 * Tourney appears in bright green tones that echo the mystic-glow palette used throughout the site.
 
-![](assets/images/tourney.jpg)
-
-### MENTION CHARACTER SPACING , FONT WEIGHT, FLASH ON BUTTONS DISTINGUISHING FROM HEADERS - WITH CURSOR POINTERS CAPITALISATION, GLOW AND COLOR
+![](assets/images/readmefiles/tourneybutton.webp)
 
 #### Secondary Font - Source Code Pro
 
