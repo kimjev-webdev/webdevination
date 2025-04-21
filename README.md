@@ -496,6 +496,22 @@ The tarot deck featured throughout this project was entirely custom-made using M
 
 <h3 id="13">Styling</h3>
 
+The project’s visual identity is powered by a deep interplay between handcrafted CSS and immersive JavaScript logic, working together to create a world that feels both symbolic and alive.
+
+#### CSS Styling Highlights
+
+* The site uses over 100 custom CSS classes to style every element. From glowing buttons and floating icons to animated card draws, modals, and game elements.
+* Multiple @keyframes animations are used to bring movement and atmosphere to the page: glowing effects, blinking lights, floating sparkles, flickering text, and portal transitions.
+* A carefully structured class system allows consistent styling across pages while still letting individual components (like the oracle terminal, tarot deck, or navbar) express their own unique qualities and usefulness - no feature is redundant.
+* Typography, spacing, and color are tightly integrated — from mystic-green glow on buttons to soft, monospaced text on responses — ensuring that every interaction feels like part of a ritual interface.
+
+#### JavaScript-Driven Dynamism
+
+* JavaScript is used extensively throughout the project to bring style to life: cards are loaded, flipped, shuffled, and drawn dynamically, all with coordinated animations and responsive behaviors.
+* The navbar transitions, menu highlights, and active link states are all controlled by JS to help users feel like they’re navigating a mystical interface, not just a static page.
+* Across the site loading transitions, interactive prompts, and session-based effects are enhanced by JS logic, adding rhythm, feedback, and timing that pure CSS alone can't provide.
+* Rather than just adding behavior, JavaScript in this project is used to amplify the aesthetic, helping the visuals pulse, breathe, and respond to the user’s presence.
+* Together, the custom CSS and dynamic JavaScript form a ritualistic design language, giving the entire site a surreal, responsive quality that transforms it from a simple website into a mystical, living experience.
 
 <h2 id="14"></h2>
 
