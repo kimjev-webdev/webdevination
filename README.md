@@ -490,15 +490,6 @@ Across the site Bootstrap 5 and Custom CSS are used interchangably to achieve th
 The navbar can be found on all pages apart from the landing page
 It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components/navbar/) copied from Bootstrap 5 and then customized. It is fully responsive thanks to Bootstrap 5’s navbar-expand-lg and collapse behavior.
 
-
-<div style="display: flex; align-items: left; gap: 20px;">
-  <img src="assets/images/readmefiles/navbar2.JPG" alt="Description" style="width: 45%;">
-  <div> 
-<br>
-<div style="display: flex; align-items: left; gap: 20px;">
-  <img src="assets/images/readmefiles/navbar3.JPG" alt="Description" style="width: 45%;">
-  <div>
-
 * Fully responsive layout using Bootstrap 5’s navbar-expand-lg and collapse behavior.
 * Dropdown menu under "Readings" links to the One Card and Three Card spread pages.
 * Transparent background allows visuals and text to stylishly pass through the navbar.
@@ -508,6 +499,16 @@ It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components
 * Custom glow effects on links (text-glow) enhance interactivity and mood.
 * Mobile menu transforms into a glowing X icon when toggled.
 * Utilizes a monospaced, mystic-coded style (Source Code Pro).
+
+<div style="display: flex; align-items: left; gap: 20px;">
+  <img src="assets/images/readmefiles/navbar2.JPG" alt="Description" style="width: 45%;">
+  <div> 
+<br>
+<div style="display: flex; align-items: left; gap: 20px;">
+  <img src="assets/images/readmefiles/navbar3.JPG" alt="Description" style="width: 45%;">
+  <div>
+
+
 
 <h3 id="17">2. Footer</h3>
 
