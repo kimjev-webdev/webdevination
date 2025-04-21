@@ -485,12 +485,13 @@ Across the site Bootstrap 5 and Custom CSS are used interchangably to achieve th
 
 <h3 id="16">1. Navbar </h3>
 
-![](assets/images/navfull.webp)
+![](assets/images/readmefiles/navbar1.jpg)
 
 The navbar can be found on all pages apart from the landing page
 It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components/navbar/) copied from Bootstrap 5 and then customized. It is fully responsive thanks to Bootstrap 5’s navbar-expand-lg and collapse behavior.
 
-<img style="margin: 20px;" align="right" width="400px" height="auto" src="assets/images/navcollapse.webp">
+<img style="margin: 20px;" align="right" width="400px" height="auto" src="assets/images/readmefiles/navbar2.jpg">
+<img style="margin: 20px;" align="right" width="400px" height="auto" src="assets/images/readmefiles/navbar3.jpg">
 
 * Fully responsive layout using Bootstrap 5’s navbar-expand-lg and collapse behavior.
 * Dropdown menu under "Readings" links to the One Card and Three Card spread pages.
@@ -502,12 +503,9 @@ It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components
 * Mobile menu transforms into a glowing X icon when toggled.
 * Utilizes a monospaced, mystic-coded style (Source Code Pro).
 
-
 <h3 id="17">2. Footer</h3>
 
-![](assets/images/footerfull.webp)
-
-<img style="margin: 20px;" align="right" width="400" height="auto" src="assets/images/footerjs.webp">
+![](assets/images/readmefiles/footer1.jpg)
 
 * Fixed at the bottom of every page, styled with subtle glow and low opacity text.
 * Display the current year dynamically using JavaScript
@@ -517,6 +515,10 @@ It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components
 * Inherits glow and font styling from global .text-glow and Source Code Pro.
 
 <h3 id="18">3. Preloader</h3>
+
+![](assets/images/readmefiles/preloader1.webp)
+![](assets/images/readmefiles/preloader2.webp)
+
 *Handled through nav.js
 *Fullscreen overlay that displays on initial page load.
 *Portal-style animation: a glowing circle that expands on entry and contracts on exit.
