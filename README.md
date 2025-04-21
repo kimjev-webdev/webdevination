@@ -490,23 +490,29 @@ Across the site Bootstrap 5 and Custom CSS are used interchangably to achieve th
 The navbar can be found on all pages apart from the landing page
 It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components/navbar/) copied from Bootstrap 5 and then customized. It is fully responsive thanks to Bootstrap 5’s navbar-expand-lg and collapse behavior.
 
-* Fully responsive layout using Bootstrap 5’s navbar-expand-lg and collapse behavior.
-* Dropdown menu under "Readings" links to the One Card and Three Card spread pages.
-* Transparent background allows visuals and text to stylishly pass through the navbar.
-* Despite the fact that on index.html, users are prompted to rotate their device horizontally for optimal experience - all paragraph text and headings are styled to fit within the space between the navbar brand and the hamburger icon, maintaining readability and styling both horizontally and vertically just incase a user misses the 'roate screen prompt' on the landing page. 
-* Uses a custom Font Awesome pentagram icon as the brand element, referencing both the occult and the suit of Pentacles.
-* The pentagram icon links back to index.html and features a pulsing glow animation that mirrors button keyframe styles.
-* Custom glow effects on links (text-glow) enhance interactivity and mood.
-* Mobile menu transforms into a glowing X icon when toggled.
-* Utilizes a monospaced, mystic-coded style (Source Code Pro).
+<div style="display: flex; align-items: flex-start; gap: 20px;">
 
-<div style="display: flex; align-items: left; gap: 20px;">
-  <img src="assets/images/readmefiles/navbar2.JPG" alt="Description" style="width: 45%;">
-  <div> 
-<br>
-<div style="display: flex; align-items: left; gap: 20px;">
-  <img src="assets/images/readmefiles/navbar3.JPG" alt="Description" style="width: 45%;">
+  <div style="flex-shrink: 0;">
+    <img src="assets/images/readmefiles/navbar2.JPG" alt="Navbar image 1" style="width: 250px; display: block; margin-bottom: 10px;">
+    <img src="assets/images/readmefiles/navbar3.JPG" alt="Navbar image 2" style="width: 250px;">
+  </div>
+
   <div>
+    <ul>
+      <li>Fully responsive layout using Bootstrap 5’s <code>navbar-expand-lg</code> and collapse behavior.</li>
+      <li>Dropdown menu under "Readings" links to the One Card and Three Card spread pages.</li>
+      <li>Transparent background allows visuals and text to stylishly pass through the navbar.</li>
+      <li>Despite the fact that on <code>index.html</code>, users are prompted to rotate their device horizontally for optimal experience — all paragraph text and headings are styled to fit within the space between the navbar brand and the hamburger icon, maintaining readability and styling both horizontally and vertically just in case a user misses the "rotate screen" prompt on the landing page.</li>
+      <li>Uses a custom Font Awesome pentagram icon as the brand element, referencing both the occult and the suit of Pentacles.</li>
+      <li>The pentagram icon links back to <code>index.html</code> and features a pulsing glow animation that mirrors button keyframe styles.</li>
+      <li>Custom glow effects on links (<code>text-glow</code>) enhance interactivity and mood.</li>
+      <li>Mobile menu transforms into a glowing X icon when toggled.</li>
+      <li>Utilizes a monospaced, mystic-coded style (<code>Source Code Pro</code>).</li>
+    </ul>
+  </div>
+
+</div>
+
 
 
 
