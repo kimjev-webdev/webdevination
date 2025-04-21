@@ -447,12 +447,12 @@ Tourney is a bold, futuristic display font that immediately conveys the tone of 
 * Letter-spacing is increased on both headers and buttons to enhance its glyphic, rune-like energy.
 * Tourney appears in bright green tones that echo the mystic-glow palette used throughout the site.
 
-Tourney/button example: 
+Tourney/button example: <br>
 ![](assets/images/readmefiles/tourneybutton.webp)
 
 #### Secondary Font - Source Code Pro
 
-![](assets/images/readmefiles/sourcecodepro.jpg)
+![](assets/images/readmefiles/sourcecodepro.jpg) INSERT IMAGE HERE 
 
 Source Code Pro was selected and installed via [Google Fonts Library](https://fonts.google.com/specimen/Source+Code+Pro?query=source+code).
 
@@ -470,7 +470,7 @@ Fallback preview:
 
 <h3 id="12"> 5. Images </h3>
 
-![](assets/images/gallerypreview.webp)
+![](assets/images/readmefiles/images.jpg)
 
 The images selected for the site should provide a visual overview of Kim's experience as an artist, as well as a clear idea of her visual language and style. The gallery hosts pictures of Kim's surface pattern designs and creative direction for fashion photography, her textile banners, her mixed-media artwork, art exhibitions and illustration which shows a dynamic approach to creativity.  
 
@@ -522,12 +522,12 @@ It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components
 
 ![](assets/images/readmefiles/preloader.gif)
 
-*Handled through nav.js
-*Fullscreen overlay that displays on initial page load.
-*Portal-style animation: a glowing circle that expands on entry and contracts on exit.
-*Alternates between entry/exit using JavaScript sessionStorage to make the user feel like they are entering and leaving the portal between each page.
-*CSS animations (@keyframes) manage scaling, rotation, and opacity.
-*Lightweight and optimized for fast performance across devices.
+* Handled through nav.js - please view file for full notes.
+* Fullscreen overlay that displays on initial page load.
+* Portal-style animation: a glowing circle that expands on entry and contracts on exit.
+* Alternates between entry/exit using JavaScript `sessionStorage` to make the user feel like they are entering and leaving the portal between each page.
+* CSS animations (@keyframes) manage scaling, rotation, and opacity.
+* Lightweight and optimized for fast performance across devices.
 * Adds an immersive mystical "gateway" effect to the UX - enhancing the convergence between technology and mysticism. 
 
 <h2 id="18">Features - Homepage</h2>
