@@ -493,8 +493,8 @@ It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components
 <div style="display: flex; align-items: flex-start; gap: 20px;">
 
   <div style="flex-shrink: 0;">
-    <img src="assets/images/readmefiles/navbar2.JPG" alt="Navbar image 1" style="width: 250px; display: block; margin-bottom: 10px;">
-    <img src="assets/images/readmefiles/navbar3.JPG" alt="Navbar image 2" style="width: 250px;">
+    <img src="assets/images/readmefiles/navbar2.JPG" alt="Navbar image 1" style="width: 45%; display: block; margin-bottom: 10px;">
+    <img src="assets/images/readmefiles/navbar3.JPG" alt="Navbar image 2" style="width: 45%;">
   </div>
 
   <div>
