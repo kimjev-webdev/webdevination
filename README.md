@@ -494,7 +494,7 @@ The tarot deck featured throughout this project was entirely custom-made using M
 #### Symbolic Integrity
 * Although visually modern, the iconography, gestures, and spatial structures of the cards remain true to the symbolic language of traditional tarot ensuring that each one still carries its archetypal resonance and interpretive power.
 
-<h3 id="13">Styling</h3>
+<h3 id="13">6. Styling</h3>
 
 The project’s visual identity is powered by a deep interplay between handcrafted CSS and immersive JavaScript logic, working together to create a world that feels both symbolic and alive.
 
@@ -505,7 +505,7 @@ The project’s visual identity is powered by a deep interplay between handcraft
 * A carefully structured class system allows consistent styling across pages while still letting individual components (like the oracle terminal, tarot deck, or navbar) express their own unique qualities and usefulness - no feature is redundant.
 * Typography, spacing, and color are tightly integrated — from mystic-green glow on buttons to soft, monospaced text on responses — ensuring that every interaction feels like part of a ritual interface.
 
-#### JavaScript-Driven Dynamism
+#### JavaScript-Driven Dynamics
 
 * JavaScript is used extensively throughout the project to bring style to life: cards are loaded, flipped, shuffled, and drawn dynamically, all with coordinated animations and responsive behaviors.
 * The navbar transitions, menu highlights, and active link states are all controlled by JS to help users feel like they’re navigating a mystical interface, not just a static page.
@@ -558,7 +558,7 @@ It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components
 * Lightweight and optimized for fast performance across devices.
 * Adds an immersive mystical "gateway" effect to the UX - enhancing the convergence between technology and mysticism. 
 
-<h2 id="18">Features - Homepage</h2>
+<h2 id="18">Features - Landing Page.</h2>
 
 ![](assets/images/carouseloverlaypreview.webp)
 
