@@ -45,82 +45,98 @@ This project brings divination into the modern age, creating a space where the i
 
 1. <a href="#16">Navbar</a>
 2. <a href="#17">Footer</a>
+3. <a href="#18">Preloader</a>
 </details>
 <details>
-<summary><a href="#18">Homepage</a></summary>
+<summary><a href="#19">Landing Page (index.html)</a></summary>
 
-1. <a href="#19">Hero/Carousel</a>
-2. <a href="#20">Image Text & Overlay</a>
+1. <a href="#20">Text/Icon Animation</a>
+2. <a href="#21">Enter Button</a>
 </details>
 <details>
-<summary><a href="#21">About Page</a></summary>
+<summary><a href="#22">Readings Info & A.I Oracle Page (info.html)</a></summary>
 
-1. <a href="#22">Images</a>
-2. <a href="#23">Paragraphs</a>
-3. <a href="#24">Buttons</a>
+1. <a href="#23">Terminal Typed Welcome & Skip Button</a>
+2. <a href="#24">Readings Selection</a>
+3. <a href="#25">A.I Oracle</a>
 </details>
 <details> 
-<summary><a href="#25">Gallery Page</a></summary>
+  
+<summary><a href="#26">Reading's Pages (onecard.html & threecard.html)</a></summary>
 
-1. <a href="#26">Images</a>
-2. <a href="#27">Icon</a>
+1. <a href="#27">Shuffle Feature</a>
+2. <a href="#28">Draw Feature</a>
+3. <a href="#29">Card Images & Descriptions</a>
+4. <a href="#30">Modal</a>
+5 <a href="#31">Fake Advertisment</a>
+
+</details>
+<details>
+<summary><a href="#32">Cards Page (cards.html)</a></summary>
+
+1. <a href="#33">Card Images</a>
+2. <a href="#34">Flip Info</a>
+3. <a href="#35">Suit Stories</a>
 </details>
 
 <details>
-<summary><a href="#28">Contact Page</a></summary>
+<summary><a href="#36">Learn Page (learn.html)</a></summary>
 
-1. <a href="#29">Background Image</a>
-2. <a href="#30">Form</a>
+1. <a href="#37">Multiple Choice Game</a>
+2. <a href="#38">Modal</a>
+
 </details>
 </details>
 
 <details>
- <summary><a href="#31">Technologies Used</a></summary>
+ <summary><a href="#39">Technologies Used</a></summary>
  
 <details>
-<summary><a href="#32">Languages</a></summary>
+<summary><a href="#40">Languages</a></summary>
 
-1. <a href="#33">HTML</a>
-2. <a href="#34">CSS</a>
-3. <a href="#35">JavaScript</a> 
+1. <a href="#41">HTML</a>
+2. <a href="#42">CSS</a>
+3. <a href="#43">JavaScript</a> 
 </details>
 
 <details>
-<summary><a href="#36">Framework</a></summary>
+<details>
+<summary><a href="#44">Frameworks</a></summary>
 
-1. <a href="#37">Bootstrap 5</a>
+1. <a href="#45">Bootstrap 5</a>  
+2. <a href="#46">Express.js</a>  
+3. <a href="#47">Node.js</a>  
 </details>
 
 <details>
-<summary><a href="#38">Libraries</a></summary>
+<summary><a href="#38">Libraries & APIs</a></summary>
 
-1. <a href="39#">Google Fonts</a>
-2. <a href="#40">Font Awesome</a>
+1. <a href="#39">Font Awesome</a>  
+2. <a href="#40">OpenAI API</a>  
+3. <a href="#41">Aztro API</a>  
+4. <a href="#42">Farmsense API</a>  
 </details>
 
 <details>
-<summary><a href="#41">Platforms</a></summary>
+<summary><a href="#43">Platforms</a></summary>
 
-1. <a href="#42">GitHub</a>
-2. <a href="#43">VS Code</a>
+1. <a href="#44">GitHub</a>  
+2. <a href="#45">Render</a>  
+3. <a href="#46">VS Code</a>  
 </details>
 
 <details>
- <summary><a href="#44">Other Tools</a></summary>
+<summary><a href="#47">Other Tools</a></summary>
 
- 1. <a href="#45">MidJourney</a>
- 2. <a href="#46">Adobe Illustrator</a>
- 3. <a href="#47">To WebP</a>
- 4. <a href="#48">Trimmy</a>
- 5. <a href="#49">Balsamiq</a>
- 6. <a href="#50">Favicon</a>
- 7. <a href="#51">Procreate</a>
- 8. <a href="#52">NAME</a>
- 9. <a href="#53">NAME</a>
- 10. <a href="#54">NAME</a>
- 11. <a href="#54a">NAME</a>
+1. <a href="#48">MidJourney</a>  
+2. <a href="#49">Adobe Illustrator</a>  
+3. <a href="#50">To WebP</a>  
+4. <a href="#51">Trimmy</a>  
+5. <a href="#52">Balsamiq</a>  
+6. <a href="#53">Favicon Generator</a>  
+7. <a href="#54">Procreate</a>  
 </details>
-</details>
+
 
 <details>
 <summary><a href="#55">Testing</a></summary>
@@ -138,7 +154,7 @@ This project brings divination into the modern age, creating a space where the i
 <summary><a href="#61a">Deployment</a></summary>
   
 1. <a href="#61b">Github Deployment</a>
-</details>
+2. <a href="#61c">Render Deployment</a>
 
 <details>
 <summary><a href="#62">Credits</a></summary>
