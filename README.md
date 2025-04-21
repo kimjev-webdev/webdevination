@@ -89,7 +89,7 @@ This project brings divination into the modern age, creating a space where the i
 </details>
 
 <details>
- <summary><a href="#39">Technologies Used</a></summary>
+<summary><a href="#39">Technologies Used</a></summary>
  
 <details>
 <summary><a href="#40">Languages</a></summary>
@@ -99,7 +99,7 @@ This project brings divination into the modern age, creating a space where the i
 3. <a href="#43">JavaScript</a> 
 </details>
 
-<details>
+
 <details>
 <summary><a href="#44">Frameworks</a></summary>
 
@@ -136,7 +136,7 @@ This project brings divination into the modern age, creating a space where the i
 6. <a href="#53">Favicon Generator</a>  
 7. <a href="#54">Procreate</a>  
 </details>
-
+</details>
 
 <details>
 <summary><a href="#55">Testing</a></summary>
