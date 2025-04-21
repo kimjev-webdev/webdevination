@@ -447,8 +447,9 @@ Tourney is a bold, futuristic display font that immediately conveys the tone of 
 * Letter-spacing is increased on both headers and buttons to enhance its glyphic, rune-like energy.
 * Tourney appears in bright green tones that echo the mystic-glow palette used throughout the site.
 
-<center>Tourney/button example: <br> ![](assets/images/readmefiles/tourneybutton.webp)
-</center>
+Tourney/button example: 
+![](assets/images/readmefiles/tourneybutton.webp)
+
 
 #### Secondary Font - Source Code Pro
 
