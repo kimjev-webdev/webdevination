@@ -520,7 +520,7 @@ It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components
 
 <h3 id="18">3. Preloader</h3>
 
-![](assets/images/readmefiles/preloader.webp)
+![](assets/images/readmefiles/preloader.gif)
 
 *Handled through nav.js
 *Fullscreen overlay that displays on initial page load.
