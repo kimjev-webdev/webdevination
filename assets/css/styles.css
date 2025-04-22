@@ -1,22 +1,4 @@
 /* --- keyframe animations --- */
-/* Rotation animation for small screens landing sequence */
-@keyframes spinBadge {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Badge fades to black from center outward */
-@keyframes fadeToBlack {
-  0% { mask-image: radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%); }
-  100% { mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%); }
-}
-
-/* Button glow */
-@keyframes glowButton {
-  from { text-shadow: 0 0 5px #aeff00, 0 0 10px #aeff00; }
-  to { text-shadow: 0 0 10px #aeff00, 0 0 20px #aeff00; }
-}
-
 /* animations for the letters and icons on landing page */
 @keyframes flashText {
   0% {
@@ -1540,41 +1522,6 @@ margin: 0px 5px 0px 5px;  }
 .onecardrow {
   margin: 0px 40px 0px 40px;
 }
-}
-
-@media (max-width: 768px) and (orientation: portrait) {
-  .landing-container,
-  .overlay {
-    display: none !important; /* hide existing landing elements */
-  }
-
-  #landscape-badge-sequence {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: black;
-    animation: fadeToBlack 3s ease-in-out forwards;
-  }
-
-  #landscape-badge-sequence img {
-    width: 60vw;
-    animation: spinBadge 2s linear 1 forwards;
-  }
-
-  .landscape-enter {
-    display: none;
-    position: absolute;
-    bottom: 15%;
-    font-size: 1.5rem;
-    z-index: 10;
-  }
-
-  /* Reveal button after badge fade */
-  .show-button {
-    display: block !important;
-    animation: glowButton 1s ease-in-out infinite alternate;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
