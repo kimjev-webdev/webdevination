@@ -1,3 +1,35 @@
+
+// === Portrait Mode Badge Animation Logic ===
+const isPortraitMobile = window.matchMedia("(orientation: portrait) and (max-width: 768px)");
+
+const badgeContainer = document.getElementById("landscape-badge-sequence");
+const mainContent = document.querySelector("main");
+const enterBtn = document.getElementById("landscape-enter-button");
+
+function handleOrientation(e) {
+  if (e.matches) {
+    badgeContainer.style.display = "flex";
+    mainContent.style.display = "none";
+    setTimeout(() => {
+      enterBtn.classList.add("show-button");
+    }, 3000);
+  } else {
+    badgeContainer.style.display = "none";
+    mainContent.style.display = "block";
+  }
+}
+
+handleOrientation(isPortraitMobile);
+isPortraitMobile.addEventListener("change", handleOrientation);
+
+// Navigate to info.html on click (portrait Enter button)
+enterBtn.addEventListener("click", () => {
+  window.location.href = "info.html";
+});
+
+// === End Portrait Mode Logic ===
+
+
 // Function to handle the transition between letters and symbols
 function animateLetters(letters, currentIndex, animationCycles, container, overlay) {
     const currentLetter = letters[currentIndex]; // Get the current letter element
@@ -69,3 +101,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // Start the animation when the page loads
     animateLetters(letters, currentIndex, animationCycles, container, overlay);
 });
+);
