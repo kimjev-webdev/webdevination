@@ -470,7 +470,7 @@ a.dropdown-item {
   position: relative;
   font-family: 'Source Code Pro', monospace;
   text-align: justify;
-  padding: 0 30px 0 30px;
+  padding: 0 60px 0 60px;
   white-space: normal;        
   word-wrap: pre-wrap;     
   line-height: 1.5;          
@@ -1264,7 +1264,7 @@ div.col-12.threeshuffle {
   overflow: visible;
 }
 
-.threecardrow {
+.threeintrorow {
   margin: 0 35px 0 35px;
 }
 
@@ -1554,10 +1554,6 @@ margin: 0px 5px 0px 5px;  }
 @media (min-width: 992px){
   #buttons-container .col-12.col-md-6 .image-container img {
     width: 120px;
-}
-
-.threeintrorow {
-  margin: 0 45px 0 45px;
 }
 
 .cardgame-select {
