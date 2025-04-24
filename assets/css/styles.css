@@ -531,7 +531,7 @@ a {
 }
 
 /* initially hide the cardback images */
-#buttons-container .col-12.col-sm-6 img {
+#buttons-container .col-12.col-md-6 img {
   display: none;
   transition: opacity 0.5s ease-in-out;
   display: block;
@@ -541,19 +541,19 @@ a {
 }
 
 /* make the images visible when the 'visible' class is added */
-#buttons-container .col-12.col-sm-6 img.visible {
+#buttons-container .col-12.col-md-6 img.visible {
   display: visible;
 }
 
 /* use flexbox on the parent container of the images only */
-#buttons-container .col-12.col-sm-6 .image-container {
+#buttons-container .col-12.col-md-6 .image-container {
   display: flex;
   justify-content: center;  
   gap: 10px; 
 }
 
 /* ensure images inside the .image-container align in a row */
-#buttons-container .col-12.col-sm-6 .image-container img {
+#buttons-container .col-12.col-md-6 .image-container img {
   margin: 0;
   width: 75px; /* Adjust the size as necessary */
   height: auto;
@@ -561,7 +561,7 @@ a {
 }
 
 /* keep the rest of the content in the column layout */
-#buttons-container .col-12.col-sm-6 {
+#buttons-container .col-12.col-md-6 {
   display: flex;
   max-width: 90vw;
   flex-direction: column;
@@ -570,7 +570,7 @@ a {
 }
 
 /* ensure buttons are aligned in the center */
-#buttons-container .col-12.col-sm-6 a {
+#buttons-container .col-12.col-md-6 a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1554,7 +1554,7 @@ margin: 0px 5px 0px 5px;  }
 } 
 
 @media (min-width: 992px){
-  #buttons-container .col-12.col-sm-6 .image-container img {
+  #buttons-container .col-12.col-md-6 .image-container img {
     width: 120px;
 }
 
