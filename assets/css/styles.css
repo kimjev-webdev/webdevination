@@ -597,7 +597,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px 60px 50px 60px;
+  margin: 20px 30px 30px 30px;
   text-align: center;
 }
 
@@ -1574,33 +1574,6 @@ width: 30% !important;
 #intro-text {
   margin: 10px 0 10px 0;
 } 
-}
-
-
-/* show the rotate screen icon and prompt on index.html when devices are held in portrait orientation */
-@media only screen and (orientation: portrait) {
-    .rotate-prompt {
-      flex-direction: column;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-bottom: 0.5rem;
-      min-width: 100%;
-      font-size: 0.75rem;
-    }
-
-  /* rotate phone screen icon */  
-    .rotate-prompt.i {
-      font-size: 2rem !important;
-    }
-}
-
-/* hide the rotate screen icon and prompt on index.html when devices are held in landscape orientation */
-@media only screen and (orientation: landscape) {
-  .rotate-prompt {
-    display: none;
-  }
 }
 
 @media (hover:hover) {
