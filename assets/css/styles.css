@@ -1061,7 +1061,6 @@ font-family: "Source Code Pro", monospace;
 
 .card-name,
 .card-details-text {
-  max-width: 95%;
   box-sizing: border-box;
 }
 
@@ -1496,10 +1495,6 @@ footer {
   .accordion-body > .row {
     margin: 0 20px 0 20px !important;
     padding: 0 20px 0 20px !important;
-  }
-
-  .card-details-text {
-    max-width: 75%;
   }
 
   .col-sm-6 {
