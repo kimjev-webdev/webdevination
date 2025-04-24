@@ -1216,18 +1216,16 @@ img.onecardadvert {
 
 /* three cards */
 
-#tarot-container {
-  margin: 0 35px 300px 35px;
-}
 #intro-text {
   font-family: "Source Code Pro", monospace;
   font-size: 1rem;
   text-align: center;
-  margin: 10px 0 10px 0;
+  margin: 10px 35px 10px 35px;
 } 
 
 p#intro-text.extratextbigscreenthree {
   text-align: center;
+  margin: 0px 35px 0px 35px;    
 }
 
 #threecard-stack {
@@ -1239,6 +1237,7 @@ p#intro-text.extratextbigscreenthree {
 }
 
 #cards-container {
+  margin: 0px 35px 0px 35px
   display: none; /* initially hidden */
   flex-wrap: wrap;
   justify-content: space-evenly;
