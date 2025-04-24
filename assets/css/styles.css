@@ -924,8 +924,7 @@ button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
   justify-content: center;
   align-items: center;
   display: none;
-  margin: 0 20px 0 20px;
-}
+  }
 
 /* CARD FLIP STYLES */
 .selected-card {
@@ -1264,6 +1263,10 @@ div.col-12.threeshuffle {
   align-items: center;
   min-height: 200px;
   overflow: visible;
+}
+
+.threecardrow {
+  margin: 0 35px 0 35px;
 }
 
 /* learning page styles */  
