@@ -433,16 +433,16 @@ Emoji's are implemented on the site as playful supplements to the UX.
 The four emoj's below reference the element's that the Minor Arcana suits correspond to. They are found inside the accordion for the Minor Arcana next to the suit titles on the 'Cards' page:
 
 <p align="left">
-  <img src="assets/images/readmefiles/icons/fireemoji.webp" alt="Flame" width="100" style="float: left; margin-right: 20px;"><br> The flame emoji references the element of fire which corresponds to The Suit of Wands. <br><br><br><br>
+  <img src="assets/images/readmefiles/icons/fireemoji.webp" alt="Flame" width="100" style="float: left; margin-right: 20px;"> The flame emoji references the element of fire which corresponds to The Suit of Wands. <br><br>
 
   <p align="left">
-  <img src="assets/images/readmefiles/icons/wateremoji.webp" alt="Sweat Drops" width="100" style="float: left; margin-right: 20px;"><br> The 'sweat-drops' emoji references the element of water which corresponds to The Suit of Cups. This emoji is taken to represent water not sweat in this context.<br><br><br><br>
+  <img src="assets/images/readmefiles/icons/wateremoji.webp" alt="Sweat Drops" width="100" style="float: left; margin-right: 20px;"> The 'sweat-drops' emoji references the element of water which corresponds to The Suit of Cups. This emoji is taken to represent water not sweat in this context.<br><br>
 
   <p align="left">
-  <img src="assets/images/readmefiles/icons/windemoji.webp" alt="Tornado" width="100" style="float: left; margin-right: 20px;"><br> The tornadoo emoji references the element of air which corresponds to The Suit of Swords. <br><br><br><br>
+  <img src="assets/images/readmefiles/icons/windemoji.webp" alt="Tornado" width="100" style="float: left; margin-right: 20px;"> The tornadoo emoji references the element of air which corresponds to The Suit of Swords. <br><br>
 
 <p align="left">
-  <img src="assets/images/readmefiles/icons/earthemoji.webp" alt="Deciduous Tree" width="100" style="float: left; margin-right: 20px;"><br> The deciduous tree emoji references the element of earth which corresponds to The Suit of Pentacles. <br><br><br><br>
+  <img src="assets/images/readmefiles/icons/earthemoji.webp" alt="Deciduous Tree" width="100" style="float: left; margin-right: 20px;"> The deciduous tree emoji references the element of earth which corresponds to The Suit of Pentacles.
 
 <h3 id="11"> 4. Fonts </h3>
 
@@ -780,6 +780,8 @@ The user story testing section of the testing document can be found [here](TESTI
 <h3 id="61"> 7. Bugs </h3>
 
 A comprehensive log of all debugging actions taken throughout the project timeline can be found [here](BUGLOG.md).
+
+There is also a list of bugs which are yet to be resolved in the [testing document](TESTING.md).
 
 <h2 id="61a"> Deployment </h2>
 
