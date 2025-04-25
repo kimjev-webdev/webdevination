@@ -330,9 +330,16 @@ The primary objective of WebDevination is to seamlessly bring the ancient art of
 | <img src="assets\images\wireframes\threecardmob3.webp" height="200"/> | <img src="assets\images\wireframes\threecarddt3.webp" height="200"/> |
 
 ### 5. Card Designs & Interpretation Supplement Page Wireframe (cards.html)
-![]() 
+
+| Mobile                                                   |   Desktop                                               |
+|:----------------------------------------------------------:|:-----------------------------------------------------------:|
+| <img src="assets\images\wireframes\cardsmob1.webp" height="200"/> | <img src="assets\images\wireframes\cardsdt1.webp" height="200"/> |
+| <img src="assets\images\wireframes\cardsmob2.webp" height="200"/> | <img src="assets\images\wireframes\cardsdt2.webp" height="200"/> |
 ### 6. Learn Tarot Matching Game Page (learn.html)
-![]() 
+
+| Mobile                                                   |   Desktop                                               |
+|:----------------------------------------------------------:|:-----------------------------------------------------------:|
+| <img src="assets\images\wireframes\learnmob1.webp" height="200"/> | <img src="assets\images\wireframes\learndt1.webp" height="200"/> |
 </details>
 
 <h3 id="9"> 2. Color Palette</h3>

@@ -53,4 +53,4 @@
 | 2025-04-20 | Oracle relied on fictional data and lacked celestial relevance. | API Integration | Integrated Aztro (horoscope) and Farmsense (moon phase) APIs to provide accurate, real-time astrological insight when possible. 
 | 2025-04-20 | Repeated questions did not build on prior ones or acknowledge past input. | AI / Session Memory | Preserved recent message history per session to enable contextual follow-up questions and smarter continuity in Oracle responses. |
 | 2025-04-21 | Oracle input placeholder doesn't clear on click and Enter key doesn't submit the form. | Frontend (oracle.js) | Added event listeners to clear placeholder on first focus and allow Enter key (without Shift) to trigger form submission. |
-| 2025-04-24 | Manual testing reveals portrait orientation is better for the userr on phones | HTML CSS | Remove rotate prompt on index.html and polish margins for optimal UX on small devices. |
+| 2025-04-24 | Manual testing reveals portrait orientation is better for the user on phones | HTML CSS | Remove rotate prompt on index.html and polish margins for optimal UX on small devices. |
