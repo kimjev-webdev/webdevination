@@ -466,7 +466,8 @@ Tourney is a bold, futuristic display font that immediately conveys the tone of 
 * Tourney appears in bright green tones that echo the mystic-glow palette used throughout the site.
 
 Tourney/button example: <br>
-![](assets/images/readmefiles/tourneybutton.webp)
+  <p align="center">
+<img src="assets/images/readmefiles/tourneybutton.webp" width="45%">
 
 #### Secondary Font - Source Code Pro
 
@@ -526,9 +527,6 @@ The tarot deck featured throughout this project was entirely custom-made using M
 
 * Although visually modern, the iconography, gestures, and spatial structures of the cards remain true to the symbolic language of traditional tarot ensuring that each one still carries its archetypal resonance and interpretive power.
 
-<br>
-<br>
-
 <h3 id="13">6. Styling</h3>
 
 The project’s visual identity is powered by a deep interplay between handcrafted CSS and immersive JavaScript logic, working together to create a world that feels both symbolic and alive.
@@ -557,9 +555,19 @@ The project’s visual identity is powered by a deep interplay between handcraft
 ![](assets/images/readmefiles/navbar1.jpg)
 
 The navbar can be found on all pages apart from the landing page
-It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components/navbar/) copied from Bootstrap 5 and then customized. It is fully responsive thanks to Bootstrap 5’s navbar-expand-lg and collapse behavior.
+It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components/navbar/) copied from Bootstrap 5 and then customized. 
 
-| <img src="assets/images/readmefiles/navbar2.JPG" alt="Navbar 1" style="width: 45%;"><br><img src="assets/images/readmefiles/navbar3.JPG" alt="Navbar 2" style="width: 45%;"> | 
+
+<p align="left">
+  <img src="assets/images/readmefiles/navbar2.JPG" width="45%" style="float: left; margin-right: 20px;">
+
+  <p align="right">
+<img src="assets/images/readmefiles/navbar3.JPG" width="45%" style="float: right; margin-right: 20px;">
+
+<br>
+<br>
+<br>
+
 * Fully responsive layout using Bootstrap 5’s `navbar-expand-lg` and collapse behavior.  
 * Dropdown menu under "Readings" links to the One Card and Three Card spread pages.  
 * Transparent background allows visuals and text to stylishly pass through the navbar.  
