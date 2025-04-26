@@ -42,13 +42,23 @@ function showButtons() {
         setTimeout(() => {
             img.classList.add('visible');
         }, 300 + (index * 300)); // ✨ Staggered animation
-        
     });
 
-    setTimeout(() => pickOneCardButton.classList.add('visible'), 300);
-    setTimeout(() => pickThreeCardsButton.classList.add('visible'), 600);
-    setTimeout(() => pickOneExplanation.classList.add('visible'), 900);
-    setTimeout(() => pickThreeExplanation.classList.add('visible'), 900);
+    setTimeout(() => {
+        if (pickOneCardButton) pickOneCardButton.classList.add('visible');
+    }, 300);
+
+    setTimeout(() => {
+        if (pickThreeCardsButton) pickThreeCardsButton.classList.add('visible');
+    }, 600);
+
+    setTimeout(() => {
+        if (pickOneExplanation) pickOneExplanation.classList.add('visible');
+    }, 900);
+
+    setTimeout(() => {
+        if (pickThreeExplanation) pickThreeExplanation.classList.add('visible');
+    }, 900);
 
     skipButton.style.display = 'none';
 }
@@ -93,7 +103,7 @@ window.addEventListener('load', function () {
         const readingsHeading = document.createElement('h2');
         readingsHeading.textContent = "🍄 TAROT READINGS";
         readingsHeading.style.fontSize = "2.5rem";
-        readingsHeading.style.textAlign = "center"
+        readingsHeading.style.textAlign = "center";
 
         const terminalSection = document.querySelector('.terminal');
         terminalSection.appendChild(readingsHeading);
