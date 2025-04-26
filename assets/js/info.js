@@ -41,7 +41,7 @@ function showButtons() {
     cardbacksOne.forEach((img, index) => {
         setTimeout(() => {
             img.classList.add('visible');
-        }, 300 + (index * 300)); // ✨ Faster image reveal
+        }, 300 + (index * 300)); // ✨ Staggered animation
     });
 
     setTimeout(() => pickOneCardButton.classList.add('visible'), 300);

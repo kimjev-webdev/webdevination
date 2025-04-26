@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             insertMajorArcanaIntro();
 
-            insertSuitIntro("wands", `The journey of Wands begins with a spark; a flame has caught the wind! A wild idea born in the soul. The Ace is much like a match struck in the dark, an idea that ignites our inner vision. With Two we stand at a crossroads, a choice lays before us...action or non-action? By the Three, momentum is building. Our dream is becoming a reality, as the idea we concieved moves beyond the corporeal and into the material world.
+            insertSuitIntro("wands", `The journey of Wands begins with a spark; a flame has caught the wind! A wild idea born in the soul. The Ace is much like a match struck in the dark, an idea that ignites our inner vision. With Two we stand at a crossroads, a choice lays before us...action or non-action? By the Three, momentum is building. Our dream is becoming a reality, as the idea we concieved moves beyond the incorporeal and into the material world.
 
 But fire demands fuel. The Four of Wands celebrates progress, a pause for joy and the foundations we have laid. Then comes the Five; our ambition has been noticed and is met with competition! The Six rises victorious. The battle has won us recognition, and yet with the Seven, we are forced to defend ourselves again! The Eight of Wands shows that our perserverance is unwavering. We have gained too much momentum to stop now! The energy, that was once just an idea, is now unstoppable!
 
