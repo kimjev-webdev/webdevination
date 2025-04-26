@@ -1,6 +1,3 @@
-/*jshint esversion: 6 */
-/*jshint esversion: 8 */
-/*jshint esversion: 10 */
 /*jshint esversion: 11 */
 /* jshint node: true */
 /* jshint -W079 */  // Suppress __dirname/__filename redefinition warning
