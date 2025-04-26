@@ -76,6 +76,30 @@
   }
 }
 
+/* Win95 Modal Fade In */
+@keyframes win95FadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Win95 Modal Fade Out */
+@keyframes win95FadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
 /* --- universal styles ---*/
 /* all pages -preloader styles */
 #preloader {
@@ -1237,6 +1261,15 @@ img.onecardadvert {
   box-shadow: none;
 }
 
+/* Apply fade-in when showing */
+#win95Modal.showing {
+  animation: win95FadeIn 0.3s ease forwards;
+}
+
+/* Apply fade-out when hiding */
+#win95Modal.hiding {
+  animation: win95FadeOut 0.3s ease forwards;
+}
 
 /* three cards */
 

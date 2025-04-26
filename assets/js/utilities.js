@@ -1,7 +1,7 @@
-// === Function Declarations (Hoisted to Top) ===
+// === Function Declarations (Hoisted) ===
 
-// Inject Win95 Modal
-function injectWin95Modal() {
+// Inject Win95 Modal with custom message
+function injectWin95Modal(customMessage) {
   if (document.getElementById('win95Modal')) return;
 
   const modalHTML = `
@@ -16,7 +16,7 @@ function injectWin95Modal() {
           </div>
         </div>
         <div class="win95-body">
-          <p>Deck shuffled! Now click ‘DRAW’ to pick a card.</p>
+          <p>${customMessage}</p> <!-- 🛠 dynamic text inserted here -->
           <div class="ok-wrap">
             <button class="win95-ok-btn" id="win95-ok">OK</button>
           </div>
@@ -32,7 +32,7 @@ function injectWin95Modal() {
   openWin95Modal();
 }
 
-// Open Win95 Modal
+// Open Win95 Modal (with fade-in)
 function openWin95Modal() {
   const modal = document.getElementById('win95Modal');
 
@@ -41,21 +41,29 @@ function openWin95Modal() {
   backdrop.id = 'win95-backdrop';
   document.body.appendChild(backdrop);
 
-  // Show modal
+  // Show modal with fade-in
   modal.style.display = 'flex';
+  modal.classList.add('showing');
 
   // Lock scroll
   document.body.style.overflow = 'hidden';
 }
 
-// Close Win95 Modal
+// Close Win95 Modal (with fade-out)
 function closeWin95Modal() {
   const modal = document.getElementById('win95Modal');
   const backdrop = document.getElementById('win95-backdrop');
 
   if (modal) {
-    modal.style.display = 'none';
+    modal.classList.remove('showing');
+    modal.classList.add('hiding');
+
+    setTimeout(function () {
+      modal.style.display = 'none';
+      modal.classList.remove('hiding');
+    }, 300); // match fade-out duration
   }
+
   if (backdrop) {
     backdrop.remove();
   }
@@ -64,15 +72,14 @@ function closeWin95Modal() {
   document.body.style.overflow = '';
 }
 
-// Event listeners for OK and Close buttons
-document.addEventListener('click', function(e) {
+// Event listener for OK and Close buttons
+document.addEventListener('click', function (e) {
   if (e.target && (e.target.id === 'win95-ok' || e.target.id === 'win95-close')) {
     closeWin95Modal();
   }
 });
 
-// === Other existing functions you already had ===
-
+// Shuffle Deck
 function shuffleDeck(shuffledDeck) {
   for (let i = shuffledDeck.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -80,6 +87,7 @@ function shuffleDeck(shuffledDeck) {
   }
 }
 
+// Shuffle Animation
 function shuffleAnimation() {
   const cards = document.querySelectorAll(".shufflecard");
 
@@ -109,15 +117,11 @@ function shuffleAnimation() {
   }, 1000);
 }
 
-function drawCard(shuffledDeck, selectedCardContainer, isShuffled) {
+// Draw a single card (one card reading)
+function drawCard(shuffledDeck, selectedCardContainer) {
   if (shuffledDeck.length === 0) {
     alert("No more cards in the deck!");
     return;
-  }
-
-  if (!isShuffled) {
-    shuffleDeck(shuffledDeck);
-    isShuffled = true;
   }
 
   const drawnCard = shuffledDeck.pop();
@@ -130,7 +134,6 @@ function drawCard(shuffledDeck, selectedCardContainer, isShuffled) {
 
   const cardBack = document.createElement('div');
   cardBack.classList.add('card-back');
-
   const cardBackImage = document.createElement('img');
   cardBackImage.src = './assets/images/cardbacks.webp';
   cardBackImage.alt = 'Card Back';
@@ -138,11 +141,9 @@ function drawCard(shuffledDeck, selectedCardContainer, isShuffled) {
 
   const cardFront = document.createElement('div');
   cardFront.classList.add('card-front');
-
   const cardFrontImage = document.createElement('img');
   cardFrontImage.src = drawnCard.image;
   cardFrontImage.alt = drawnCard.name;
-  cardFrontImage.loading = "lazy";
   cardFront.appendChild(cardFrontImage);
 
   cardElement.appendChild(cardBack);
@@ -160,24 +161,15 @@ function drawCard(shuffledDeck, selectedCardContainer, isShuffled) {
   }, 1000);
 }
 
+// Show Card Details
 function showCardDetails(card, selectedCardContainer) {
   const cardDetails = `
     <div class="card-info">
-        <p class="card-response">The answer is...${card.response}!</p>
-        <p class="card-details-text">${card.interpretation}</p>
+      <p class="card-response">The answer is...${card.response}!</p>
+      <p class="card-details-text">${card.interpretation}</p>
     </div>
   `;
   selectedCardContainer.innerHTML += cardDetails;
 }
 
-// === DOM Ready Hook ===
-
-document.addEventListener('DOMContentLoaded', function () {
-  const cardbacksOne = document.querySelectorAll('#buttons-container .col-12.col-md-6 img');
-
-  window.shuffleDeck = shuffleDeck;
-  window.shuffleAnimation = shuffleAnimation;
-  window.drawCard = drawCard;
-  window.showCardDetails = showCardDetails;
-  window.injectWin95Modal = injectWin95Modal;
-});
+// === End Utilities ===
