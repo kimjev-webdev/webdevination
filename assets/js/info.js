@@ -42,6 +42,7 @@ function showButtons() {
         setTimeout(() => {
             img.classList.add('visible');
         }, 300 + (index * 300)); // ✨ Staggered animation
+        
     });
 
     setTimeout(() => pickOneCardButton.classList.add('visible'), 300);

@@ -4,16 +4,15 @@
 
 [WebDevination](http://webdevination.onrender.com/) is a portmanteau of web development and divination. This project seeks to blend the ancient art of tarot reading with the power of modern technology. The interactive tarot game is designed to offer a unique user experience that updates the divinatory experience within a digital framework.
 
-With design influences drawn from the classic terminal interface, combined with a beautiful set of cards generated using MidJourney, the site introduces users to the concept of techno-divination which seeks to refresh and replicate the personal nature of in-person fortune telling. Javascript aids interactivity and helps to provide this authentic experience.
+With design influences drawn from the classic terminal interface, combined with a beautiful set of cards generated using [MidJourney](https://www.midjourney.com/), the site introduces users to the concept of techno-divination which seeks to refresh and replicate the personal nature of in-person fortune telling. Javascript aids interactivity and helps to provide this authentic experience.
 
-The single card reading, and three card reading both encourage the user to tap into their intuition and use the cards for introspective inquiry. A revolutionary 'techno oracle' powered by ChatGPT offers a unique and exciting addition to the cards, providing mysterious, metaphysical responses to the users questions. In addition to the card reading and AI oracle features, the site includes a dedicated page where users can explore the unique card designs and familiarise themselves with more specific meanings. For those wishing to learn or remember the cards, there's also an interactive game that challenges users to match card descriptions to the correct images, reinforcing their understanding in a fun and engaging way.
+The [single card reading](http://webdevination.onrender.com/onecard.html), and [three card reading](http://webdevination.onrender.com/threecard.html) both encourage the user to tap into their intuition and use the cards for introspective inquiry. A revolutionary ['techno oracle'](http://webdevination.onrender.com/info.html) powered by [ChatGPT](https://chatgpt.com/) offers a unique and exciting addition to the cards, providing mysterious, metaphysical responses to the users questions. In addition to the card reading and AI oracle features, the site includes a dedicated page where users can explore the [unique card designs](http://webdevination.onrender.com/cards.html) and familiarise themselves with more specific meanings. For those wishing to learn or remember the cards, there's also an [interactive game](http://webdevination.onrender.com/learn.html) that challenges users to match card descriptions to the correct images, reinforcing their understanding in a fun and engaging way.
 
 This project brings divination into the modern age, creating a space where the internet is justified as the perfect transcendental, immaterial environment for this practice which enables deeper connection and self-reflection.
 ## Table of Contents
 
 <details>
   <summary><a href="#1">UX</a></summary>
-
   <details>
     <summary><a href="#2">Planning & Goals</a></summary>
 
@@ -21,7 +20,6 @@ This project brings divination into the modern age, creating a space where the i
 2. <a href="#4">User Profiles</a>
 3. <a href="#5">User Stories</a>
 4. <a href="#6">Minimum Viable Product</a>
-
   </details>
 
 <details>
@@ -33,10 +31,8 @@ This project brings divination into the modern age, creating a space where the i
 4.  <a href="#11">Fonts</a>
 5.  <a href="#12">Images</a>
 6.  <a href="#13">Styling</a>
-
 </details>
 </details>
-
 </details>
 <details>
 <summary><a href="#14">Features</a></summary>
@@ -61,7 +57,6 @@ This project brings divination into the modern age, creating a space where the i
 3. <a href="#25">A.I Oracle</a>
 </details>
 <details> 
-  
 <summary><a href="#26">Reading's Pages (onecard.html & threecard.html)</a></summary>
 
 1. <a href="#27">Shuffle Feature</a>
@@ -78,20 +73,16 @@ This project brings divination into the modern age, creating a space where the i
 2. <a href="#34">Flip Info</a>
 3. <a href="#35">Suit Stories</a>
 </details>
-
 <details>
 <summary><a href="#36">Learn Page (learn.html)</a></summary>
 
 1. <a href="#37">Multiple Choice Game</a>
 2. <a href="#38">Modal</a>
-
 </details>
 </details>
 </details>
-
 <details>
 <summary><a href="#39">Technologies Used</a></summary>
- 
 <details>
 <summary><a href="#40">Languages</a></summary>
 
@@ -99,8 +90,6 @@ This project brings divination into the modern age, creating a space where the i
 2. <a href="#42">CSS</a>
 3. <a href="#43">JavaScript</a> 
 </details>
-
-
 <details>
 <summary><a href="#44">Frameworks</a></summary>
 
@@ -108,7 +97,6 @@ This project brings divination into the modern age, creating a space where the i
 2. <a href="#46">Express.js</a>  
 3. <a href="#47">Node.js</a>  
 </details>
-
 <details>
 <summary><a href="#38">Libraries & APIs</a></summary>
 
@@ -117,7 +105,6 @@ This project brings divination into the modern age, creating a space where the i
 3. <a href="#41">Aztro API</a>  
 4. <a href="#42">Farmsense API</a>  
 </details>
-
 <details>
 <summary><a href="#43">Platforms</a></summary>
 
@@ -125,7 +112,6 @@ This project brings divination into the modern age, creating a space where the i
 2. <a href="#45">Render</a>  
 3. <a href="#46">VS Code</a>  
 </details>
-
 <details>
 <summary><a href="#47">Other Tools</a></summary>
 
@@ -136,10 +122,10 @@ This project brings divination into the modern age, creating a space where the i
 5. <a href="#52">Balsamiq</a>  
 6. <a href="#53">Favicon Generator</a>  
 7. <a href="#54">Procreate</a>  
+8. <a href="#54a">ChatGPT</a>
 </details>
 </details>
 </details>
-
 <details>
 <summary><a href="#55">Testing</a></summary>
 
@@ -422,27 +408,54 @@ Font Awesome's styling utilities have aided the 'flashing' of the icon, achieved
 
 #### Emoji's
 
-Emoji's are implemented on the site as playful supplements to the UX. 
+Emoji's are implemented on the site as playful supplements to the UX. **Please be aware that emoji graphics will appear differently depending on the browser/operating system. Despite this the emoji's used are universal and represent the same thing despite style indescrepancies. The images below may not appear as they look here on your own browser. Users should be able to interpret them accordingly. They offer visual enhancement only and are not vital for a positive UX - they simply enhance the style choices used on this site.**
+
 <p align="left">
   <img src="assets/images/readmefiles/icons/crystal_ball.webp" alt="Crystal Ball" width="100" style="float: left; margin-right: 20px;"><br>
-  The crystal ball emoji was used in the title of the A.I oracle feature to help captivate the users attention. The color of the emoji also compliments the card designs featured on the info page and breaks up the otherwise heavy neon green and black elements.  
+  The crystal ball emoji was used in the title of the [A.I oracle](webdevination.onrender.com/info.html) feature to help captivate the users attention. The color of the emoji also compliments the card designs featured on the info page and breaks up the otherwise heavy neon green and black elements.  
 </p>
 <br>
-
-The four emoj's below reference the element's that the Minor Arcana suits correspond to. They are found inside the accordion for the Minor Arcana next to the suit titles on the 'Cards' page:
-
-<p align="left">
-  <img src="assets/images/readmefiles/icons/fireemoji.webp" alt="Flame" width="100" style="float: left; margin-right: 20px;"> The flame emoji references the element of fire which corresponds to The Suit of Wands. <br><br>
-
-  <p align="left">
-  <img src="assets/images/readmefiles/icons/wateremoji.webp" alt="Sweat Drops" width="100" style="float: left; margin-right: 20px;"> The 'sweat-drops' emoji references the element of water which corresponds to The Suit of Cups. This emoji is taken to represent water not sweat in this context.<br><br>
-
-  <p align="left">
-  <img src="assets/images/readmefiles/icons/windemoji.webp" alt="Tornado" width="100" style="float: left; margin-right: 20px;"> The tornadoo emoji references the element of air which corresponds to The Suit of Swords. <br><br>
+<br>
 
 <p align="left">
-  <img src="assets/images/readmefiles/icons/earthemoji.webp" alt="Deciduous Tree" width="100" style="float: left; margin-right: 20px;"> The deciduous tree emoji references the element of earth which corresponds to The Suit of Pentacles.
+  <img src="assets/images/readmefiles/icons/milkyway.webp" alt="Milky Way" width="100" style="float: left; margin-right: 20px;"><br>
+  The Milky Away emoji appears above the card selections on [info.html](webdevination.onrender.com/info.html) in the heading `tarot readings` which is shown on the users 2nd, 3rd & nth visit to the page in a session, in place of the terminal text which is shown only on their landing visit.
 
+<br>
+<br>
+
+#### The four emoji's below reference the element's that the Minor Arcana suits correspond to. They are found inside the accordion for the Minor Arcana next to the suit titles on the [cards page](webdevination.onrender.com/cards.html).
+
+  <img src="assets/images/readmefiles/icons/fireemoji.webp" alt="Flame" width="100"> The flame emoji references the element of fire which corresponds to The Suit of Wands. <br><br>
+
+  <img src="assets/images/readmefiles/icons/wateremoji.webp" alt="Sweat Drops" width="100"> The 'sweat-drops' emoji references the element of water which corresponds to The Suit of Cups. This emoji is taken to represent water not sweat in this context.<br><br>
+
+  <img src="assets/images/readmefiles/icons/windemoji.webp" alt="Tornado" width="100"> The tornadoo emoji references the element of air which corresponds to The Suit of Swords. <br><br>
+
+  <img src="assets/images/readmefiles/icons/earthemoji.webp" alt="Deciduous Tree" width="100"> The deciduous tree emoji references the element of earth which corresponds to The Suit of Pentacles.
+
+<br>
+<br>
+<br>
+
+#### The three emoji's below are used in the messages displayed by the A.I oracle:
+
+<img src="assets/images/readmefiles/icons/sparkles.webp" alt="Sparkles" width="100"> Displays whilst the oracle is 'thinking' before the response is generated. <br><br>
+
+  <img src="assets/images/readmefiles/icons/candle.webp" alt="Candle" width="100"> If the API returns an empty result the emoji shows with the message `"The Oracle is silent..."`.<br><br>
+
+  <img src="assets/images/readmefiles/icons/fog.webp" alt="Fog" width="100"> If a fetch error occurs this emoji displays alongside the message `"The mists are unclear. Try again soon."` <br><br>
+
+#### These 4 emoji's are displayed alongside the specific card info which is revealed by flipping the card images on the [cards page](webdevination.onrender.com/cards.html).
+
+<img src="assets/images/readmefiles/icons/purple_heart.webp" alt="Purple Heart" width="100"> Shows next to the "LOVE" category on card backs. <br><br>
+
+<img src="assets/images/readmefiles/icons/sparkles.webp" alt="Sparkles" width="100"> Shows next to the "CAREER" category on card backs. <br><br>
+
+<img src="assets/images/readmefiles/icons/moneybag.webp" alt="Money Bag" width="100"> Shows next to the "FINANCE" category on card backs. <br><br>
+  
+<img src="assets/images/readmefiles/icons/herb.webp" alt="Herbs" width="100"> Shows next to the "HEALTH" category on card backs. <br><br>
+  
 <h3 id="11"> 4. Fonts </h3>
 
 Typography plays a vital role in reinforcing the aesthetic and metaphysical tone of the project. Two distinct typefaces—Tourney and Source Code Pro—were chosen to complement the terminal-style theme and enhance the user’s immersive experience.
@@ -606,39 +619,112 @@ It was created from a [boilerplate](https://getbootstrap.com/docs/4.0/components
 
 <h3 id="20">1. Text/Icon Animation</h3>
 
+* JavaScript: Animates each letter of "WebDevination" to briefly swap into a Material Icon, then back again, creating a dynamic, futuristic intro effect.
+* CSS: Custom keyframes and transitions enhance the animation for smooth sliding and opacity effects.
+* HTML: Each letter and symbol is carefully structured with nested spans to allow individual animation targeting.
+
 <h3 id="21">2. Enter Button</h3>
+
+* JavaScript: Displays a "Enter" button after 3 animation cycles. Users can either click the button, click anywhere on the page, or press the Enter key (added enhancement) to instantly navigate to the Info page.
+* UX Upgrade: The enter key press shortcut mentioned above was added to allow faster navigation for impatient users.
+
 
 <h2 id="22">Features - Readings Info & A.I Oracle Page (info.html)  </h2>
 
 ![](assets/images/readmefiles/infomockup.PNG)
 
-<h3 id="23">Terminal Typed Welcome & Skip Button</h3>
-<h3 id="24">Readings Selection</h3>
-<h3 id="25">A.I Oracle</h3>
+<h3 id="23">1. Terminal Typed Welcome & Skip Button</h3>
+
+* JavaScript: Types out a multi-line introduction slowly to simulate an old-school terminal using `setTimeout.`
+* Session Storage: Saves a `visitedInfoPage` flag so that after the first visit, the long typing sequence is skipped and a simple "TAROT READINGS" heading is shown instead.
+* Skip Button: UX orientated feature allows users to skip typing manually on first visit if they wish.
+
+<h3 id="24">2. Readings Selection</h3>
+
+* JavaScript: Reveals two buttons (One Card / Three Cards) after intro text, along with animated card images and short explanations.
+* CSS: Fade-in effects and animated reveals for the cardback images and reading options.
+
+<h3 id="25">3. A.I Oracle</h3>
+
+* JavaScript: Custom form submission captures user's question, sends it via `fetch POST` request to a `Node.js` API hosted on Render.
+* OpenAI Integration: Oracle server uses real-time API calls to generate poetic, mystical responses.
+* Typing Animation: Displays Oracle's answer one letter at a time for a magical feel. Shows a `"Consulting the Stars..."` interim message while fetching.
+Fallback Messages:
+* If no answer is returned from the API (network error, server offline, etc.), user-friendly fallback messages appear instead:
+-   `"🕯️ The Oracle is silent..."` (if the API returns an empty result).
+- `"🌫️ The mists are unclear. Try again soon."` (if a fetch error occurs).
+* Input Locking: Disables form fields while awaiting API response to prevent duplicate submissions.
 
 <h2 id="26">Features - Reading's Pages (onecard.html & threecard.html)</h2>
 
 ![](assets/images/readmefiles/onecardmockup.PNG)
 ![](assets/images/readmefiles/threecardmockup.PNG)
 
-<h3 id="27">Shuffle Feature</h3>
+<h3 id="27">1. Shuffle Feature</h3>
+
+* JavaScript: Shuffles the deck using the Fisher-Yates shuffle algorithm and animates the cards flying randomly for a dynamic effect. This is loaded from `utilities.js.`
+* CSS: Transition effects make the cards appear to "scatter" and return. `overlay: visible` allows cards to scatter over other page elements for effective visuals. `overlay:hidden` on the body prevents this feature from adding unnessacary width/height to the page whilst the shuffle is activated. 
+
 <h3 id="28">Draw Feature</h3>
+
+* One Card: User selects a single card, which flips to reveal its artwork and a cryptic interpretation, both are loaded from `tarot.json`
+* Three Cards: User draws past, present, and future cards, each flipping independently. Like one card each card image and it's corresponding description are loaded from the `tarot.json`
+* JavaScript: Both pages have their own js file to handle the intracacies and differences of the draw logic. After the shuffle is inserted from the `utilities.js` file, `onecard.js` and `threecard.js` respectivley handle each pages draw feature. Click handlers dynamically inject the selected cards into the DOM.
+
 <h3 id="29">Card Images & Descriptions</h3>
+
+* JavaScript: Dynamically inserts the selected card's name, image, and description into the page after the card flip animation completes. See above. 
+
 <h3 id="30">Modal</h3>
+
+* JavaScript: Windows 95 mock-style neon modals pop up when the first shuffle is complete, prompting the user to select draw to load their cards. These modals are injected entirely from the js file `utilities` and iteract with `onecard.js` and `threecard.js`
+* Accessibility: OK button focuses automatically inside the modal when opened.
+
 <h3 id="31">Fake Advertisment</h3>
+
+* HTML/CSS: A fun feature which uses reduntant/empty space on `onecard.html`. This fake advert was created using Midjourney and ProCreate. The advertising space could potentially be used for revenue and real adverts, which is the true purpose of implementing it. It shows that passive revenue could be generated from using advertisment within the sites pages. 
+* Advert container is styled to match the retro/futuristic Win95 aesthetic with neon green. It houses an advert for a fake fortune teller 'Madame Electra' with a captivating animation which is both alluring and strange.  
 
 <h2 id="32">Cards Page (cards.html)</h2>
 
 ![](assets/images/readmefiles/cardsmockup.PNG)
-<h3 id="33">Card Images
-<h3 id="34">Flip Info
-<h3 id="35">Suit Stories
+
+<h3 id="33">1. Card Images</h3>
+
+* A full deck of 78 cards were generated with MidJourney. Style influences were provided with the developers own artwork, and prompts included references to the symbols on the cards which are found on the traditional Ryder-Waite deck. This page allows users to enjoy the artwork which they will have come across in their readings.
+* JavaScript: Dynamically loads all 78 Tarot cards from a `tarot.json`.
+* Responsive Grid: CSS flexbox/grid layout adapts based on screen size.
+
+<h3 id="34">2. Flip Info</h3>
+
+* JavaScript/CSS: Hovering or tapping a card flips it to show a brief description on the back using smooth  `rotateY` animations.
+* These fields loaded from the `tarot.son` file are seperated from the `interpretation:` field which is loaded on the readings pages.
+* `"specifics":` which loads upon flipping the card image displays short categorized information fields (`LOVE`, `CAREER`, `FINANCE` and `HEALTH`) which aim to supplement the UX and allow the user to access specific indicators which can guide them to interpret the card from their readings if they wish.
+
+<h3 id="35">3. Suit Stories</h3>
+
+* JavaScript: Intro stories for each suit (Wands, Cups, Swords, Pentacles) dynamically inserted when the accordion is expanded.
+* These stories provide an indepth, emotive look into the cards aiming to encourage a deeper understanding of the symbolism within the tarot, supplementing the UX and inspiring the user to learn more about each card. 
   
-<h2 id="36">Learn Page (learn.html)
+<h2 id="36">Learn Page (learn.html)</h2>
 
 ![](assets/images/readmefiles/learnmockup.PNG)
-<h3 id="37">Multiple Choice Game
-<h3 id="38">Modal
+
+<h3 id="37">1. Multiple Choice Game</h3>
+
+* JavaScript: Interactive quiz where the user matches the interpretation to the correct Tarot card among 4 randomized options which are loaded via `learn.js` from the `tarot.json`
+* Score Keeping: Tracks user's score with a max available score of 78.
+* Session State: Moves to next 4 card choice automatically after each guess whether right or wrong - user is informed via modal (see below).
+
+<h3 id="38">2. Modal</h3>
+
+* JavaScript: Bootstrap modals customized with Win95 aesthetic pop up after each answer.
+* Audio Feedback: Plays a nostalgic Windows 95 error sound on wrong answers located at `assets\audio\win95_error.mp3` to enhance the retro game feeling and suprise the user a little.
+* Accessibility: Keyboard (Enter key) shortcuts allow easy modal closure after feedback.
+* Answer: Whether right or wrong, the modal text is adjusted to inform the user of the correct card, injected via the `"name":` field in `tarot.json`. 
+
+![](assets\images\readmefiles\modalright.webp)
+![](assets\images\readmefiles\modalwrong.webp)
 
 <h2 id="39"></h2> 
 <h2 id="39">Technologies Used</h2>
@@ -658,10 +744,10 @@ Powers dynamic behavior throughout the site. From controlling the navbar and shu
 #### 1.  [Bootstrap 5](https://getbootstrap.com/)
 Used as a responsive layout foundation and for components like the navbar, modals, and accordion galleries. Utility classes were also used throughout, though heavily customized to create a completely original aesthetic.
 
-#### 2. Express.js
+#### 2. [Express.js](https://expressjs.com/)
 Provides the lightweight backend framework for the AI Oracle, handling routes, requests, and API integration.
 
-#### 3. Node.js
+#### 3. [Node.js](https://nodejs.org/en)
 Runs the server-side logic for the Oracle, allowing API calls to OpenAI, Aztro, and Farmsense while managing environment variables and user session memory.
 
 <h3 id="42">Libraries & APIs</h3>
@@ -669,13 +755,13 @@ Runs the server-side logic for the Oracle, allowing API calls to OpenAI, Aztro, 
 #### 1. [Font Awesome](https://fontawesome.com/)
 Used throughout for iconography, including social links and the custom navbar pentagram icon.
 
-#### 2. OpenAI API
+#### 2. [OpenAI API](https://openai.com/api/)
 Generates poetic, symbolic responses based on user questions and astrological context.
 
-#### 3. Aztro API
+#### 3. [Aztro API](https://aztro.readthedocs.io/)
 Supplies real-time daily horoscopes based on user-provided birth date or zodiac sign.
 
-#### 4. Farmsense API
+#### 4. [Farmsense API](https://www.farmsense.net/api/)
 Delivers current moon phase data to enrich the Oracle's predictions with lunar energy.
 
 #### 5. [Google Fonts](https://fonts.google.com/)
@@ -684,7 +770,6 @@ Used to import and serve the project’s two core typefaces 'Tourney' and 'Sourc
 <h3 id="43">Platforms</a>
 
 #### 1. [Github](https://github.com)
-
 Hosts the deployed frontend via GitHub Pages and stores the full project codebase with version control.
 
 #### 2. [Render](https://render.com)
@@ -719,41 +804,15 @@ Used to paint over, clean up, or manually correct MidJourney outputs — removin
 #### 8. [ChatGPT](https://chatgpt.com/)
 Used to brainstorm, refine prompts, debug code, and provides the mystical language for the Oracle itself. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h2 id="55">Testing</h2>
 
 <h3 id="56">1. About Testing</h3>
 
 A document including a table with all tests can be found [here](TESTING.md).
 
-* The entire site has been tested comprehensivley throughout the build. Further evidence of continuous testing can be seen throughout the [deployment history](https://github.com/kimjev-webdev/Unit1/deployments) on Github. 
+* The entire site has been tested comprehensivley throughout the build. Further evidence of continuous testing can be seen throughout the [deployment history](https://github.com/kimjev-webdev/webdevination/deployments) on Github and through the extensive [bug log](BUGLOG.md)
 * Each time a feature was added, all the pages on the site were tested to see if there was an impact.
 * The site was sent to friends, family and contacts on social media  feedback and testing.
-* The images in the gallery have been compressed so they are all below 300kb with an average image size of less than 150kb. 
 * Color contrasts have been checked to ensure compliance with WCAG guidlines.
 
 <h3 id="57">2. Validation</h3>
