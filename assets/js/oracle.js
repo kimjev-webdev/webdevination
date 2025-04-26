@@ -1,6 +1,14 @@
-// === Function Declarations ===
+/* jshint esversion: 11 */
+/* jshint node: true */
+/* jshint -W079 */
 
-// Typing the Oracle's message
+// this script handles the front end for the oracle form submission and response display
+// it uses the openai api to generate a response based on the user's question
+// it handles the typing animation for the oracle's response
+// it displays an interim message while waiting for the response
+// it uses the fetch api to send the question to the server and receive the response
+
+// function to type out the oracle's message character by character
 function typeOracleMessage(text, element, speed = 40) {
   element.textContent = "";
   let i = 0;
@@ -9,6 +17,7 @@ function typeOracleMessage(text, element, speed = 40) {
     element.textContent += text.charAt(i);
     i++;
 
+    // when finished typing, unlock the form
     if (i >= text.length) {
       clearInterval(interval);
       isTyping = false;
@@ -17,18 +26,18 @@ function typeOracleMessage(text, element, speed = 40) {
   }, speed);
 }
 
-// Lock or unlock form inputs
+// function to lock or unlock the form inputs
 function toggleFormLock(disabled) {
   questionInput.disabled = disabled;
   oracleSubmitBtn.disabled = disabled;
 }
 
-// Fetch the Oracle response
+// function to fetch the oracle's response from the server
 async function fetchOracleResponse(question, responseBox) {
   isTyping = true;
   toggleFormLock(true);
 
-  // Show interim "consulting the stars..." message immediately
+  // show interim message immediately
   responseBox.textContent = "✨ Consulting the stars...";
 
   try {
@@ -41,24 +50,26 @@ async function fetchOracleResponse(question, responseBox) {
     const data = await res.json();
 
     if (data.answer) {
-      // Wait a tiny moment before typing real answer
+      // after a short pause, type out the real answer
       setTimeout(() => {
-        typeOracleMessage(data.answer, responseBox, 40); // ✨ Faster typing speed
-      }, 600); // optional small pause after "consulting"
+        typeOracleMessage(data.answer, responseBox, 40);
+      }, 600);
     } else {
+      // if no answer received, show fallback message
       responseBox.textContent = "🕯️ The Oracle is silent...";
       toggleFormLock(false);
       isTyping = false;
     }
   } catch (err) {
-    console.error("Oracle error:", err);
-    responseBox.textContent = "🌫️ The mists are unclear. Try again soon.";
+    // if error during fetch, show error message
+    console.error("oracle error:", err);
+    responseBox.textContent = "🌫️ The mists are unclear. try again soon.";
     toggleFormLock(false);
     isTyping = false;
   }
 }
 
-// Handle submit event
+// function to handle form submission
 function handleOracleSubmit(e) {
   e.preventDefault();
 
@@ -71,8 +82,7 @@ function handleOracleSubmit(e) {
   fetchOracleResponse(question, oracleResponse);
 }
 
-// === SETUP ===
-
+// set up event listeners for the oracle form and input
 const oracleForm = document.getElementById("oracle-form");
 const questionInput = document.getElementById("questionInput");
 const oracleResponse = document.getElementById("oracle-response");
@@ -80,9 +90,10 @@ const oracleSubmitBtn = oracleForm.querySelector("button[type='submit']");
 
 let isTyping = false;
 
+// listen for form submit
 oracleForm.addEventListener("submit", handleOracleSubmit);
 
-// Allow Enter key (without Shift) to submit
+// allow enter key (without shift) to submit the form
 questionInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();

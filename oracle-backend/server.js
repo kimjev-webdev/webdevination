@@ -2,7 +2,7 @@
 /* jshint node: true */
 /* jshint -W079 */  // Suppress __dirname/__filename redefinition warning
 
-// This script handles the backend for the ai oracle form submission and response display.
+// this script handles the backend for the ai oracle form submission and response display.
 // load environment variables from .env (ESM style)
 import * as dotenv from 'dotenv';
 dotenv.config();
@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../index.html'));
 });
 
-// ---- helper functions ----
+// helper functions
 
 // get today's horoscope for a given zodiac sign
 async function getDailyHoroscope(sign = 'pisces') {
@@ -97,7 +97,7 @@ Only return JSON. If unsure, use null for values.`;
   }
 }
 
-// ---- main server logic ----
+// main server logic 
 
 // openAI api setup
 const openai = new OpenAI({
@@ -109,7 +109,7 @@ const openai = new OpenAI({
 // in-memory session storage for user sessions
 const sessionMemory = {};
 
-// Oracle endpoint — handles incoming questions
+// oracle endpoint — handles incoming questions
 app.post('/oracle', async (req, res) => {
   let sessionId = req.cookies.sessionId;
 
