@@ -76,3 +76,4 @@
 2025-04-26 | Learning Game Modal not displaying correctly | JS | Restored original Bootstrap modal for the Learn page. Fixed injection timing and ensured correct Bootstrap modal API usage to prevent missing elements on quick selections.
 2025-04-26 | Sound file not playing (404 error) | Assets | Fixed path to assets/audio/win95_error.mp3. Confirmed sound loads and plays only on incorrect answer selections without errors.
 2025-04-26 | Learning Game modal text injection error (null) | JS | Fixed injectLearnModal() to ensure modal elements are queried after they are guaranteed to exist. Used Bootstrap modal show.bs.modal event to inject text safely without race conditions.
+2025-04-266 | Landing Page Enter Key Navigation Improvement | JS | Added global keydown listener to detect Enter keypress and redirect user to info.html at any point during landing animation. Improves UX by allowing faster navigation without waiting for button reveal.
