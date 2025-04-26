@@ -119,10 +119,11 @@
       <pre id="terminalText"></pre>
     </section>
 
-    <!-- buttons (initially hidden) -->
+    <!-- tarot reading options) -->
     <div id="buttons-container" class="buttons-container">
       <section class="row inforow">
         <h2 class="visually-hidden">Here are the reading choices</h2>
+        <!-- left column: one card reading -->
         <div class="col-12 col-md-6">
           <div class="image-container">
             <a href="onecard.html">
@@ -134,7 +135,7 @@
             Provides clarity, focus, and quick answers, especially for yes/no questions. An effective tool for decision-making.
           </div>
         </div>
-
+        <!-- right column: three card reading -->
         <div class="col-12 col-md-6">
           <div class="image-container">
             <a href="threecard.html">
@@ -153,8 +154,7 @@
           </div>
         </div>
       </section>
-
-      <!-- Oracle Form -->
+      <!-- oracle form -->
       <section class="row infolgscreen text-glow">
         <h2 class="title text-glow">🔮 Ask the Oracle</h2>
         <form id="oracle-form">
@@ -165,25 +165,27 @@
       </section>
     </div>
 
-    <!-- Skip Button -->
+    <!-- skip button for terminal text which appears first time only on this page -->
     <button id="skipButton" class="skip-button text-glow">SKIP</button>
   </main>
 
-  <!-- Footer -->
+  <!-- footer -->
   <footer class="text-center text-glow">
     <p>&copy; <span id="current-year"></span> WebDevination. All Rights Reserved.</p>
     <p>Made with <i class="fa-solid fa-heart text-glow"></i> by Kim Piffy</p>
   </footer>
 
-  <!-- JS -->
+  <!-- js -->
   <script src="./assets/js/info.js"></script>
   <script src="./assets/js/oracle.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+  <!-- js dynamically set the current year in the footer -->
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
 
+<!-- js for nav hover colors and the preloader-->
   <script src="assets/js/nav.js"></script>
 </body>
 </html>
