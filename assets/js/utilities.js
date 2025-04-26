@@ -1,25 +1,24 @@
 // === Function Declarations (Hoisted to Top) ===
 
+// Inject Win95 Modal
 function injectWin95Modal() {
   if (document.getElementById('win95Modal')) return;
 
   const modalHTML = `
-    <div class="modal fade" id="win95Modal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content win95-modal win95-window text-glow">
-          <div class="win95-title-bar">
-            <span class="win95-title-text">SHUFFLE COMPLETE</span>
-            <div class="win95-buttons">
-              <button type="button" class="win95-btn" data-bs-dismiss="modal" aria-label="Close">
-                <i class="fa-light fa-x"></i>
-              </button>
-            </div>
+    <div id="win95Modal" class="win95-modal-wrapper" style="display: none;">
+      <div class="win95-modal win95-window text-glow">
+        <div class="win95-title-bar">
+          <span class="win95-title-text">SHUFFLE COMPLETE</span>
+          <div class="win95-buttons">
+            <button type="button" class="win95-btn" id="win95-close" aria-label="Close">
+              <i class="fa-light fa-x" aria-hidden="true"></i>
+            </button>
           </div>
-          <div class="win95-body">
-            <p>Deck shuffled! Now click ‘DRAW’ to pick a card.</p>
-            <div class="ok-wrap">
-              <button class="win95-ok-btn" id="win95-ok" data-bs-dismiss="modal">OK</button>
-            </div>
+        </div>
+        <div class="win95-body">
+          <p>Deck shuffled! Now click ‘DRAW’ to pick a card.</p>
+          <div class="ok-wrap">
+            <button class="win95-ok-btn" id="win95-ok">OK</button>
           </div>
         </div>
       </div>
@@ -30,18 +29,49 @@ function injectWin95Modal() {
   modalContainer.innerHTML = modalHTML;
   document.body.appendChild(modalContainer);
 
-  const enterListener = function (e) {
-    const modal = document.getElementById('win95Modal');
-    const isVisible = modal && modal.getAttribute('aria-hidden') === 'false';
-    if (e.key === 'Enter' && isVisible) {
-      const okBtn = document.getElementById('win95-ok');
-      if (okBtn) okBtn.click();
-    }
-  };
-
-  document.removeEventListener('keydown', enterListener);
-  document.addEventListener('keydown', enterListener);
+  openWin95Modal();
 }
+
+// Open Win95 Modal
+function openWin95Modal() {
+  const modal = document.getElementById('win95Modal');
+
+  // Create backdrop
+  const backdrop = document.createElement('div');
+  backdrop.id = 'win95-backdrop';
+  document.body.appendChild(backdrop);
+
+  // Show modal
+  modal.style.display = 'flex';
+
+  // Lock scroll
+  document.body.style.overflow = 'hidden';
+}
+
+// Close Win95 Modal
+function closeWin95Modal() {
+  const modal = document.getElementById('win95Modal');
+  const backdrop = document.getElementById('win95-backdrop');
+
+  if (modal) {
+    modal.style.display = 'none';
+  }
+  if (backdrop) {
+    backdrop.remove();
+  }
+
+  // Unlock scroll
+  document.body.style.overflow = '';
+}
+
+// Event listeners for OK and Close buttons
+document.addEventListener('click', function(e) {
+  if (e.target && (e.target.id === 'win95-ok' || e.target.id === 'win95-close')) {
+    closeWin95Modal();
+  }
+});
+
+// === Other existing functions you already had ===
 
 function shuffleDeck(shuffledDeck) {
   for (let i = shuffledDeck.length - 1; i > 0; i--) {
@@ -112,6 +142,7 @@ function drawCard(shuffledDeck, selectedCardContainer, isShuffled) {
   const cardFrontImage = document.createElement('img');
   cardFrontImage.src = drawnCard.image;
   cardFrontImage.alt = drawnCard.name;
+  cardFrontImage.loading = "lazy";
   cardFront.appendChild(cardFrontImage);
 
   cardElement.appendChild(cardBack);
@@ -144,7 +175,6 @@ function showCardDetails(card, selectedCardContainer) {
 document.addEventListener('DOMContentLoaded', function () {
   const cardbacksOne = document.querySelectorAll('#buttons-container .col-12.col-md-6 img');
 
-  // Expose functions globally to other scripts
   window.shuffleDeck = shuffleDeck;
   window.shuffleAnimation = shuffleAnimation;
   window.drawCard = drawCard;

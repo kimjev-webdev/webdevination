@@ -1083,7 +1083,7 @@ img.onecardadvert {
   }
 
 .win95-window {
-  width: 75%;
+  max-width: 75%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1424,11 +1424,6 @@ footer {
 
 /* media query */
 /* Move icons on landing page up slightly on phones and tablets */
-@media (max-width: 320px) {
-  .leftonecard {
-    margin-top: 200px;
-  } 
-}
 
 @media (min-width: 300px) and (max-width: 370px) {
   .letter i.material-icons {
