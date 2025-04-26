@@ -79,3 +79,5 @@
 2025-04-26 | Landing Page Enter Key Navigation Improvement | JS | Added global keydown listener to detect Enter keypress and redirect user to info.html at any point during landing animation. Improves UX by allowing faster navigation without waiting for button reveal.
 2025-04-26 | Learn Page modal did not close on Enter key | JS | Added a 'keydown' listener to detect Enter press when Learn modal is open. Automatically triggers the OK button to close modal, improving accessibility.
 2025-04-26 | Landing Page Enter key redirect not working during animation | JS | Refactored event listeners to ensure pressing Enter at any time (including mid-animation) redirects user instantly to info.html. Used a helper function for clean consistent behavior.
+2025-04-26 | Accordion opening caused background zoom/stretch | CSS | Fixed background behavior by applying background-size: cover, background-attachment: fixed, and setting html, body to 100% height. Accordion content can expand without distorting the background. Background remains clean and consistent across viewport sizes.
+
