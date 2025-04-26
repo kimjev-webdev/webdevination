@@ -13,7 +13,7 @@
 | threecard.html  | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\threecardhtmlpass.png">| PASSED |
 | cards.html   | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\cardshtmlpass.png">| PASSED |
 | learn.html  | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\learnhtml.png"> | PASSED |
-| 404.html   | [W3C](https://validator.w3.org/) | <img src="assets/images/testing/contacthtmlbefore.jpeg"> | PASSED |
+| 404.html   | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\404htmlpass.png"> | PASSED |
 
 
 ### 2. CSS 
@@ -33,14 +33,23 @@ Links checked with [W3C Link Checker](https://validator.w3.org/checklink).
 
 | Page      | URL                  | Screenshot           | Notes              |
 |-----------|----------------------|----------------------|--------------------|
-| All Pages   | [W3C ](https://validator.w3.org/checklink) | <img src="assets/images/testing/linktesting.jpeg" height="auto" width="600px"> | All links tested and valid - instagram and linked in links checked manually as they are blocked by robot.txt - working. 
+| All Pages   | [W3C ](https://validator.w3.org/checklink) | <img src="assets\images\testing\linkspass.png" height="auto" width="600px"> | PASSED |
 
 ### 4. JavaScript 
+JavaScript files checked with [JSHint](https://jshint.com/).
 
 | Page      | URL                  | Screenshot           | Notes              |
 |-----------|----------------------|----------------------|--------------------|
-| contact.js   | [JSHint](https://validator.w3.org/checklink) | <img src="assets/images/testing/contactjs.jpeg" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
-| main.js  | [JSHint](https://validator.w3.org/checklink) | <img src="assets/images/testing/mainjs.jpeg" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
+| index.js   | [JSHint](https://jshint.com/) | <img src="assets\images\testing\indexjsmetrics.png" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
+| nav.js  | [JSHint](https://jshint.com/) | <img src="" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
+| info.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\infojsmetrics.png" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
+| oracle.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\oraclejsmetrics.png" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
+| server.js  | [JSHint](https://jshint.com/) | <img src="" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
+| onecard.js  | [JSHint](https://jshint.com/) | <img src="" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
+| threecard.js  | [JSHint](https://jshint.com/) | <img src="" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
+| utilities.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\utilitiesjsmetrics.png" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
+| cards.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\cardsjsmetrics.png" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
+| learn.js  | [JSHint](https://jshint.com/) | <img src="" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
 
 
 <h2 id="mobiletesting">Mobile Testing</h2>
