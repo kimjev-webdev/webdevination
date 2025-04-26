@@ -7,15 +7,14 @@
 
 | Page      | URL                  | Screenshot           | Notes              |
 |-----------|----------------------|----------------------|--------------------|
-| Index.html - Before    | [W3C ](https://validator.w3.org/) | <img src="assets/images/testing/indexhtml1.jpeg" height="auto" width="600px"> <img src="assets/images/testing/indexhtml2.jpeg" height="auto" width="600px"> | Removed unnessacary roles, deleted stray end div tag, close footer form, change carousel section to div, remove alt text from icons in footer   |
-| Index.html - After    | [W3C](https:/validator.w3.org) | <img src="assets/images/testing/indexhtml.jpeg" height="auto" width="600px">  | Passed all tests.   |
-| About.html - Before   | [W3C](https://validator.w3.org/) | <img src="assets/images/testing/abouthtml.jpeg" height="auto" width="600px">| Removed roles, closed form in footer, removed alt tags from footer icons, fixed headers and header hierarchy|
-| About.html - After   | [W3C](https://validator.w3.org/) | <img src="assets/images/testing/aboutpass.jpeg" height="auto" width="600px">| Passed all tests. |
-| Gallery.html - Before   | [W3C](https://validator.w3.org/) | <img src="assets/images/testing/galleryhtml.jpeg" height="auto" width="600px"> <img src="assets/images/testing/galleryhtml2.jpeg" height="auto" width="600px"> | Remove navigation and header roles, remove img-fluid tags from all images in gallery, swap center element for css |
-| Gallery.html - After   | [W3C](https://validator.w3.org/) | <img src="assets/images/testing/galleryhtmlafter.jpeg" height="auto" width="600px"> | Aria Labels maintained on up arrow icon - further explination needed for accessibility. Report filed to W3C |
-| Contact.html - Before   | [W3C](https://validator.w3.org/) | <img src="assets/images/testing/contacthtmlbefore.jpeg" height="auto" width="600px"> | Remove unnessacary aria labels from query items |
-| Contact.html - After   | [W3C](https://validator.w3.org/) | <img src="assets/images/testing/contacthtmlafter.jpeg" height="auto" width="600px"> | Passed all tests. |
-| 404.html   | [W3C](https://validator.w3.org/) | <img src="assets/images/testing/404html.jpeg" height="auto" width="600px"> | Passed all tests  |
+| index.html     | [W3C ](https://validator.w3.org/) | <img src="assets\images\testing\indexhtmlpass.png" height="auto" width="600px"> <img src="assets/images/testing/indexhtml2.jpeg" height="auto" width="600px"> | PASSED   |
+| info.html   | [W3C](https:/validator.w3.org) | <img src="assets\images\testing\infohtmlpass.png" height="auto" width="600px">  | PASSED   |
+| onecard.html   | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\onecardhtmlpass.png" height="auto" width="600px">| PASSED |
+| threecard.html  | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\threecardhtmlpass.png" height="auto" width="600px">| PASSED |
+| cards.html   | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\cardshtmlpass.png" height="auto" width="600px"> <img src="assets/images/testing/galleryhtml2.jpeg" height="auto" width="600px"> | PASSED |
+| learn.html  | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\learnhtml.png" height="auto" width="600px"> | PASSED |
+| 404.html   | [W3C](https://validator.w3.org/) | <img src="assets/images/testing/contacthtmlbefore.jpeg" height="auto" width="600px"> | PASSED |
+
 
 ### 2. CSS 
 
