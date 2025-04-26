@@ -40,7 +40,7 @@ JavaScript files checked with [JSHint](https://jshint.com/).
 
 | Page      | URL                  | Screenshot           | Notes              |
 |-----------|----------------------|----------------------|--------------------|
-| index.js   | [JSHint](https://jshint.com/) | <img src="assets\images\testing\indexjsmetrics.png"> | PASSED |
+| index.js   | [JSHint](https://jshint.com/) | <img src="assets\images\testing\indexjsmetrics.png" width="100%"> | PASSED |
 | nav.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\navjsmetrics.png"> | PASSED |
 | info.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\infojsmetrics.png"> | PASSED |
 | oracle.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\oraclejsmetrics.png"> | P"ASSED |
