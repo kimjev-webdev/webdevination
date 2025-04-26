@@ -39,6 +39,28 @@ function injectLearnModal(message) {
   }
 
   const modal = new bootstrap.Modal(document.getElementById('learnModal'));
+
+  // === ✨ Accessibility: Allow Enter Key to Close Modal ===
+  const okButton = document.getElementById('learn-ok');
+
+  const handleEnterKey = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      okButton.click();
+    }
+  };
+
+  const learnModalElement = document.getElementById('learnModal');
+
+  learnModalElement.addEventListener('shown.bs.modal', () => {
+    document.addEventListener('keydown', handleEnterKey);
+    okButton.focus();
+  }, { once: true });
+
+  learnModalElement.addEventListener('hidden.bs.modal', () => {
+    document.removeEventListener('keydown', handleEnterKey);
+  }, { once: true });
+
   modal.show();
 }
 
