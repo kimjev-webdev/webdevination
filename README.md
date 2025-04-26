@@ -156,8 +156,7 @@ This project brings divination into the modern age, creating a space where the i
 <details>
 <summary><a href="#61a">Deployment</a></summary>
   
-1. <a href="#61b">Github Deployment</a>
-2. <a href="#61c">Render Deployment</a>
+1. <a href="#61b">Render Deployment</a>
 
 </details>
 
@@ -785,113 +784,58 @@ There is also a list of bugs which are yet to be resolved in the [testing docume
 
 <h2 id="61a"> Deployment </h2>
 
-<h3 id="61b"> 1. Github Deployment </h3>
+The full WebDevination experience (frontend + Oracle backend) is deployed using [Render](https://render.com/).
 
-Github Pages works with repositories that contain static files. 
-
-##### Frontend Deployment (GitHub Pages)
-The project frontend is deployed using GitHub Pages, accessible at:
-
-https://kimjev-webdev.github.io/webdevination
-
-#### How to Deploy:
-Push your project to a GitHub repository (e.g., kimjev-webdev/webdevination).
-
-Make sure all your HTML, CSS, JS, assets, and folders are in the main branch (or a designated build folder like /dist).
-
-Go to Repository Settings → Pages.
-
-Under "Source," select:
-
-Branch: main
-
-Folder: /root (or /docs if using that folder)
-
-Click Save — GitHub will build and deploy the site.
-
-Your site will be available shortly at https://<username>.github.io/<repo-name>.
-
-#### IMPORTANT NOTICE 
-
-The Oracle feature relies on a server-side API to communicate with OpenAI’s language model and external astrology APIs. GitHub Pages is strictly static-only, meaning it can’t run any backend logic or API routes.
-
-As a result:
-
-❌ The Oracle feature will not work on GitHub Pages because GitHub cannot handle dynamic POST requests or execute server-side code.
-
-Therefore:
-
-The server is deployed separately using Render, a platform that supports Node.js backend services. This enables the /oracle route and supports real-time GPT + astrology responses.
-
-For full experience visit the Render deploy at:
-
+🔮 **Live Project Link:**  
 https://webdevination.onrender.com
 
-##### How to Deploy Backend on Render:
-Go to https://render.com and log in or create an account.
+<h3 id="61b">
 
-Click “New Web Service” and connect your GitHub repository.
+### Why Deploy with Render?
 
-Choose your backend folder (e.g., oracle-backend) as the root for the service.
+Although the project frontend was initially available through GitHub Pages, GitHub Pages only supports **static files** (HTML, CSS, JS).  
+It **does not support server-side APIs** meaning features like the Oracle (which relies on OpenAI and astrology APIs) could not work properly.
 
-Configure the settings:
+Render provides full backend support, allowing WebDevination to:
 
-Environment: Node
+* Handle dynamic POST requests
+* Fetch live GPT-based oracle readings
+* Incorporate real-time astrology data
 
-Build Command: npm install
+By deploying both frontend and backend through Render, the project offers a seamless, integrated experience.
 
-Start Command: node server.js 
+### Free Render Plan Notice!
 
-Under "Advanced", add your environment variables:
+Because WebDevination is deployed on Render's free tier:
 
-OPENAI_API_KEY=...
+If the server has been inactive for a while, it may **sleep** to conserve resources.
+On the first request after sleeping, **it can take up to 50 seconds** for the server to wake up and load the site.
 
-AZTRO_API_URL=... (if using)
+After waking, the site runs normally.
 
-MOON_API_URL=... or FARMSENSE_KEY=... (if applicable)
+### Step-by-Step Render Deployment Process:
 
-Click Create Web Service.
+### GitHub Integration:
+* The developer connects the GitHub repository (kimjev-webdev/webdevination) to Render. This allows Render to pull the latest code directly from the repository whenever a new deployment is triggered. Manual deployment is also an option. 
 
-#### When deploying a project like WebDevination, especially with a backend using API keys (like OpenAI), it’s crucial to hide sensitive files like .env and avoid pushing unnecessary or bulky folders like node_modules. 
+### Creating a New Web Service:
+* On Render's dashboard, the developer selects "New Web Service", chooses "Web Service", and selects the appropriate repository and branch.
 
-The .env file stores sensitive environment variables such as:
-OPENAI_API_KEY=
-AZTRO_API_URL=
-FARMSENSE_API_KEY=
+### Configuring Build Settings:
+* Environment: Node.js is selected.
+* Build Command: npm install (installs project dependencies).
+* Start Command: node server.js (or the relevant startup file to launch the Express server).
 
-These should never be committed to GitHub.
+### Setting Environment Variables: 
+* Sensitive keys and API URLs (such as OpenAI API keys and astrology API endpoints) are added securely in the Environment tab of the service.
+* These are not pushed to GitHub but injected at runtime using process.env.
 
-#### How to Hide .env:
-
-Create a .gitignore file (if it doesn't exist).
-Add .env to it.
-This ensures the .env file is not tracked or pushed to GitHub.
-
-The node_modules folder contains all the installed packages. It’s auto-generated by npm install and does not belong in the GitHub repo.
-
-#### How to Hide node_modules:
-In .gitignore, also add:
-node_modules/
-
-This reduces your repo size dramatically and avoids redundant files.
-
-#### What happens if they aren't hidden?
-Someone could steal the API keys and use up our OpenAI credits.
-The repo bloats with hundreds of MB of dependencies.
-The mystique of the magical Oracle is destroyed! 😢
-
-#### Where to add this information for deployment?
-
-On Render:
-Go to web service → Environment tab.
-Add secrets as key/value pairs:
-
-OPENAI_API_KEY=sk-xxxxxxxxxxxx
-AZTRO_API_URL=
-etc. 
-
-Render injects them into the live app so your backend can access them using process.env.OPENAI_API_KEY without needing a local .env file!
-
+### Deployment: 
+* Once configured, Render automatically builds and deploys the project.
+* The frontend (HTML, CSS, JavaScript) is served by the same backend Express server, ensuring dynamic content and server-side API functionality.
+* Any new commits pushed to the selected GitHub branch automatically trigger a redeployment, keeping the live site up-to-date.
+* Manual deployment can be selected to ensure the current project state has been pushed, which is useful when testing the API manually.
+                  
 <h2 id="62">Credits</h2>
 
 <h3 id="64">1. Copyright Notice</h3>
