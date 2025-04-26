@@ -139,3 +139,16 @@ As a software developer with an interest in spirituality I want to interact with
 Here I list known issues with the site which are yet to be fixed.
 For the full list of resolved issues throughout the project timeline please view the [Bug Log](BUGLOG.md). 
 
+### 1. Dropdown Nav Minor DevTools Testing Behavior (No Impact on Mobile Devices)
+* During development, a minor behavior was observed when using browser DevTools to simulate a mobile device:
+On first tap of the "Readings" dropdown in the navbar, the background highlight activated before expanding the dropdown menu itself.
+
+* This issue only occurs inside DevTools simulation because hover and click states can overlap in emulated touch environments.
+
+* Extensive real-device testing on phones confirmed that on actual mobile devices, the navbar dropdown behaves correctly:
+one tap expands the menu, and no incorrect hover behavior occurs.
+
+* As this is a DevTools-only quirk with no effect on real-world usability, no code changes were required.
+
+* The project prioritizes real-user experience, and this observation was documented instead of forcing unnecessary workarounds that could compromise overall navbar functionality.
+
