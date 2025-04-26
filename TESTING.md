@@ -43,7 +43,7 @@ JavaScript files checked with [JSHint](https://jshint.com/).
 | index.js   | [JSHint](https://jshint.com/) | <img src="assets\images\testing\indexjsmetrics.png" width="700px"> | PASSED |
 | nav.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\navjsmetrics.png" width="700px"> | PASSED |
 | info.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\infojsmetrics.png" width="700px"> | PASSED |
-| oracle.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\oraclejsmetrics.png" width="700px"> | P"ASSED |
+| oracle.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\oraclejsmetrics.png" width="700px"> | PASSED |
 | server.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\serverjsmetrics.png" width="700px"> | JSHint does not fully recognize "type": "module" settings and incorrectly flags valid module code. The import.meta warning is a false positive from the linter and does not affect functionality, testing, or production deployment. |
 | onecard.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\onecardjsmetrics.png" width="700px"> | PASSED |
 | threecard.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\threecardjsmetrics.png" width="700px"> | PASSED |
