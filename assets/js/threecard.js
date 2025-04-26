@@ -9,25 +9,6 @@ function handleShuffleButtonClick(shuffledDeck, threecardStack, cardsContainer) 
 
   setTimeout(function () {
     injectWin95Modal();
-
-    const modalElement = document.getElementById('win95Modal');
-    const okButton = modalElement.querySelector('.win95-ok-btn');
-    const modal = new bootstrap.Modal(modalElement);
-
-    modalElement.addEventListener('shown.bs.modal', function () {
-      requestAnimationFrame(function () {
-        setTimeout(function () {
-          const isAriaVisible = modalElement.getAttribute('aria-hidden') === 'false';
-          const isActuallyVisible = modalElement.getBoundingClientRect().width > 0;
-
-          if (isAriaVisible && isActuallyVisible && okButton) {
-            okButton.focus();
-          }
-        }, 50);
-      });
-    }, { once: true });
-
-    modal.show();
   }, 1200);
 }
 
