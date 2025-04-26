@@ -29,7 +29,7 @@ async function fetchOracleResponse(question, responseBox) {
   toggleFormLock(true);
 
   // Show interim "consulting the stars..." message immediately
-  responseBox.textContent = "🛸 Consulting the stars...";
+  responseBox.textContent = "✨ Consulting the stars...";
 
   try {
     const res = await fetch("/oracle", {
