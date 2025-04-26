@@ -1,1674 +1,1821 @@
 /* --- keyframe animations --- */
 /* animations for the letters and icons on landing page */
 @keyframes flashText {
-  0% {
-    opacity: 1;
+  /* 0% styles */
+    0% {
+      opacity: 1;
+    }
+  /* 50% styles */
+    50% {
+      opacity: 0.2;
+    }
+  /* 100% styles */
+    100% {
+      opacity: 1;
+    }
   }
-  50% {
-    opacity: 0.2;
+  
+  /* animation for the blinking cursor effect */    
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
   }
-  100% {
-    opacity: 1;
+  
+  /* animation for the portal ring */ 
+  @keyframes portalSpin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
-}
-
-/* animation for the blinking cursor effect */    
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
-}
-
-/* animation for the portal ring */ 
-@keyframes portalSpin {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* animation for the portal ring expansion */ 
-@keyframes portalExpand {
-  0% {
-    transform: rotate(0deg) scale(1);
-    opacity: 1;
+  
+  /* animation for the portal ring expansion */ 
+  @keyframes portalExpand {
+  /* 0% styles */
+    0% {
+      transform: rotate(0deg) scale(1);
+      opacity: 1;
+    }
+  /* 100% styles */
+    100% {
+      transform: rotate(720deg) scale(10);
+      opacity: 0;
+    }
   }
-  100% {
-    transform: rotate(720deg) scale(10);
-    opacity: 0;
+  
+  /* animation for the sparkles on preloader */
+  @keyframes sparkleFloat {
+    0%   { background-position: 0 0, 0 0; }
+    100% { background-position: 100px 100px, -100px -100px; }
   }
-}
-
-/* animation for the sparkles on preloader */
-@keyframes sparkleFloat {
-  0%   { background-position: 0 0, 0 0; }
-  100% { background-position: 100px 100px, -100px -100px; }
-}
-
-/* animation for the mask expansion on preloader */ 
-@keyframes maskExpand {
-  0% {
-    transform: scale(1);
-    opacity: 1;
+  
+  /* animation for the mask expansion on preloader */ 
+  @keyframes maskExpand {
+  /* 0% styles */
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  /* 100% styles */
+    100% {
+      transform: scale(10);
+      opacity: 0;
+    }
   }
-  100% {
-    transform: scale(10);
-    opacity: 0;
+  
+  /* @keyframes portalopen styles */
+  @keyframes portalOpen {
+  /* 0% styles */
+    0% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  /* 100% styles */
+    100% {
+      transform: scale(10) rotate(720deg);
+      opacity: 0;
+    }
   }
-}
-
-@keyframes portalOpen {
-  0% {
-    transform: scale(1) rotate(0deg);
-    opacity: 1;
+  
+  /* @keyframes portalclose styles */
+  @keyframes portalClose {
+  /* 0% styles */
+    0% {
+      transform: scale(10) rotate(0deg);
+      opacity: 1;
+    }
+  /* 100% styles */
+    100% {
+      transform: scale(1) rotate(-720deg);
+      opacity: 0;
+    }
   }
-  100% {
-    transform: scale(10) rotate(720deg);
-    opacity: 0;
+  
+  /* Win95 Modal Fade In */
+  @keyframes win95FadeIn {
+  /* 0% styles */
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  /* 100% styles */
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
-}
-
-@keyframes portalClose {
-  0% {
-    transform: scale(10) rotate(0deg);
-    opacity: 1;
+  
+  /* Win95 Modal Fade Out */
+  @keyframes win95FadeOut {
+  /* 0% styles */
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  /* 100% styles */
+    100% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
   }
-  100% {
-    transform: scale(1) rotate(-720deg);
-    opacity: 0;
-  }
-}
-
-/* Win95 Modal Fade In */
-@keyframes win95FadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Win95 Modal Fade Out */
-@keyframes win95FadeOut {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-}
-
-/* --- universal styles ---*/
-/* all pages -preloader styles */
-#preloader {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle at center, #000 0%, #050505 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  overflow: hidden;
-}
-
-/* preloader dots */
-.sparkles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image:
-    radial-gradient(#aeff00 1px, transparent 1px),
-    radial-gradient(#00ffcc 1px, transparent 1px);
-  background-size: 20px 20px, 40px 40px;
-  animation: sparkleFloat 3s linear infinite;
-  opacity: 0.3;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* preloader portal */
-.portal-ring {
-  width: 120px;
-  height: 120px;
-  border: 1px solid rgb(174, 255, 0)0;
-  border-radius: 50%;
-  box-shadow: rgb(174, 255, 0) 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;
-  z-index: 3;
-
-  /* Smooth startup */
-  opacity: 0;
-  transform: scale(0.1);
-}
-/* mask to make center of portal darker*/
-.mask-center {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  background-color: #000;
-  border-radius: 50%;
-  z-index: 2;
-
-  /* Match portal ring entrance */
-  opacity: 0;
-  transform: scale(0.1);
-}
-
-/* universal reset styles */  
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* body styles */
-body {
-  min-height: 100vh;
-  margin-top: 100px;
-  min-width: 100vw;
-  padding: 0;
-  background-color: black !important;
-  background-image: url('../images/tarotbg.webp');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-/* general styles */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* font family for all body text */  
-p {
-  font-family: "Source Code Pro", monospace;
-}
-
-/* primary font styling for headers and buttons */
-h1, h2, h3, h4, h5, h6, button, button:hover, button:active button:focus {
-  font-family: 'Tourney', monospace;
-  text-transform: uppercase !important;
-  letter-spacing: 1vw;
-  box-shadow: none;
-  background-color: transparent !important;
-  text-decoration: none !important;
-  text-align: center;
-  border: transparent !important;
-  outline: none !important;
-}
-
-/* aid ux/accessibility let user identiify clickable elements */  
-button, button:hover { 
-cursor: pointer;
-}
-
-/* button hover effect */ 
-button:hover {
-transform: scale(1.1);
-animation: flashText 1s infinite;
-color: rgb(174, 255, 0);
-}
-
-/* natural click in effect so user know when a button has been selected" */   
-button:active {
-  transform: scale(0.92);
-}
-
-/* consolidated glow utility */
-.text-glow {
-  color: rgb(174, 255, 0) !important;
-  text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a !important;  
-}
-
-/* --- landing page styles (index.html) -- */
-/* specific styles for the landing page body */
-body.landing {
-  font-family: 'Tourney', monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
-
-/* alignment for landing page container - central to viewport */
-.container.landing-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-  position: absolute;
-  width: 100vw;
-  height: 30vh;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  white-space: nowrap;
-}
-
-/* letter alignment for landing page animation */
-.letter {
-  position: relative;
-  font-size: 4.5vw;
-  margin: 0 0px;
-  display: inline-block;
-  width: 5vw;
-  height: 5vw;
-  text-align: center;
-  line-height: 6vw;
-}
-
-/* icon alignment for landing page animation */
-.letter i.material-icons {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  text-align: center;
-  font-size: 3.5vw;
-  width: 3vw;
-  line-height: 5.5vw;
-  visibility: hidden;
-  transform: translateX(-2vw);
-  margin-top: 0.5vh;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-/* ensure letters overlay symbols correctly */
-.letter .text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-} 
-
-/* container for enter button */
-.overlay {
-  position: fixed;
-  display: none;
-  align-items: center;
-  justify-content: center; 
-  width: 100vw;
-  height: 30vh;
-  background-color: transparent;
-  flex-direction: column;
-  z-index: 2;
-  position: absolute;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-}
-
-/* ensure enter button is visible when the overlay is displayed */    
-.container:hover .overlay {
-  display: flex;
-}
-
-/*sizing and alignment for enter button */
-.enter-button {
-  display: inline-block;
-  margin: 3vh;
-  padding: 3vh;
-  font-size: 4.5vw;
-}
-
-/* flash effect for button */
-.enter-button {
-  animation: flashText 1s infinite; 
-}
-
-/* promt user to click on the animation to enter at any point even before the sequence has finished */
-.container,
-.overlay,
-.enter-button {
-cursor: pointer;
-}
-
-/* hide rotate screen prompt by default */
-.rotate-prompt {
-  display: none;
-  text-align: center;
-  position: absolute;
-  bottom: 60px;
-  font-size: 1rem;
-}
-
-/* margin for spacing around rotate screen when horizontal */  
-i.rotate-icon {
-  margin: 10px;
-}
-
-/* --- navbar styles --- */
-.navbar {
-  background-color: transparent !important;
-  padding: 10px 15px 5px 0px;
-}
-
-/* navbar item positioning */
-.nav-item {
-  position: relative;
-}
-
-/* navbar link styling */
-.nav-link {
-  display: block;
-  font-size: 16px;
-  font-family: "Source Code Pro", monospace;
-  background-color: #000000;
-  border: 1px solid rgb(174, 255, 0);
-  border-radius: 5px 5px 0 0;
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
-  color: rgb(174, 255, 0);
-  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;   
-}
-
-/* navbar link hover styles */
-.nav-link:hover,
-.nav-item:hover .nav-link,
-a.dropdown-item:hover {
-  color: #000000;
-  background-color: rgb(174, 255, 0);
-}
-
-/* navbar active link styles */
-.nav-link.active {
-  border-bottom: 1px solid rgb(174, 255, 0);
-  box-shadow: inset 0 3px 5px rgb(174, 255, 0);
-}
-
-/* remove margin for last item in navbar links */
-.nav-item:last-child {
-  margin-right: 0;
-}
-
-/* dropdown menu styles */
-.dropdown-menu {
-  background-color: #000;
-  border: 1px solid rgb(174, 255, 0);
-  font-family: "Source Code Pro", monospace;
-}
-
-/* links in dropdown menu item styles */
-a.dropdown-item {
-  font-family: "Source Code Pro", monospace;
-  text-align: center;
-  color: rgb(174, 255, 0);
-  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;
-}
-
-/* show dropdown menu when 'show' class is added */
-.dropdown-menu.show {
-  display: block;
-}
-
-/* --- hamburger icon styles/responsive navbar --- */
-/* Hamburger button styling */
-.navbar-toggler.glow-toggle {
-  border: none;
-  outline: none;
-  padding: 0;
-}
-
-/* hamburger bars styling */
-.glow-toggle .bar {
-  display: block;
-  width: 30px;
-  height: 4px;
-  margin: 6px auto;
-  border-radius: 2px;
-  transition: all 0.3s ease-in-out;
-  background-color: rgb(174, 255, 0); 
-  box-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;
-}
-
-/* when toggler is open (menu expanded) - transform to a cross */
-.glow-toggle:not(.collapsed) .bar:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
-}
-
-.glow-toggle:not(.collapsed) .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.glow-toggle:not(.collapsed) .bar:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
-}
-
-/* remove focus outline and focus shadow on toggler */
-.navbar-toggler:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-/* navbar toggle button styles */
-#site-nav .navbar-toggle {
-  float: right;
-  text-align: right;
-  border: 0px;
-  margin-right: 0px;
-  margin-top: 38px;
-}
-
-/* default state: green text on black background */
-.nav-link.menu-current {
-  color: rgb(174, 255, 0) !important;
-  background-color: #000 !important;
-  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
-}
-
-/* hover state: black text on green background */
-.nav-link.menu-current:hover {
-  color: #000 !important;
-  background-color: rgb(174, 255, 0) !important;
-  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;  
-}
-
-/* active dropdown state: black text on green background */
-.nav-item.dropdown.dropdown-open > .nav-link {
-  color: #000 !important;
-  background-color: rgb(174, 255, 0) !important;
-  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
-}
-
-/* --- readings menu item styles (info.html) --- */
-/* terminal intro text alignment */
-.terminal {
-  text-align: center;
-}
-
-/* skip button allows user to load page contents without delay */
-.skip-button {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  padding: 10px 20px;
-  font-size: 2rem;
-  transition: 0.3s;
-  z-index: 1 !important;
-}
-
-/* extra styling for explination text on info page */
-#terminalText {
-  position: relative;
-  font-family: 'Source Code Pro', monospace;
-  text-align: justify;
-  padding: 0 60px 0 60px;
-  white-space: normal;        
-  word-wrap: pre-wrap;     
-  line-height: 1.5;          
-  overflow: hidden;    
-}
-
-/* cursor animation for the terminal text */ 
-.cursor {
-  display: inline-block;
-  width: 1ch;
-  animation: blink 1s infinite;
-}
-
-/* info page row alignment */ 
-.inforow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* info page card button styles */
-.card-button  {
-  display: block;
-  margin: auto;
-  padding: 10px 0px;
-  font-size: 2rem;
-  line-height: 2rem;
-  letter-spacing: 1vw;
-  transition: 0.3s;
-  opacity: 0; 
-  color: rgb(174, 255, 0);
-  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
-}
-
-/* reading explination text styles */
-.explanation {
-  margin: 0 30px 30px 30px;
-  font-family: "Source Code Pro", monospace;
-  font-size: 14px;
-  align-items: center;
-  text-align: justify;
-  opacity: 0; /* Initially hidden */
-  transform: translateY(-20px); /* Start below */
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-
-/* show the buttons and explanations when the 'visible' class is added in js */ 
-.buttons-container.visible,
-.card-button.visible,
-.explanation.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ensure buttons have no extra decoration */    
-a {
-  text-decoration: none;
-}
-
-/* initially hide the cardback images */
-#buttons-container .col-12.col-md-6 img {
-  display: none;
-  transition: opacity 0.5s ease-in-out;
-  display: block;
-  margin: auto;
-  width: 75px;
-  height: auto;
-}
-
-/* make the images visible when the 'visible' class is added */
-#buttons-container .col-12.col-md-6 img.visible {
-  display: visible;
-}
-
-/* use flexbox on the parent container of the images only */
-#buttons-container .col-12.col-md-6 .image-container {
-  display: flex;
-  justify-content: center;  
-  gap: 10px; 
-}
-
-/* ensure images inside the .image-container align in a row */
-#buttons-container .col-12.col-md-6 .image-container img {
-  margin: 0;
-  width: 75px; /* Adjust the size as necessary */
-  height: auto;
-  border-radius: 15px;
-}
-
-/* keep the rest of the content in the column layout */
-#buttons-container .col-12.col-md-6 {
-  display: flex;
-  max-width: 90vw;
-  flex-direction: column;
-  align-items: center;  /* Center the content horizontally */
-  justify-content: center; /* Center the content vertically */
-}
-
-/* ensure buttons are aligned in the center */
-#buttons-container .col-12.col-md-6 a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
- /* Add some space below each button */
-}
-
-/* make the buttons and explanations centered */
-.buttons-container {
-  margin-top: 20px;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-/* ensure the card images are aligned in a row and centered */   
-.image-container {
-  display: flex;
-  align-items: flex-start;
-}
-
-/* AI oracle container styles */    
-/* ensure the oracle container is aligned in a row and centered */
-.infolgscreen {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 30px 30px 30px;
-  text-align: center;
-}
-
-/* ensure oracle title sizing and alignment */      
-h2.title {
-  font-size: 2.5rem;
-  letter-spacing: 1vw;
-  text-align: center;
-  margin-bottom: 20px;
-}       
-
-/* flexbox layout for the oracle form */
-#oracle-form {
-  display: flex;
-  flex-direction: column; 
-align-items: center;
-}
-
-/* text entry box for oracle form styles */  
-  textarea#questionInput {
-    background-color: rgb(174, 255, 0);
-    min-width: 100%;  
-    text-align: center;
-    font-family: "Source Code Pro", monospace;  
-    font-size: 1rem;
-    padding: 30px 12px;
-    border-radius: 10px;
-    border: 1px solid #2aff1a;
-    box-sizing: border-box;
-    line-height: 1.5;
-    font-family: inherit;
-    box-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-    color: #000000;
-    white-space: pre-wrap;         
-    word-wrap: break-word;        
+  
+  /* --- universal styles ---*/
+  /* all pages -preloader styles */
+  #preloader {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, #000 0%, #050505 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
     overflow: hidden;
   }
-
-  /* button for oracle form styles */ 
-  .oracleButton {
-    font-size: 2rem;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: 0.3s ease-in-out;
-  }
-
-  /* oracles response box styles */ 
-.response-box {
-  margin: 15px 30px 30px 30px;
-  box-shadow: #2aff1a;
-  padding: 1.5rem;
-  background-color: transparent !important; 
-  font-size: 14px;
-  font-family: "Source Code Pro", monospace;
-}
-
-/* oracle response text styles */   
-.oracle-response {
-  margin-bottom: 20px;
-  font-family: "Source Code Pro", monospace;  
-  text-align: justify;
-}
-
-/* oracle type question box font styles */
-#questionInput::placeholder, #questionInput {
-  font-size: 1rem;  
-  font-family: "Source Code Pro", monospace !important; 
-  color: #000000;
-}
-
-/* character counter styles */  
-#char-count {
-color: rgb(174, 255, 0) !important;
-text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
-  margin: 20px 0px 0px 0px;
-  font-size: 1rem;
-  font-family: "Source Code Pro", monospace !important;
-} 
-
-/* oracle response text styles including blinking cursor. */   
-#oracle-response::after {
-  content: '|';
-  animation: blink 1s infinite;
-  margin-left: 5px;
-  color: #88ff88;
-}
-
-/* --- research cards page styles (cards.html)--- */
-.intro-paragraph, #majorArcanaIntro p{
-  text-align: justify !important;
-}
-
-/*  styles to flip cards on hover or select*/
-.flip-card {
-  width: 100%;
-  aspect-ratio: 2 / 3;
-  max-width: 100%;
-  margin: 0 auto;
-  perspective: 1000px;
-}
-
-.flip-card-inner,
-.flip-card-front,
-.flip-card-back {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: transparent !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flip-card-back {
-  font-size: 14px;
-  background-color: transparent !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  transform: rotateY(180deg);
-}
-
-.flip-card-back p {
-  font-family: "Source Code Pro", monospace;
-  margin: 5px 0;
-  line-height: 1rem;
-  text-align: left !important;
-}
-
-.accordion-item {
-  background-color: transparent !important;
-  border: none !important;
-}
-
-.accordion-body {
-  border: none !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-.accordion-body > .row {
-  display: flex;
-  justify-content: center;
-  margin: 0 !important;
-  padding: 0 !important;
-  gap: 1rem !important;
-}
-
-.accordion-button {
-  font-size: 3rem;
-  padding: 10px 60px;
-  border: none !important;
-  cursor: pointer !important;
-  transition: 0.3s;
-  box-shadow: none !important;
- flex-wrap: wrap;
- min-width: 100%;
-}
-
-
-.accordion-item > h2 > .accordion-button {
-  text-align: center;
-  justify-content: center !important;
-  margin: 30px 0 0 0;
-}
-
-
-accordion-button:hover {
-  animation: flashText 1s infinite;
-}
-
-.accordion-button i {
-  transition: transform 0.3s ease;
-}
-
-#suitOfCups .accordion-button,
-#suitOfWands .accordion-button,
-#suitOfSwords .accordion-button,
-#suitOfPentacles .accordion-button {
-  font-family: 'Source Code Pro', monospace;
-  font-size: 1.5rem;
-  margin: 0 0;
-  letter-spacing: normal;
-}
-
-.card-body {
-  background-color: transparent !important;
-  border: none;
-  font-family: "Source Code Pro", monospace;
-  text-align: center;
-  font-size: 16px;
-  padding: 20px;
-}
-
-.card {
-  background-color: transparent !important;
-}
-
-.card-img, .card-img-top {
-  border-radius: 15px !important;
-}
-
-.accordion-button::after {
-  display: none !important;
-}
-
-.intro-paragraph {
-  padding: 30px 0 0 0;
-  text-align: justify !important;
-  position: relative;
-  z-index: 2;
-}
-
-.exploreheader {
-  font-size: 3rem;
-  margin: 0 0 30px 0;
-}
-
-.explorep, .intro-paragraph {
-  text-align: justify !important;
-  margin: 0 auto;
-  max-width: 80vw;
-}
-
-.suit-intro {
-  font-family: "Source Code Pro", monospace;
-  text-align: justify;
-  margin: 0 auto;
-  max-width: 80vw  !important;  
-}
-
-/* one card reading styles  */
-body.onecard {
-  padding: 0;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-
-p.card-response {
-  font-family: "Source Code Pro", monospace;
-  font-size: 1.2rem;
-  text-align: center;
-  margin: 10px 0 10px 0px;
-}
-
-/* card details text */
-
-.instcol {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-self: center;
-  justify-content: center;
-  align-items: center;  
-}
-
-.onecardheader {
-  margin-bottom: 2.5rem;
-  font-family: "Tourney", monospace;
-  flex-wrap: wrap;
-  font-size: 2.5rem;
-  letter-spacing: 1vw;
-}
-
-.leftonecard {
-overflow: visible !important;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-}
-
-#deck {
-  position: relative;
-  width: 175px;
-  height: auto;
-}
-
- .onecardrow {
-  align-items: flex-start;
-  justify-content: space-between;
-
-}
-
-.shufflecard {
-  z-index: 2;
-  display: flex;
-  justify-content: center;
- align-items: center;
-  width: 175px;
-  height: auto;
-  background-size: cover;
-  border-radius: 5px;
-  transition: transform 0.5s ease, top 0.5s ease, left 0.5s ease;
-}
-
-button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
-  font-family: "Tourney", monospace !important;
-  font-size: 2rem !important;
-  letter-spacing: 1vw;
-  margin: 0px 10px 0px 10px;
-}
-
-#selected-cardone {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: none;
-  }
-
-/* CARD FLIP STYLES */
-.selected-card {
-  width: 175px;
-  height: auto;
-  transition: transform 1s ease-in-out;
-  border-radius: 15px;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3vh;
-}
-
-/* Ensures card starts with back visible */
-.selected-card .card-front, 
-.selected-card .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transition: transform 1s ease-in-out;
-}
-
-/* Initially show back, hide front */
-.selected-card .card-back {
-  transform: rotateY(0deg);
-}
-
-.selected-card .card-front {
-  transform: rotateY(180deg);
-}
-
-/* Flip card to reveal front */
-.selected-card.flip {
-  transform: rotateY(180deg);
-}
-
-/* CARD IMAGE STYLES */
-.selected-card img {
-  border-radius: 15px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.card-front, .card-back {
-  overflow: visible;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transition: transform 1s;
-}
-
-.card-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 250px;
-}
-
-.card-info.p {
-  font-family: "Source Code Pro", monospace;
-  font-size: 1rem;
-  text-align: center;
-}
-
-
-p.card-response {
-  align-items: center;
-}
-
-.dealcol {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card-stack {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  margin: 0 0 100px 0;
-  overflow: visible;
-}
-
-.shufflecard {
-  position: absolute;
-  width: 175px;
-  height: auto;
-  border-radius: 15px;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-}
-
-#instructions {
-  margin-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-justify-content: center !important;
-font-family: "Source Code Pro", monospace;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.onecardp {
-  text-align: justify !important;
-}
-
-.extratextbigscreen {
-  text-align: justify !important;
-  display: none;
-}
-
-.card-name {
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-  line-height: 2.5rem;
-  font-size: 2rem;
-  letter-spacing: 1vw;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.card-details-text {
-  font-family: "Source Code Pro", monospace;
-  font-size: 1rem;
-  align-self: center;
-  text-align: justify;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card-name,
-.card-details-text {
-  box-sizing: border-box;
-}
-
-#instructions-column {
-  width: 100%;
-  margin: 10px;
-}
-
-#card-column {
-  width: 100%;
-  margin: 10px;
-}
-
-img.onecardadvert {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    margin: 0 auto;
-  }
-
-.win95-window {
-  max-width: 75%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border: 2px solid rgb(0, 0, 0);
-  background: #C0C0C0;
-  font-family: 'Source Code Pro', sans-serif;
-  box-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  margin: 20px auto; /* center it horizontally */
-}
-
-
-.win95-title-bar {
-  font-family: 'Source Code Pro' monospace;
-  background: rgb(174, 255, 0);
-  color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2px 6px;
-  font-size: 14px;
-  height: 22px;
-  border-radius: 5px;
-  border-bottom: 2px solid rgb(174, 255, 0);
-}
-
-.win95-buttons {
-  display: flex;
-  gap: 2px;
-}
-
-.win95-btn i {
-  text-align: center;
-  width: 18px;
-  height: 18px;
-  color: black !important;
-  background: rgb(174, 255, 0);
-  border: 1px solid rgba(0, 0, 0, 0.904);
-  font-size: 10px;
-  padding: 2px 4px 0 4px;
-  line-height: 14px;
-  cursor: default;
-}
-
-.win95-body {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  background: rgb(174, 255, 0);;
-  color: black;
-  font-size: 13px;
-  border-top: 2px solid #fff;
-  border-left: 2px solid #fff;
-  border-right: 2px solid #808080;
-  border-bottom: 2px solid #808080;
-}
-
-/* modal styles */  
-.win95-modal {
-  padding: 0 !important;
-  background: #aeff00;
-  border: 2px solid black;
-  box-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
-  font-family: 'Source Code Pro', monospace;
-  z-index: 1050;
-}
-
-.win95-title-text {
-  flex: 1;
-  font-weight: bold;
-  padding-left: 4px;
-}
-
-.win95-title-bar {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background: rgb(174, 255, 0);
-  color: black;
-  padding: 2px 6px;
-  font-size: 14px;
-  height: 22px;
-  border-bottom: 2px solid rgb(174, 255, 0);
-  width: 100%;
-}
-
-.ok-wrap {
-  margin-top: 10px;
-  text-align: center;
-}
-
-.win95-ok-btn {
-  font-family: 'Source Code Pro', monospace;
-  font-size: 14px;
-  padding: 2px 18px;
-  background-color: rgb(174, 255, 0);
-  border: 2px outset #fff;
-  color: black;
-  cursor: pointer;
-  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
-  box-shadow: inset -1px -1px #808080, inset 1px 1px #fff;
-  transition: all 0.1s ease-in-out;
-  letter-spacing: 0;
-}
-
-.win95-ok-btn:hover, .win95-ok-btn:focus{
-  font-family: 'Source Code Pro', monospace !important;
-  color: #000 !important;
-  animation: none !important; 
-  border: 2px inset #ffffff !important;
-  transform: translateY(1px);
-  background-color: rgb(174, 255, 0);
-  letter-spacing: 0;
-}
-
-.win95-ok-btn:active {
-  border: 2px inset #fff;
-  box-shadow: inset 1px 1px #808080, inset -1px -1px #fff;
-  transform: translateY(1px);
-}
-
-/* NEW for custom Win95 Modal Wrapper (replacing Bootstrap modal positioning) */
-#win95Modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background: transparent; /* important: no white/black background */
-  z-index: 1050; /* same z-index you use for .win95-modal */
-}
-
-/* NEW custom backdrop (no Bootstrap .modal-backdrop) */
-#win95-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(2px);
-  z-index: 1040;
-}
-
-/* OPTIONAL: Remove automatic focus ring on OK or Close button */
-#win95-ok:focus,
-#win95-close:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-/* Apply fade-in when showing */
-#win95Modal.showing {
-  animation: win95FadeIn 0.3s ease forwards;
-}
-
-/* Apply fade-out when hiding */
-#win95Modal.hiding {
-  animation: win95FadeOut 0.3s ease forwards;
-}
-
-/* three cards */
-
-.threeintrorow {
-  margin: 0px 40px 0px 40px;
-}
-
-#intro-text {
-  font-family: "Source Code Pro", monospace;
-  font-size: 1rem;
-  text-align: center;
   
-} 
-
-p#intro-text.extratextbigscreenthree {
-  text-align: center;  
-}
-
-#threecard-stack {
-  margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-#cards-container {
-  margin: 0px 35px 0px 35px;
-  display: none; 
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.threecard {
-  overflow-x: hidden;
-}
-
-.threecard.p.card-details-text {
-  text-align: center;
-}
-
-#past.card, #present.card, #future.card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} 
-
-div.col-12.threeshuffle {
-  display: flex;
-  flex-wrap: wrap;  
-  justify-content: center;
-  align-items: center;
-  min-height: 200px;
-  overflow: visible;
-}
-
-
-/* learning page styles */  
-
-.learn {
-  overflow-x: hidden;
-}
-
-.cardgame-back img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-p {
-  font-family: "Source Code Pro", monospace; 
-  text-align: center; 
-}
-
-.score {
-  text-transform: uppercase; 
-  font-family: "Tourney", monospace !important;
-  letter-spacing: 1vw;    
-  text-align: center; /* Center the score text */
-  margin-top: 5px;
-  font-size: 2rem;  
-} 
-
-#restart-button {
-  letter-spacing: 1VW;
-  font-family: "Tourney", monospace !important;
-  font-size: 2rem !important;
-}
-
-#restart-button:hover {   
-  animation: flashText 1s infinite;
-}
-
-.cardgame {
-  width: 150px; /* adjust based on your design */
-  height: 200px; /* adjust based on your design */
-  margin: 10px;
-  perspective: 1000px;
-}
-
-.cardgame-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transform: rotateY(0deg);
-  transition: transform 0.6s;
-}
-
-.cardgame.flipped .cardgame-inner {
-  transform: rotateY(180deg);
-}
-
-.cardgame-front,
-.cardgame-back {
-  position: absolute;
-  width: 120px;
-  height: auto;
-  backface-visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  background-color: #f1f1f1;
-}
-
-.cardgame-back {
-  transform: rotateY(180deg);
-}
-
-/* New styles for the card choice grid */
-
-.game-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    margin-bottom: 50px;
+  /* preloader dots */
+  .sparkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:
+      radial-gradient(#aeff00 1px, transparent 1px),
+      radial-gradient(#00ffcc 1px, transparent 1px);
+    background-size: 20px 20px, 40px 40px;
+    animation: sparkleFloat 3s linear infinite;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 1;
   }
-
-  .cardgame-select {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .cardgame-display {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .cardgame-text {
-    font-family: "Source Code Pro", monospace;
-    font-size: 1rem;
-    text-align: justify; 
-    margin: 20px 60px 20px 60px;
-  }
-
-.card-choices {
-  height: auto;
-  justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns, equally spaced */
-    grid-template-rows: repeat(2, 1fr);    /* 2 rows, equally spaced */
-    gap: 15px;                             /* Optional: Space between items */                      /* Optional: Full screen height */
-    
-    /* Align items towards the center cross of the grid */
-    place-items: center;                   /* Centers both horizontally and vertically */
-  }
-.card-choice {
-  width: 10vw; /* Adjust the card width */
-  height: auto; /* Adjust the card height */
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.card-choice:hover {
-  transform: scale(1.1); /* Slight scaling effect on hover */
-}
-
-.card-choice img {
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure images are contained and maintain aspect ratio */
-}
-
-.card-description {
-  max-width: 20vw;
-  margin-bottom: 20px;
-  font-size: 1rem;
-  font-family: "Source Code Pro", monospace;
-  text-align: justify;
-}
-
-/* === Learn Page Specific Modal Wrapper === */
-#learnModalWrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  z-index: 1050;
-}
-
-/* === Fade In and Fade Out for Learn Modal === */
-#learnModalWrapper.showing {
-  animation: win95FadeIn 0.3s ease forwards;
-  display: flex;
-}
-
-#learnModalWrapper.hiding {
-  animation: win95FadeOut 0.3s ease forwards;
-}
-
-/* === Learn Modal Backdrop === */
-#learn-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(2px);
-  z-index: 1040;
-  display: none;
-}
-
-#learn-backdrop.showing {
-  display: block;
-}
-
-/*--- footer styles ---*/
-footer {
-   font-size: 0.75rem;
-  line-height: 0.75rem;
-  min-width: 100vw;
-  width: 100%;
-  z-index: -1 !important;
-}
-
-/* media query */
-/* Move icons on landing page up slightly on phones and tablets */
-
-@media (min-width: 300px) and (max-width: 370px) {
-  .letter i.material-icons {
-    font-size: 4.5vw;
-    margin-top: 0vh;
-    transform: translate(-2vw, 0.2vh);
-  }
-}
-
-@media (min-width: 370px) and (max-width: 576px) {
-  .letter i.material-icons {
-    font-size: 4.5vw;
-    margin-top: 0vh;
-    transform: translate(-2vw, 0vh);
-  }
-}
-
-@media (max-width: 576px) {
-  .skip-button {
-    bottom: 60px;
-} 
-
-/* justify intro text on three card reading on smaller screens */
-#intro-text { 
-    text-align: justify !important;
-}
-
-.extratextbigscreenthree {
-  text-align: justify !important;
-}
-
-.exploreheader, .accordion-item > h2 > .accordion-button {
-  font-size: 8vw;
-}
-
-.explorep, .intro-paragraph {
-  max-width: 65vw;
-}
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-  .exploreheader, .accordion-item > h2 > .accordion-button {  
-    font-size: 2rem;
-  } 
-}
-
-@media (min-width: 768px) {
-  .inforow {
-    flex-wrap: nowrap;
-  }
-}
-
-@media (max-width: 768px) {
-  .card-name {
-    max-width: 100%;
-
-  body.onecard {
-   margin-top: 0px;  
-  }
-
-  .onecardrow {
-    padding: 0px 50px 0px 50px; 
-}
-  }
-
-  .accordion-body > .row {
-    margin: 0 20px 0 20px !important;
-    padding: 0 20px 0 20px !important;
-  }
-
-  .col-sm-6 {
-    max-width: 100%;
-  }
-
-  div#cards-container.row.mt-5 {
-    display: flex;
-    flex-direction: column;
-}
-
-.row.win95-window {
-  display: none;
-}
-
-.card-button {
-  font-size: 1.5rem;
-}
-
-button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
-margin: 0px 5px 0px 5px;  }
-
-.onecardrow {
-  margin: 0px 40px 0px 40px;
-}
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-  .shufflebtn, .dealbtn {   
-  font-size: 2vw !important;
-  padding-left: 0px !important;
-  padding-right: 0px !important;      
-}
-}
-
-@media (max-width: 992px) {
-  .card-choice {
-    width: 8.5rem;
-  }
-
-  .extratextbigscreenthree {
-    display: none;    }
-
-  .game-container {
-    margin: 0 40px 50px 40px;
-  }
-
-  .cardgame-display {
-    margin-top: 20px;
-  }
-
-  .card-description {
-    max-width: 100%;
-  }
-} 
-
-@media (min-width: 992px){
-  #buttons-container .col-12.col-md-6 .image-container img {
+  
+  /* preloader portal */
+  .portal-ring {
     width: 120px;
-}
-
-.cardgame-select {
-width: 30% !important;
-}
-
-.extratextbigscreen {
-  display: block;
-  text-align: justify !important;
-}
-
-#intro-text {
-  margin: 10px 0 10px 0;
-} 
-}
-
-@media (hover:hover) {
+    height: 120px;
+    border: 1px solid rgb(174, 255, 0)0;
+    border-radius: 50%;
+    box-shadow: rgb(174, 255, 0) 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;
+    z-index: 3;
+  
+    /* Smooth startup */
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  /* mask to make center of portal darker*/
+  .mask-center {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #000;
+    border-radius: 50%;
+    z-index: 2;
+  
+    /* Match portal ring entrance */
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  
+  /* universal reset styles */  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* body styles */
+  body {
+    min-height: 100vh;
+    margin-top: 100px;
+    min-width: 100vw;
+    padding: 0;
+    background-color: black !important;
+    background-image: url('../images/tarotbg.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  /* general styles */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* font family for all body text */  
+  p {
+    font-family: "Source Code Pro", monospace;
+  }
+  
+  /* primary font styling for headers and buttons */
+  h1, h2, h3, h4, h5, h6, button, button:hover, button:active button:focus {
+    font-family: 'Tourney', monospace;
+    text-transform: uppercase !important;
+    letter-spacing: 1vw;
+    box-shadow: none;
+    background-color: transparent !important;
+    text-decoration: none !important;
+    text-align: center;
+    border: transparent !important;
+    outline: none !important;
+  }
+  
+  /* aid ux/accessibility let user identiify clickable elements */  
+  button, button:hover { 
+  cursor: pointer;
+  }
+  
+  /* button hover effect */ 
+  button:hover {
+  transform: scale(1.1);
+  animation: flashText 1s infinite;
+  color: rgb(174, 255, 0);
+  }
+  
+  /* natural click in effect so user know when a button has been selected" */   
+  button:active {
+    transform: scale(0.92);
+  }
+  
+  /* consolidated glow utility */
+  .text-glow {
+    color: rgb(174, 255, 0) !important;
+    text-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a !important;  
+  }
+  
+  /* --- landing page styles (index.html) -- */
+  /* specific styles for the landing page body */
+  body.landing {
+    font-family: 'Tourney', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  /* alignment for landing page container - central to viewport */
+  .container.landing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    position: absolute;
+    width: 100vw;
+    height: 30vh;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    white-space: nowrap;
+  }
+  
+  /* letter alignment for landing page animation */
+  .letter {
+    position: relative;
+    font-size: 4.5vw;
+    margin: 0 0px;
+    display: inline-block;
+    width: 5vw;
+    height: 5vw;
+    text-align: center;
+    line-height: 6vw;
+  }
+  
+  /* icon alignment for landing page animation */
+  .letter i.material-icons {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    font-size: 3.5vw;
+    width: 3vw;
+    line-height: 5.5vw;
+    visibility: hidden;
+    transform: translateX(-2vw);
+    margin-top: 0.5vh;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  /* ensure letters overlay symbols correctly */
+  .letter .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  } 
+  
+  /* container for enter button */
+  .overlay {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center; 
+    width: 100vw;
+    height: 30vh;
+    background-color: transparent;
+    flex-direction: column;
+    z-index: 2;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+  }
+  
+  /* ensure enter button is visible when the overlay is displayed */    
+  .container:hover .overlay {
+    display: flex;
+  }
+  
+  /*sizing and alignment for enter button */
+  .enter-button {
+    display: inline-block;
+    margin: 3vh;
+    padding: 3vh;
+    font-size: 4.5vw;
+  }
+  
+  /* flash effect for button */
+  .enter-button {
+    animation: flashText 1s infinite; 
+  }
+  
+  /* promt user to click on the animation to enter at any point even before the sequence has finished */
+  .container,
+  .overlay,
+  /* .enter-button styles */
+  .enter-button {
+  cursor: pointer;
+  }
+  
+  /* hide rotate screen prompt by default */
+  .rotate-prompt {
+    display: none;
+    text-align: center;
+    position: absolute;
+    bottom: 60px;
+    font-size: 1rem;
+  }
+  
+  /* margin for spacing around rotate screen when horizontal */  
+  i.rotate-icon {
+    margin: 10px;
+  }
+  
+  /* --- navbar styles --- */
+  .navbar {
+    background-color: transparent !important;
+    padding: 10px 15px 5px 0px;
+  }
+  
+  /* navbar item positioning */
+  .nav-item {
+    position: relative;
+  }
+  
+  /* navbar link styling */
+  .nav-link {
+    display: block;
+    font-size: 16px;
+    font-family: "Source Code Pro", monospace;
+    background-color: #000000;
+    border: 1px solid rgb(174, 255, 0);
+    border-radius: 5px 5px 0 0;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(174, 255, 0);
+    text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;   
+  }
+  
+  /* navbar link hover styles */
+  .nav-link:hover,
+  .nav-item:hover .nav-link,
+  /* a.dropdown-item:hover styles */
+  a.dropdown-item:hover {
+    color: #000000;
+    background-color: rgb(174, 255, 0);
+  }
+  
+  /* navbar active link styles */
+  .nav-link.active {
+    border-bottom: 1px solid rgb(174, 255, 0);
+    box-shadow: inset 0 3px 5px rgb(174, 255, 0);
+  }
+  
+  /* remove margin for last item in navbar links */
+  .nav-item:last-child {
+    margin-right: 0;
+  }
+  
+  /* dropdown menu styles */
+  .dropdown-menu {
+    background-color: #000;
+    border: 1px solid rgb(174, 255, 0);
+    font-family: "Source Code Pro", monospace;
+  }
+  
+  /* links in dropdown menu item styles */
+  a.dropdown-item {
+    font-family: "Source Code Pro", monospace;
+    text-align: center;
+    color: rgb(174, 255, 0);
+    text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;
+  }
+  
+  /* show dropdown menu when 'show' class is added */
+  .dropdown-menu.show {
+    display: block;
+  }
+  
+  /* --- hamburger icon styles/responsive navbar --- */
+  /* Hamburger button styling */
+  .navbar-toggler.glow-toggle {
+    border: none;
+    outline: none;
+    padding: 0;
+  }
+  
+  /* hamburger bars styling */
+  .glow-toggle .bar {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 6px auto;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(174, 255, 0); 
+    box-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;
+  }
+  
+  /* when toggler is open (menu expanded) - transform to a cross */
+  .glow-toggle:not(.collapsed) .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  /* .glow-toggle:not(.collapsed) .bar:nth-child(2) styles */
+  .glow-toggle:not(.collapsed) .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  /* .glow-toggle:not(.collapsed) .bar:nth-child(3) styles */
+  .glow-toggle:not(.collapsed) .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  /* remove focus outline and focus shadow on toggler */
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* navbar toggle button styles */
+  #site-nav .navbar-toggle {
+    float: right;
+    text-align: right;
+    border: 0px;
+    margin-right: 0px;
+    margin-top: 38px;
+  }
+  
+  /* default state: green text on black background */
+  .nav-link.menu-current {
+    color: rgb(174, 255, 0) !important;
+    background-color: #000 !important;
+    text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
+  }
+  
+  /* hover state: black text on green background */
+  .nav-link.menu-current:hover {
+    color: #000 !important;
+    background-color: rgb(174, 255, 0) !important;
+    text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px;  
+  }
+  
+  /* active dropdown state: black text on green background */
+  .nav-item.dropdown.dropdown-open > .nav-link {
+    color: #000 !important;
+    background-color: rgb(174, 255, 0) !important;
+    text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
+  }
+  
+  /* --- readings menu item styles (info.html) --- */
+  /* terminal intro text alignment */
+  .terminal {
+    text-align: center;
+  }
+  
+  /* skip button allows user to load page contents without delay */
+  .skip-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    transition: 0.3s;
+    z-index: 1 !important;
+  }
+  
+  /* extra styling for explination text on info page */
+  #terminalText {
+    position: relative;
+    font-family: 'Source Code Pro', monospace;
+    text-align: justify;
+    padding: 0 60px 0 60px;
+    white-space: normal;        
+    word-wrap: pre-wrap;     
+    line-height: 1.5;          
+    overflow: hidden;    
+  }
+  
+  /* cursor animation for the terminal text */ 
+  .cursor {
+    display: inline-block;
+    width: 1ch;
+    animation: blink 1s infinite;
+  }
+  
+  /* info page row alignment */ 
+  .inforow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* info page card button styles */
+  .card-button  {
+    display: block;
+    margin: auto;
+    padding: 10px 0px;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: 1vw;
+    transition: 0.3s;
+    opacity: 0; 
+    color: rgb(174, 255, 0);
+    text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
+  }
+  
+  /* reading explination text styles */
+  .explanation {
+    margin: 0 30px 30px 30px;
+    font-family: "Source Code Pro", monospace;
+    font-size: 14px;
+    align-items: center;
+    text-align: justify;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Start below */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  }
+  
+  /* show the buttons and explanations when the 'visible' class is added in js */ 
+  .buttons-container.visible,
+  .card-button.visible,
+  /* .explanation.visible styles */
+  .explanation.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* ensure buttons have no extra decoration */    
+  a {
+    text-decoration: none;
+  }
+  
+  /* initially hide the cardback images */
+  #buttons-container .col-12.col-md-6 img {
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    display: block;
+    margin: auto;
+    width: 75px;
+    height: auto;
+  }
+  
+  /* make the images visible when the 'visible' class is added */
+  #buttons-container .col-12.col-md-6 img.visible {
+    display: visible;
+  }
+  
+  /* use flexbox on the parent container of the images only */
+  #buttons-container .col-12.col-md-6 .image-container {
+    display: flex;
+    justify-content: center;  
+    gap: 10px; 
+  }
+  
+  /* ensure images inside the .image-container align in a row */
+  #buttons-container .col-12.col-md-6 .image-container img {
+    margin: 0;
+    width: 75px; /* Adjust the size as necessary */
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  /* keep the rest of the content in the column layout */
+  #buttons-container .col-12.col-md-6 {
+    display: flex;
+    max-width: 90vw;
+    flex-direction: column;
+    align-items: center;  /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+  }
+  
+  /* ensure buttons are aligned in the center */
+  #buttons-container .col-12.col-md-6 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* Add some space below each button */
+  }
+  
+  /* make the buttons and explanations centered */
+  .buttons-container {
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* ensure the card images are aligned in a row and centered */   
+  .image-container {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  /* AI oracle container styles */    
+  /* ensure the oracle container is aligned in a row and centered */
+  .infolgscreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px 30px 30px;
+    text-align: center;
+  }
+  
+  /* ensure oracle title sizing and alignment */      
+  h2.title {
+    font-size: 2.5rem;
+    letter-spacing: 1vw;
+    text-align: center;
+    margin-bottom: 20px;
+  }       
+  
+  /* flexbox layout for the oracle form */
+  #oracle-form {
+    display: flex;
+    flex-direction: column; 
+  align-items: center;
+  }
+  
+  /* text entry box for oracle form styles */  
+    textarea#questionInput {
+      background-color: rgb(174, 255, 0);
+      min-width: 100%;  
+      text-align: center;
+      font-family: "Source Code Pro", monospace;  
+      font-size: 1rem;
+      padding: 30px 12px;
+      border-radius: 10px;
+      border: 1px solid #2aff1a;
+      box-sizing: border-box;
+      line-height: 1.5;
+      font-family: inherit;
+      box-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+      color: #000000;
+      white-space: pre-wrap;         
+      word-wrap: break-word;        
+      overflow: hidden;
+    }
+  
+    /* button for oracle form styles */ 
+    .oracleButton {
+      font-size: 2rem;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: 0.3s ease-in-out;
+    }
+  
+    /* oracles response box styles */ 
+  .response-box {
+    margin: 15px 30px 30px 30px;
+    box-shadow: #2aff1a;
+    padding: 1.5rem;
+    background-color: transparent !important; 
+    font-size: 14px;
+    font-family: "Source Code Pro", monospace;
+  }
+  
+  /* oracle response text styles */   
+  .oracle-response {
+    margin-bottom: 20px;
+    font-family: "Source Code Pro", monospace;  
+    text-align: justify;
+  }
+  
+  /* oracle type question box font styles */
+  #questionInput::placeholder, #questionInput {
+    font-size: 1rem;  
+    font-family: "Source Code Pro", monospace !important; 
+    color: #000000;
+  }
+  
+  /* character counter styles */  
+  #char-count {
+  color: rgb(174, 255, 0) !important;
+  text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
+    margin: 20px 0px 0px 0px;
+    font-size: 1rem;
+    font-family: "Source Code Pro", monospace !important;
+  } 
+  
+  /* oracle response text styles including blinking cursor. */   
+  #oracle-response::after {
+    content: '|';
+    animation: blink 1s infinite;
+    margin-left: 5px;
+    color: #88ff88;
+  }
+  
+  /* --- research cards page styles (cards.html)--- */
+  .intro-paragraph, #majorArcanaIntro p{
+    text-align: justify !important;
+  }
+  
+  /*  styles to flip cards on hover or select*/
+  .flip-card {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    max-width: 100%;
+    margin: 0 auto;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner,
+  .flip-card-front,
+  /* .flip-card-back styles */
+  .flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  /* .flip-card:hover .flip-card-inner styles */
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
-}
-
+  
+  .flip-card-front,
+  /* .flip-card-back styles */
+  .flip-card-back {
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  /* .flip-card-front styles */
+  .flip-card-front {
+    background-color: transparent !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* .flip-card-back styles */
+  .flip-card-back {
+    font-size: 14px;
+    background-color: transparent !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transform: rotateY(180deg);
+  }
+  
+  /* .flip-card-back p styles */
+  .flip-card-back p {
+    font-family: "Source Code Pro", monospace;
+    margin: 5px 0;
+    line-height: 1rem;
+    text-align: left !important;
+  }
+  
+  /* .accordion-item styles */
+  .accordion-item {
+    background-color: transparent !important;
+    border: none !important;
+  }
+  
+  /* .accordion-body styles */
+  .accordion-body {
+    border: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* .accordion-body > .row styles */
+  .accordion-body > .row {
+    display: flex;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 1rem !important;
+  }
+  
+  /* .accordion-button styles */
+  .accordion-button {
+    font-size: 3rem;
+    padding: 10px 60px;
+    border: none !important;
+    cursor: pointer !important;
+    transition: 0.3s;
+    box-shadow: none !important;
+   flex-wrap: wrap;
+   min-width: 100%;
+  }
+  
+  /* .accordion-item > h2 > .accordion-button styles */
+  .accordion-item > h2 > .accordion-button {
+    text-align: center;
+    justify-content: center !important;
+    margin: 30px 0 0 0;
+  }
+  
+  /* accordion-button:hover styles */
+  accordion-button:hover {
+    animation: flashText 1s infinite;
+  }
+  
+  /* .accordion-button i styles */
+  .accordion-button i {
+    transition: transform 0.3s ease;
+  }
+  
+  #suitOfCups .accordion-button,
+  #suitOfWands .accordion-button,
+  #suitOfSwords .accordion-button,
+  /* #suitofpentacles .accordion-button styles */
+  #suitOfPentacles .accordion-button {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5rem;
+    margin: 0 0;
+    letter-spacing: normal;
+  }
+  
+  /* .card-body styles */
+  .card-body {
+    background-color: transparent !important;
+    border: none;
+    font-family: "Source Code Pro", monospace;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+  }
+  
+  /* .card styles */
+  .card {
+    background-color: transparent !important;
+  }
+  
+  /* .card-img, .card-img-top styles */
+  .card-img, .card-img-top {
+    border-radius: 15px !important;
+  }
+  
+  /* .accordion-button::after styles */
+  .accordion-button::after {
+    display: none !important;
+  }
+  
+  /* .intro-paragraph styles */
+  .intro-paragraph {
+    padding: 30px 0 0 0;
+    text-align: justify !important;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* .exploreheader styles */
+  .exploreheader {
+    font-size: 3rem;
+    margin: 0 0 30px 0;
+  }
+  
+  /* .explorep, .intro-paragraph styles */
+  .explorep, .intro-paragraph {
+    text-align: justify !important;
+    margin: 0 auto;
+    max-width: 80vw;
+  }
+  
+  /* .suit-intro styles */
+  .suit-intro {
+    font-family: "Source Code Pro", monospace;
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 80vw  !important;  
+  }
+  
+  /* one card reading styles  */
+  body.onecard {
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* p.card-response styles */
+  p.card-response {
+    font-family: "Source Code Pro", monospace;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 10px 0 10px 0px;
+  }
+  
+  /* card details text */
+  
+  /* .instcol styles */
+  .instcol {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+    align-items: center;  
+  }
+  
+  /* .onecardheader styles */
+  .onecardheader {
+    margin-bottom: 2.5rem;
+    font-family: "Tourney", monospace;
+    flex-wrap: wrap;
+    font-size: 2.5rem;
+    letter-spacing: 1vw;
+  }
+  
+  /* .leftonecard styles */
+  .leftonecard {
+  overflow: visible !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  }
+  
+  /* #deck styles */
+  #deck {
+    position: relative;
+    width: 175px;
+    height: auto;
+  }
+  
+  /* .onecardrow styles */
+   .onecardrow {
+    align-items: flex-start;
+    justify-content: space-between;
+  
+  }
+  
+  /* .shufflecard styles */
+  .shufflecard {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    width: 175px;
+    height: auto;
+    background-size: cover;
+    border-radius: 5px;
+    transition: transform 0.5s ease, top 0.5s ease, left 0.5s ease;
+  }
+  
+  /* button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button styles */
+  button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
+    font-family: "Tourney", monospace !important;
+    font-size: 2rem !important;
+    letter-spacing: 1vw;
+    margin: 0px 10px 0px 10px;
+  }
+  
+  /* #selected-cardone styles */
+  #selected-cardone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    }
+  
+  /* CARD FLIP STYLES */
+  .selected-card {
+    width: 175px;
+    height: auto;
+    transition: transform 1s ease-in-out;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh;
+  }
+  
+  /* Ensures card starts with back visible */
+  .selected-card .card-front, 
+  /* .selected-card .card-back styles */
+  .selected-card .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 1s ease-in-out;
+  }
+  
+  /* Initially show back, hide front */
+  .selected-card .card-back {
+    transform: rotateY(0deg);
+  }
+  
+  /* .selected-card .card-front styles */
+  .selected-card .card-front {
+    transform: rotateY(180deg);
+  }
+  
+  /* Flip card to reveal front */
+  .selected-card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  /* CARD IMAGE STYLES */
+  .selected-card img {
+    border-radius: 15px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* .card-front, .card-back styles */
+  .card-front, .card-back {
+    overflow: visible;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 1s;
+  }
+  
+  /* .card-info styles */
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+  }
+  
+  /* .card-info.p styles */
+  .card-info.p {
+    font-family: "Source Code Pro", monospace;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* p.card-response styles */
+  p.card-response {
+    align-items: center;
+  }
+  
+  /* .dealcol styles */
+  .dealcol {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* .card-stack styles */
+  .card-stack {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 0 0 100px 0;
+    overflow: visible;
+  }
+  
+  /* .shufflecard styles */
+  .shufflecard {
+    position: absolute;
+    width: 175px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  
+  /* #instructions styles */
+  #instructions {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center !important;
+  font-family: "Source Code Pro", monospace;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* .onecardp styles */
+  .onecardp {
+    text-align: justify !important;
+  }
+  
+  /* .extratextbigscreen styles */
+  .extratextbigscreen {
+    text-align: justify !important;
+    display: none;
+  }
+  
+  /* .card-name styles */
+  .card-name {
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    line-height: 2.5rem;
+    font-size: 2rem;
+    letter-spacing: 1vw;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  /* .card-details-text styles */
+  .card-details-text {
+    font-family: "Source Code Pro", monospace;
+    font-size: 1rem;
+    align-self: center;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card-name,
+  /* .card-details-text styles */
+  .card-details-text {
+    box-sizing: border-box;
+  }
+  
+  /* #instructions-column styles */
+  #instructions-column {
+    width: 100%;
+    margin: 10px;
+  }
+  
+  /* #card-column styles */
+  #card-column {
+    width: 100%;
+    margin: 10px;
+  }
+  
+  /* img.onecardadvert styles */
+  img.onecardadvert {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+  
+  /* .win95-window styles */
+  .win95-window {
+    max-width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid rgb(0, 0, 0);
+    background: #C0C0C0;
+    font-family: 'Source Code Pro', sans-serif;
+    box-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+    margin: 20px auto; /* center it horizontally */
+  }
+  
+  /* .win95-title-bar styles */
+  .win95-title-bar {
+    font-family: 'Source Code Pro' monospace;
+    background: rgb(174, 255, 0);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 6px;
+    font-size: 14px;
+    height: 22px;
+    border-radius: 5px;
+    border-bottom: 2px solid rgb(174, 255, 0);
+  }
+  
+  /* .win95-buttons styles */
+  .win95-buttons {
+    display: flex;
+    gap: 2px;
+  }
+  
+  /* .win95-btn i styles */
+  .win95-btn i {
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    color: black !important;
+    background: rgb(174, 255, 0);
+    border: 1px solid rgba(0, 0, 0, 0.904);
+    font-size: 10px;
+    padding: 2px 4px 0 4px;
+    line-height: 14px;
+    cursor: default;
+  }
+  
+  /* .win95-body styles */
+  .win95-body {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgb(174, 255, 0);;
+    color: black;
+    font-size: 13px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+  }
+  
+  /* modal styles */  
+  .win95-modal {
+    padding: 0 !important;
+    background: #aeff00;
+    border: 2px solid black;
+    box-shadow: 0 0 5px #2aff1a, 0 0 10px #2aff1a, 0 0 20px #2aff1a;
+    font-family: 'Source Code Pro', monospace;
+    z-index: 1050;
+  }
+  
+  /* .win95-title-text styles */
+  .win95-title-text {
+    flex: 1;
+    font-weight: bold;
+    padding-left: 4px;
+  }
+  
+  /* .win95-title-bar styles */
+  .win95-title-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgb(174, 255, 0);
+    color: black;
+    padding: 2px 6px;
+    font-size: 14px;
+    height: 22px;
+    border-bottom: 2px solid rgb(174, 255, 0);
+    width: 100%;
+  }
+  
+  /* .ok-wrap styles */
+  .ok-wrap {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* .win95-ok-btn styles */
+  .win95-ok-btn {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    padding: 2px 18px;
+    background-color: rgb(174, 255, 0);
+    border: 2px outset #fff;
+    color: black;
+    cursor: pointer;
+    text-shadow: #2aff1a 0 0 5px, #2aff1a 0 0 10px, #2aff1a 0 0 20px; 
+    box-shadow: inset -1px -1px #808080, inset 1px 1px #fff;
+    transition: all 0.1s ease-in-out;
+    letter-spacing: 0;
+  }
+  
+  /* .win95-ok-btn:hover, .win95-ok-btn:focus styles */
+  .win95-ok-btn:hover, .win95-ok-btn:focus{
+    font-family: 'Source Code Pro', monospace !important;
+    color: #000 !important;
+    animation: none !important; 
+    border: 2px inset #ffffff !important;
+    transform: translateY(1px);
+    background-color: rgb(174, 255, 0);
+    letter-spacing: 0;
+  }
+  
+  /* .win95-ok-btn:active styles */
+  .win95-ok-btn:active {
+    border: 2px inset #fff;
+    box-shadow: inset 1px 1px #808080, inset -1px -1px #fff;
+    transform: translateY(1px);
+  }
+  
+  /* NEW for custom Win95 Modal Wrapper (replacing Bootstrap modal positioning) */
+  #win95Modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* important: no white/black background */
+    z-index: 1050; /* same z-index you use for .win95-modal */
+  }
+  
+  /* NEW custom backdrop (no Bootstrap .modal-backdrop) */
+  #win95-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(2px);
+    z-index: 1040;
+  }
+  
+  /* OPTIONAL: Remove automatic focus ring on OK or Close button */
+  #win95-ok:focus,
+  /* #win95-close:focus styles */
+  #win95-close:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* Apply fade-in when showing */
+  #win95Modal.showing {
+    animation: win95FadeIn 0.3s ease forwards;
+  }
+  
+  /* Apply fade-out when hiding */
+  #win95Modal.hiding {
+    animation: win95FadeOut 0.3s ease forwards;
+  }
+  
+  /* three cards */
+  
+  /* .threeintrorow styles */
+  .threeintrorow {
+    margin: 0px 40px 0px 40px;
+  }
+  
+  /* #intro-text styles */
+  #intro-text {
+    font-family: "Source Code Pro", monospace;
+    font-size: 1rem;
+    text-align: center;
+  
+  } 
+  
+  /* p#intro-text.extratextbigscreenthree styles */
+  p#intro-text.extratextbigscreenthree {
+    text-align: center;  
+  }
+  
+  /* #threecard-stack styles */
+  #threecard-stack {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* #cards-container styles */
+  #cards-container {
+    margin: 0px 35px 0px 35px;
+    display: none; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  /* .threecard styles */
+  .threecard {
+    overflow-x: hidden;
+  }
+  
+  /* .threecard.p.card-details-text styles */
+  .threecard.p.card-details-text {
+    text-align: center;
+  }
+  
+  /* #past.card, #present.card, #future.card styles */
+  #past.card, #present.card, #future.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+  
+  /* div.col-12.threeshuffle styles */
+  div.col-12.threeshuffle {
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    overflow: visible;
+  }
+  
+  /* learning page styles */  
+  
+  /* .learn styles */
+  .learn {
+    overflow-x: hidden;
+  }
+  
+  /* .cardgame-back img styles */
+  .cardgame-back img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* p styles */
+  p {
+    font-family: "Source Code Pro", monospace; 
+    text-align: center; 
+  }
+  
+  /* .score styles */
+  .score {
+    text-transform: uppercase; 
+    font-family: "Tourney", monospace !important;
+    letter-spacing: 1vw;    
+    text-align: center; /* Center the score text */
+    margin-top: 5px;
+    font-size: 2rem;  
+  } 
+  
+  /* #restart-button styles */
+  #restart-button {
+    letter-spacing: 1VW;
+    font-family: "Tourney", monospace !important;
+    font-size: 2rem !important;
+  }
+  
+  /* #restart-button:hover styles */
+  #restart-button:hover {   
+    animation: flashText 1s infinite;
+  }
+  
+  /* .cardgame styles */
+  .cardgame {
+    width: 150px; /* adjust based on your design */
+    height: 200px; /* adjust based on your design */
+    margin: 10px;
+    perspective: 1000px;
+  }
+  
+  /* .cardgame-inner styles */
+  .cardgame-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.6s;
+  }
+  
+  /* .cardgame.flipped .cardgame-inner styles */
+  .cardgame.flipped .cardgame-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .cardgame-front,
+  /* .cardgame-back styles */
+  .cardgame-back {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #f1f1f1;
+  }
+  
+  /* .cardgame-back styles */
+  .cardgame-back {
+    transform: rotateY(180deg);
+  }
+  
+  /* New styles for the card choice grid */
+  
+  /* .game-container styles */
+  .game-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+  
+  /* .cardgame-select styles */
+    .cardgame-select {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+  
+  /* .cardgame-display styles */
+    .cardgame-display {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+  /* .cardgame-text styles */
+    .cardgame-text {
+      font-family: "Source Code Pro", monospace;
+      font-size: 1rem;
+      text-align: justify; 
+      margin: 20px 60px 20px 60px;
+    }
+  
+  /* .card-choices styles */
+  .card-choices {
+    height: auto;
+    justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns, equally spaced */
+      grid-template-rows: repeat(2, 1fr);    /* 2 rows, equally spaced */
+      gap: 15px;                             /* Optional: Space between items */                      /* Optional: Full screen height */
+  
+      /* Align items towards the center cross of the grid */
+      place-items: center;                   /* Centers both horizontally and vertically */
+    }
+  /* .card-choice styles */
+  .card-choice {
+    width: 10vw; /* Adjust the card width */
+    height: auto; /* Adjust the card height */
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  /* .card-choice:hover styles */
+  .card-choice:hover {
+    transform: scale(1.1); /* Slight scaling effect on hover */
+  }
+  
+  /* .card-choice img styles */
+  .card-choice img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images are contained and maintain aspect ratio */
+  }
+  
+  /* .card-description styles */
+  .card-description {
+    max-width: 20vw;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-family: "Source Code Pro", monospace;
+    text-align: justify;
+  }
+  
+  /* === Learn Page Specific Modal Wrapper === */
+  #learnModalWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    z-index: 1050;
+  }
+  
+  /* === Fade In and Fade Out for Learn Modal === */
+  #learnModalWrapper.showing {
+    animation: win95FadeIn 0.3s ease forwards;
+    display: flex;
+  }
+  
+  /* #learnmodalwrapper.hiding styles */
+  #learnModalWrapper.hiding {
+    animation: win95FadeOut 0.3s ease forwards;
+  }
+  
+  /* === Learn Modal Backdrop === */
+  #learn-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(2px);
+    z-index: 1040;
+    display: none;
+  }
+  
+  /* #learn-backdrop.showing styles */
+  #learn-backdrop.showing {
+    display: block;
+  }
+  
+  /*--- footer styles ---*/
+  footer {
+     font-size: 0.75rem;
+    line-height: 0.75rem;
+    min-width: 100vw;
+    width: 100%;
+    z-index: -1 !important;
+  }
+  
+  /* media query */
+  /* Move icons on landing page up slightly on phones and tablets */
+  
+  /* @media (min-width: 300px) and (max-width: 370px) styles */
+  @media (min-width: 300px) and (max-width: 370px) {
+  /* .letter i.material-icons styles */
+    .letter i.material-icons {
+      font-size: 4.5vw;
+      margin-top: 0vh;
+      transform: translate(-2vw, 0.2vh);
+    }
+  }
+  
+  /* @media (min-width: 370px) and (max-width: 576px) styles */
+  @media (min-width: 370px) and (max-width: 576px) {
+  /* .letter i.material-icons styles */
+    .letter i.material-icons {
+      font-size: 4.5vw;
+      margin-top: 0vh;
+      transform: translate(-2vw, 0vh);
+    }
+  }
+  
+  /* @media (max-width: 576px) styles */
+  @media (max-width: 576px) {
+  /* .skip-button styles */
+    .skip-button {
+      bottom: 60px;
+  } 
+  
+  /* justify intro text on three card reading on smaller screens */
+  #intro-text { 
+      text-align: justify !important;
+  }
+  
+  /* .extratextbigscreenthree styles */
+  .extratextbigscreenthree {
+    text-align: justify !important;
+  }
+  
+  /* .exploreheader, .accordion-item > h2 > .accordion-button styles */
+  .exploreheader, .accordion-item > h2 > .accordion-button {
+    font-size: 8vw;
+  }
+  
+  /* .explorep, .intro-paragraph styles */
+  .explorep, .intro-paragraph {
+    max-width: 65vw;
+  }
+  }
+  
+  /* @media (min-width: 576px) and (max-width: 768px) styles */
+  @media (min-width: 576px) and (max-width: 768px) {
+  /* .exploreheader, .accordion-item > h2 > .accordion-button styles */
+    .exploreheader, .accordion-item > h2 > .accordion-button {  
+      font-size: 2rem;
+    } 
+  }
+  
+  /* @media (min-width: 768px) styles */
+  @media (min-width: 768px) {
+  /* .inforow styles */
+    .inforow {
+      flex-wrap: nowrap;
+    }
+  }
+  
+  /* @media (max-width: 768px) styles */
+  @media (max-width: 768px) {
+  /* .card-name styles */
+    .card-name {
+      max-width: 100%;
+  
+  /* body.onecard styles */
+    body.onecard {
+     margin-top: 0px;  
+    }
+  
+  /* .onecardrow styles */
+    .onecardrow {
+      padding: 0px 50px 0px 50px; 
+  }
+    }
+  
+  /* .accordion-body > .row styles */
+    .accordion-body > .row {
+      margin: 0 20px 0 20px !important;
+      padding: 0 20px 0 20px !important;
+    }
+  
+  /* .col-sm-6 styles */
+    .col-sm-6 {
+      max-width: 100%;
+    }
+  
+  /* div#cards-container.row.mt-5 styles */
+    div#cards-container.row.mt-5 {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  /* .row.win95-window styles */
+  .row.win95-window {
+    display: none;
+  }
+  
+  /* .card-button styles */
+  .card-button {
+    font-size: 1.5rem;
+  }
+  
+  /* button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button styles */
+  button.shufflebtn, button.dealbtn, #shuffle-button, #deal-button {
+  margin: 0px 5px 0px 5px;  }
+  
+  /* .onecardrow styles */
+  .onecardrow {
+    margin: 0px 40px 0px 40px;
+  }
+  }
+  
+  /* @media (min-width: 768px) and (max-width: 1200px) styles */
+  @media (min-width: 768px) and (max-width: 1200px) {
+  /* .shufflebtn, .dealbtn styles */
+    .shufflebtn, .dealbtn {   
+    font-size: 2vw !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;      
+  }
+  }
+  
+  /* @media (max-width: 992px) styles */
+  @media (max-width: 992px) {
+  /* .card-choice styles */
+    .card-choice {
+      width: 8.5rem;
+    }
+  
+  /* .extratextbigscreenthree styles */
+    .extratextbigscreenthree {
+      display: none;    }
+  
+  /* .game-container styles */
+    .game-container {
+      margin: 0 40px 50px 40px;
+    }
+  
+  /* .cardgame-display styles */
+    .cardgame-display {
+      margin-top: 20px;
+    }
+  
+  /* .card-description styles */
+    .card-description {
+      max-width: 100%;
+    }
+  } 
+  
+  /* @media (min-width: 992px) styles */
+  @media (min-width: 992px){
+  /* #buttons-container .col-12.col-md-6 .image-container img styles */
+    #buttons-container .col-12.col-md-6 .image-container img {
+      width: 120px;
+  }
+  
+  /* .cardgame-select styles */
+  .cardgame-select {
+  width: 30% !important;
+  }
+  
+  /* .extratextbigscreen styles */
+  .extratextbigscreen {
+    display: block;
+    text-align: justify !important;
+  }
+  
+  /* #intro-text styles */
+  #intro-text {
+    margin: 10px 0 10px 0;
+  } 
+  }
+  
+  /* @media (hover:hover) styles */
+  @media (hover:hover) {
+  /* .flip-card:hover .flip-card-inner styles */
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+  

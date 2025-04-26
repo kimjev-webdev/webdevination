@@ -7,13 +7,13 @@
 
 | Page      | URL                  | Screenshot           | Notes              |
 |-----------|----------------------|----------------------|--------------------|
-| index.html     | [W3C ](https://validator.w3.org/) | <img src="assets\images\testing\indexhtmlpass.png" height="auto" width="600px"> <img src="assets/images/testing/indexhtml2.jpeg" height="auto" width="600px"> | PASSED   |
-| info.html   | [W3C](https:/validator.w3.org) | <img src="assets\images\testing\infohtmlpass.png" height="auto" width="600px">  | PASSED   |
-| onecard.html   | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\onecardhtmlpass.png" height="auto" width="600px">| PASSED |
-| threecard.html  | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\threecardhtmlpass.png" height="auto" width="600px">| PASSED |
-| cards.html   | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\cardshtmlpass.png" height="auto" width="600px"> <img src="assets/images/testing/galleryhtml2.jpeg" height="auto" width="600px"> | PASSED |
-| learn.html  | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\learnhtml.png" height="auto" width="600px"> | PASSED |
-| 404.html   | [W3C](https://validator.w3.org/) | <img src="assets/images/testing/contacthtmlbefore.jpeg" height="auto" width="600px"> | PASSED |
+| index.html     | [W3C ](https://validator.w3.org/) | <img src="assets\images\testing\indexhtmlpass.png"> | PASSED   |
+| info.html   | [W3C](https:/validator.w3.org) | <img src="assets\images\testing\infohtmlpass.png">  | PASSED   |
+| onecard.html   | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\onecardhtmlpass.png">| PASSED |
+| threecard.html  | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\threecardhtmlpass.png">| PASSED |
+| cards.html   | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\cardshtmlpass.png">| PASSED |
+| learn.html  | [W3C](https://validator.w3.org/) | <img src="assets\images\testing\learnhtml.png"> | PASSED |
+| 404.html   | [W3C](https://validator.w3.org/) | <img src="assets/images/testing/contacthtmlbefore.jpeg"> | PASSED |
 
 
 ### 2. CSS 
