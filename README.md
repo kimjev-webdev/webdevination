@@ -418,8 +418,8 @@ Emoji's are implemented on the site as playful supplements to the UX. **Please b
 <br>
 
 <p align="left">
-  <img src="assets/images/readmefiles/icons/milkyway.webp" alt="Milky Way" width="100" style="float: left; margin-right: 20px;"><br>
-  The Milky Away emoji appears above the card selections on [info.html](webdevination.onrender.com/info.html) in the heading `tarot readings` which is shown on the users 2nd, 3rd & nth visit to the page in a session, in place of the terminal text which is shown only on their landing visit.
+  <img src="assets/images/readmefiles/icons/mushroom.webp" alt="Mushroom" width="100" style="float: left; margin-right: 20px;"><br>
+  The Mushroom emoji appears above the card selections on [info.html](webdevination.onrender.com/info.html) in the heading `tarot readings` which is shown on the users 2nd, 3rd & nth visit to the page in a session, in place of the terminal text which is shown only on their landing visit.
 
 <br>
 <br>
