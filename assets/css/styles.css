@@ -168,10 +168,12 @@ body {
   margin-top: 100px;
   min-width: 100vw;
   padding: 0;
-  background-size: cover;
   background-color: black !important;
   background-image: url('../images/tarotbg.webp');
-  background-repeat: no-repeat; /* Adjust as needed */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /* general styles */
