@@ -134,9 +134,9 @@ As a software developer with an interest in spirituality I want to interact with
 | As someone interested in the modern resurgence of folk traditions I want the site to offer a contemporary approach to tarot that still maintains its roots in ancient practices, so I can experience tarot in a way that feels connected to both history and modern spirituality. | ![](assets/images/contactpreview.webp) ![](assets/images/speaksoon.jpeg) ![](assets/images/footerjs.webp). | INSERT EXPLANATION HERE.  |
 | As an newcomer to tarot I want the site to provide a simple and approachable introduction to tarot, with easy-to-understand explanations and interactive features, so I can learn about tarot at my own pace and feel comfortable exploring the cards without feeling overwhelmed. | ![](assets/images/galleryresponsive.webp) ![](assets/images/gallerypreview.webp) | INSERT EXPLANATION HERE |
 
-<h2 id="bugs">Bugs</h2>
+<h2 id="bugs">Bugs & Other Bits!</h2>
 
-Here I list known issues with the site which are yet to be fixed.
+Here I list known issues with the site and some notes about things I would do differently if I knew what I know at the start of this project. 
 For the full list of resolved issues throughout the project timeline please view the [Bug Log](BUGLOG.md). 
 
 ### 1. Dropdown Nav Minor DevTools Testing Behavior (No Impact on Mobile Devices)
@@ -152,7 +152,7 @@ one tap expands the menu, and no incorrect hover behavior occurs.
 
 * The project prioritizes real-user experience, and this observation was documented instead of forcing unnecessary workarounds that could compromise overall navbar functionality.
 
-### 2. Note on Commit Messages and Workflow Constraints
+### 2. Notes on Some Vague Commit Messages and Workflow Constraints
 
 During the development of this project, some commit messages (such as "Update README.md") may appear vague or overly simple. This was due to a combination of practical constraints:
 
@@ -164,13 +164,13 @@ During the development of this project, some commit messages (such as "Update RE
 
 **When working from a desktop, I always use the full Visual Studio Code editor with an integrated terminal, which allows for detailed commits, branches, and full local control. Despite these hurdles, I made sure to clearly document major features, fixes, and updates elsewhere — particularly within the README, the Deployment instructions, and the Bug Logs to ensure a transparent, traceable development process.**
 
-### 3. Note on CSS Class Usage and Learning Reflection
+### 3. Notes on CSS Class Usage and Learning Reflection
 
 Throughout this project, I used a large number of very specific and sometimes repetitive CSS classes.
 
 This approach initially helped me to individually style each page and element exactly how I envisioned. However, as the project grew, I realized that using highly specific classes for every variation led to unnecessary repetition, larger CSS files, and more maintenance complexity.
 
-## Biggest Learning Curve:
+### Biggest Learning Curve:
 
 * I have learned that more general, reusable utility classes (following DRY principles — Don't Repeat Yourself) would have made my CSS cleaner, more scalable, and easier to manage.
 
