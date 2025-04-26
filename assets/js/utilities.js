@@ -1,6 +1,10 @@
-// === Function Declarations (Hoisted) ===
+/* jshint esversion: 11 */
+/* jshint node: true */
+/* jshint -W079 */
 
-// Inject Win95 Modal with custom message
+// this script provides utilities for both onecard.html and threecard.html, win95 modal handling, the general logic behind shuffling animations, card drawing, and showing card details
+
+// inject a win95-style modal with a custom message
 function injectWin95Modal(customMessage) {
   if (document.getElementById('win95Modal')) return;
 
@@ -8,9 +12,9 @@ function injectWin95Modal(customMessage) {
     <div id="win95Modal" class="win95-modal-wrapper" style="display: none;">
       <div class="win95-modal win95-window text-glow">
         <div class="win95-title-bar">
-          <span class="win95-title-text">SHUFFLE COMPLETE</span>
+          <span class="win95-title-text">shuffle complete</span>
           <div class="win95-buttons">
-            <button type="button" class="win95-btn" id="win95-close" aria-label="Close">
+            <button type="button" class="win95-btn" id="win95-close" aria-label="close">
               <i class="fa-light fa-x" aria-hidden="true"></i>
             </button>
           </div>
@@ -18,7 +22,7 @@ function injectWin95Modal(customMessage) {
         <div class="win95-body">
           <p>${customMessage}</p>
           <div class="ok-wrap">
-            <button class="win95-ok-btn" id="win95-ok">OK</button>
+            <button class="win95-ok-btn" id="win95-ok">ok</button>
           </div>
         </div>
       </div>
@@ -32,7 +36,7 @@ function injectWin95Modal(customMessage) {
   openWin95Modal();
 }
 
-// Open Win95 Modal (fade-in)
+// open the win95 modal with a fade-in
 function openWin95Modal() {
   const modal = document.getElementById('win95Modal');
 
@@ -46,7 +50,7 @@ function openWin95Modal() {
   document.body.style.overflow = 'hidden';
 }
 
-// Close Win95 Modal (fade-out)
+// close the win95 modal with a fade-out
 function closeWin95Modal() {
   const modal = document.getElementById('win95Modal');
   const backdrop = document.getElementById('win95-backdrop');
@@ -68,14 +72,14 @@ function closeWin95Modal() {
   document.body.style.overflow = '';
 }
 
-// Listen for OK or Close clicks
+// listen for clicks on ok or close buttons to close the modal
 document.addEventListener('click', function (e) {
   if (e.target && (e.target.id === 'win95-ok' || e.target.id === 'win95-close')) {
     closeWin95Modal();
   }
 });
 
-// Shuffle Deck
+// shuffle the deck using fisher-yates algorithm
 function shuffleDeck(shuffledDeck) {
   for (let i = shuffledDeck.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -83,7 +87,7 @@ function shuffleDeck(shuffledDeck) {
   }
 }
 
-// Shuffle Animation
+// animate the shuffle by randomly moving and rotating cards
 function shuffleAnimation() {
   const cards = document.querySelectorAll(".shufflecard");
 
@@ -113,10 +117,10 @@ function shuffleAnimation() {
   }, 1000);
 }
 
-// Draw One Card
+// draw one card from the shuffled deck and display it
 function drawCard(shuffledDeck, selectedCardContainer) {
   if (shuffledDeck.length === 0) {
-    alert("No more cards in the deck!");
+    alert("no more cards in the deck!");
     return;
   }
 
@@ -132,7 +136,7 @@ function drawCard(shuffledDeck, selectedCardContainer) {
   cardBack.classList.add('card-back');
   const cardBackImage = document.createElement('img');
   cardBackImage.src = './assets/images/cardbacks.webp';
-  cardBackImage.alt = 'Card Back';
+  cardBackImage.alt = 'card back';
   cardBack.appendChild(cardBackImage);
 
   const cardFront = document.createElement('div');
@@ -157,18 +161,18 @@ function drawCard(shuffledDeck, selectedCardContainer) {
   }, 1000);
 }
 
-// Show Card Details
+// show card interpretation and response text after drawing a card
 function showCardDetails(card, selectedCardContainer) {
   const cardDetails = `
     <div class="card-info">
-      <p class="card-response">The answer is...${card.response}!</p>
+      <p class="card-response">the answer is...${card.response}!</p>
       <p class="card-details-text">${card.interpretation}</p>
     </div>
   `;
   selectedCardContainer.innerHTML += cardDetails;
 }
 
-// === Export Functions ===
+// export functions
 export {
   injectWin95Modal,
   shuffleDeck,

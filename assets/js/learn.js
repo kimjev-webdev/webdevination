@@ -1,4 +1,11 @@
-// === Inject and Show Learn Modal ===
+/* jshint esversion: 11 */
+/* jshint node: true */
+/* jshint -W079 */
+
+// this script handles the learning game where players guess tarot cards based on interpretation
+// it includes a modal for feedback, shuffling animations, game logic, and score tracking
+
+// function to inject and show the learn result modal
 function injectLearnModal(message) {
   let modalElement = document.getElementById('learnModal');
 
@@ -8,9 +15,9 @@ function injectLearnModal(message) {
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content win95-modal win95-window text-glow">
             <div class="win95-title-bar">
-              <span class="win95-title-text">RESULT</span>
+              <span class="win95-title-text">result</span>
               <div class="win95-buttons">
-                <button type="button" class="win95-btn text-glow" data-bs-dismiss="modal" aria-label="Close">
+                <button type="button" class="win95-btn text-glow" data-bs-dismiss="modal" aria-label="close">
                   <i class="fa-light fa-x"></i>
                 </button>
               </div>
@@ -18,7 +25,7 @@ function injectLearnModal(message) {
             <div class="win95-body">
               <p id="learnModalMessage">...</p>
               <div class="ok-wrap">
-                <button class="win95-ok-btn" id="learn-ok" data-bs-dismiss="modal">OK</button>
+                <button class="win95-ok-btn" id="learn-ok" data-bs-dismiss="modal">ok</button>
               </div>
             </div>
           </div>
@@ -35,12 +42,12 @@ function injectLearnModal(message) {
   if (modalMessageElement) {
     modalMessageElement.textContent = message;
   } else {
-    console.error('Modal message element not found!');
+    console.error('modal message element not found!');
   }
 
   const modal = new bootstrap.Modal(document.getElementById('learnModal'));
 
-  // === ✨ Accessibility: Allow Enter Key to Close Modal ===
+  // allow enter key to close the modal
   const okButton = document.getElementById('learn-ok');
 
   const handleEnterKey = (event) => {
@@ -64,7 +71,7 @@ function injectLearnModal(message) {
   modal.show();
 }
 
-// === Shuffle Deck Function ===
+// function to shuffle the tarot deck
 function shuffleDeck(deck) {
   for (let i = deck.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -72,7 +79,7 @@ function shuffleDeck(deck) {
   }
 }
 
-// === Shuffle Animation Function ===
+// function to play the shuffle animation
 function shuffleAnimation() {
   const cards = document.querySelectorAll(".shufflecard");
 
@@ -102,11 +109,11 @@ function shuffleAnimation() {
   }, 3000);
 }
 
-// === Initialize Game ===
+// function to initialize or restart the game
 function initializeGame() {
   currentCardIndex = 0;
   score = 0;
-  document.getElementById('score').textContent = `Score: ${score}`;
+  document.getElementById('score').textContent = `score: ${score}`;
 
   shuffleDeck(tarotData);
   shuffleAnimation();
@@ -115,14 +122,14 @@ function initializeGame() {
   showCardChoices();
 }
 
-// === Show Current Card Description ===
+// function to show the current card's description
 function showCardDescription() {
   const card = tarotData[currentCardIndex];
   const descriptionElement = document.getElementById('card-description');
   descriptionElement.textContent = card.interpretation;
 }
 
-// === Show Card Choices ===
+// function to show multiple card choices
 function showCardChoices() {
   const choices = [tarotData[currentCardIndex]];
 
@@ -153,18 +160,18 @@ function showCardChoices() {
   });
 }
 
-// === Handle Card Selection ===
+// function to handle when a card choice is selected
 function handleCardSelection(event) {
   const selectedCardName = event.target.closest('.card-choice').dataset.cardName;
   const correctCardName = tarotData[currentCardIndex].name;
 
   if (selectedCardName === correctCardName) {
     score++;
-    document.getElementById('score').textContent = `Score: ${score}`;
-    injectLearnModal(`${correctCardName} was the correct answer. Well done!`);
+    document.getElementById('score').textContent = `score: ${score}`;
+    injectLearnModal(`${correctCardName} was the correct answer. well done!`);
   } else {
     playErrorSound();
-    injectLearnModal(`Incorrect! The correct answer was ${correctCardName}.`);
+    injectLearnModal(`incorrect! the correct answer was ${correctCardName}.`);
   }
 
   currentCardIndex = (currentCardIndex + 1) % totalMatches;
@@ -172,19 +179,19 @@ function handleCardSelection(event) {
   showCardChoices();
 }
 
-// === Play Windows 95 Error Sound ===
+// function to play the windows 95 error sound
 function playErrorSound() {
   const audio = new Audio('./assets/audio/win95_error.mp3');
   audio.play();
 }
 
-// === Global Declarations ===
+// === global declarations ===
 let totalMatches = 0;
 let currentCardIndex = 0;
 let tarotData = [];
 let score = 0;
 
-// === Game Initialization ===
+// === fetch tarot data and start the game ===
 fetch('./assets/tarot.json')
   .then(function (response) { return response.json(); })
   .then(function (data) {
@@ -193,8 +200,8 @@ fetch('./assets/tarot.json')
     initializeGame();
   })
   .catch(function (error) {
-    console.error('Error loading tarot deck:', error);
+    console.error('error loading tarot deck:', error);
   });
 
-// === Restart Button Listener ===
+// === restart button listener ===
 document.getElementById('restart-button').addEventListener('click', initializeGame);

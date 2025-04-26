@@ -1,7 +1,13 @@
-import { injectWin95Modal, shuffleDeck, shuffleAnimation, drawCard, showCardDetails } from './utilities.js';
+/* jshint esversion: 11 */
+/* jshint node: true */
+/* jshint -W079 */
 
-// === Function Declarations (Hoisted) ===
+// this script handles shuffling and dealing three tarot cards for a past-present-future spread
+// it imports utilities for shuffling, animating, showing a win95-style modal, and displaying card details
 
+import { injectWin95Modal, shuffleDeck, shuffleAnimation, showCardDetails } from './utilities.js';
+
+// function to handle shuffle button click
 function handleShuffleButtonClick(shuffledDeck, threecardStack, cardsContainer) {
   threecardStack.style.display = 'flex';
   cardsContainer.style.display = 'none';
@@ -10,10 +16,11 @@ function handleShuffleButtonClick(shuffledDeck, threecardStack, cardsContainer) 
   shuffleAnimation();
 
   setTimeout(function () {
-    injectWin95Modal('Deck shuffled! Now click DRAW to deal your cards.');
+    injectWin95Modal('deck shuffled! now click draw to deal your cards.');
   }, 1200);
 }
 
+// function to handle deal button click
 function handleDealButtonClick(shuffledDeck, threecardStack, cardsContainer, pastColumn, presentColumn, futureColumn) {
   threecardStack.style.display = 'none';
   cardsContainer.style.display = 'flex';
@@ -22,9 +29,10 @@ function handleDealButtonClick(shuffledDeck, threecardStack, cardsContainer, pas
   drawThreeCards(shuffledDeck, pastColumn, presentColumn, futureColumn);
 }
 
+// function to draw three cards for past, present, and future
 function drawThreeCards(shuffledDeck, pastColumn, presentColumn, futureColumn) {
   if (shuffledDeck.length < 3) {
-    alert("Not enough cards left in the deck!");
+    alert("not enough cards left in the deck!");
     return;
   }
 
@@ -37,6 +45,7 @@ function drawThreeCards(shuffledDeck, pastColumn, presentColumn, futureColumn) {
   displayCardInColumn(futureCard, futureColumn);
 }
 
+// function to display a drawn card inside a column with a heading
 function displayCardInColumn(card, column) {
   column.innerHTML = '';
 
@@ -45,9 +54,9 @@ function displayCardInColumn(card, column) {
 
   const heading = document.createElement('h3');
   heading.classList.add('mt-3');
-  if (column.id === 'past') heading.textContent = 'Past';
-  else if (column.id === 'present') heading.textContent = 'Present';
-  else if (column.id === 'future') heading.textContent = 'Future';
+  if (column.id === 'past') heading.textContent = 'past';
+  else if (column.id === 'present') heading.textContent = 'present';
+  else if (column.id === 'future') heading.textContent = 'future';
 
   const cardElement = document.createElement('div');
   cardElement.classList.add('selected-card');
@@ -57,7 +66,7 @@ function displayCardInColumn(card, column) {
   cardBack.classList.add('card-back');
   const cardBackImage = document.createElement('img');
   cardBackImage.src = './assets/images/cardbacks.webp';
-  cardBackImage.alt = 'Card Back';
+  cardBackImage.alt = 'card back';
   cardBack.appendChild(cardBackImage);
 
   const cardFront = document.createElement('div');
@@ -73,6 +82,7 @@ function displayCardInColumn(card, column) {
   wrapper.appendChild(cardElement);
   column.appendChild(wrapper);
 
+  // add flip animation and show card details after a delay
   setTimeout(function () {
     cardElement.classList.add('flip');
 
@@ -83,8 +93,8 @@ function displayCardInColumn(card, column) {
   }, 1000);
 }
 
-// === Execution ===
-
+// execution 
+// fetch the tarot deck data and initialize the game after the page loads
 document.addEventListener('DOMContentLoaded', function () {
   fetch('./assets/tarot.json')
     .then(function (response) { return response.json(); })
@@ -112,6 +122,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     })
     .catch(function (error) {
-      console.error('Error loading tarot deck:', error);
+      console.error('error loading tarot deck:', error);
     });
 });

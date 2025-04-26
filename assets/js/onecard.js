@@ -1,7 +1,13 @@
-import { injectWin95Modal, shuffleDeck, shuffleAnimation, drawCard, showCardDetails } from './utilities.js';
+/* jshint esversion: 11 */
+/* jshint node: true */
+/* jshint -W079 */
 
-// === Function Declarations (Hoisted) ===
+// this script handles shuffling and dealing a tarot card on the one-card draw page
+// it imports utilities for shuffling, animating, drawing, and showing a win95-style modal
 
+import { injectWin95Modal, shuffleDeck, shuffleAnimation, drawCard } from './utilities.js';
+
+// function to handle shuffle button click
 function handleShuffleButtonClick(shuffledDeck, cardStack, selectedCardContainer) {
   cardStack.style.display = 'flex';
   selectedCardContainer.style.display = 'none';
@@ -10,10 +16,11 @@ function handleShuffleButtonClick(shuffledDeck, cardStack, selectedCardContainer
   shuffleAnimation();
 
   setTimeout(function () {
-    injectWin95Modal('Deck shuffled! Now click DRAW to pick a card.');
+    injectWin95Modal('deck shuffled! now click draw to pick a card.');
   }, 1200);
 }
 
+// function to handle deal button click
 function handleDealButtonClick(shuffledDeck, cardStack, selectedCardContainer) {
   cardStack.style.display = 'none';
   selectedCardContainer.style.display = 'flex';
@@ -21,6 +28,7 @@ function handleDealButtonClick(shuffledDeck, cardStack, selectedCardContainer) {
   drawCard(shuffledDeck, selectedCardContainer);
 }
 
+// function to initialize the game by setting up event listeners
 function initializeGame(tarotDeck) {
   const shuffleButton = document.getElementById('shuffle');
   const dealButton = document.getElementById('deal');
@@ -38,8 +46,8 @@ function initializeGame(tarotDeck) {
   });
 }
 
-// === Execution ===
-
+// execution
+// fetch the tarot deck data and initialize the game after the page loads
 document.addEventListener('DOMContentLoaded', function () {
   fetch('./assets/tarot.json')
     .then(function (response) { return response.json(); })
@@ -48,6 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
       initializeGame(tarotDeck);
     })
     .catch(function (error) {
-      console.error('Error loading tarot deck:', error);
+      console.error('error loading tarot deck:', error);
     });
 });

@@ -41,12 +41,12 @@ JavaScript files checked with [JSHint](https://jshint.com/).
 | Page      | URL                  | Screenshot           | Notes              |
 |-----------|----------------------|----------------------|--------------------|
 | index.js   | [JSHint](https://jshint.com/) | <img src="assets\images\testing\indexjsmetrics.png" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
-| nav.js  | [JSHint](https://jshint.com/) | <img src="" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
+| nav.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\navjsmetrics.png" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
 | info.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\infojsmetrics.png" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
 | oracle.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\oraclejsmetrics.png" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
 | server.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\serverjsmetrics.png" height="auto" width="600px"> | This warning can be safely ignored because: This project uses modern ECMAScript Modules (ESM), enabled by setting "type": "module" in package.json. import.meta.url is officially supported in Node.js environments when using ESM. The server runs correctly without errors, and import.meta.url is required to correctly emulate __dirname and __filename in ESM. JSHint does not fully recognize "type": "module" settings and incorrectly flags valid module code. The import.meta warning is a false positive from the linter and does not affect functionality, testing, or production deployment. |
-| onecard.js  | [JSHint](https://jshint.com/) | <img src="" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
-| threecard.js  | [JSHint](https://jshint.com/) | <img src="" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
+| onecard.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\onecardjsmetrics.png" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
+| threecard.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\threecardjsmetrics.png" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
 | utilities.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\utilitiesjsmetrics.png" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
 | cards.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\cardsjsmetrics.png" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
 | learn.js  | [JSHint](https://jshint.com/) | <img src="" height="auto" width="600px"> | Warnings ignored, issue is with JSHint |
