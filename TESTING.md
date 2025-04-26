@@ -38,8 +38,8 @@ Links checked with [W3C Link Checker](https://validator.w3.org/checklink).
 ### 4. JavaScript 
 JavaScript files checked with [JSHint](https://jshint.com/).
 
-| Page      | URL                  | Screenshot           | Notes              |
-|-----------|----------------------|----------------------|--------------------|
+| Page      | URL                  | Screenshot                                  | Notes              |
+|-----------|----------------------|---------------------------------------------|--------------------|
 | index.js   | [JSHint](https://jshint.com/) | <img src="assets\images\testing\indexjsmetrics.png" width="700px"> | PASSED |
 | nav.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\navjsmetrics.png" width="700px"> | PASSED |
 | info.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\infojsmetrics.png" width="700px"> | PASSED |
