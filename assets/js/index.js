@@ -30,6 +30,11 @@ function animateLetters(letters, currentIndex, animationCycles, container, overl
     }, 300);
 }
 
+// === Helper Function to Redirect to Info Page ===
+function redirectToInfoPage() {
+    window.location.href = "./info.html";
+}
+
 // === Execute When DOM Loaded ===
 document.addEventListener("DOMContentLoaded", () => {
     const letters = document.querySelectorAll('.letter');
@@ -40,19 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let animationCycles = 0;
 
     // Handle Enter button click
-    button.addEventListener('click', () => {
-        window.location.href = "./info.html";
-    });
+    button.addEventListener('click', redirectToInfoPage);
 
     // Handle container click or tap
-    container.addEventListener('click', () => {
-        window.location.href = "./info.html";
-    });
+    container.addEventListener('click', redirectToInfoPage);
 
     // Handle pressing Enter key anywhere on the page
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
-            window.location.href = "./info.html";
+            redirectToInfoPage();
         }
     });
 
