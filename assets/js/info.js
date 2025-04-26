@@ -101,13 +101,13 @@ const pickThreeExplanation = document.getElementById('pickThreeExplanation');
 const cardbacksOne = document.querySelectorAll('#buttons-container .col-12.col-md-6 img');
 
 const textToType = [
-    "welcome seeker!\n",
-    "i sense that you are eager to embark on a journey of self discovery...\n",
-    "the cards are waiting to guide your way!\n",
-    "two paths lay before you, but which one will you choose?\n",
+    "Welcome seeker!\n",
+    "I sense that you are eager to embark on a journey of self discovery...\n",
+    "The cards are waiting to guide your way!\n",
+    "Two paths lay before you, but which one will you choose?\n",
 ];
 
-// === page load logic ===
+// page load logic
 window.addEventListener('load', function () {
     if (sessionStorage.getItem('visitedInfoPage')) {
         // if user already visited, skip typing and show heading instantly
