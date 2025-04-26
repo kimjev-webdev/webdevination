@@ -90,7 +90,7 @@ window.addEventListener('load', function () {
 
         // Inject a new centered heading "READINGS"
         const readingsHeading = document.createElement('h2');
-        readingsHeading.textContent = "👁️ READINGS";
+        readingsHeading.textContent = "👁️ TAROT READINGS";
         readingsHeading.style.fontSize = "2.5rem";
         readingsHeading.style.textAlign = "center"
 
