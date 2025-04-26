@@ -152,3 +152,28 @@ one tap expands the menu, and no incorrect hover behavior occurs.
 
 * The project prioritizes real-user experience, and this observation was documented instead of forcing unnecessary workarounds that could compromise overall navbar functionality.
 
+### 2. Note on Commit Messages and Workflow Constraints
+
+During the development of this project, some commit messages (such as "Update README.md") may appear vague or overly simple. This was due to a combination of practical constraints:
+
+* While I was able to access the GitHub web editor and browser-based VS Code (vscode.dev), the browser version does not provide a built-in terminal. For this reason I was forced to use Github Codespaces when working from my tablet.
+
+* Limited time on GitHub Codespaces: I ran out of my allocated Codespaces hours midway through the project which meant when working from the tablet, at a certain point I was uploading and changing files manually through Github. (I have been working from an iPad due to childcare responsibilities with a young baby in order to keep  up with deadlines as desktop is located outside house in garden). Because of this, I could not easily create local commits with detailed messages or run advanced Git operations from the iPad
+
+* Knowledge gap at the time: I was unaware that GitHub allowed adding or editing commit messages post-push directly through the web interface.
+
+**When working from a desktop, I always use the full Visual Studio Code editor with an integrated terminal, which allows for detailed commits, branches, and full local control. Despite these hurdles, I made sure to clearly document major features, fixes, and updates elsewhere — particularly within the README, the Deployment instructions, and the Bug Logs to ensure a transparent, traceable development process.**
+
+### 3. Note on CSS Class Usage and Learning Reflection
+
+Throughout this project, I used a large number of very specific and sometimes repetitive CSS classes.
+
+This approach initially helped me to individually style each page and element exactly how I envisioned. However, as the project grew, I realized that using highly specific classes for every variation led to unnecessary repetition, larger CSS files, and more maintenance complexity.
+
+## Biggest Learning Curve:
+
+* I have learned that more general, reusable utility classes (following DRY principles — Don't Repeat Yourself) would have made my CSS cleaner, more scalable, and easier to manage.
+
+* In future projects, I plan to group common styles together, make better use of CSS variables, and create modular class systems where possible, rather than styling each element uniquely.
+
+**This project has been a huge lesson in balancing creative freedom with maintainable, efficient front-end code and refining my CSS architecture is one of my key takeaways moving forward.**
