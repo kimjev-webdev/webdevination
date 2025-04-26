@@ -1,5 +1,6 @@
-// 🧠 HOISTED FUNCTIONS — defined before they're used
+// === Function Declarations ===
 
+// Typing the Oracle's message
 function typeOracleMessage(text, element, speed = 40) {
   element.textContent = "";
   let i = 0;
@@ -16,14 +17,19 @@ function typeOracleMessage(text, element, speed = 40) {
   }, speed);
 }
 
+// Lock or unlock form inputs
 function toggleFormLock(disabled) {
   questionInput.disabled = disabled;
   oracleSubmitBtn.disabled = disabled;
 }
 
+// Fetch the Oracle response
 async function fetchOracleResponse(question, responseBox) {
   isTyping = true;
   toggleFormLock(true);
+
+  // Show interim "consulting the stars..." message immediately
+  responseBox.textContent = "🛸 Consulting the stars...";
 
   try {
     const res = await fetch("/oracle", {
@@ -35,7 +41,10 @@ async function fetchOracleResponse(question, responseBox) {
     const data = await res.json();
 
     if (data.answer) {
-      typeOracleMessage(data.answer, responseBox);
+      // Wait a tiny moment before typing real answer
+      setTimeout(() => {
+        typeOracleMessage(data.answer, responseBox, 40); // ✨ Faster typing speed
+      }, 600); // optional small pause after "consulting"
     } else {
       responseBox.textContent = "🕯️ The Oracle is silent...";
       toggleFormLock(false);
@@ -49,6 +58,7 @@ async function fetchOracleResponse(question, responseBox) {
   }
 }
 
+// Handle submit event
 function handleOracleSubmit(e) {
   e.preventDefault();
 
@@ -61,7 +71,7 @@ function handleOracleSubmit(e) {
   fetchOracleResponse(question, oracleResponse);
 }
 
-// 🧩 SETUP
+// === SETUP ===
 
 const oracleForm = document.getElementById("oracle-form");
 const questionInput = document.getElementById("questionInput");
@@ -72,6 +82,7 @@ let isTyping = false;
 
 oracleForm.addEventListener("submit", handleOracleSubmit);
 
+// Allow Enter key (without Shift) to submit
 questionInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();

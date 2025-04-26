@@ -1,14 +1,16 @@
+import { injectWin95Modal, shuffleDeck, shuffleAnimation, drawCard, showCardDetails } from './utilities.js';
+
 // === Function Declarations (Hoisted) ===
 
 function handleShuffleButtonClick(shuffledDeck, cardStack, selectedCardContainer) {
   cardStack.style.display = 'flex';
   selectedCardContainer.style.display = 'none';
 
-  shuffleDeck(shuffledDeck);          // from utilities.js
-  shuffleAnimation();                 // from utilities.js
+  shuffleDeck(shuffledDeck);
+  shuffleAnimation();
 
   setTimeout(function () {
-    injectWin95Modal();              // from utilities.js
+    injectWin95Modal('Deck shuffled! Now click DRAW to pick a card.');
   }, 1200);
 }
 
@@ -16,7 +18,7 @@ function handleDealButtonClick(shuffledDeck, cardStack, selectedCardContainer) {
   cardStack.style.display = 'none';
   selectedCardContainer.style.display = 'flex';
 
-  drawCard(shuffledDeck, selectedCardContainer);  // from utilities.js
+  drawCard(shuffledDeck, selectedCardContainer);
 }
 
 function initializeGame(tarotDeck) {

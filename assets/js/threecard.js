@@ -1,3 +1,5 @@
+import { injectWin95Modal, shuffleDeck, shuffleAnimation, drawCard, showCardDetails } from './utilities.js';
+
 // === Function Declarations (Hoisted) ===
 
 function handleShuffleButtonClick(shuffledDeck, threecardStack, cardsContainer) {
@@ -8,7 +10,7 @@ function handleShuffleButtonClick(shuffledDeck, threecardStack, cardsContainer) 
   shuffleAnimation();
 
   setTimeout(function () {
-    injectWin95Modal();
+    injectWin95Modal('Deck shuffled! Now click DRAW to deal your cards.');
   }, 1200);
 }
 
@@ -76,24 +78,12 @@ function displayCardInColumn(card, column) {
 
     setTimeout(function () {
       wrapper.insertBefore(heading, cardElement);
-      showCardDetails(card, wrapper); // from utilities.js
+      showCardDetails(card, wrapper);
     }, 500);
   }, 1000);
 }
 
-function showCardDetails(card, wrapper) {
-  const cardInfo = document.createElement('div');
-  cardInfo.classList.add('card-info');
-
-  const interpretationPara = document.createElement('p');
-  interpretationPara.classList.add('card-details-text');
-  interpretationPara.textContent = card.interpretation;
-
-  cardInfo.appendChild(interpretationPara);
-  wrapper.appendChild(cardInfo);
-}
-
-// === DOM Ready ===
+// === Execution ===
 
 document.addEventListener('DOMContentLoaded', function () {
   fetch('./assets/tarot.json')

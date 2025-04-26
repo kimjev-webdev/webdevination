@@ -16,7 +16,7 @@ function injectWin95Modal(customMessage) {
           </div>
         </div>
         <div class="win95-body">
-          <p>${customMessage}</p> <!-- 🛠 dynamic text inserted here -->
+          <p>${customMessage}</p>
           <div class="ok-wrap">
             <button class="win95-ok-btn" id="win95-ok">OK</button>
           </div>
@@ -32,24 +32,21 @@ function injectWin95Modal(customMessage) {
   openWin95Modal();
 }
 
-// Open Win95 Modal (with fade-in)
+// Open Win95 Modal (fade-in)
 function openWin95Modal() {
   const modal = document.getElementById('win95Modal');
 
-  // Create backdrop
   const backdrop = document.createElement('div');
   backdrop.id = 'win95-backdrop';
   document.body.appendChild(backdrop);
 
-  // Show modal with fade-in
   modal.style.display = 'flex';
   modal.classList.add('showing');
 
-  // Lock scroll
   document.body.style.overflow = 'hidden';
 }
 
-// Close Win95 Modal (with fade-out)
+// Close Win95 Modal (fade-out)
 function closeWin95Modal() {
   const modal = document.getElementById('win95Modal');
   const backdrop = document.getElementById('win95-backdrop');
@@ -61,18 +58,17 @@ function closeWin95Modal() {
     setTimeout(function () {
       modal.style.display = 'none';
       modal.classList.remove('hiding');
-    }, 300); // match fade-out duration
+    }, 300);
   }
 
   if (backdrop) {
     backdrop.remove();
   }
 
-  // Unlock scroll
   document.body.style.overflow = '';
 }
 
-// Event listener for OK and Close buttons
+// Listen for OK or Close clicks
 document.addEventListener('click', function (e) {
   if (e.target && (e.target.id === 'win95-ok' || e.target.id === 'win95-close')) {
     closeWin95Modal();
@@ -117,7 +113,7 @@ function shuffleAnimation() {
   }, 1000);
 }
 
-// Draw a single card (one card reading)
+// Draw One Card
 function drawCard(shuffledDeck, selectedCardContainer) {
   if (shuffledDeck.length === 0) {
     alert("No more cards in the deck!");
@@ -172,4 +168,11 @@ function showCardDetails(card, selectedCardContainer) {
   selectedCardContainer.innerHTML += cardDetails;
 }
 
-// === End Utilities ===
+// === Export Functions ===
+export {
+  injectWin95Modal,
+  shuffleDeck,
+  shuffleAnimation,
+  drawCard,
+  showCardDetails
+};

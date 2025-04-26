@@ -1,11 +1,11 @@
-// === Function Declarations (Hoisted to Top) ===
-
+// === Inject and Show Learn Modal ===
 function injectLearnModal(message) {
   let modalElement = document.getElementById('learnModal');
+
   if (!modalElement) {
     const modalHTML = `
       <div class="modal fade" id="learnModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content win95-modal win95-window text-glow">
             <div class="win95-title-bar">
               <span class="win95-title-text">RESULT</span>
@@ -29,33 +29,28 @@ function injectLearnModal(message) {
     const wrapper = document.createElement('div');
     wrapper.innerHTML = modalHTML;
     document.body.appendChild(wrapper);
-
-    const enterListener = function (e) {
-      const modal = document.getElementById('learnModal');
-      const isVisible = modal && modal.getAttribute('aria-hidden') === 'false';
-      if (e.key === 'Enter' && isVisible) {
-        const okBtn = document.getElementById('learn-ok');
-        if (okBtn) okBtn.click();
-      }
-    };
-
-    document.removeEventListener('keydown', enterListener);
-    document.addEventListener('keydown', enterListener);
   }
 
-  // Set message and show modal
-  document.getElementById('learnModalMessage').textContent = message;
+  const modalMessageElement = document.getElementById('learnModalMessage');
+  if (modalMessageElement) {
+    modalMessageElement.textContent = message;
+  } else {
+    console.error('Modal message element not found!');
+  }
+
   const modal = new bootstrap.Modal(document.getElementById('learnModal'));
   modal.show();
 }
 
-function shuffleDeck(shuffledDeck) {
-  for (let i = shuffledDeck.length - 1; i > 0; i--) {
+// === Shuffle Deck Function ===
+function shuffleDeck(deck) {
+  for (let i = deck.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [shuffledDeck[i], shuffledDeck[j]] = [shuffledDeck[j], shuffledDeck[i]];
+    [deck[i], deck[j]] = [deck[j], deck[i]];
   }
 }
 
+// === Shuffle Animation Function ===
 function shuffleAnimation() {
   const cards = document.querySelectorAll(".shufflecard");
 
@@ -85,6 +80,7 @@ function shuffleAnimation() {
   }, 3000);
 }
 
+// === Initialize Game ===
 function initializeGame() {
   currentCardIndex = 0;
   score = 0;
@@ -97,12 +93,14 @@ function initializeGame() {
   showCardChoices();
 }
 
+// === Show Current Card Description ===
 function showCardDescription() {
   const card = tarotData[currentCardIndex];
   const descriptionElement = document.getElementById('card-description');
   descriptionElement.textContent = card.interpretation;
 }
 
+// === Show Card Choices ===
 function showCardChoices() {
   const choices = [tarotData[currentCardIndex]];
 
@@ -133,6 +131,7 @@ function showCardChoices() {
   });
 }
 
+// === Handle Card Selection ===
 function handleCardSelection(event) {
   const selectedCardName = event.target.closest('.card-choice').dataset.cardName;
   const correctCardName = tarotData[currentCardIndex].name;
@@ -142,6 +141,7 @@ function handleCardSelection(event) {
     document.getElementById('score').textContent = `Score: ${score}`;
     injectLearnModal(`${correctCardName} was the correct answer. Well done!`);
   } else {
+    playErrorSound();
     injectLearnModal(`Incorrect! The correct answer was ${correctCardName}.`);
   }
 
@@ -150,17 +150,19 @@ function handleCardSelection(event) {
   showCardChoices();
 }
 
-// === Global Declarations ===
+// === Play Windows 95 Error Sound ===
+function playErrorSound() {
+  const audio = new Audio('./assets/audio/win95_error.mp3');
+  audio.play();
+}
 
+// === Global Declarations ===
 let totalMatches = 0;
 let currentCardIndex = 0;
 let tarotData = [];
 let score = 0;
 
-const backCardImage = './assets/images/cardbacks.webp';
-
 // === Game Initialization ===
-
 fetch('./assets/tarot.json')
   .then(function (response) { return response.json(); })
   .then(function (data) {
@@ -172,4 +174,5 @@ fetch('./assets/tarot.json')
     console.error('Error loading tarot deck:', error);
   });
 
+// === Restart Button Listener ===
 document.getElementById('restart-button').addEventListener('click', initializeGame);

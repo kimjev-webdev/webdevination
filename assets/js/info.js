@@ -1,33 +1,32 @@
-// This script handles the typing effect for the terminal text and the display of buttons and explanations.     
+// === Function Declarations (Hoisted) ===
 
-// Function to type the terminal text
+// Typing the terminal text
 function typeText() {
-    // Remove old cursor
     const existingCursor = document.querySelector('.cursor');
     if (existingCursor) existingCursor.remove();
 
     if (typingInProgress && currentTextIndex < textToType.length) {
         const currentText = textToType[currentTextIndex];
-        
+
         if (currentCharIndex < currentText.length) {
             terminalTextElement.textContent += currentText[currentCharIndex];
             currentCharIndex++;
             addCursor();
-            setTimeout(typeText, 100); // Adjust typing speed
+            setTimeout(typeText, 40); // ✨ Faster typing speed
         } else {
             terminalTextElement.textContent += '\n';
             currentTextIndex++;
             currentCharIndex = 0;
             addCursor();
-            setTimeout(typeText, 500); // Adjust delay between lines
+            setTimeout(typeText, 300); // ✨ Faster line delay
         }
     } else if (currentTextIndex >= textToType.length) {
-        addCursor(); // Keep cursor blinking after text finishes
+        addCursor();
         showButtons();
     }
 }
 
-// Function to add blinking cursor
+// Adding the blinking cursor
 function addCursor() {
     const cursor = document.createElement('span');
     cursor.className = 'cursor';
@@ -35,58 +34,37 @@ function addCursor() {
     terminalTextElement.appendChild(cursor);
 }
 
-// Function to show buttons and explanations
+// Show the buttons, explanations, images
 function showButtons() {
-    // Make buttons and explanations visible
-    buttonsContainer.style.opacity = 1; // Make the buttons container visible
+    buttonsContainer.style.opacity = 1;
 
-    // Make the cardback images visible (same as buttons)
     cardbacksOne.forEach((img, index) => {
         setTimeout(() => {
-            img.classList.add('visible'); // Show cardback image
-        }, 500 + (index * 500)); // Add a small delay for each card image
+            img.classList.add('visible');
+        }, 300 + (index * 300)); // ✨ Faster image reveal
     });
 
-    // Make the pickOneCard button visible
-    setTimeout(() => {
-        pickOneCardButton.classList.add('visible'); // Show pick one card button
-    }, 500);
+    setTimeout(() => pickOneCardButton.classList.add('visible'), 300);
+    setTimeout(() => pickThreeCardsButton.classList.add('visible'), 600);
+    setTimeout(() => pickOneExplanation.classList.add('visible'), 900);
+    setTimeout(() => pickThreeExplanation.classList.add('visible'), 900);
 
-    // Make the pickThreeCards button visible
-    setTimeout(() => {
-        pickThreeCardsButton.classList.add('visible'); // Show pick three cards button
-    }, 1000);
-
-    // Make the pickOneExplanation visible
-    setTimeout(() => {
-        pickOneExplanation.classList.add('visible'); // Show explanation for a one card reading
-    }, 1500);
-
-    // Make the pickThreeExplanation visible
-    setTimeout(() => {
-        pickThreeExplanation.classList.add('visible'); // Show explanation for three card reading   
-    }, 1500);
-
-    // Hide skip button after text is finished
     skipButton.style.display = 'none';
 }
 
-// Function to handle skip button click
+// Skip button manually triggers showing everything
 function handleSkipButtonClick() {
-    typingInProgress = false; // Stop typing
+    typingInProgress = false;
     terminalTextElement.textContent = textToType.join('');
-    addCursor(); // Add blinking cursor at the end
-
-    // Show buttons and explanations immediately
+    addCursor();
     showButtons();
 }
 
-// State variables
+// === Global Declarations ===
 let currentTextIndex = 0;
 let currentCharIndex = 0;
 let typingInProgress = true;
 
-// DOM elements
 const terminalTextElement = document.getElementById('terminalText');
 const skipButton = document.getElementById('skipButton');
 const buttonsContainer = document.getElementById('buttons-container');
@@ -94,11 +72,8 @@ const pickOneCardButton = document.getElementById('pickOneCard');
 const pickThreeCardsButton = document.getElementById('pickThreeCards');
 const pickOneExplanation = document.getElementById('pickOneExplanation');
 const pickThreeExplanation = document.getElementById('pickThreeExplanation');
-
-// Image elements
 const cardbacksOne = document.querySelectorAll('#buttons-container .col-12.col-md-6 img');
 
-// Text to be typed out
 const textToType = [
     "Welcome Seeker!\n",
     "I sense that you are eager to embark on a journey of self discovery...\n",
@@ -106,8 +81,19 @@ const textToType = [
     "Two paths lay before you, but which one will you choose?\n",
 ];
 
-// Event listener for skip button
-skipButton.addEventListener('click', handleSkipButtonClick);
+// === Page Load Logic ===
+window.addEventListener('load', function () {
+    if (sessionStorage.getItem('visitedInfoPage')) {
+        // User already visited → instantly show everything
+        terminalTextElement.style.display = 'none';
+        skipButton.style.display = 'none';
+        showButtons();
+    } else {
+        // First visit → type text normally
+        sessionStorage.setItem('visitedInfoPage', 'true');
+        typeText();
+    }
+});
 
-// Start typing text when the page loads
-window.onload = typeText;
+// Skip button event
+skipButton.addEventListener('click', handleSkipButtonClick);

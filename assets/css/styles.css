@@ -1153,6 +1153,7 @@ img.onecardadvert {
 }
 
 .win95-body {
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   background: rgb(174, 255, 0);;
@@ -1469,6 +1470,46 @@ p {
   text-align: justify;
 }
 
+/* === Learn Page Specific Modal Wrapper === */
+#learnModalWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  z-index: 1050;
+}
+
+/* === Fade In and Fade Out for Learn Modal === */
+#learnModalWrapper.showing {
+  animation: win95FadeIn 0.3s ease forwards;
+  display: flex;
+}
+
+#learnModalWrapper.hiding {
+  animation: win95FadeOut 0.3s ease forwards;
+}
+
+/* === Learn Modal Backdrop === */
+#learn-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(2px);
+  z-index: 1040;
+  display: none;
+}
+
+#learn-backdrop.showing {
+  display: block;
+}
 
 /*--- footer styles ---*/
 footer {
@@ -1593,7 +1634,7 @@ margin: 0px 5px 0px 5px;  }
     display: none;    }
 
   .game-container {
-    margin: 0 50px 50px 50px;
+    margin: 0 40px 50px 40px;
   }
 
   .cardgame-display {
