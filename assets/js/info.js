@@ -84,9 +84,20 @@ const textToType = [
 // === Page Load Logic ===
 window.addEventListener('load', function () {
     if (sessionStorage.getItem('visitedInfoPage')) {
-        // User already visited → instantly show everything
+        // User already visited → instantly show heading and buttons
         terminalTextElement.style.display = 'none';
         skipButton.style.display = 'none';
+
+        // Inject a new centered heading "READINGS"
+        const readingsHeading = document.createElement('h2');
+        readingsHeading.textContent = "READINGS";
+        readingsHeading.style.fontSize = "2.5rem";
+        readingsHeading.style.textAlign = "center";
+        readingsHeading.style.marginBottom = "30px";
+
+        const terminalSection = document.querySelector('.terminal');
+        terminalSection.appendChild(readingsHeading);
+
         showButtons();
     } else {
         // First visit → type text normally

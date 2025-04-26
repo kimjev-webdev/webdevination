@@ -351,7 +351,6 @@ i.rotate-icon {
 /* navbar link styling */
 .nav-link {
   display: block;
-  margin-right: 5px;
   font-size: 16px;
   font-family: "Source Code Pro", monospace;
   background-color: #000000;
