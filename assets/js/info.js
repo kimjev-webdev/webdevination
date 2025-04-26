@@ -101,7 +101,7 @@ const pickThreeExplanation = document.getElementById('pickThreeExplanation');
 const cardbacksOne = document.querySelectorAll('#buttons-container .col-12.col-md-6 img');
 
 const textToType = [
-    "Welcome seeker!\n",
+    "Welcome Seeker!\n",
     "I sense that you are eager to embark on a journey of self discovery...\n",
     "The cards are waiting to guide your way!\n",
     "Two paths lay before you, but which one will you choose?\n",
