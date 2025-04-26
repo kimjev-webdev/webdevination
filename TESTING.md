@@ -44,8 +44,7 @@ JavaScript files checked with [JSHint](https://jshint.com/).
 | nav.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\navjsmetrics.png" height="auto"> | PASSED |
 | info.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\infojsmetrics.png" height="auto"> | PASSED |
 | oracle.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\oraclejsmetrics.png" height="auto"> | PASSED |
-| server.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\serverjsmetrics.png" height="auto"> | 
-JSHint does not fully recognize "type": "module" settings and incorrectly flags valid module code. The import.meta warning is a false positive from the linter and does not affect functionality, testing, or production deployment. |
+| server.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\serverjsmetrics.png" height="auto"> | JSHint does not fully recognize "type": "module" settings and incorrectly flags valid module code. The import.meta warning is a false positive from the linter and does not affect functionality, testing, or production deployment. |
 | onecard.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\onecardjsmetrics.png" height="auto"> | PASSED |
 | threecard.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\threecardjsmetrics.png" height="auto"> | PASSED |
 | utilities.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\utilitiesjsmetrics.png" height="auto"> | PASSED |
