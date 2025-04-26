@@ -16,7 +16,7 @@ function handleShuffleButtonClick(shuffledDeck, threecardStack, cardsContainer) 
   shuffleAnimation();
 
   setTimeout(function () {
-    injectWin95Modal('deck shuffled! now click draw to deal your cards.');
+    injectWin95Modal('Deck shuffled! Now click "DRAW" to deal your cards!');
   }, 1200);
 }
 
@@ -54,9 +54,9 @@ function displayCardInColumn(card, column) {
 
   const heading = document.createElement('h3');
   heading.classList.add('mt-3');
-  if (column.id === 'past') heading.textContent = 'past';
-  else if (column.id === 'present') heading.textContent = 'present';
-  else if (column.id === 'future') heading.textContent = 'future';
+  if (column.id === 'past') heading.textContent = 'Past';
+  else if (column.id === 'present') heading.textContent = 'Present';
+  else if (column.id === 'future') heading.textContent = 'Future';
 
   const cardElement = document.createElement('div');
   cardElement.classList.add('selected-card');

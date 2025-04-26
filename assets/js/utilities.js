@@ -165,7 +165,7 @@ function drawCard(shuffledDeck, selectedCardContainer) {
 function showCardDetails(card, selectedCardContainer) {
   const cardDetails = `
     <div class="card-info">
-      <p class="card-response">the answer is...${card.response}!</p>
+      <p class="card-response">The answer is...${card.response}!</p>
       <p class="card-details-text">${card.interpretation}</p>
     </div>
   `;

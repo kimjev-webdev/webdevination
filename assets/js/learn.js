@@ -1,6 +1,7 @@
 /* jshint esversion: 11 */
 /* jshint node: true */
 /* jshint -W079 */
+/* global bootstrap */
 
 // this script handles the learning game where players guess tarot cards based on interpretation
 // it includes a modal for feedback, shuffling animations, game logic, and score tracking

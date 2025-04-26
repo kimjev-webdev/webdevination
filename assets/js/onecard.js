@@ -16,7 +16,7 @@ function handleShuffleButtonClick(shuffledDeck, cardStack, selectedCardContainer
   shuffleAnimation();
 
   setTimeout(function () {
-    injectWin95Modal('deck shuffled! now click draw to pick a card.');
+    injectWin95Modal('Deck shuffled! Now click "DRAW" to pick a card!');
   }, 1200);
 }
 

@@ -12,10 +12,10 @@ function generateCardSection(cards, suit) {
         const imagePath = `assets/images/cardfronts/${card.name.toLowerCase().replace(/ /g, '')}.webp`;
 
         const specificsHtml = card.specifics
-            .replace(/LOVE:/g, "<strong>💜 love:</strong>")
-            .replace(/CAREER:/g, "<strong>✨ career:</strong>")
-            .replace(/FINANCE:/g, "<strong>💰 finance:</strong>")
-            .replace(/HEALTH:/g, "<strong>🌿 health:</strong>")
+            .replace(/LOVE:/g, "<strong>💜 Love:</strong>")
+            .replace(/CAREER:/g, "<strong>✨ Career:</strong>")
+            .replace(/FINANCE:/g, "<strong>💰 Finance:</strong>")
+            .replace(/HEALTH:/g, "<strong>🌿 Health:</strong>")
             .replace(/\n/g, "<br><br>");
 
         cardHtml += `
