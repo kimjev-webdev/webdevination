@@ -559,17 +559,20 @@ a {
 }
 
 /* hide cardback images initially */
+/* hide cardback images initially */
 #buttons-container .col-12.col-md-6 img {
-  display: none;
+  opacity: 0;
   margin: auto;
   width: 75px;
   height: auto;
   transition: opacity 0.5s ease-in-out;
+  display: block;
 }
+
 
 /* make cardbacks visible when shown */
 #buttons-container .col-12.col-md-6 img.visible {
-  display: block;
+  opacity: 1;
 }
 
 /* flex container for images */
@@ -887,15 +890,13 @@ accordion-button:hover {
 .explorep, .intro-paragraph {
   text-align: justify !important;
   margin: 0 auto;
-  max-width: 80vw;
+  padding: 0px 63px;
 }
 
 /* paragraph text inside suit intros */
 .suit-intro p {
   font-family: "Source Code Pro", monospace;
   text-align: justify;
-  margin: 0 auto;
-  max-width: 80vw !important;
 }
 
 /* one card reading layout */
@@ -1627,11 +1628,6 @@ footer {
   .exploreheader,
   .accordion-item > h2 > .accordion-button {
     font-size: 8vw;
-  }
-  /* narrow explore paragraph widths */
-  .explorep,
-  .intro-paragraph {
-    max-width: 65vw;
   }
 }
 
