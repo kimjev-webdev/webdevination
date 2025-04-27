@@ -15,14 +15,12 @@ function typeText() {
     if (typingInProgress && currentTextIndex < textToType.length) {
         const currentText = textToType[currentTextIndex];
 
-        // if still typing a line, add the next character
         if (currentCharIndex < currentText.length) {
             terminalTextElement.textContent += currentText[currentCharIndex];
             currentCharIndex++;
             addCursor();
             setTimeout(typeText, 40); // faster typing speed
         } else {
-            // move to next line after completing a line
             terminalTextElement.textContent += '\n';
             currentTextIndex++;
             currentCharIndex = 0;
@@ -30,7 +28,6 @@ function typeText() {
             setTimeout(typeText, 300); // small delay before next line
         }
     } else if (currentTextIndex >= textToType.length) {
-        // finished typing all lines
         addCursor();
         showButtons();
     }
@@ -48,24 +45,20 @@ function addCursor() {
 function showButtons() {
     buttonsContainer.style.opacity = 1;
 
-    // show each image with a staggered animation
     cardbacksOne.forEach((img, index) => {
         setTimeout(() => {
             img.classList.add('visible');
         }, 300 + (index * 300));
     });
 
-    // reveal the one card button
     setTimeout(() => {
         if (pickOneCardButton) pickOneCardButton.classList.add('visible');
     }, 300);
 
-    // reveal the three cards button
     setTimeout(() => {
         if (pickThreeCardsButton) pickThreeCardsButton.classList.add('visible');
     }, 600);
 
-    // reveal the explanations for both options
     setTimeout(() => {
         if (pickOneExplanation) pickOneExplanation.classList.add('visible');
     }, 900);
@@ -74,7 +67,6 @@ function showButtons() {
         if (pickThreeExplanation) pickThreeExplanation.classList.add('visible');
     }, 900);
 
-    // hide the skip button once everything is shown
     skipButton.style.display = 'none';
 }
 
@@ -107,29 +99,56 @@ const textToType = [
     "Two paths lay before you, but which one will you choose?\n",
 ];
 
+// function to dynamically update the readings heading size
+function updateReadingsHeadingSize() {
+    if (!readingsHeading) return;
+    const width = window.innerWidth;
+    if (width <= 340) {
+        readingsHeading.style.fontSize = "2rem";
+    } else if (width >= 435) {
+        readingsHeading.style.fontSize = "3.5rem";
+    } else {
+        readingsHeading.style.fontSize = "2.5rem";
+    }
+    readingsHeading.style.textAlign = "center";
+    readingsHeading.style.padding = "0px 60px";
+}
+
+// debounce function to limit how often a function fires
+function debounce(func, wait) {
+    let timeout;
+    return function () {
+        clearTimeout(timeout);
+        timeout = setTimeout(func, wait);
+    };
+}
+
 // page load logic
+let readingsHeading = null; // declare globally so resize can find it
 window.addEventListener('load', function () {
     if (sessionStorage.getItem('visitedInfoPage')) {
-        // if user already visited, skip typing and show heading instantly
         terminalTextElement.style.display = 'none';
         skipButton.style.display = 'none';
 
-        const readingsHeading = document.createElement('h2');
+        readingsHeading = document.createElement('h2');
         readingsHeading.textContent = "Tarot Readings";
-        readingsHeading.style.fontSize = "2.5rem";
         readingsHeading.style.textAlign = "center";
-        readingsHeading.style.padding = "0px 60px 0px 60px";
+        readingsHeading.style.padding = "0px 60px";
+
+        updateReadingsHeadingSize();
 
         const terminalSection = document.querySelector('.terminal');
         terminalSection.appendChild(readingsHeading);
 
         showButtons();
     } else {
-        // if first visit, start typing animation
         sessionStorage.setItem('visitedInfoPage', 'true');
         typeText();
     }
 });
+
+// resize event to adjust heading dynamically, but debounced
+window.addEventListener('resize', debounce(updateReadingsHeadingSize, 150));
 
 // event listener for skip button
 skipButton.addEventListener('click', handleSkipButtonClick);
