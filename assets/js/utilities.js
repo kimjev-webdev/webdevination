@@ -12,7 +12,7 @@ function injectWin95Modal(customMessage) {
     <div id="win95Modal" class="win95-modal-wrapper" style="display: none;">
       <div class="win95-modal win95-window text-glow">
         <div class="win95-title-bar">
-          <span class="win95-title-text">shuffle complete</span>
+          <span class="win95-title-text">SHUFFLE COMPLETE</span>
           <div class="win95-buttons">
             <button type="button" class="win95-btn" id="win95-close" aria-label="close">
               <i class="fa-light fa-x" aria-hidden="true"></i>
