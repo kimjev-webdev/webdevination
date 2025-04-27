@@ -4,7 +4,6 @@
 
 // this script provides utilities for both onecard.html and threecard.html, win95 modal handling, the general logic behind shuffling animations, card drawing, and showing card details
 
-// inject a win95-style modal with a custom message
 function injectWin95Modal(customMessage) {
   if (document.getElementById('win95Modal')) return;
 
@@ -36,7 +35,6 @@ function injectWin95Modal(customMessage) {
   openWin95Modal();
 }
 
-// open the win95 modal with a fade-in
 function openWin95Modal() {
   const modal = document.getElementById('win95Modal');
 
@@ -50,7 +48,6 @@ function openWin95Modal() {
   document.body.style.overflow = 'hidden';
 }
 
-// close the win95 modal with a fade-out
 function closeWin95Modal() {
   const modal = document.getElementById('win95Modal');
   const backdrop = document.getElementById('win95-backdrop');
@@ -72,14 +69,12 @@ function closeWin95Modal() {
   document.body.style.overflow = '';
 }
 
-// listen for clicks on ok or close buttons to close the modal
 document.addEventListener('click', function (e) {
   if (e.target && (e.target.id === 'win95-ok' || e.target.id === 'win95-close')) {
     closeWin95Modal();
   }
 });
 
-// shuffle the deck using fisher-yates algorithm
 function shuffleDeck(shuffledDeck) {
   for (let i = shuffledDeck.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -87,7 +82,6 @@ function shuffleDeck(shuffledDeck) {
   }
 }
 
-// animate the shuffle by randomly moving and rotating cards
 function shuffleAnimation() {
   const cards = document.querySelectorAll(".shufflecard");
 
@@ -117,10 +111,11 @@ function shuffleAnimation() {
   }, 1000);
 }
 
-// draw one card from the shuffled deck and display it
-function drawCard(shuffledDeck, selectedCardContainer) {
+// UPDATED drawCard to handle button disabling
+function drawCard(shuffledDeck, selectedCardContainer, dealButton) {
   if (shuffledDeck.length === 0) {
     alert("no more cards in the deck!");
+    if (dealButton) dealButton.disabled = false;
     return;
   }
 
@@ -157,11 +152,15 @@ function drawCard(shuffledDeck, selectedCardContainer) {
 
     setTimeout(function () {
       showCardDetails(drawnCard, selectedCardContainer);
+
+      // Re-enable the deal button after a total safety delay
+      setTimeout(function () {
+        if (dealButton) dealButton.disabled = false;
+      }, 1000); // 1 second after flip and card details shown
     }, 500);
   }, 1000);
 }
 
-// show card interpretation and response text after drawing a card
 function showCardDetails(card, selectedCardContainer) {
   const cardDetails = `
     <div class="card-info">

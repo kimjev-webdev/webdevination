@@ -4,7 +4,6 @@
 
 // this script builds the dynamic tarot gallery with suit intros, major arcana intro, card flipping behavior, and accessibility improvements
 
-// function to generate the card section html for a group of cards
 function generateCardSection(cards, suit) {
     let cardHtml = `<section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-6 row-cols-xxl-6 g-4" role="region" aria-label="${suit.charAt(0).toUpperCase() + suit.slice(1)} cards">`;
 
@@ -38,7 +37,6 @@ function generateCardSection(cards, suit) {
     cardHtml += '</section>';
     return cardHtml;
 }
-
 // function to insert the intro paragraph before the major arcana cards
 function insertMajorArcanaIntro() {
     const introHtml = `
@@ -62,7 +60,6 @@ function insertMajorArcanaIntro() {
     }
 }
 
-// function to insert suit intro paragraphs dynamically
 function insertSuitIntro(suitId, storyText) {
     const cardContainer = document.getElementById(`${suitId}Cards`);
     if (cardContainer) {
@@ -79,22 +76,37 @@ function insertSuitIntro(suitId, storyText) {
     }
 }
 
-// function to enable flip toggle on touch devices
+// FINAL: perfect touch flip behavior
 function enableTouchFlipBehavior() {
-    const cards = document.querySelectorAll('.flip-card');
+  const cards = document.querySelectorAll('.flip-card');
+
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
     cards.forEach(card => {
-        card.addEventListener('click', function () {
-            if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-                const inner = this.querySelector('.flip-card-inner');
-                if (inner) {
-                    inner.classList.toggle('flipped');
-                }
-            }
-        });
+      card.addEventListener('click', function (e) {
+        const allInnerCards = document.querySelectorAll('.flip-card-inner');
+        const inner = this.querySelector('.flip-card-inner');
+        if (!inner) return;
+
+        if (inner.classList.contains('flipped')) {
+          // If THIS card is already flipped, flip it back
+          inner.classList.remove('flipped');
+        } else {
+          // Else, flip ALL other cards back first
+          allInnerCards.forEach(otherInner => {
+            otherInner.classList.remove('flipped');
+          });
+
+          // Then flip this one open
+          inner.classList.add('flipped');
+        }
+
+        e.preventDefault();
+      });
     });
+  }
 }
 
-// main page load logic 
+// main page load logic
 document.addEventListener("DOMContentLoaded", function () {
     fetch('assets/tarot.json')
         .then(response => response.json())
@@ -111,17 +123,16 @@ document.addEventListener("DOMContentLoaded", function () {
             const majorArcana = data.tarot.filter(card => majorArcanaNames.includes(card.name));
             const minorArcana = data.tarot.filter(card => !majorArcanaNames.includes(card.name));
 
-            // generate major arcana
             insertMajorArcanaIntro();
             majorArcanaCards.innerHTML = generateCardSection(majorArcana, 'major');
 
-            // generate minor arcana card sections
-const suits = ['wands', 'cups', 'swords', 'pentacles'];
-suits.forEach(suit => {
-    const suitCards = minorArcana.filter(card => card.name.toLowerCase().includes(suit));
-    const suitContainer = document.getElementById(`${suit}Cards`);
-    suitContainer.innerHTML = generateCardSection(suitCards, suit);
-});
+            const suits = ['wands', 'cups', 'swords', 'pentacles'];
+            suits.forEach(suit => {
+                const suitCards = minorArcana.filter(card => card.name.toLowerCase().includes(suit));
+                const suitContainer = document.getElementById(`${suit}Cards`);
+                suitContainer.innerHTML = generateCardSection(suitCards, suit);
+            });
+
 
 // insert suit intro stories AFTER cards are generated 
 insertSuitIntro("wands", `
@@ -179,29 +190,27 @@ insertSuitIntro("pentacles", `
 `);
 
 
-            // enable flipping after everything rendered
-            setTimeout(() => {
-                enableTouchFlipBehavior();
-            }, 500);
-        })
-        .catch(error => console.error("error loading tarot data:", error));
+setTimeout(() => {
+    enableTouchFlipBehavior();
+}, 500);
+})
+.catch(error => console.error("error loading tarot data:", error));
 
-    // set up accordion icon animations
-    const accordionButtons = document.querySelectorAll(".accordion-button");
-    accordionButtons.forEach(button => {
-        const icon = button.querySelector("i");
-        const targetId = button.getAttribute("data-bs-target");
-        const target = document.querySelector(targetId);
+const accordionButtons = document.querySelectorAll(".accordion-button");
+accordionButtons.forEach(button => {
+const icon = button.querySelector("i");
+const targetId = button.getAttribute("data-bs-target");
+const target = document.querySelector(targetId);
 
-        if (target && icon) {
-            target.addEventListener("show.bs.collapse", () => {
-                icon.classList.remove("fa-chevron-down");
-                icon.classList.add("fa-chevron-up");
-            });
-            target.addEventListener("hide.bs.collapse", () => {
-                icon.classList.remove("fa-chevron-up");
-                icon.classList.add("fa-chevron-down");
-            });
-        }
-    });
+if (target && icon) {
+target.addEventListener("show.bs.collapse", () => {
+    icon.classList.remove("fa-chevron-down");
+    icon.classList.add("fa-chevron-up");
+});
+target.addEventListener("hide.bs.collapse", () => {
+    icon.classList.remove("fa-chevron-up");
+    icon.classList.add("fa-chevron-down");
+});
+}
+});
 });

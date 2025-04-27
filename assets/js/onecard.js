@@ -21,11 +21,13 @@ function handleShuffleButtonClick(shuffledDeck, cardStack, selectedCardContainer
 }
 
 // function to handle deal button click
-function handleDealButtonClick(shuffledDeck, cardStack, selectedCardContainer) {
+function handleDealButtonClick(shuffledDeck, cardStack, selectedCardContainer, dealButton) {
+  dealButton.disabled = true; // ⬅️ DISABLE immediately when clicked
+
   cardStack.style.display = 'none';
   selectedCardContainer.style.display = 'flex';
 
-  drawCard(shuffledDeck, selectedCardContainer);
+  drawCard(shuffledDeck, selectedCardContainer, dealButton); // ⬅️ pass dealButton to drawCard
 }
 
 // function to initialize the game by setting up event listeners
@@ -42,7 +44,7 @@ function initializeGame(tarotDeck) {
   });
 
   dealButton.addEventListener('click', function () {
-    handleDealButtonClick(shuffledDeck, cardStack, selectedCardContainer);
+    handleDealButtonClick(shuffledDeck, cardStack, selectedCardContainer, dealButton); // ⬅️ pass dealButton
   });
 }
 
