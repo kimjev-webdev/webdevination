@@ -145,7 +145,8 @@
                 <img src="assets/images/cardbacks.webp" alt="Third card back for three card reading">
               </div>
             </a>
-          </div>            
+          </div>     
+          <a href="threecard.html" id="pickThreeCards" class="card-button">THREE CARDS</a>      
           <div id="pickThreeExplanation" class="explanation">
             Draw three cards to represent the past, present, and future to view a clear timeline of the situation.
           </div>
@@ -155,13 +156,13 @@
       <section class="row infolgscreen text-glow">
         <h2 class="title text-glow">🔮 Ask the Oracle</h2>
         <form id="oracle-form">
+          <label for="questionInput" class="visually-hidden">Enter your question for the Oracle</label>
           <textarea id="questionInput" placeholder="Type your question..." required maxlength="500" rows="5"></textarea>
           <button class="oracleButton text-glow" type="submit">REVEAL YOUR FATE</button>
         </form>
         <div id="oracle-response" class="oracle-response text-glow"></div>
       </section>
-    </div>
-
+      
     <!-- skip button for terminal text which appears first time only on this page -->
     <button id="skipButton" class="skip-button text-glow">SKIP</button>
   </main>
