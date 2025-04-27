@@ -38,24 +38,46 @@ const openai = new OpenAI({
 
 const sessionMemory = {};
 
+// --- NEW helper function to rewrite dates based on user locale ---
+function rewriteDatesInInput(text, locale) {
+  const datePattern = /\b(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})\b/g;
+
+  return text.replace(datePattern, (match, p1, p2, p3) => {
+    let day = p1, month = p2, year = p3;
+
+    if (locale.startsWith('en-GB') || locale.startsWith('fr') || locale.startsWith('de') || locale.startsWith('es')) {
+      // Europe style input DD/MM/YYYY
+      day = p1;
+      month = p2;
+    } else if (locale.startsWith('ja')) {
+      // Japan special: YYYY/MM/DD
+      year = p1;
+      month = p2;
+      day = p3;
+    } else {
+      // US/Canada default: MM/DD/YYYY
+      month = p1;
+      day = p2;
+    }
+
+    return `${month}/${day}/${year}`; // Always normalize to MM/DD/YYYY for GPT
+  });
+}
+
+// --- NORMALIZE birthday for display purposes (not for extraction) ---
 function normalizeBirthday(birthdayString, locale) {
   const parts = birthdayString.split('-').map(part => parseInt(part, 10));
 
   if (parts.length === 2) {
     let month, day;
-
     if (locale.startsWith('en-GB') || locale.startsWith('fr') || locale.startsWith('de') || locale.startsWith('es')) {
-      // Europe (DD-MM)
       [day, month] = parts;
     } else if (locale.startsWith('ja')) {
-      // Japan special (default fallback)
       [day, month] = parts;
     } else {
-      // US/Canada default (MM-DD)
       [month, day] = parts;
     }
-
-    return `${String(day).padStart(2, '0')}-${String(month).padStart(2, '0')}`; // <-- fallback is DD-MM
+    return `${String(day).padStart(2, '0')}-${String(month).padStart(2, '0')}`;
   } else if (parts.length === 3) {
     const [year, month, day] = parts;
     return `${String(day).padStart(2, '0')}-${String(month).padStart(2, '0')}`;
@@ -64,6 +86,7 @@ function normalizeBirthday(birthdayString, locale) {
   }
 }
 
+// --- call aztro API ---
 async function getDailyHoroscope(sign = 'pisces') {
   try {
     const response = await axios.post(`https://aztro.sameerkumar.website/?sign=${sign}&day=today`);
@@ -74,6 +97,7 @@ async function getDailyHoroscope(sign = 'pisces') {
   }
 }
 
+// --- call farmsense API ---
 async function getMoonPhase() {
   try {
     const unixDate = Math.floor(Date.now() / 1000);
@@ -85,7 +109,10 @@ async function getMoonPhase() {
   }
 }
 
-async function extractAstroContext(userInput) {
+// --- NEW extractAstroContext (corrected input first) ---
+async function extractAstroContext(userInput, locale = 'en-US') {
+  const correctedInput = rewriteDatesInInput(userInput, locale);
+
   const systemPrompt = `You are a precise interpreter of astrological context.
 From the following user message, extract as much relevant data as possible.
 
@@ -105,7 +132,7 @@ Only return JSON. If unsure, use null for values.`;
     temperature: 0,
     messages: [
       { role: 'system', content: systemPrompt },
-      { role: 'user', content: userInput }
+      { role: 'user', content: correctedInput }
     ]
   });
 
@@ -117,6 +144,7 @@ Only return JSON. If unsure, use null for values.`;
   }
 }
 
+// --- ORACLE endpoint ---
 app.post('/oracle', async (req, res) => {
   let sessionId = req.cookies.sessionId;
 
@@ -127,13 +155,14 @@ app.post('/oracle', async (req, res) => {
   }
 
   const userQuestion = req.body.question;
-  const userLocale = req.body.locale || 'en-US'; // read locale
+  const userLocale = req.body.locale || 'en-US';
+
   if (!userQuestion) {
     return res.status(400).json({ error: "Please ask the Oracle a question." });
   }
 
   try {
-    const contextData = await extractAstroContext(userQuestion) || {};
+    const contextData = await extractAstroContext(userQuestion, userLocale) || {};
     const { sign, birthday, date_ref, day_ref, topic } = contextData;
 
     const parsedBirthday = birthday ? normalizeBirthday(birthday, userLocale) : null;
