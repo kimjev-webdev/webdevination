@@ -416,13 +416,6 @@ Emoji's are implemented on the site as playful supplements to the UX. **Please b
 <br>
 <br>
 
-<p align="left">
-  <img src="assets/images/readmefiles/icons/mushroom.webp" alt="Mushroom" width="100" style="float: left; margin-right: 20px;"><br>
-  The Mushroom emoji appears above the card selections on [info.html](webdevination.onrender.com/info.html) in the heading `tarot readings` which is shown on the users 2nd, 3rd & nth visit to the page in a session, in place of the terminal text which is shown only on their landing visit.
-
-<br>
-<br>
-
 #### The four emoji's below reference the element's that the Minor Arcana suits correspond to. They are found inside the accordion for the Minor Arcana next to the suit titles on the [cards page](webdevination.onrender.com/cards.html).
 
   <img src="assets/images/readmefiles/icons/fireemoji.webp" alt="Flame" width="100"> The flame emoji references the element of fire which corresponds to The Suit of Wands. <br><br>
