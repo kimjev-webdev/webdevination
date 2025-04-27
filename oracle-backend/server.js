@@ -213,8 +213,8 @@ You may gently ask the seeker when they were born to better attune to their star
 
     const chat = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4',
-      temperature: parseFloat(process.env.OPENAI_TEMPERATURE) || 0.9,
-      max_tokens: parseInt(process.env.OPENAI_MAX_TOKENS) || 300,
+      temperature: parseFloat(process.env.OPENAI_TEMPERATURE) || 0.8,
+      max_tokens: parseInt(process.env.OPENAI_MAX_TOKENS) || 700,
       messages
     });
 
