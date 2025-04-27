@@ -210,7 +210,8 @@ Your visions should be potent yet succinct — no more than 6 to 8 sentences. Do
 ${hasAstroData 
   ? `Known Sign: ${rememberedSign || 'undisclosed'}\nBirthday: ${rememberedBirthday || 'unspecified'}\nMoon: ${moonInfo}\nHoroscope: ${horoscope}` 
   : `The signs are unclear. Speak only in archetypes, riddles, and mystic symbols. 
-You may gently ask the seeker when they were born to better attune to their stars.`}`;
+If no astrological information is known, you should gently ask the seeker when they were born, to better attune your visions to their stars.
+`}`;
 
     const history = sessionMemory[sessionId].filter(m => !m.metadata).slice(-6);
 
