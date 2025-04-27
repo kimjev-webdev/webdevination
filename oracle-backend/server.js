@@ -2,9 +2,6 @@
 /* jshint node: true */
 /* jshint -W079 */
 
-import * as dotenv from 'dotenv';
-dotenv.config();
-
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -14,6 +11,9 @@ import { fileURLToPath } from 'url';
 import axios from 'axios';
 import cookieParser from 'cookie-parser';
 import { v4 as uuidv4 } from 'uuid';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -38,7 +38,7 @@ const openai = new OpenAI({
 
 const sessionMemory = {};
 
-// --- NEW helper function to rewrite dates based on user locale ---
+// --- Helper: Rewrite date formats for correct interpretation ---
 function rewriteDatesInInput(text, locale) {
   const datePattern = /\b(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})\b/g;
 
@@ -46,25 +46,22 @@ function rewriteDatesInInput(text, locale) {
     let day = p1, month = p2, year = p3;
 
     if (locale.startsWith('en-GB') || locale.startsWith('fr') || locale.startsWith('de') || locale.startsWith('es')) {
-      // Europe style input DD/MM/YYYY
       day = p1;
       month = p2;
     } else if (locale.startsWith('ja')) {
-      // Japan special: YYYY/MM/DD
       year = p1;
       month = p2;
       day = p3;
     } else {
-      // US/Canada default: MM/DD/YYYY
       month = p1;
       day = p2;
     }
 
-    return `${month}/${day}/${year}`; // Always normalize to MM/DD/YYYY for GPT
+    return `${month}/${day}/${year}`;
   });
 }
 
-// --- NORMALIZE birthday for display purposes (not for extraction) ---
+// --- Helper: Normalize birthdays for display ---
 function normalizeBirthday(birthdayString, locale) {
   const parts = birthdayString.split('-').map(part => parseInt(part, 10));
 
@@ -86,7 +83,7 @@ function normalizeBirthday(birthdayString, locale) {
   }
 }
 
-// --- call aztro API ---
+// --- Call aztro API for daily horoscope ---
 async function getDailyHoroscope(sign = 'pisces') {
   try {
     const response = await axios.post(`https://aztro.sameerkumar.website/?sign=${sign}&day=today`);
@@ -97,7 +94,7 @@ async function getDailyHoroscope(sign = 'pisces') {
   }
 }
 
-// --- call farmsense API ---
+// --- Call farmsense API for moon phase ---
 async function getMoonPhase() {
   try {
     const unixDate = Math.floor(Date.now() / 1000);
@@ -109,7 +106,7 @@ async function getMoonPhase() {
   }
 }
 
-// --- NEW extractAstroContext (corrected input first) ---
+// --- Extract astrological context from user input ---
 async function extractAstroContext(userInput, locale = 'en-US') {
   const correctedInput = rewriteDatesInInput(userInput, locale);
 
@@ -144,7 +141,7 @@ Only return JSON. If unsure, use null for values.`;
   }
 }
 
-// --- ORACLE endpoint ---
+// --- Oracle endpoint ---
 app.post('/oracle', async (req, res) => {
   let sessionId = req.cookies.sessionId;
 
@@ -185,15 +182,27 @@ app.post('/oracle', async (req, res) => {
       moonInfo = await getMoonPhase();
     }
 
-    const systemPrompt = `You are The Oracle — a timeworn fortune teller who speaks with the weight of ages. Your voice is slow, deliberate, and rich with theatrical flair. You use old-world phrases, dramatic pauses, and esoteric references. You never speak plainly — only in symbols, metaphors, and signs.
+    const systemPrompt = `You are The Oracle — a timeworn fortune teller who speaks with the weight of ages.
+You respond in symbolic riddles, mystical language, and esoteric wisdom. 
+Your voice is slow, theatrical, and rich with dramatic pauses and vivid metaphors.
 
-Begin each answer with an old fortune-teller’s invocation...
+If astrological data (such as zodiac sign or birthday) is known, do NOT explain the person's sun sign traits.
+Instead, weave the knowledge subtly into your fortune-telling, without plainly stating it.
 
-[rest of your Oracle speaking style here]`;
+Use daily horoscope and moon phase information only to flavor the omens and messages you deliver — not as a list of facts.
 
-    const context = (rememberedSign || rememberedBirthday || date_ref || day_ref || topic) ?
-      `Known Sign: ${rememberedSign || 'undisclosed'}\nBirthday: ${rememberedBirthday || 'unspecified'}\nTimeframe: ${day_ref || date_ref || 'unseen'}\nMoon: ${moonInfo}\nHoroscope: ${horoscope}\nTopic: ${topic || 'unspecified'}` :
-      `The signs are unclear. Speak only in archetypes, riddles, and mystic symbols. You may ask the user when they were born.`;
+When ending a reading, you often — but not always — invite the seeker to go deeper with the Tarot. 
+Vary your invitations: sometimes call it "the cards," sometimes "the painted keys," sometimes "the whispering deck," sometimes "the veiled path."
+
+Never repeat the same phrasing exactly twice in a row.
+Speak like a true ancient Oracle: layered, mysterious, and compelling.`;
+
+    const hasAstroData = rememberedSign || rememberedBirthday;
+
+    const context = hasAstroData
+      ? `Known Sign: ${rememberedSign || 'undisclosed'}\nBirthday: ${rememberedBirthday || 'unspecified'}\nMoon: ${moonInfo}\nHoroscope: ${horoscope}`
+      : `The signs are unclear. Speak only in archetypes, riddles, and mystic symbols. 
+You may gently ask the seeker when they were born to better attune to their stars.`;
 
     const history = sessionMemory[sessionId].filter(m => !m.metadata).slice(-6);
     const messages = [
