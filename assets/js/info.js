@@ -115,8 +115,8 @@ window.addEventListener('load', function () {
         skipButton.style.display = 'none';
 
         const readingsHeading = document.createElement('h2');
-        readingsHeading.textContent = "🍄 tarot readings";
-        readingsHeading.style.fontSize = "2.5rem";
+        readingsHeading.textContent = "•Tarot Readings•";
+        readingsHeading.style.fontSize = "3.5rem";
         readingsHeading.style.textAlign = "center";
 
         const terminalSection = document.querySelector('.terminal');
