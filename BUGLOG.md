@@ -91,5 +91,5 @@ Date | Bug | Focus | Solution
 2025-04-27 | Flip card hover and tap conflicts broke on mixed device interactions | JS | Further refined hover/tap separation so hover only applies to non-touch devices, preserving intuitive behavior across all device types.
 2025-04-27 | Missing accessible labels for tarot cards in gallery | HTML/JS | Ensured all flip-cards have aria-labelledby attributes linked to hidden <h3> titles inside back side of card, improving screen reader support.
 Date | Bug / Update | Focus Area | Fix Notes
-2025-04-28 | Tarot Readings dynamic heading was not resizing correctly across viewports. | Info page JS | Added dynamic font resizing for the readings heading. Introduced a debounce function to optimize window resize events and prevent performance issues. Confirmed heading text stays centered and properly padded.
-
+2025-04-27 | Tarot Readings dynamic heading was not resizing correctly across viewports. | Info page JS | Added dynamic font resizing for the readings heading. Introduced a debounce function to optimize window resize events and prevent performance issues. Confirmed heading text stays centered and properly padded.
+2025-04-27 | Skip button was not appearing during terminal typing animation on first visit. | Info page HTML & JS | Discovered missing closing </div> on buttons-container section which incorrectly nested the skip button. Added the missing </div> to restore correct HTML structure. Confirmed skip button now displays properly on first visit and hides after typing completes.
