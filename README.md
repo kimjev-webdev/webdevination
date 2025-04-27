@@ -131,11 +131,10 @@ This project brings divination into the modern age, creating a space where the i
 
 1. <a href="#56">About Testing</a>
 2. <a href="#57">Validation</a>
-3. <a href="#58">Mobile Testing</a>
-4. <a href="#59">Desktop Testing</a>
-5. <a href="#60">Manual Testing</a>
-6. <a href="#60a">User Story Testing</a>
-7. <a href="#61">Bugs</a>
+3. <a href="#58">Mobile & Desktop Testing</a>
+4. <a href="#59">Manual Testing</a>
+5. <a href="#60">User Story Testing</a>
+6. <a href="#61">Bugs</a>
 </details>
 
 
@@ -810,32 +809,37 @@ Used to brainstorm, refine prompts, debug code, and provides the mystical langua
 
 A document including a table with all tests can be found [here](TESTING.md).
 
-* The entire site has been tested comprehensivley throughout the build. Further evidence of continuous testing can be seen throughout the [deployment history](https://github.com/kimjev-webdev/webdevination/deployments) on Github and through the extensive [bug log](BUGLOG.md)
+* The entire site has been tested comprehensivley throughout the build. Further evidence of continuous testing can be seen throughout the [deployment history](https://github.com/kimjev-webdev/webdevination/deployments) on Github and through the extensive [Bug Log](BUGLOG.md)
 * Each time a feature was added, all the pages on the site were tested to see if there was an impact.
 * The site was sent to friends, family and contacts on social media  feedback and testing.
 * Color contrasts have been checked to ensure compliance with WCAG guidlines.
+
+<br>
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" />
+    </a>
+</p>
 
 <h3 id="57">2. Validation</h3>
 
 The validation section of the testing document can be found [here](TESTING.md#validation)
 
-<h3 id="58">3. Mobile Testing</h3>
+<h3 id="58">3. Mobile & Desktop Testing</h3>
 
-The mobile testing section of the testing document can be found [here](TESTING.md#mobiletesting)
+The mobile & desktop testing section of the testing document can be found [here](TESTING.md#mobiletesting)
 
-<h3 id="59"> 4. Desktop Testing</h3>
-
-The desktop testing section of the testing document can be found [here](TESTING.md#desktoptesting)
-
-<h3 id="60"> 5. Manual Testing</h3>
+<h3 id="59"> 4. Manual Testing</h3>
 
 The manual testing section of the testing document can be found [here](TESTING.md#manual)
 
-<h3 id="60a"> 6. User Story Testing</h3>
+<h3 id="60"> 5. User Story Testing</h3>
 
 The user story testing section of the testing document can be found [here](TESTING.md#user)
 
-<h3 id="61"> 7. Bugs </h3>
+<h3 id="61"> 6. Bugs </h3>
 
 A comprehensive log of all debugging actions taken throughout the project timeline can be found [here](BUGLOG.md).
 

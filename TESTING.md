@@ -22,8 +22,7 @@ CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-valida
 
 | Page      | URL                  | Screenshot           | Notes              |
 |-----------|----------------------|----------------------|--------------------|
-| All Pages - Before    | [W3C ](https://jigsaw.w3.org/css-validator/) | <img src="assets/images/testing/cssbefore.jpeg" height="auto" width="600px"> | Remove text shadow class for 311, apply comma after "Montserrat" 322, remove space between 1 and 00% for line 501. |
-| All Pages - After    | [W3C](https://jigsaw.w3.org/css-validator/)| <img src="assets/images/testing/cssafter.jpeg" height="auto" width="600px">  | Passed all tests.   |
+| All Pages    | [W3C ](https://jigsaw.w3.org/css-validator/) | <img src="assets\images\testing\csstests.png"> | PASSED | 
 
 ### 3. Link Testing
 
@@ -33,7 +32,7 @@ Links checked with [W3C Link Checker](https://validator.w3.org/checklink).
 
 | Page      | URL                  | Screenshot           | Notes              |
 |-----------|----------------------|----------------------|--------------------|
-| All Pages   | [W3C ](https://validator.w3.org/checklink) | <img src="assets\images\testing\linkspass.png" height="auto" width="600px"> | PASSED |
+| All Pages   | [W3C ](https://validator.w3.org/checklink) | <img src="assets\images\testing\linkspass.png"> | PASSED |
 
 ### 4. JavaScript 
 JavaScript files checked with [JSHint](https://jshint.com/).
@@ -52,36 +51,30 @@ JavaScript files checked with [JSHint](https://jshint.com/).
 | learn.js  | [JSHint](https://jshint.com/) | <img src="assets\images\testing\learnjsmetrics.png" width="700px"> | PASSED |
 
 
-<h2 id="mobiletesting">Mobile Testing</h2>
+<h2 id="mobiletesting">Mobile & Desktop Testing</h2>
+<h2 id="desktoptesting" style="display:none;">Lighthouse Testing</h2>
+
 
 ## 1. Lighthouse
 
-Preliminary mobile testing is undertaken with Chrome dev tools Lighthouse. This assesses the pages Performance, Accessibility, Best Practices and SEO
+Preliminary mobile & desktop testing is undertaken with Chrome dev tools Lighthouse. This assesses the pages Performance, Accessibility, Best Practices and SEO
 
-| Page      | Screenshot           | Notes              |
-|-----------|----------------------|--------------------|
-| index.html |<img src="assets/images/testing/indextestingmobile.jpg" width="400px" height="auto"> | SEO ignored - LEARN MORE button is specific enough for purpose in this instance. |
-| info.html|<img src="assets/images/testing/abouttestingmobile.jpg" width="400px" height="auto"> | Good scores. No amendments needed. |
-| onecard.html|<img src="assets/images/testing/gallerymobiletesting.jpg" width="400px" height="auto"> | Good scores. No amendments needed. |00
-| threecard.html|<img src="assets/images/testing/contactmobiletesting.jpg" width="400px" height="auto"> | Good scores. No amendments needed. |
-| cards.html |<img src="assets/images/testing/404testingmobile.jpg" width="400px" height="auto"> | Good scores. No amendments needed. |
-| learn.html |<img src="assets/images/testing/404testingmobile.jpg" width="400px" height="auto"> | Good scores. No amendments needed. |
-| 404.html |<img src="assets/images/testing/404testingmobile.jpg" width="400px" height="auto"> | Good scores. No amendments needed. |
-
-<h2 id="desktoptesting">Desktop Testing</h2>
-
-## 1. Lighthouse
-
-Preliminary mobile testing is undertaken with Chrome dev tools Lighthouse. This assesses the pages Performance, Accessibility, Best Practices and SEO
-
-| Page      | Screenshot           | Notes              |
-|-----------|----------------------|--------------------|
-| index.html - before |<img src="assets/images/testing/homepagedesktoptestingbefore.jpg" width="400px" height="auto"> | Footer links increased to 16px to improve accessibility |
-| index.html - after |<img src="assets/images/testing/indexdesktopafter.jpg" width="400px" height="auto"> | SEO ignored - LEARN MORE button is specific enough for purpose in this instance. |
-| about.html|<img src="assets/images/testing/aboutdesktoptest.jpg" width="400px" height="auto"> | Good scores. No amendments needed. |
-| gallery.html|<img src="assets/images/testing/gallerydesktoptest.jpg" width="400px" height="auto"> | Good scores. No amendments needed. |00
-| contact.html|<img src="assets/images/testing/contactdesktoptest.jpg" width="400px" height="auto"> | Good scores. No amendments needed. |
-| 404.html |<img src="assets/images/testing/404desktoptesting.jpg" width="400px" height="auto"> | Good scores. No amendments needed. |
+| Page      |  Screenshot                   | Notes              |
+|-----------|----------------------------------|--------------------|
+index.html - Mobile     | <img src="assets\images\testing\indexlighthousemob.png" width="700px"> |                       |
+index.html - Desktop    | <img src="assets\images\testing\indexlighthousedt.png" width="700px"> |                       |
+info.html - Mobile      | <img src="assets\images\testing\infolighthousemob.png" width="700px"> |                       |
+info.html - Desktop     | <img src="assets\images\testing\infolighthousedt.png" width="700px"> |                       | 
+onecard.html - Mobile   | <img src="assets\images\testing\onecardlighthousemob.png" width="700px"> |                       | 
+onecard.html - Desktop  | <img src="assets\images\testing\onecardlighthousedt.png" width="700px"> |                       |
+threecard.html - Mobile | <img src="assets\images\testing\threecardlighthousemob.png" width="700px"> |                       |
+threecard.html - Desktop| <img src="assets\images\testing\threecardlighthousedt.png" width="700px"> |                       |
+cards.html - Mobile     | <img src="assets\images\testing\cardslighthousemob.png" width="700px"> |                       |
+cards.html - Desktop    | <img src="assets\images\testing\cardslighthousedt.png" width="700px"> |                       |
+learn.html - Mobile     | <img src="assets\images\testing\learnlighthousemob.png" width="700px"> |                       |
+learn.html - Desktop    | <img src="assets\images\testing\learnlighthousedt.png" width="700px"> |                       |
+404.html - Mobile       | <img src="assets\images\testing\404lighthousemob.png" width="700px"> |                       |
+404.html - Desktop      | <img src="assets\images\testing\404lighthousedt.png" width="700px"> |                       | 
 
 <h2 id="accessibility">Accessibility</h2>
 
