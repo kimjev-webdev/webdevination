@@ -115,9 +115,10 @@ window.addEventListener('load', function () {
         skipButton.style.display = 'none';
 
         const readingsHeading = document.createElement('h2');
-        readingsHeading.textContent = "•Tarot Readings•";
-        readingsHeading.style.fontSize = "3.5rem";
+        readingsHeading.textContent = "Tarot Readings";
+        readingsHeading.style.fontSize = "2.5rem";
         readingsHeading.style.textAlign = "center";
+        readingsHeading.style.padding = "0px 60px 0px 60px";
 
         const terminalSection = document.querySelector('.terminal');
         terminalSection.appendChild(readingsHeading);
