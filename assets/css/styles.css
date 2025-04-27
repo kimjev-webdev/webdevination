@@ -552,6 +552,12 @@ a {
   text-decoration: none;
 }
 
+/* flash animation for the reading choices buttons */
+#buttons-container .col-12.col-md-6 a:hover {
+  animation: flashText 1s infinite;
+  transform: scale(1.1);
+}
+
 /* hide cardback images initially */
 #buttons-container .col-12.col-md-6 img {
   display: none;
