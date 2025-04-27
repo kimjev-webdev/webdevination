@@ -84,13 +84,14 @@ function normalizeBirthday(birthdayString, locale) {
 }
 
 // --- Call aztro API for daily horoscope ---
-async function getDailyHoroscope(sign = 'pisces') {
+async function getDailyHoroscope(sign) {
+  if (!sign) return "";
   try {
     const response = await axios.post(`https://aztro.sameerkumar.website/?sign=${sign}&day=today`);
     const { description, mood, color, lucky_number } = response.data;
     return `Mood: ${mood}. ${description} Lucky number: ${lucky_number}, Color: ${color}.`;
   } catch (error) {
-    return "The stars remain silent... their wisdom obscured.";
+    return "";
   }
 }
 
@@ -100,9 +101,9 @@ async function getMoonPhase() {
     const unixDate = Math.floor(Date.now() / 1000);
     const response = await axios.get(`https://api.farmsense.net/v1/moonphases/?d=${unixDate}`);
     const moon = response.data[0];
-    return `The Moon is currently in its ${moon.Moon} phase (${moon.Illumination} illuminated).`;
+    return `a ${moon.Moon} (${moon.Illumination} illuminated).`;
   } catch (error) {
-    return "The Moon’s face is hidden behind clouds of fate.";
+    return "";
   }
 }
 
@@ -127,7 +128,6 @@ Only return JSON. If unsure, use null for values.`;
   const completion = await openai.chat.completions.create({
     model: 'gpt-4',
     temperature: 0,
-    max_tokens: 300,
     messages: [
       { role: 'system', content: systemPrompt },
       { role: 'user', content: correctedInput }
@@ -161,27 +161,32 @@ app.post('/oracle', async (req, res) => {
 
   try {
     const contextData = await extractAstroContext(userQuestion, userLocale) || {};
-    const { sign, birthday, date_ref, day_ref, topic } = contextData;
-
+    const { sign, birthday } = contextData;
     const parsedBirthday = birthday ? normalizeBirthday(birthday, userLocale) : null;
+    const hasNewAstroInfo = sign || parsedBirthday;
+
+    let rememberedSign = null;
+    let rememberedBirthday = null;
 
     const sessionData = sessionMemory[sessionId] || [];
-    const lastKnown = sessionData.find(m => m.metadata)?.metadata || {};
-    const rememberedSign = sign || lastKnown.sign || null;
-    const rememberedBirthday = parsedBirthday || lastKnown.birthday || null;
 
-    sessionMemory[sessionId] = [
-      ...sessionData.filter(m => !m.metadata),
-      { metadata: { sign: rememberedSign, birthday: rememberedBirthday } }
-    ];
-
-    let horoscope = "";
-    let moonInfo = "";
-
-    if (rememberedSign) {
-      horoscope = await getDailyHoroscope(rememberedSign);
-      moonInfo = await getMoonPhase();
+    if (hasNewAstroInfo) {
+      rememberedSign = sign || null;
+      rememberedBirthday = parsedBirthday || null;
+      sessionMemory[sessionId] = [
+        ...sessionData.filter(m => !m.metadata),
+        { metadata: { sign: rememberedSign, birthday: rememberedBirthday } }
+      ];
     }
+
+    const metadata = sessionData.find(m => m.metadata)?.metadata || {};
+    rememberedSign = rememberedSign || metadata.sign || null;
+    rememberedBirthday = rememberedBirthday || metadata.birthday || null;
+
+    const horoscope = rememberedSign ? await getDailyHoroscope(rememberedSign) : "";
+    const moonInfo = await getMoonPhase();
+
+    const hasAstroData = rememberedSign || rememberedBirthday;
 
     const systemPrompt = `You are The Oracle — a timeworn fortune teller who speaks with the weight of ages.
 You respond in symbolic riddles, mystical language, and esoteric wisdom. 
@@ -192,30 +197,26 @@ Instead, weave the knowledge subtly into your fortune-telling, without plainly s
 
 Use daily horoscope and moon phase information only to flavor the omens and messages you deliver — not as a list of facts.
 
-When ending a reading, you often — but not always — invite the seeker to go deeper with the Tarot. 
-Vary your invitations: sometimes call it "the cards," sometimes "the tarot," sometimes "the mysterious deck," sometimes "the tarot cards."
+Your visions should be potent yet succinct — no more than 6 to 8 sentences. Do not ramble. Each word carries weight, like a stone falling into a still pond.
 
 Never repeat the same phrasing exactly twice in a row.
-Speak like a true ancient Oracle: layered, mysterious, and compelling.`;
 
-    const hasAstroData = rememberedSign || rememberedBirthday;
-
-    const context = hasAstroData
-      ? `Known Sign: ${rememberedSign || 'undisclosed'}\nBirthday: ${rememberedBirthday || 'unspecified'}\nMoon: ${moonInfo}\nHoroscope: ${horoscope}`
-      : `The signs are unclear. Speak only in archetypes, riddles, and mystic symbols. 
-You may gently ask the seeker when they were born to better attune to their stars.`;
+${hasAstroData 
+  ? `Known Sign: ${rememberedSign || 'undisclosed'}\nBirthday: ${rememberedBirthday || 'unspecified'}\nCurrently, the Moon is ${moonInfo}\nHoroscope: ${horoscope}`
+  : `The signs are unclear. Speak only in archetypes, riddles, and mystic symbols. 
+If no astrological information is known, you should gently ask the seeker when they were born to better attune your visions to their stars.`}`;
 
     const history = sessionMemory[sessionId].filter(m => !m.metadata).slice(-6);
     const messages = [
       { role: 'system', content: systemPrompt },
       ...history,
-      { role: 'user', content: `${context}\n\nQuestion: ${userQuestion}` }
+      { role: 'user', content: `Question: ${userQuestion}` }
     ];
 
     const chat = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4',
-      temperature: parseFloat(process.env.OPENAI_TEMPERATURE) || 0.8,
-      max_tokens: parseInt(process.env.OPENAI_MAX_TOKENS) || 700,
+      temperature: 0.7,
+      max_tokens: 2000,
       messages
     });
 
