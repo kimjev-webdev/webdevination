@@ -16,7 +16,7 @@ function injectLearnModal(message) {
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content win95-modal win95-window text-glow">
             <div class="win95-title-bar">
-              <span class="win95-title-text">result</span>
+              <span class="win95-title-text">RESULT</span>
               <div class="win95-buttons">
                 <button type="button" class="win95-btn text-glow" data-bs-dismiss="modal" aria-label="close">
                   <i class="fa-light fa-x"></i>
@@ -169,10 +169,10 @@ function handleCardSelection(event) {
   if (selectedCardName === correctCardName) {
     score++;
     document.getElementById('score').textContent = `score: ${score}`;
-    injectLearnModal(`${correctCardName} was the correct answer. well done!`);
+    injectLearnModal(`${correctCardName} was the correct answer. Well done!`);
   } else {
     playErrorSound();
-    injectLearnModal(`incorrect! the correct answer was ${correctCardName}.`);
+    injectLearnModal(`Incorrect! The correct answer was ${correctCardName}.`);
   }
 
   currentCardIndex = (currentCardIndex + 1) % totalMatches;
