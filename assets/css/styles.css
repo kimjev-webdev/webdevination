@@ -618,6 +618,7 @@
   
   /* ensure buttons are aligned in the center */
   #buttons-container .col-12.col-md-6 a {
+    font-family: 'Tourney', monospace;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -796,6 +797,10 @@
     line-height: 1rem;
     text-align: left !important;
   }
+
+  .flip-card-inner.flipped {
+    transform: rotateY(180deg);
+  }
   
   /* .accordion-item styles */
   .accordion-item {
@@ -906,7 +911,7 @@
   }
   
   /* .suit-intro styles */
-  .suit-intro {
+  .suit-intro p {
     font-family: "Source Code Pro", monospace;
     text-align: justify;
     margin: 0 auto;
@@ -1417,7 +1422,7 @@
   
   /* learning page styles */  
   
-  /* .learn styles */
+  /* body styles */
   .learn {
     overflow-x: hidden;
   }
@@ -1429,13 +1434,13 @@
     object-fit: cover;
   }
   
-  /* p styles */
+  /* paragraph styles */
   p {
     font-family: "Source Code Pro", monospace; 
     text-align: center; 
   }
   
-  /* .score styles */
+  /* scoreboard style */
   .score {
     text-transform: uppercase; 
     font-family: "Tourney", monospace !important;
@@ -1445,19 +1450,19 @@
     font-size: 2rem;  
   } 
   
-  /* #restart-button styles */
+  /* #restart button styles */
   #restart-button {
     letter-spacing: 1VW;
     font-family: "Tourney", monospace !important;
     font-size: 2rem !important;
   }
   
-  /* #restart-button:hover styles */
+  /* restart button hover styles */
   #restart-button:hover {   
     animation: flashText 1s infinite;
   }
   
-  /* .cardgame styles */
+  /* margins and alignment for the four card selection */
   .cardgame {
     width: 150px; /* adjust based on your design */
     height: 200px; /* adjust based on your design */
