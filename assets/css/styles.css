@@ -1344,7 +1344,7 @@ p#intro-text.extratextbigscreenthree {
 
 /* container for three card stack */
 #threecard-stack {
-  margin-top: 10px;
+  margin-top: 45px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
