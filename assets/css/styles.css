@@ -1327,7 +1327,7 @@ img.onecardadvert {
 
 /* three card intro row padding */
 .threeintrorow {
-  margin: 0px 40px 30px 40px;
+  margin: 0px 40px 0px 40px;
 }
 
 /* intro text styling */
@@ -1344,7 +1344,7 @@ p#intro-text.extratextbigscreenthree {
 
 /* container for three card stack */
 #threecard-stack {
-  margin-top: 45px;
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
