@@ -61,20 +61,20 @@ Preliminary mobile & desktop testing is undertaken with Chrome dev tools Lightho
 
 | Page      |  Screenshot                   | Notes              |
 |-----------|----------------------------------|--------------------|
-index.html - Mobile     | <img src="assets\images\testing\indexlighthousemob.png" width="700px"> |                       |
-index.html - Desktop    | <img src="assets\images\testing\indexlighthousedt.png" width="700px"> |                       |
-info.html - Mobile      | <img src="assets\images\testing\infolighthousemob.png" width="700px"> |                       |
-info.html - Desktop     | <img src="assets\images\testing\infolighthousedt.png" width="700px"> |                       | 
-onecard.html - Mobile   | <img src="assets\images\testing\onecardlighthousemob.png" width="700px"> |                       | 
-onecard.html - Desktop  | <img src="assets\images\testing\onecardlighthousedt.png" width="700px"> |                       |
-threecard.html - Mobile | <img src="assets\images\testing\threecardlighthousemob.png" width="700px"> |                       |
-threecard.html - Desktop| <img src="assets\images\testing\threecardlighthousedt.png" width="700px"> |                       |
-cards.html - Mobile     | <img src="assets\images\testing\cardslighthousemob.png" width="700px"> |                       |
-cards.html - Desktop    | <img src="assets\images\testing\cardslighthousedt.png" width="700px"> |                       |
-learn.html - Mobile     | <img src="assets\images\testing\learnlighthousemob.png" width="700px"> |                       |
-learn.html - Desktop    | <img src="assets\images\testing\learnlighthousedt.png" width="700px"> |                       |
-404.html - Mobile       | <img src="assets\images\testing\404lighthousemob.png" width="700px"> |                       |
-404.html - Desktop      | <img src="assets\images\testing\404lighthousedt.png" width="700px"> |                       | 
+index.html - Mobile     | <img src="assets\images\testing\indexlighthousemob.png" width="700px"> |GOOD SCORES |
+index.html - Desktop    | <img src="assets\images\testing\indexlighthousedt.png" width="700px"> |GOOD SCORES|
+info.html - Mobile      | <img src="assets\images\testing\infolighthousemob.png" width="700px"> |GOOD SCORES |
+info.html - Desktop     | <img src="assets\images\testing\infolighthousedt.png" width="700px"> | GOOD SCORES | 
+onecard.html - Mobile   | <img src="assets\images\testing\onecardlighthousemob.png" width="700px"> | GOOD SCORES | 
+onecard.html - Desktop  | <img src="assets\images\testing\onecardlighthousedt.png" width="700px"> | GOOD SCORES |
+threecard.html - Mobile | <img src="assets\images\testing\threecardlighthousemob.png" width="700px"> | GOOD SCORES |
+threecard.html - Desktop| <img src="assets\images\testing\threecardlighthousedt.png" width="700px"> | GOOD SCORES |
+cards.html - Mobile     | <img src="assets\images\testing\cardslighthousemob.png" width="700px"> |GOOD SCORES |
+cards.html - Desktop    | <img src="assets\images\testing\cardslighthousedt.png" width="700px"> |GOOD SCORES |
+learn.html - Mobile     | <img src="assets\images\testing\learnlighthousemob.png" width="700px"> |GOOD SCORES |
+learn.html - Desktop    | <img src="assets\images\testing\learnlighthousedt.png" width="700px"> | GOOD SCORES |
+404.html - Mobile       | <img src="assets\images\testing\404lighthousemob.png" width="700px"> | GOOD SCORES |
+404.html - Desktop      | <img src="assets\images\testing\404lighthousedt.png" width="700px"> | GOOD SCORES | 
 
 <h2 id="accessibility">Accessibility</h2>
 
@@ -84,14 +84,20 @@ More detailed accessibility testing was undertaken using [WAVE](https://wave.web
 
 | Page         | URL                             | Screenshot                                              | Notes              |
 |--------------|----------------------------------|---------------------------------------------------------|--------------------|
-| index.html   | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/waveindex.png" height="auto" width="600px"> <img src="assets/images/testing/indexwavealerts.jpeg" height="auto" width="600px"> | |
-| info.html    | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/waveinfo.png" height="auto" width="600px"> <img src="assets/images/testing/infowavealerts.jpeg" height="auto" width="600px"> | |
-| onecard.html | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/waveonecard.png" height="auto" width="600px"> <img src="assets/images/testing/onecardwavealerts.jpeg" height="auto" width="600px"> | |
-| threecard.html | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/wavethreecard.png" height="auto" width="600px"> <img src="assets/images/testing/threecardwavealerts.jpeg" height="auto" width="600px"> | |
-| cards.html   | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/wavecards.png" height="auto" width="600px"> <img src="assets/images/testing/cardswavealerts.jpeg" height="auto" width="600px"> | |
-| learn.html   | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/wavelearn.png" height="auto" width="600px"> <img src="assets/images/testing/learnwavealerts.jpeg" height="auto" width="600px"> | |
-| 404.html     | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/wave404.png" height="auto" width="600px"> | |
+| index.html   | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/waveindex.png" height="auto" width="600px"> | NO ERRORS |
+| info.html    | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/waveinfo.png" height="auto" width="600px"> | NO ERRORS - alerts for `text-align: justify` and redundant links ignored for styling purposes. |
+| onecard.html | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/waveonecard.png" height="auto" width="600px"> | NO ERRORS - 2 alerts for `text-align: justify` ignored for styling purposes. |
+| threecard.html | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/wavethreecard.png" height="auto" width="600px"> | NO ERRORS |
+| cards.html   | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/wavecards.png" height="auto" width="600px">  | NO ERRORS - 32 alerts for `text-align: justify` ignored - justified text chosen for stylistic reasons, only heavy use on this page. Does not effect readability. |
+| learn.html   | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/wavelearn.png" height="auto" width="600px"> | NO ERRORS - 2 alerts for `text-align: justify` ignored for styling purposes.|
+| 404.html     | [WAVE](https://wave.webaim.org/) | <img src="assets/images/testing/wave404.png" height="auto" width="600px"> | NO ERRORS |
 
+<br>
+
+Evidence to support the readability and accessibility of the colour scheme is provided by [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/):
+
+<img src="assets/images/testing/textcontrast1.png">
+<img src="assets/images/testing/textcontrast2.png">
 
 <h2 id="manual">Manual Testing</h2>
 
