@@ -485,7 +485,7 @@ a.dropdown-item {
   padding: 10px 20px;
   font-size: 2rem;
   transition: 0.3s;
-  z-index: 1 !important;
+  z-index: 1000 !important;
 }
 
 /* intro text area formatting */
@@ -1660,11 +1660,10 @@ footer {
   }
   /* remove top margin on onecard page */
   body.onecard {
-    margin-top: 0px;
+    margin-top: 80px;
   }
   /* padding adjustments on onecard row */
   .onecardrow {
-    padding: 0px 50px;
     margin: 0px 40px;
   }
   /* compress accordion body rows */

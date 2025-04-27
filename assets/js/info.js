@@ -143,6 +143,9 @@ window.addEventListener('load', function () {
         showButtons();
     } else {
         sessionStorage.setItem('visitedInfoPage', 'true');
+        skipButton.style.display = 'block';
+        skipButton.style.opacity = '1';
+        skipButton.style.visibility = 'visible';
         typeText();
     }
 });
