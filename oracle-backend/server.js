@@ -127,6 +127,7 @@ Only return JSON. If unsure, use null for values.`;
   const completion = await openai.chat.completions.create({
     model: 'gpt-4',
     temperature: 0,
+    max_tokens: 300,
     messages: [
       { role: 'system', content: systemPrompt },
       { role: 'user', content: correctedInput }
@@ -166,16 +167,8 @@ app.post('/oracle', async (req, res) => {
 
     const sessionData = sessionMemory[sessionId] || [];
     const lastKnown = sessionData.find(m => m.metadata)?.metadata || {};
-
-    const hasNewAstroInfo = sign || parsedBirthday;
-
-    let rememberedSign = null;
-    let rememberedBirthday = null;
-
-    if (hasNewAstroInfo) {
-      rememberedSign = sign || lastKnown.sign || null;
-      rememberedBirthday = parsedBirthday || lastKnown.birthday || null;
-    }
+    const rememberedSign = sign || lastKnown.sign || null;
+    const rememberedBirthday = parsedBirthday || lastKnown.birthday || null;
 
     sessionMemory[sessionId] = [
       ...sessionData.filter(m => !m.metadata),
@@ -187,10 +180,8 @@ app.post('/oracle', async (req, res) => {
 
     if (rememberedSign) {
       horoscope = await getDailyHoroscope(rememberedSign);
+      moonInfo = await getMoonPhase();
     }
-    moonInfo = await getMoonPhase();
-
-    const hasAstroData = rememberedSign || rememberedBirthday;
 
     const systemPrompt = `You are The Oracle — a timeworn fortune teller who speaks with the weight of ages.
 You respond in symbolic riddles, mystical language, and esoteric wisdom. 
@@ -202,29 +193,29 @@ Instead, weave the knowledge subtly into your fortune-telling, without plainly s
 Use daily horoscope and moon phase information only to flavor the omens and messages you deliver — not as a list of facts.
 
 When ending a reading, you often — but not always — invite the seeker to go deeper with the Tarot. 
-Vary your invitations: sometimes call it "the cards," sometimes "the deck," sometimes "the tarot".
+Vary your invitations: sometimes call it "the cards," sometimes "the painted keys," sometimes "the whispering deck," sometimes "the veiled path."
 
-Speak like a true ancient Oracle: layered, mysterious, and compelling.
-Your visions should be potent yet succinct — no more than 6 to 8 sentences. Do not ramble. Each word carries weight, like a stone falling into a still pond.`;
+Never repeat the same phrasing exactly twice in a row.
+Speak like a true ancient Oracle: layered, mysterious, and compelling.`;
 
-${hasAstroData 
-  ? `Known Sign: ${rememberedSign || 'undisclosed'}\nBirthday: ${rememberedBirthday || 'unspecified'}\nMoon: ${moonInfo}\nHoroscope: ${horoscope}` 
-  : `The signs are unclear. Speak only in archetypes, riddles, and mystic symbols. 
-If no astrological information is known, you should gently ask the seeker when they were born, to better attune your visions to their stars.
-`}`;
+    const hasAstroData = rememberedSign || rememberedBirthday;
+
+    const context = hasAstroData
+      ? `Known Sign: ${rememberedSign || 'undisclosed'}\nBirthday: ${rememberedBirthday || 'unspecified'}\nMoon: ${moonInfo}\nHoroscope: ${horoscope}`
+      : `The signs are unclear. Speak only in archetypes, riddles, and mystic symbols. 
+You may gently ask the seeker when they were born to better attune to their stars.`;
 
     const history = sessionMemory[sessionId].filter(m => !m.metadata).slice(-6);
-
     const messages = [
       { role: 'system', content: systemPrompt },
       ...history,
-      { role: 'user', content: `Question: ${userQuestion}` }
+      { role: 'user', content: `${context}\n\nQuestion: ${userQuestion}` }
     ];
 
     const chat = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4',
-      temperature: 0.7,
-      max_tokens: 2000,
+      temperature: parseFloat(process.env.OPENAI_TEMPERATURE) || 0.8,
+      max_tokens: parseInt(process.env.OPENAI_MAX_TOKENS) || 700,
       messages
     });
 
@@ -248,3 +239,4 @@ If no astrological information is known, you should gently ask the seeker when t
 app.listen(port, () => {
   console.log(`🔮 The Oracle is listening at http://localhost:${port}`);
 });
+
