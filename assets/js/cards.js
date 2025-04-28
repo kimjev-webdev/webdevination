@@ -67,9 +67,8 @@ function insertSuitIntro(suitId, storyText) {
         introDiv.className = "suit-intro mb-4";
         introDiv.style.position = "relative";
         introDiv.style.zIndex = "2";
-        introDiv.style.maxWidth = "800px";
+        introDiv.style.padding = "0px 63px;"
         introDiv.style.margin = "0 auto";
-        introDiv.style.padding = "1rem";
         introDiv.innerHTML = storyText;
 
         cardContainer.parentNode.insertBefore(introDiv, cardContainer);
