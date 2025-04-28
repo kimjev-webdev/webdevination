@@ -69,8 +69,9 @@ function insertSuitIntro(suitId, storyText) {
         introDiv.style.zIndex = "2";
         introDiv.style.padding = "0px 63px";
         introDiv.style.margin = "0 auto";
+        introDiv.style.display = "block"; 
+        introDiv.style.width = "100%";    
         introDiv.innerHTML = storyText;
-
         cardContainer.parentNode.insertBefore(introDiv, cardContainer);
     }
 }
