@@ -149,8 +149,10 @@ app.post('/oracle', async (req, res) => {
   if (!sessionId) {
     sessionId = uuidv4();
     res.cookie('sessionId', sessionId, { maxAge: 7 * 24 * 60 * 60 * 1000 });
-    sessionMemory[sessionId] = [];
   }
+
+  // 👁️‍🗨️ Added: Always initialize sessionMemory
+  sessionMemory[sessionId] = sessionMemory[sessionId] || [];
 
   const userQuestion = req.body.question;
   const userLocale = req.body.locale || 'en-US';
@@ -168,7 +170,7 @@ app.post('/oracle', async (req, res) => {
     let rememberedSign = null;
     let rememberedBirthday = null;
 
-    const sessionData = sessionMemory[sessionId] || [];
+    const sessionData = sessionMemory[sessionId];
 
     if (hasNewAstroInfo) {
       rememberedSign = sign || null;
@@ -179,7 +181,7 @@ app.post('/oracle', async (req, res) => {
       ];
     }
 
-    const metadata = sessionData.find(m => m.metadata)?.metadata || {};
+    const metadata = sessionMemory[sessionId].find(m => m.metadata)?.metadata || {};
     rememberedSign = rememberedSign || metadata.sign || null;
     rememberedBirthday = rememberedBirthday || metadata.birthday || null;
 
@@ -240,4 +242,3 @@ If no astrological information is known, you should gently ask the seeker when t
 app.listen(port, () => {
   console.log(`🔮 The Oracle is listening at http://localhost:${port}`);
 });
-
