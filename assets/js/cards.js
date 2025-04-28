@@ -67,7 +67,7 @@ function insertSuitIntro(suitId, storyText) {
         introDiv.className = "suit-intro mb-4";
         introDiv.style.position = "relative";
         introDiv.style.zIndex = "2";
-        introDiv.style.padding = "0px 63px;"
+        introDiv.style.padding = "0px 63px";
         introDiv.style.margin = "0 auto";
         introDiv.innerHTML = storyText;
 
