@@ -887,7 +887,7 @@ accordion-button:hover {
 }
 
 /* paragraph text inside explore section */
-.explorep, {
+.explorep {
   text-align: justify !important;
   margin: 0 auto;
   padding: 0px 60px;
